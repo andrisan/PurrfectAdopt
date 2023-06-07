@@ -19,7 +19,14 @@ return new class extends Migration
             $table->text('soal');
             $table->text('jawaban');
         });
+
+        Schema::create('admin_soal_pk', function (Blueprint $table) {
+            $table->foreignId('admin_id_admin')->constrained('admin');
+            $table->foreignId('soal_id_soal')->constrained('soal');
+        });
     }
+
+
 
     /**
      * Reverse the migrations.
