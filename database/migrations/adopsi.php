@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('Adopsi', function (Blueprint $table) {
             $table->id('ID_ADOPSI');
+            $table->integer('JUMLAH');
+            $table->string('TEMPAT');
+            $table->boolean('STATUS_PEMBAYARAN')->nullable();
         });
     }
 
