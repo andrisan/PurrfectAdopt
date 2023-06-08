@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('TEMPAT');
             $table->boolean('STATUS_PEMBAYARAN')->nullable();
             $table->string('METODE')->nullable();
+            $table->text('LOKASI_PU')->nullable();
         });
     }
 
