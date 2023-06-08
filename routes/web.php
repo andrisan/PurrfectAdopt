@@ -1,6 +1,10 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\ResetPasswordController;
+use App\Http\Controllers\SignUpController;
+use App\Http\Controllers\SesiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,18 +18,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware(['guest'])->group(function(){
+  Route::get('/', [SesiController::class, 'index'])->name('login');
+  Route::post('/', [SesiController::class, 'login']);
+
+  Route::get('/signup', [SignUpController::class, 'showRegistrationForm'])->name('signup');
+  Route::post('/signup', [SignUpController::class, 'signup']);
+
+  Route::get('/forgot-password', [ForgotPasswordController::class, 'index'])->name('password.request');
+  Route::post('/forgot-password', [ForgotPasswordController::class, 'forgotPasswordHandler'])->name('password.email');
+
+  Route::get('/reset-password/{token}', [ResetPasswordController::class, 'index'])->name('password.reset');
+  Route::post('/reset-password', [ResetPasswordController::class, 'resetPasswordHandler'])->name('password.update');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+Route::get('/home', function(){
+  return redirect('/admin');
 });
 
-require __DIR__.'/auth.php';
+Route::middleware(['auth'])->group(function(){
+  Route::get('/users', [AdminController::class, 'index']);
+  Route::get('/users/admin', [AdminController::class, 'admin'])->middleware('userAccess:admin');
+  Route::get('/users/user', [AdminController::class, 'user'])->middleware('userAccess:user');
+  Route::get('/logout', [SesiController::class, 'logout']);
+});
