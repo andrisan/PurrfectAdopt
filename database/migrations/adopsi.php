@@ -18,6 +18,8 @@ return new class extends Migration
             $table->boolean('STATUS_PEMBAYARAN')->nullable();
             $table->string('METODE')->nullable();
             $table->text('LOKASI_PU')->nullable();
+            $table->timestamp('TGL_ADOPSI');
+
         });
     }
 
