@@ -16,6 +16,7 @@ return new class extends Migration
             $table->integer('JUMLAH');
             $table->string('TEMPAT');
             $table->boolean('STATUS_PEMBAYARAN')->nullable();
+            $table->string('METODE')->nullable();
         });
     }
 
