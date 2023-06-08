@@ -26,10 +26,15 @@ return new class extends Migration
         });
 
         Schema::create('jawaban', function (Blueprint $table) {
-            $table->id(id_jawaban);
+            $table->id('id_jawaban');
             $table->foreignId('id_user')->constrained('user_adopt');
             $table->foreignId('akun_id_akun')->constrained('user_adopt');
             $table->text('jawaban');
+        });
+        
+        Schema::create('check_jawaban', function (Blueprint $table) {
+                $table->id('id_check_jawaban');
+                $table->bool('status_jawaban');
         });
     }
 
