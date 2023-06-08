@@ -42,6 +42,12 @@ return new class extends Migration
                  $table->foreignId('id_jawaban')->constrained('jawaban');
                  $table->foreignId('id_check')->constrained('check_jawaban');
         });
+        
+        Schema::create('soal_jawaban_pk', function (Blueprint $table) {
+            $table->foreignId('id_soal')->constrained('soal');
+            $table->foreignId('id_jawaban')->constrained('jawaban');
+            $table->foreignId('user_adopt_id_user')->constrained('jawaban');
+    });
     }
 
 
