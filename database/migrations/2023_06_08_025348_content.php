@@ -19,6 +19,9 @@ return new class extends Migration
             $table->binary('galery');
             $table->timestamps();
         });
+        /**
+        * Diatas merupakan kode penambahan migrasi tabel konten
+        */
     }
 
     /**
