@@ -20,7 +20,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="leading-normal tracking-normal text-white-400 m-6 bg-cover bg-fixed">
-<div class="h-full">
+<div class="h-full flex flex-col justify-between">
     <!--Nav-->
     <div class="w-full container mx-auto">
         <div class="w-full flex items-center justify-between">
@@ -39,16 +39,20 @@
     </div>
 
     <!--Main-->
-    <div class="container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+    <div class="container mx-auto flex flex-wrap md:flex-nowrap items-center">
         <!--Left Col-->
-        <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-            <h1 class="my-4 text-3xl md:text-5xl text-black opacity-75 font-bold leading-tight text-center md:text-left">Welcome Cat Lovers!</h1>
-            <p class="leading-normal text-black text-base md:text-2xl mb-8 text-center md:text-left">
+        <div class="flex flex-col w-full xl:w-3/5 justify-center lg:items-start overflow-y-hidden">
+            <h1 class="my-4 text-4xl md:text-6xl text-black opacity-75 font-bold leading-tight text-center md:text-left">Welcome Cat Lovers!</h1></br>
+            <h5 class="leading-normal text-black text-xl md:text-3xl mb-8 text-center md:text-left">
                 Unleash Your Love for Cats on Our Website!
-            </p>
+            </h5>
             <a href="{{ route('register') }}" class="btn btn-accent space-x-2 bg-yellow-400 flex items-center justify-center py-3 px-6 text-white hover:bg-yellow-500 hover:text-white rounded-sm">
                 <span>REGISTER</span>
             </a>
+        </div>
+        <!--Right Col -->
+        <div class="w-full xl:w-2/5 py-6 overflow-hidden mt-auto">
+            <img class="w-3/4 h-auto mx-auto" src="{{ asset('/img/hero-kucing.png') }}" alt="Hero Image">
         </div>
     </div>
 </div>
