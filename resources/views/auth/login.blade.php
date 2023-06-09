@@ -43,7 +43,7 @@
                         <!-- Footer -->
                         <div class="text-center">
                             <span class="text-xs text-gray-400 font-semibold">Don't have account?</span>
-                            <a href="/signup" class="text-xs font-semibold text-purple-700">Sign up</a>
+                            <a href="/register" class="text-xs font-semibold text-purple-700">Sign up</a>
                         </div>
                     </div>
                 </div>
