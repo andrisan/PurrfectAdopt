@@ -17,25 +17,83 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
-        return view('auth.login');
+        return view('auth.login', [
+            'title'=>'Login',
+        ]);
     }
 
     /**
      * Handle an incoming authentication request.
      */
-    public function store(LoginRequest $request): RedirectResponse
+    public function store(LoginRequest $request)
     {
-        $request->authenticate();
+        $request->validate([
+            'email'=>'required',
+            'password'=>'required',
+        ],
+        [
+            'email.required'=>'Email wajib diisi.',
+            'password.required'=>'Password wajib diisi.',
+        ]);
 
-        $request->session()->regenerate();
+        $info_login = [
+            'email'=>$request->email,
+            'password'=>$request->password,
+        ];
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        if(Auth::attempt($info_login))
+        {
+            if(Auth::user()->role == 'admin')
+            {
+                return redirect('/main/admin');
+            }
+            elseif(Auth::user()->role == 'user')
+            {
+                return redirect('/main/user');
+            }
+        }
+        else
+        {
+            return redirect('/')
+                        ->withErrors('Email dan password tidak valid')
+                        ->withInput();
+        }
+    }
+
+    /**
+     * Display the main view for admin and user.
+     */
+    public function main()
+    {
+        echo 'Halo, selamat datang';
+        echo '<h1>'. Auth::user()->name .'</h1>';
+        echo '<a href="/logout">Logout >></a>';
+    }
+
+    /**
+     * Display the admin view.
+     */
+    function admin()
+    {
+        echo 'Halo, selamat datang di halaman admin';
+        echo '<h1>'. Auth::user()->name .'</h1>';
+        echo '<a href="/logout">Logout >></a>';
+    }
+
+    /**
+     * Display the user view.
+     */
+    function user()
+    {
+        echo 'Halo, selamat datang di halaman user';
+        echo '<h1>'. Auth::user()->name .'</h1>';
+        echo '<a href="/logout">Logout >></a>';
     }
 
     /**
      * Destroy an authenticated session.
      */
-    public function destroy(Request $request): RedirectResponse
+    public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
 
