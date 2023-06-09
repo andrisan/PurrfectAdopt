@@ -1,10 +1,9 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\SignUpController;
-use App\Http\Controllers\SesiController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(['guest'])->group(function(){
-  Route::get('/', [SesiController::class, 'index'])->name('login');
-  Route::post('/', [SesiController::class, 'login']);
+  Route::get('/', [AuthenticatedSessionController::class, 'create'])->name('login');
+  Route::post('/', [AuthenticatedSessionController::class, 'store']);
 
   Route::get('/signup', [SignUpController::class, 'showRegistrationForm'])->name('signup');
   Route::post('/signup', [SignUpController::class, 'signup']);
@@ -37,8 +36,8 @@ Route::get('/home', function(){
 });
 
 Route::middleware(['auth'])->group(function(){
-  Route::get('/users', [AdminController::class, 'index']);
-  Route::get('/users/admin', [AdminController::class, 'admin'])->middleware('userAccess:admin');
-  Route::get('/users/user', [AdminController::class, 'user'])->middleware('userAccess:user');
-  Route::get('/logout', [SesiController::class, 'logout']);
+  Route::get('/main', [AuthenticatedSessionController::class, 'main']);
+  Route::get('/main/admin', [AuthenticatedSessionController::class, 'admin'])->middleware('userAccess:admin');
+  Route::get('/main/user', [AuthenticatedSessionController::class, 'user'])->middleware('userAccess:user');
+  Route::get('/logout', [AuthenticatedSessionController::class, 'destroy']);
 });
