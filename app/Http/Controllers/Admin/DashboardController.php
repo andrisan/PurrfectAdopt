@@ -16,6 +16,13 @@ class DashboardController extends Controller
         return view('admin.home');
     }
 
+    public function getKucing(){
+        $kucing = Kucing::all();
+        return response()->json($kucing);
+    }
+
+
+
     /**
      * Show the form for creating a new resource.
      */
