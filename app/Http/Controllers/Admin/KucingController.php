@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class KucingController extends Controller
@@ -11,7 +12,7 @@ class KucingController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.kucing');
     }
 
     /**
