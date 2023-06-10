@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Kucing;
 
 class KucingController extends Controller
 {
@@ -15,9 +16,11 @@ class KucingController extends Controller
         return view('admin.kucing');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    public function getKucing(){
+        $kucing = Kucing::all();
+        return response()->json($kucing);
+    }
+
     public function create()
     {
         //

@@ -21,7 +21,11 @@ Route::get('/', function () {
 });
 
 Route::resource('/admin-kucing', KucingController::class);
+Route::get('getadminkucing', [KucingController::class, 'getKucing']);
+
+
 Route::resource('/admin-home', DashboardController::class);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
