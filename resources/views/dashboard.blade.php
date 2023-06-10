@@ -30,7 +30,7 @@
                 <span class="font-semibold text-lg md:text-xl">PurrfectAdopt</span>
             </a>
         </div>
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4 px-6">
             <a href="#"
                 class="inline-block text-white no-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-105 duration-300 ease-in-out">
                 Home
@@ -53,8 +53,8 @@
     </div>
 </div>
 
-
-
+<!--body-->
+<section>
 
 </body>
 </html>
