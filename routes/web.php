@@ -21,10 +21,7 @@ Route::get('/', function () {
 });
 
 Route::resource('/admin-kucing', KucingController::class);
-<<<<<<< HEAD
 Route::resource('/admin-home', DashboardController::class);
-=======
->>>>>>> 26b030cc674d54a29f00daa1063340983d8d5d8e
 
 Route::get('/dashboard', function () {
     return view('dashboard');
