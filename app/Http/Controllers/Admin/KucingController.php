@@ -61,8 +61,10 @@ class KucingController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy( $id)
     {
-        //
+        $kucing = Kucing::findOrFail($id);
+        $kucing->delete();
+        return response()->json(['pesan' => 'Deleted']);
     }
 }

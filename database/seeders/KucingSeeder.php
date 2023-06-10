@@ -26,5 +26,29 @@ class KucingSeeder extends Seeder
             'foto'          => '',
             'video'         => '',
         ]);
+        DB::table('kucings')->insert([
+            'nama'          => 'Meow2',
+            'warna'         => 'kuning',
+            'ras'           => 'mongolia',
+            'gender'        => '0',
+            'berat_badan'   => '20',
+            'tinggi_badan'  => '20',
+            'kesehatan'     => '',
+            'sikap'         => '',
+            'foto'          => '',
+            'video'         => '',
+        ]);
+        DB::table('kucings')->insert([
+            'nama'          => 'Meow3',
+            'warna'         => 'kuning',
+            'ras'           => 'mongolia',
+            'gender'        => '0',
+            'berat_badan'   => '20',
+            'tinggi_badan'  => '20',
+            'kesehatan'     => '',
+            'sikap'         => '',
+            'foto'          => '',
+            'video'         => '',
+        ]);
     }
 }
