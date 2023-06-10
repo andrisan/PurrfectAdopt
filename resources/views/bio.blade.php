@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bio dan CP</title>
-</head>
+    <link href="public/bio.css" rel="stylesheet">
 <body>
 <div>
-    <link href="bio.css" rel="stylesheet" />
     <div class="bioandcp-container">
       <div class="bioandcp-bioandcp">
         <span class="bioandcp-text"><span>Bio And Contact Person</span></span>
