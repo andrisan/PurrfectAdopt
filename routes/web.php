@@ -25,6 +25,7 @@ Route::get('getadminkucing', [KucingController::class, 'getKucing']);
 Route::get('hapuskucing/{id}', [KucingController::class, 'destroy'] )->name('hapuskucing');
 
 Route::resource('/admin-home', DashboardController::class);
+Route::get('gethomekucing', [DashboardController::class, 'getKucing']);
 
 
 Route::get('/dashboard', function () {
