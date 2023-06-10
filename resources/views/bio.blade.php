@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bio dan CP</title>
-    <link href="public/bio.css" rel="stylesheet">
+    <link href="{{ asset('bio.css') }}" rel="stylesheet">
+
 <body>
 <div>
     <div class="bioandcp-container">
@@ -26,20 +27,20 @@
         </div>
         <div class="bioandcp-frame65"></div>
         <span class="bioandcp-text06"><span>+62 8** - **** - ****</span></span>
-        <span class="bioandcp-text08"><span>@jimmy.id</span></span>
+        <span class="bioandcp-text08"><span>@jimmy.id</span></span> 
         <span class="bioandcp-text10"><span>jimmyar@gmail.com</span></span>
         <img
-          src="TELEPON.png"
+          src="{{ asset('images/TELEPON.png') }}"
           alt="IMAGE8d7ca49add3c477989d0b490041e378bremovebgprevi470"
           class="bioandcp-image8d7ca49add3c477989d0b490041e378bremovebgprevi"
         />
         <img
-          src="IMAIL.png"
+          src="{{ asset('images/IMAIL.png') }}"
           alt="dac4759725cea960ea30fcaf48ee309cremovebgpreview1471"
           class="bioandcp-dac4759725cea960ea30fcaf48ee309cremovebgpreview1"
         />
         <img
-          src="IGE.png"
+          src="{{ asset('images/IGE.png') }}"
           alt="Rectangle92472"
           class="bioandcp-rectangle92"
         />
@@ -50,7 +51,7 @@
           </span>
         </div>
         <img
-          src="ORANG.png"
+          src="{{ asset('images/ORANG.png') }}"
           alt="IMAGE2887851removebgpreview1474"
           class="bioandcp-image2887851removebgpreview1"
         />

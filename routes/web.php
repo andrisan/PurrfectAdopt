@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::view('/bio','bio');
 Route::middleware(['guest'])->group(function(){
   Route::get('/', [SesiController::class, 'index'])->name('login');
   Route::post('/', [SesiController::class, 'login']);
