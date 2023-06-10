@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\KucingController;
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/admin-home', KucingController::class);
-
-Route::get('/admin-home', [KucingController::class, 'index']);
+Route::resource('/admin-kucing', KucingController::class);
+Route::resource('/admin-home', DashboardController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
