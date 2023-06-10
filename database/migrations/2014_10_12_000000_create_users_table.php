@@ -24,7 +24,7 @@ return new class extends Migration
             $table->text('ekonomi');
             $table->text('crime_hist');
             $table->integer('kontak');
-
+            $table->boolean('status');//ini admin atau user
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
