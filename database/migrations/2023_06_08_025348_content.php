@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contents', function (Blueprint $table) {
+        Schema::create('contens', function (Blueprint $table) {
             $table->id();
             $table->string('judul',50);
             $table->string('nama', 50);
@@ -19,8 +19,9 @@ return new class extends Migration
             $table->binary('galery');
             $table->timestamps();
         });
-        
-
+        /**
+        * Diatas merupakan kode penambahan migrasi tabel konten
+        */
     }
 
     /**
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('contents');
+        Schema::dropIfExists('contens');
     }
 };
