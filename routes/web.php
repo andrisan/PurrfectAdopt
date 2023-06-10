@@ -22,6 +22,10 @@ Route::middleware(['guest'])->group(function(){
     return view('welcome');
   })->name('welcome');
 
+  Route::get('/dashboard', function(){
+    return view('dashboard');
+  })->name('dashborad');
+
 
   Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
   Route::post('/login', [AuthenticatedSessionController::class, 'store']);
