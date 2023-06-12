@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Kucing;
 
-class DashboardController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,15 +12,7 @@ class DashboardController extends Controller
     public function index()
     {
         //
-        return view('admin.home');
     }
-
-    public function getKucing(){
-        $kucing = Kucing::all();
-        return response()->json($kucing);
-    }
-
-
 
     /**
      * Show the form for creating a new resource.
