@@ -11,17 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contens', function (Blueprint $table) {
+        Schema::create('Adopsi', function (Blueprint $table) {
             $table->id();
-            $table->string('judul',50);
-            $table->string('nama', 50);
-            $table->text('isi');
-            $table->binary('galery');
-            $table->timestamps();
+            $table->integer('JUMLAH');
+            $table->string('TEMPAT');
+            $table->boolean('STATUS_PEMBAYARAN')->nullable();
+            $table->string('METODE')->nullable();
+            $table->text('LOKASI_PU')->nullable();
+            $table->timestamp('TGL_ADOPSI');
+
         });
-        /**
-        * Diatas merupakan kode penambahan migrasi tabel konten
-        */
     }
 
     /**
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('contens');
+        Schema::dropIfExists('Adopsi');
     }
 };
