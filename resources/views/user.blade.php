@@ -46,7 +46,7 @@
                     <th scope="col"
                       class="px-20 py-3 text-center text-xs font-medium uppercase tracking-wider">
                       Data Kucing
-                    </th>
+                     </th>
                     <th scope="col"
                       class="px-5 py-3 text-center text-xs font-medium uppercase tracking-wider">
                       Aksi
@@ -76,6 +76,7 @@
                   </tr>
 
                   <!-- More people... -->
+                  <!-- dogmfdkgfdg -->
                 </tbody>
               </table>
             </div>
