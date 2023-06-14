@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -142,16 +141,6 @@ td.image-cell img {
     }
 </style>
   </head>
-
-<body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purrfect Adopt</title>
-    <link rel="stylesheet" href="style-kucing.css">
-</head>
 <body>
 <header>
     <div class="logo">Logo</div>
