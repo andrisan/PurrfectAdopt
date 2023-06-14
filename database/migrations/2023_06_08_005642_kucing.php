@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text('sikap')->nullable();
             $table->binary('foto')->nullable();
             $table->binary('video')->nullable();
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }
