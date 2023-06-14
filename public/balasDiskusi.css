@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins.ttf") format("truetype");
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.kotak {
+  width: 1196px;
+  height: 158px;
+  left: 121px;
+  top: 81px;
+  border-radius: 25px;
+  background-color: #ffd95a;
+  margin-top: 50px;
+}
+
+.kotak2 {
+  width: 1090px;
+  height: 186px;
+  left: 248px;
+  top: 481px;
+  border-radius: 25px;
+  background-color: #ffd95a;
+  margin-top: 50px;
+}
+
+.kotak3 {
+  width: 951px;
+  height: 75px;
+  left: 245px;
+  top: 269px;
+  border-radius: 25px;
+  background-color: #ffd95a;
+  margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+  .icon {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
