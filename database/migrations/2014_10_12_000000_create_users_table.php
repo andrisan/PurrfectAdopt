@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-
+            $table->enum('role', ['admin', 'user'])->default('user');
             $table->boolean('gender');
             $table->string('profesi', 50);
             $table->text('alamat');
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->text('ekonomi');
             $table->text('crime_hist');
             $table->integer('kontak');
-
+            $table->boolean('status');//ini admin atau user
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
