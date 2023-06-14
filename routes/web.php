@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\KucingController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,8 @@ Route::get('hapuskucing/{id}', [KucingController::class, 'destroy'] )->name('hap
 
 Route::resource('/admin-home', DashboardController::class);
 
+Route::resource('/admin-user', UserController::class);
+Route::get('getadminuser', [UserController::class, 'getUser']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
