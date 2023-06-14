@@ -18,9 +18,6 @@ class UserController extends Controller
     }
 
     public function getUser(){
-        $kucing = User::all();
-        return response()->json($kucing);
-
         $user = User::all();
         return response()->json($user);
     }

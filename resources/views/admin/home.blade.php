@@ -81,7 +81,7 @@ strong {
 */
 
   /* 1 */
-  font-size: 1em;
+  /* font-size: 1em; */
   /* 2 */
 
 small {
@@ -420,7 +420,7 @@ body {
   }
 .bg-kotak{
   --tw-bg-opacity: 1;
-  background-color: #FFD95A; 
+  background-color: #FFD95A;
 }
     </style>
 
@@ -435,10 +435,10 @@ body {
           <p class="text-gray-400 p-1">30th October 2020 | 1st November 2020</p>
         </div>
         <!-- Counter -->
-        <div class="bg-blue-50 min-h-screen px-20"> 
+        <div class="bg-blue-50 min-h-screen px-20">
           <!-- px-20 untuk ngatur padding kiri dan kanan -->
           <div class="flex flex-wrap mt-8 grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10 rounded-md bg-kotak">
-            
+
             <!--Grid starts here-->
               <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
                 <div>
@@ -450,12 +450,12 @@ body {
                 <div class="text-pink-500">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-10" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd"
-                      
+
                       clip-rule="evenodd" />
                   </svg>
                 </div>
               </div>
-  
+
               <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
                 <div>
                   <div class="text-sm text-gray-400 ">User</div>
@@ -466,12 +466,12 @@ body {
                 <div class="text-pink-500">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd"
-                      
+
                       clip-rule="evenodd" />
                   </svg>
                 </div>
               </div>
-  
+
               <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
                 <div>
                   <div class="text-sm text-gray-400 ">Artikel</div>
@@ -496,7 +496,7 @@ body {
               <canvas class="p-5" id="chartLine"></canvas>
 
           </div>
-        </div> 
+        </div>
         <!-- Counter -->
       </div>
     </div>
@@ -611,7 +611,7 @@ body {
         }
 
         getKucing();
-        
+
         function getContent() {
             const url = 'http://127.0.0.1:8000/gethomecontent';
 
