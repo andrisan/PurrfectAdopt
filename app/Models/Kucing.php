@@ -12,4 +12,10 @@ class Kucing extends Model
     protected $fillable = [
         'nama', 'warna', 'ras', 'gender', 'berat_badan', 'tinggi_badan',
         'kesehatan', 'sikap', 'foto', 'video'];
+
+    // Relasi dengan pemilik kucing
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'owner_id');
+    }
 }
