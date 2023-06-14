@@ -8,7 +8,7 @@
 body{
   margin: 0;
   padding: 0;
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
 } 
 
 header {
@@ -21,8 +21,8 @@ header {
     }
     
     .logo {
-      font-size: 24px;
-      font-weight: bold;
+      margin-left: 2%;
+      width: 70%;
     }
     
     nav ul {
@@ -40,7 +40,15 @@ header {
     nav ul li a {
       color: #fff;
       text-decoration: none;
-/*       margin-left: 100px; */
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+    width: 20px;
+    height: 40px;
+    background: white;
+    border-radius: 5px;
+    color: #C07F00;
     }
     
     .profile {
@@ -127,23 +135,37 @@ td.image-cell img {
       text-align: center;
     }
     
-    .right-section {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-    
-    .social-media img {
-      width: 20px;
-      height: 20px;
-      margin-left: 10px;
-    }
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 5%;
+}
+
+  .right-section span{
+    margin-right: 7%;
+  }
+
+.social-media {
+  margin-top: 10px;
+  margin-left: 40%;
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  /* margin-right: 10%; */
+}
+
 </style>
   </head>
 <body>
+  
 <header>
-    <div class="logo">Logo</div>
+    <div class="logo2"><a href="#"><img class="logo" src="{{ asset('/img/logo.png') }}" alt="Logo"></div></a>
     <nav>
       <ul>
         <li><a href="#">Beranda</a></li>
@@ -152,11 +174,11 @@ td.image-cell img {
         <li><a href="#">Artikel</a></li>
       </ul>
     </nav>
-    <div class="profile">
-      <img src="profile-image.jpg" alt="Profil">
+    <div class="profile"><a href="#">
+      <img src="{{ asset('/img/profile.png') }}" alt="Profil"></a>
       <span>Profil</span>
     </div>
-  </header>
+</header>
   
     <div class="container">
         <div class="table-wrapper">
@@ -185,7 +207,7 @@ td.image-cell img {
        <td>1 kg</td>
        <td>5 cm</td>
        <td>sudah adopsi</td>
-       <td class="image-cell"><img src="image/btn-delete.png"></td>
+       <td class="image-cell"><img src="{{ asset('/img/btn-delete.png') }}" alt="">
        </tr>
        <tr>
        <td>2</td>
@@ -197,7 +219,7 @@ td.image-cell img {
        <td>1 kg</td>
        <td>5 cm</td>
        <td>sudah adopsi</td>
-       <td class="image-cell"><img src="image/btn-delete.png"></td>
+       <td class="image-cell"><img src="{{ asset('/img/btn-delete.png') }}"></td>
        </tr>
            <tr>
        <td>3</td>
@@ -209,7 +231,11 @@ td.image-cell img {
        <td>1 kg</td>
        <td>5 cm</td>
        <td>sudah adopsi</td>
-       <td class="image-cell"><img src="image/btn-delete.png"></td>
+       <td class="button">
+        <a href="#">
+        <button>Del</button>
+        </a>
+       </td>
        </tr>
             <tr>
        <td>4</td>
@@ -275,11 +301,11 @@ td.image-cell img {
       Jalan Veteran Malang
     </div>
     <div class="right-section">
-      <span>Contact Us:</span>
+      <span><b>Contact Us</b></span>
       <div class="social-media">
-        <a href="#"><img src="facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="{{ asset('/img/facebook.png') }}" alt="Facebook"></a>
+        <a href="#"><img src="{{ asset('/img/whatsapp.png') }}" alt="WhatsApp"></a>
+        <a href="#"><img src="{{ asset('/img/ig.png') }}" alt="Instagram"></a>
       </div>
     </div>
   </footer>
