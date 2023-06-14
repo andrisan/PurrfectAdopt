@@ -17,9 +17,22 @@ class DashboardController extends Controller
         return view('admin.home');
     }
 
+    public function getAdmin(){
+        $admin = Admin::all();
+        $totalRows = count($admin);
+        return $totalRows;
+    }
+    
     public function getKucing(){
         $kucing = Kucing::all();
-        return response()->json($kucing);
+        $totalRows = count($kucing);
+        return $totalRows;
+    }
+
+    public function getKonten(){
+        $konten = Konten::all();
+        $totalRows = count($konten);
+        return $totalRows;
     }
 
 
