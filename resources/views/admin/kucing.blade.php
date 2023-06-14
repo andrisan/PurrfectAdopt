@@ -26,7 +26,7 @@
             </tr>
         </thead>
         <tbody>
-
+            
         </tbody>
     </table>
   </div>
@@ -65,7 +65,7 @@
                                         <td> ${el.gender} </td>
                                         <td>${el.berat_badan}</td>
                                         <td> ${el.tinggi_badan}</td>
-                                        <td>${el.status}</td>
+                                        <td>${el.status ? 'Teradopsi' : 'Belum diadopsi'}</td>
                                         <td>
                                         <button id="btndelete" class="btn btn-danger">Hapus</button></td>
                                     </tr>
