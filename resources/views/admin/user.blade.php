@@ -79,7 +79,7 @@
     <div class="p-10"></div>
     <div class="grid p-10 place-items-center">
             <div class="p-5 bg-light rounded shadow">
-              <table class="text-center text-white">
+              <table class="text-center text-white" id="tbluser">
                 <thead class="bg-primary rounded shadow">
                   <tr>
                     <th scope="col"
@@ -104,30 +104,6 @@
                     </th>
                   </tr>
                 </thead>
-                <tbody class="bg-light divide-y divide-gray-200">
-                  <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      
-                    </td>
-
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm">
-                      
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <button class="btn-primary">
-
-                      </button>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      
-                    </td>
-                  </tr>
-
-                  <!-- More people... -->
-                </tbody>
               </table>
             </div>
           </div>
