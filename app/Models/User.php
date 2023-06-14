@@ -21,7 +21,7 @@ class User extends Model
     protected $table = 'users';
      protected $fillable = [
         'name', 'email', 'password', 'gender', 'profesi', 'alamat', 
-        'usia','ekonomi', 'crime_hist', 'kontak'];
+        'usia','ekonomi', 'crime_hist', 'kontak', 'status'];
 
     /**
      * The attributes that should be hidden for serialization.
