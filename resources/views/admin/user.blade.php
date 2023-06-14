@@ -5,53 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda Admin</title>
 
+    <!--Icon Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
+      body{
+        margin: 0;
+        padding: 0;
+        font-family: Poppins;
+        background-color: #FFF7D4;
+      }
+
+      header {
+        background-color: #C07F00;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        width: 30px;
+        height: 30px;
+      }
+
+      nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      margin-left: 110%;
+      }
+
+      nav ul li {
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+  /*       margin-left: 100px; */
+      }
+
+      .profile {
+      display: flex;
+      align-items: center;
+      }
+
+      .profile img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
 
       .text-white {
         --tw-text-opacity: 1;
         color: rgba(255, 255, 255, var(--tw-text-opacity));
       }
 
-      .text-center {
-        text-align: center;
+      .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 60vh;
       }
 
-      .font-medium {
-        font-weight: 500;
+      .table-wrapper {
+          width: 90%;
+      /*     margin: 0 auto; */
+
+          margin-left: 5%;
+          margin-right: 5%;
+          border-radius: 5px;
+          padding: 20px;
+          background: #FFD95A;
       }
 
-      .grid {
-        display: grid;
+      .tableuser {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 10px;
+          margin-bottom: 10px;
+      /*     background: red; */
       }
 
-      .p-5 {
-        padding: 1.25rem;
+      .tableuser, th, td {
+          border: 1px solid black;
+          padding: 10px;
       }
 
-      .p-10 {
-        padding: 2.5rem;
-      }
+      footer {
+      background-color: #C07F00;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 150px;
+    }
 
-      .px-10 {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-      }
-      .px-24 {
-        padding-left: 6rem;
-        padding-right: 6rem;
-      }
+    .left-section {
+      flex: 1;
+    }
 
-      .py-3 {
-        padding-top: 0.75rem;
-        padding-bottom: 0.75rem;
-      }
+    .left-section h3 {
+      margin: 0;
+      font-size: 18px;
+    }
 
-      .place-items-center {
-        place-items: center;
-      }
+    .left-section p {
+      margin: 5px 0;
+    }
 
-      .yellow-bg {
-        background-color: #FFF7D4;
+    .center-section {
+      flex: 1;
+      text-align: center;
+    }
+
+    .right-section {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .social-media img {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+    }
+
+      thead {
+          background-color: #C07F00;
       }
 
       .bg-light{
@@ -62,8 +149,8 @@
         background-color: #C07F00;
       }
 
-      .roundedd {
-        border-radius: 1.5rem;
+      .rounded {
+        border-radius: 1rem;
       }
 
       .shadow {
@@ -73,51 +160,68 @@
 
     </style>
 </head>
+
 <body style="font-family: Poppins;" class="yellow-bg">
+  <header>
+  <img src="../../../public/img/logoo.png" alt="logo">
+      <nav>
+        <ul>
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#">Kucing</a></li>
+          <li><a href="#">User</a></li>
+          <li><a href="#">Artikel</a></li>
+        </ul>
+      </nav>
+      <div class="profile">
+        <img src="../../../public/img/profil.jfif" alt="Profil">
+        <span>Profil</span>
+      </div>
+  </header>
 
     <!--Table-->
-    <div class="p-10"></div>
-        <div class="grid p-10 place-items-center">
-            <div class="p-5 bg-light rounded shadow">
-                <table class="text-center text-white" id="tbluser">
-                    <thead class="bg-primary rounded shadow">
-                        <tr>
-                            <th scope="col"
-                            class="px-10 py-3 font-medium">
-                            No
-                            </th>
-                            <th scope="col"
-                            class="px-10 py-3 font-medium">
-                            ID User
-                            </th>
-                            <th scope="col"
-                            class="px-24 py-3 font-medium">
-                            Name
-                            </th>
-                            <th scope="col"
-                            class="px-24 py-3 font-medium">
-                            Email
-                            </th>
-                            <th scope="col"
-                            class="px-24 py-3 font-medium">
-                            Jenis Kelamin
-                            </th>
-                            <th scope="col"
-                            class="px-24 py-3 font-medium">
-                            Status
-                            </th>
-                            <th scope="col"
-                            class="px-24 py-3 font-medium">
-                            Aksi
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-            </div>
+    <div class="container">
+        <div class="table-wrapper shadow rounded">
+            <table class="tableuser" id="tbluser">
+                <thead class="shadow">
+                  <tr>
+                    <td><b>No</b></td>
+                    <td><b>ID User</b></td>
+                    <td><b>Name</b></td>
+                    <td><b>Email</b></td>
+                    <td><b>Jenis Kelamin</b></td>
+                    <td><b>Status</b></td>
+                    <td><b>Aksi</b></td> 
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
         </div>
     </div>
+  <!--End Table-->
+
+  <!--Footer-->
+  <footer>
+    <div class="left-section">
+      <h3>Purrfect Adopt</h3>
+      <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
+    </div>
+    <div class="center-section">
+      <h3> Alamat Kami </h3>
+      Jalan Veteran Malang
+    </div>
+    <div class="right-section">
+      <span>Contact Us: </span>
+      <div class="social-media">
+        <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!--End Footer-->
+
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
