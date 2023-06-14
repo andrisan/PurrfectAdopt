@@ -16,26 +16,12 @@ class DashboardController extends Controller
         //
         return view('admin.home');
     }
-
-    public function getAdmin(){
-        $admin = Admin::all();
-        $totalRows = count($admin);
-        return $totalRows;
-    }
-    
+ 
     public function getKucing(){
         $kucing = Kucing::all();
         $totalRows = count($kucing);
         return $totalRows;
     }
-
-    public function getKonten(){
-        $konten = Konten::all();
-        $totalRows = count($konten);
-        return $totalRows;
-    }
-
-
 
     /**
      * Show the form for creating a new resource.
