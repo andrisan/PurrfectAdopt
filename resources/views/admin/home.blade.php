@@ -442,9 +442,9 @@ body {
             <!--Grid starts here-->
               <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
                 <div>
-                  <div id="hitungkucing" class="text-sm text-gray-400 ">Kucing</div>
+                  <div  class="text-sm text-gray-400 ">Kucing</div>
                   <div class="flex items-center pt-1">
-                    <div class="text-3xl font-medium text-gray-600 ">34</div>
+                    <div id="hitungkucing" class="text-3xl font-medium text-gray-600 "></div>
                   </div>
                 </div>
                 <div class="text-pink-500">
@@ -460,7 +460,7 @@ body {
                 <div>
                   <div class="text-sm text-gray-400 ">User</div>
                   <div class="flex items-center pt-1">
-                    <div id="hitunguser" class="text-3xl font-medium text-gray-600 ">44</div>
+                    <div id="hitunguser" class="text-3xl font-medium text-gray-600 "></div>
                   </div>
                 </div>
                 <div class="text-pink-500">
@@ -476,7 +476,7 @@ body {
                 <div>
                   <div class="text-sm text-gray-400 ">Artikel</div>
                   <div class="flex items-center pt-1">
-                    <div id="hitungartikel" class="text-3xl font-medium text-gray-600 ">45</div>
+                    <div id="hitungartikel" class="text-3xl font-medium text-gray-600 "></div>
                   </div>
                 </div>
                 <div class="text-pink-500">
@@ -576,6 +576,84 @@ body {
       document.getElementById("chartRadar"),
       configRadarChart
     );
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+        let isi = '';
+
+        // $.ajaxSetup({
+        //     headers: {
+        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('kucing')
+        //     }
+        // });
+
+        function getKucing() {
+            const url = 'http://127.0.0.1:8000/gethomekucing';
+
+            $.ajax({
+                type:"GET",
+                url:url,
+                dataType:"JSON",
+                success:
+                function (response) {
+                            isi = '';
+                                isi += `
+                                    <p>${response}</p>
+                                `;
+                             $('#hitungkucing').append(isi);
+                        }
+                        // tblkucing diganti ID Div
+            });
+        }
+
+        getKucing();
+        
+        function getContent() {
+            const url = 'http://127.0.0.1:8000/gethomecontent';
+
+            $.ajax({
+                type:"GET",
+                url:url,
+                dataType:"JSON",
+                success:
+                function (response) {
+                            isi = '';
+                                isi += `
+                                    <p>${response}</p>
+                                `;
+                             $('#hitungartikel').append(isi);
+                        }
+                        // tblkucing diganti ID Div
+            });
+        }
+
+        getContent();
+
+        function getUser() {
+            const url = 'http://127.0.0.1:8000/gethomeuser';
+
+            $.ajax({
+                type:"GET",
+                url:url,
+                dataType:"JSON",
+                success:
+                function (response) {
+                            isi = '';
+                                isi += `
+                                    <p>${response}</p>
+                                `;
+                             $('#hitunguser').append(isi);
+                        }
+                        // tblkucing diganti ID Div
+            });
+        }
+
+        getUser();
+    })
   </script>
 
 </body>
