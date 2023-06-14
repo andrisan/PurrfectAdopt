@@ -28,6 +28,7 @@ Route::resource('/admin-home', DashboardController::class);
 Route::get('gethomekucing', [DashboardController::class, 'getKucing']);
 
 
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
