@@ -6,6 +6,7 @@ use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\SesiController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-  Route::view('/bio','bio');
+Route::get('/bio', [BioController::class, 'index'])->name('bio');
+Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
+
   Route::view('/testidistributor','testidistributor');
   Route::middleware(['guest'])->group(function(){
   Route::get('/', [SesiController::class, 'index'])->name('login');
