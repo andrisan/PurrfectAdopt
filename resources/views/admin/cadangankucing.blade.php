@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>Purrfect Adopt</title>
-
-</head>
-<body name="kucing">
-  <div>
-    <table id="tblkucing" border="1px solid black">
-        <thead>
-            <tr>
-                <td>No</td>
-                <td>ID</td>
-                <td>Nama</td>
-                <td>Warna</td>
-                <td>Ras</td>
-                <td>Gender</td>
-                <td>Berat Badan</td>
-                <td>Tinggi Badan</td>
-                <td>Status</td>
-                <td >Aksi</td>
-            </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-    </table>
-  </div>
-  
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   <script type="text/javascript">
@@ -100,5 +67,3 @@
         getKucing();
     })
   </script>
-</body>
-</html>
