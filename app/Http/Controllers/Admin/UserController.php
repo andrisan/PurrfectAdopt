@@ -12,13 +12,22 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+
+
         return view('admin.user');
     }
 
     public function getUser(){
         $kucing = User::all();
         return response()->json($kucing);
+
+        $user = User::all();
+        return response()->json($user);
+    }
+    public function create()
+    {
+        //
+
     }
 
     /**

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Kucing;
+use App\Models\Content;
 
 class DashboardController extends Controller
 {
@@ -15,13 +17,18 @@ class DashboardController extends Controller
         //
         return view('admin.home');
     }
-
+ 
     public function getKucing(){
         $kucing = Kucing::all();
-        return response()->json($kucing);
+        $totalRows = count($kucing);
+        return $totalRows;
     }
 
-
+    public function getContent(){
+        $content = Content::all();
+        $totalRows = count($content);
+        return $totalRows;
+    }
 
     /**
      * Show the form for creating a new resource.
