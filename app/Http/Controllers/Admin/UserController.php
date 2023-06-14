@@ -4,35 +4,22 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Kucing;
-use App\Models\Content;
+use App\Models\User;
 
-class DashboardController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
-        return view('admin.home');
-    }
- 
-    public function getKucing(){
-        $kucing = Kucing::all();
-        $totalRows = count($kucing);
-        return $totalRows;
+        return view('admin.user');
     }
 
-    public function getContent(){
-        $content = Content::all();
-        $totalRows = count($content);
-        return $totalRows;
+    public function getUser(){
+        $user = User::all();
+        return response()->json($user);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         //
