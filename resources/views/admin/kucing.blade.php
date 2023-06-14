@@ -235,7 +235,7 @@ td.image-cell img {
                                         <td> ${el.nama} </td>
                                         <td>${el.warna}</td>
                                         <td> ${el.ras} </td>
-                                        <td> ${el.gender} </td>
+                                        <td> ${el.gender ? 'Laki-laki' : 'Perempuan'} </td>
                                         <td>${el.berat_badan}</td>
                                         <td> ${el.tinggi_badan}</td>
                                         <td>${el.status ? 'Teradopsi' : 'Belum diadopsi'}</td>
