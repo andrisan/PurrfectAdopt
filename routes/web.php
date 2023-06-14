@@ -38,6 +38,7 @@ Route::get('gethomeuser', [DashboardController::class, 'getUser']);
 
 Route::resource('/admin-user', UserController::class);
 Route::get('getadminuser', [UserController::class, 'getUser']);
+Route::get('hapususer/{id}', [UserController::class, 'destroy'] )->name('hapususer');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

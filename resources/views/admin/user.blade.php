@@ -149,8 +149,8 @@
                                             <th class="nr" opacity="0">${el.id}</th>
                                             <th> ${el.name} </th>
                                             <th>${el.email}</th>
-                                            <th> ${el.gender} </th>
-                                            <th> ${el.status ? 'User' : 'Admin'}</th>
+                                            <th> ${el.gender ? 'Laki-laki' : 'Perempuan'} </th>
+                                            <th> ${el.status ? 'Admin' : 'User'}</th>
                                             <th>
                                             <button id="btndelete" class="btn btn-danger">Hapus</button></th>
                                         </tr>
