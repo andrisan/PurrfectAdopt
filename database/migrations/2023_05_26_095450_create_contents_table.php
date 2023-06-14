@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('judul',50);
             $table->string('nama', 50);
             $table->text('isi');
-            $table->binary('galery');
+            $table->binary('galery')->nullable();
             $table->timestamps();
         });
         
