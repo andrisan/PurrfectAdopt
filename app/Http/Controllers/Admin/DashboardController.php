@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Kucing;
+use App\Models\Content;
 
 class DashboardController extends Controller
 {
@@ -20,6 +21,12 @@ class DashboardController extends Controller
     public function getKucing(){
         $kucing = Kucing::all();
         $totalRows = count($kucing);
+        return $totalRows;
+    }
+
+    public function getContent(){
+        $content = Content::all();
+        $totalRows = count($content);
         return $totalRows;
     }
 
