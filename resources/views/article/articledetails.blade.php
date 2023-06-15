@@ -54,3 +54,30 @@
         </svg>
     </div>
 <!-- sidebar end -->
+<!-- content -->
+<div class="col-span-2 bg-white flex flex-col justify-start p-6">
+        <a href="#" class="text-black-700 text-sm font-bold uppercase pb-4 text-center">Symptoms of Cat Illness</a>
+        <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4 text-center">Treating Cat Fever</a>
+        <a href="#" class="pb-6">Just like humans, cats can also experience fever. However, cat fever has distinct characteristics. For those who have recently acquired a cat, it is important to pay attention to various aspects of cat fever so that you know how to treat a cat with fever in the future.</a>
+        <a href="#" class="text-black-700 text-sm font-bold uppercase pb-4">Causes of Cat Fever</a>
+        <a href="#" class="pb-6">The most common cause of cat fever is usually due to infections that enter through the mouth, nose, eyes, or throat. Cat fever typically occurs as a body's response to fight off the infection attacking the body.</a>
+        <a href=""></a>
+        <a href="#" class="pb-6">Apart from these seasonal factors, cat fever can also be an indication of a serious underlying illness. Therefore, it is important to pay attention to its condition and promptly seek medical attention to receive appropriate treatment.</a>
+        <a href="#" class="text-black-700 text-sm font-bold uppercase pb-4">Signs of Cat Fever</a>
+        <a href="#" class="pb-6">Signs that may indicate cat fever include a loss of appetite and decreased water intake that lasts for more than 24 hours. When a cat loses its appetite, its body becomes weaker and lacks energy.</a>
+        <a href=""></a>
+        <a href="#" class="pb-6">To truly confirm that a cat has a fever, you can perform a rectal temperature check using a thermometer. If the body temperature reads 39.3 degrees Celsius or higher, it is advisable to consult a veterinarian immediately.</a>
+        <a href="#" class="text-black-700 text-sm font-bold uppercase pb-4">Treating Cat Fever</a>
+        <a href="#" class="pb-6">When you observe the signs of cat fever, the next step is to seek veterinary care. The veterinarian will conduct an examination and provide appropriate treatment for your cat based on its specific needs and health condition. Typically, when a cat has a fever, the veterinarian will administer medication to reduce the fever, often in the form of liquid medication.</a>
+        <a href="#" class="text-black-700 text-sm font-bold uppercase pb-4">First Aid for Cat Fever</a>
+        <a href="#" class="pb-6">If you find yourself in a situation where you cannot immediately see a veterinarian, you can administer some first aid measures to help treat your cat's fever. Here are some steps you can take:</a>
+        <a href="#" class="pb-6">
+            <li>Place the cat in a cool, dark area with a cool floor. Cats lower their body temperature through their oil glands and sweat. By providing contact with a cool floor, their body temperature will gradually decrease.</li>
+            <li>Use a fan to help lower the room temperature and gradually reduce their body temperature.</li>
+            <li>Once possible, take your cat to the veterinarian for a thorough examination, especially to rule out any serious underlying conditions that require prompt medical attention.</li>
+        </a>
+        <a href=""></a>
+        <a href="#" class="pb-6">Well, that's a brief explanation about cat fever and how to treat it. Make sure to always pay attention to the health condition of your beloved cat and provide them with nutritious food. For cats with sensitive digestion, you can give them</a>
+    </div>
+  </div>
+  <!-- content -->
