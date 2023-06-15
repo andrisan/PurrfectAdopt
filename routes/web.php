@@ -18,9 +18,8 @@ use App\Http\Controllers\BioController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/bio', [BioController::class, 'index'])->name('bio');
-Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
 
+Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
   Route::view('/testidistributor','testidistributor');
   Route::middleware(['guest'])->group(function(){
   Route::get('/', [SesiController::class, 'index'])->name('login');
