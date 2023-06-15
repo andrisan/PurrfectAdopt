@@ -3,7 +3,7 @@
 
 <head>
     <title>Testimoni 2</title>
-    <link rel="stylesheet" href="css/testi.css">
+    <link rel="stylesheet" href="{{ asset('testimonipet.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
