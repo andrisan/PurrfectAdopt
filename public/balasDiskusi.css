@@ -19,7 +19,7 @@ body {
 
 .kotak2 {
   width: 1090px;
-  height: 186px;
+  height: 770px;
   left: 248px;
   top: 481px;
   border-radius: 25px;
@@ -27,14 +27,18 @@ body {
   margin-top: 50px;
 }
 
-.kotak3 {
-  width: 951px;
-  height: 75px;
-  left: 245px;
-  top: 269px;
-  border-radius: 25px;
-  background-color: #ffd95a;
-  margin-top: 50px;
+.teks-tengah {
+  text-align: center;
+}
+
+.tab-kanan {
+  text-indent: -2em;
+  padding-left: 2em;
+}
+
+.rata-kanan-kiri {
+  text-align: justify;
+  text-indent: 3em;
 }
 
 @media (max-width: 600px) {
