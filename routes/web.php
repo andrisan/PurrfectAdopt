@@ -19,8 +19,9 @@ use App\Http\Controllers\BioController;
 |
 */
 
-Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
+  Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
   Route::view('/testi','testi');
+  Route::view('/bio','bio');
   Route::view('/balasDiskusi','balasDiskusi');
   Route::view('/diskusi','diskusi');
   Route::view('/setting2','setting2');
