@@ -8,13 +8,8 @@
 body{
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
   font-family: 'Poppins', sans-serif;
 } 
-=======
-  font-family: Poppins;
-}
->>>>>>> df7de539c25eb654374c35e0ff44c728f793b0d7
 
 header {
       background-color: #C07F00;
@@ -72,7 +67,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 30vh;
 }
 
 .table-wrapper {
@@ -113,13 +108,16 @@ td.image-cell img {
 }
 
     footer {
-      background-color: #C07F00;
-      color: #fff;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 150px;
+        background-color: #C07F00;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        align-items: center;
+        bottom: 0;
+        width: 100%;
+
     }
 
     .left-section {
@@ -139,7 +137,6 @@ td.image-cell img {
       flex: 1;
       text-align: center;
     }
-<<<<<<< HEAD
     
   .right-section {
     flex: 1;
@@ -166,8 +163,6 @@ td.image-cell img {
   /* margin-right: 10%; */
 }
 
-=======
-
     .right-section {
       flex: 1;
       display: flex;
@@ -183,139 +178,42 @@ td.image-cell img {
     .btn-red {
         @apply bg-blue-500 text-white;
     }
->>>>>>> df7de539c25eb654374c35e0ff44c728f793b0d7
+
+    .rounded {
+        border-radius: 1rem;
+      }
+
 </style>
-  </head>
+</head>
 <body>
-  
-<header>
-    <div class="logo2"><a href="#"><img class="logo" src="{{ asset('/img/logo.png') }}" alt="Logo"></div></a>
-    <nav>
-      <ul>
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Kucing</a></li>
-        <li><a href="#">User</a></li>
-        <li><a href="#">Artikel</a></li>
-      </ul>
-    </nav>
-    <div class="profile"><a href="#">
-      <img src="{{ asset('/img/profile.png') }}" alt="Profil"></a>
-      <span>Profil</span>
+    <header>
+        <div class="flex">
+                Logo
+        </div>
+            <nav>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Kucing</a></li>
+                <li><a href="#">User</a></li>
+                <li><a href="#">Artikel</a></li>
+            </ul>
+            </nav>
+        <div class="profile">
+            <img src="profile-image.jpg" alt="Profil">
+            <span>Profil</span>
+        </div>
+    </header>
+
+    <div class="col-md-12">
+        <div style="margin-left: 90px;">
+            <p style="font-size: 25px; font-weight:600">Data kucing yang tersedia</p>
+        </div>
     </div>
-<<<<<<< HEAD
-</header>
-  
-    <div class="container">
-        <div class="table-wrapper">
-            <table class="tablekucing" id="tblkucing">
-    <thead>
-     <tr>
-    <td><b>No</b></td>
-    <td><b>ID</b></td>
-    <td><b>Nama</b></td>
-    <td><b>Warna</b></td>
-    <td><b>Ras</b></td>
-    <td><b>Gender</b></td>
-    <td><b>Berat Badan</b></td>
-    <td><b>Tinggi Badan</b</td>
-    <td><b>Status</b></td>
-    <td><b>Aksi</b></td>      </tr>
-     </thead>
-   <tbody>
-      <tr>
-       <td>1</td>
-       <td>234</td>
-       <td>Fian</td>
-       <td>Putih</td>
-       <td>BSH</td>
-       <td>Jantan</td>
-       <td>1 kg</td>
-       <td>5 cm</td>
-       <td>sudah adopsi</td>
-       <td class="image-cell"><img src="{{ asset('/img/btn-delete.png') }}" alt="">
-       </tr>
-       <tr>
-       <td>2</td>
-       <td>234</td>
-       <td>Fian</td>
-       <td>Putih</td>
-       <td>BSH</td>
-       <td>Jantan</td>
-       <td>1 kg</td>
-       <td>5 cm</td>
-       <td>sudah adopsi</td>
-       <td class="image-cell"><img src="{{ asset('/img/btn-delete.png') }}"></td>
-       </tr>
-           <tr>
-       <td>3</td>
-       <td>234</td>
-       <td>Fian</td>
-       <td>Putih</td>
-       <td>BSH</td>
-       <td>Jantan</td>
-       <td>1 kg</td>
-       <td>5 cm</td>
-       <td>sudah adopsi</td>
-       <td class="button">
-        <a href="#">
-        <button>Del</button>
-        </a>
-       </td>
-       </tr>
-            <tr>
-       <td>4</td>
-       <td>234</td>
-       <td>Fian</td>
-       <td>Putih</td>
-       <td>BSH</td>
-       <td>Jantan</td>
-       <td>1 kg</td>
-       <td>5 cm</td>
-       <td>sudah adopsi</td>
-       <td class="image-cell"><img src="image/btn-delete.png"></td>
-       </tr>
-       <tr>
-       <td>5</td>
-       <td>234</td>
-       <td>Fian</td>
-       <td>Putih</td>
-       <td>BSH</td>
-       <td>Jantan</td>
-       <td>1 kg</td>
-       <td>5 cm</td>
-       <td>sudah adopsi</td>
-       <td class="image-cell"><img src="image/btn-delete.png"></td>
-       </tr>
-       <tr>
-       <td>6</td>
-       <td>234</td>
-       <td>Fian</td>
-       <td>Putih</td>
-       <td>BSH</td>
-       <td>Jantan</td>
-       <td>1 kg</td>
-       <td>5 cm</td>
-       <td>sudah adopsi</td>
-       <td class="image-cell"><img src="image/btn-delete.png"></td>
-       </tr>
-       <tr>
-       <td>7</td>
-       <td>234</td>
-       <td>Fian</td>
-       <td>Putih</td>
-       <td>BSH</td>
-       <td>Jantan</td>
-       <td>1 kg</td>
-       <td>5 cm</td>
-       <td>sudah adopsi</td>
-       <td class="image-cell"><img src="image/btn-delete.png"></td>
-       </tr>
-=======
-  </header>
+
 
     <div class="container">
-        <div class="table-wrapper">
-            <table class="tablekucing" id="tblkucing">
+        <div class="table-wrapper rounded">
+            <table class="tablekucing " id="tblkucing">
                 <thead>
                 <tr>
                 <td><b>No</b></td>
@@ -327,10 +225,10 @@ td.image-cell img {
                 <td><b>Berat Badan</b></td>
                 <td><b>Tinggi Badan</b</td>
                 <td><b>Status</b></td>
-                <td><b>Aksi</b></td>      </tr>
+                <td><b>Aksi</b></td>
+                </tr>
                 </thead>
                 <tbody>
->>>>>>> df7de539c25eb654374c35e0ff44c728f793b0d7
 
                 </tbody>
             </table>
@@ -355,6 +253,23 @@ td.image-cell img {
       </div>
     </div>
   </footer>
+        <div class="left-section">
+        <h3>Purrfect Adopt</h3>
+        <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
+        </div>
+        <div class="center-section">
+        <h3> Alamat Kami </h3>
+        Jalan Veteran Malang
+        </div>
+        <div class="right-section">
+        <span>Contact Us:</span>
+        <div class="social-media">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+        </div>
+    </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

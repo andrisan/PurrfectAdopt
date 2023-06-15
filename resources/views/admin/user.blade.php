@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda Admin</title>
+    <title>Purrfect Adopt</title>
 
     <!--Icon Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,7 +13,7 @@
         margin: 0;
         padding: 0;
         font-family: Poppins;
-        background-color: #FFF7D4;
+        /* background-color: #FFF7D4; */
       }
 
       header {
@@ -69,7 +69,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 60vh;
+          height: 30vh;
       }
 
       .table-wrapper {
@@ -97,13 +97,15 @@
       }
 
       footer {
-      background-color: #C07F00;
-      color: #fff;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 150px;
+        background-color: #C07F00;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        align-items: center;
+        bottom: 0;
+        width: 100%;
     }
 
     .left-section {
@@ -179,6 +181,12 @@
   </header>
 
     <!--Table-->
+    <div class="col-md-12">
+        <div style="margin-left: 90px;">
+            <p style="font-size: 25px; font-weight:600">Data user yang terdaftar</p>
+        </div>
+    </div>
+
     <div class="container">
         <div class="table-wrapper shadow rounded">
             <table class="tableuser" id="tbluser">
@@ -190,7 +198,7 @@
                     <td><b>Email</b></td>
                     <td><b>Jenis Kelamin</b></td>
                     <td><b>Status</b></td>
-                    <td><b>Aksi</b></td> 
+                    <td><b>Aksi</b></td>
                   </tr>
                 </thead>
                 <tbody>
@@ -249,14 +257,14 @@
                                 response.forEach(el => {
                                     isi += `
                                         <tr>
-                                            <th>${no_urut}</th>
-                                            <th class="nr" opacity="0">${el.id}</th>
-                                            <th> ${el.name} </th>
-                                            <th>${el.email}</th>
-                                            <th> ${el.gender ? 'Laki-laki' : 'Perempuan'} </th>
-                                            <th> ${el.status ? 'Admin' : 'User'}</th>
-                                            <th>
-                                            <button id="btndelete" class="btn btn-danger">Hapus</button></th>
+                                            <td>${no_urut}</td>
+                                            <td class="nr" opacity="0">${el.id}</td>
+                                            <td> ${el.name} </td>
+                                            <td>${el.email}</td>
+                                            <td> ${el.gender ? 'Laki-laki' : 'Perempuan'} </td>
+                                            <td> ${el.status ? 'Admin' : 'User'}</td>
+                                            <td>
+                                            <button id="btndelete" class="btn btn-danger">Hapus</button></td>
                                         </tr>
                                     `;
                                     no_urut += 1;
