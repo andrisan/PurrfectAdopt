@@ -305,5 +305,7 @@
     <!-- END FEATURES SECTION -->
 <!-- choose us-->
 
+@include('components.footer');
+
 </body>
 </html>
