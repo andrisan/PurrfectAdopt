@@ -175,7 +175,8 @@ td.image-cell img {
                 <td><b>Berat Badan</b></td>
                 <td><b>Tinggi Badan</b</td>
                 <td><b>Status</b></td>
-                <td><b>Aksi</b></td>      </tr>
+                <td><b>Aksi</b></td>
+                </tr>
                 </thead>
                 <tbody>
 
