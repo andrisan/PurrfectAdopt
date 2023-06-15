@@ -20,7 +20,7 @@ use App\Http\Controllers\BioController;
 */
 
 Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
-  Route::view('/testidistributor','testidistributor');
+  Route::view('/testi','testi');
   Route::middleware(['guest'])->group(function(){
   Route::get('/', [SesiController::class, 'index'])->name('login');
   Route::post('/', [SesiController::class, 'login']);
