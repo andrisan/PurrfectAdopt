@@ -41,7 +41,7 @@ textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
-  
+
 }
 
 blockquote,
@@ -89,7 +89,7 @@ iframe,
 embed,
 object {
   display: block;
- 
+
   vertical-align: middle;
 
 }
@@ -693,131 +693,63 @@ object {
       <div class="flex flex-col ">
       </div>
     </div>
+
     <div class="flex-auto ">
-      <div class="flex flex-col">
-        <div class="flex flex-col bg-white h-24 p-2 drop-shadow-2xl">
-          <div class="flex flex-row space-x-3">
-          </div>
+        <div class="flex flex-col">
+            <div class="flex flex-col bg-white h-24 p-2 drop-shadow-2xl">
+            <div class="flex flex-row space-x-3">
+            </div>
+            </div>
+
+            <div class="bg-blue-50 min-h-screen">
+                <div class=" mt-8 grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10 ">
+                    <div>
+                        <button>Kembali</button>
+                    </div>
+                </div>
+
+                <div class=" flex items-center justify-between text-gray-600 text-3xl px-5"><b>Data Kucing</b></div>
+            <!--Table-->
+                <div class="grid  lg:grid-cols-1  md:grid-cols-1 p-4 gap-3">
+                    <div class="col-span-2 flex flex-auto items-center justify-between  p-5 bg-white rounded shadow-sm">
+                        <table class="min-w-full divide-y divide-gray-200 table-auto">
+                            <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                Nama
+                                </th>
+                                <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
+                                Umur
+                                </th>
+                                <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
+                                Jenis Kelamin
+                                </th>
+                                <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
+                                Jenis Ras
+                                </th>
+                                <th scope="col"
+                                class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
+                                Berat
+                                </th>
+                                </th>
+                                <th scope="col"
+                                class="relative px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="bg-blue-50 min-h-screen">
-          <div class=" mt-8 grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10 ">
-          <div>
-        <button>Kembali</button>
-        </div>
-        </div>
-          
-          <div class=" flex items-center justify-between text-gray-600 text-3xl px-5"><b>Data Kucing</b></div>
-          <!--Table-->
-          <div class="grid  lg:grid-cols-1  md:grid-cols-1 p-4 gap-3">
-            <div class="col-span-2 flex flex-auto items-center justify-between  p-5 bg-white rounded shadow-sm">
-              <table class="min-w-full divide-y divide-gray-200 table-auto">
-                <thead class="bg-gray-50">
-                  <tr>
-                    <th scope="col"
-                      class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                      Nama
-                    </th>
-                    <th scope="col"
-                      class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
-                      Umur
-                    </th>
-                    <th scope="col"
-                      class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
-                      Jenis Kelamin
-                    </th>
-                    <th scope="col"
-                      class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
-                      Jenis Ras
-                    </th>
-                    <th scope="col" 
-                    class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
-                    Berat
-                    </th>
-                    </th>
-                    <th scope="col" 
-                    class="relative px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                    </th>
-                  </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
-                  <tr>
-
-  <!-- Required chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  <!-- Chart line -->
-  <script>
-    const labels = ["January", "February", "March", "April", "May", "June"];
-    const data = {
-      labels: labels,
-      datasets: [{
-        label: "My First dataset",
-        backgroundColor: "hsl(252, 82.9%, 67.8%)",
-        borderColor: "hsl(252, 82.9%, 67.8%)",
-        data: [0, 10, 5, 2, 20, 30, 45],
-      }, ],
-    };
-
-    const configLineChart = {
-      type: "line",
-      data,
-      options: {},
-    };
-
-    var chartLine = new Chart(
-      document.getElementById("chartLine"),
-      configLineChart
-    );
-  </script>
-
-  <script>
-    const dataRadar = {
-      labels: [
-        "Reservation 1",
-        "Reservation 2",
-        "Reservation 3",
-        "Reservation 4",
-        "Reservation 5",
-        "Reservation 6",
-        "Reservation 7",
-      ],
-      datasets: [{
-          label: "My First Dataset",
-          data: [65, 59, 90, 81, 56, 55, 40],
-          fill: true,
-          backgroundColor: "rgba(255,105,180)",
-          borderColor: "rgb(255,20,147)",
-          pointBackgroundColor: "rgb(133, 105, 241)",
-          pointBorderColor: "#fff",
-          pointHoverBackgroundColor: "#fff",
-          pointHoverBorderColor: "rgb(133, 105, 241)",
-        },
-        {
-          label: "My Second Dataset",
-          data: [28, 48, 40, 19, 96, 27, 100],
-          fill: true,
-          backgroundColor: "rgba(255,105,180)",
-          borderColor: "rgb(0,191,255)",
-          pointBackgroundColor: "rgb(54, 162, 235)",
-          pointBorderColor: "#fff",
-          pointHoverBackgroundColor: "#fff",
-          pointHoverBorderColor: "rgb(54, 162, 235)",
-        },
-      ],
-    };
-
-    const configRadarChart = {
-      type: "radar",
-      data: dataRadar,
-      options: {},
-    };
-
-    var chartBar = new Chart(
-      document.getElementById("chartRadar"),
-      configRadarChart
-    );
-  </script>
-
+    </div>
+  </div>
 </body>
 
 </html>
