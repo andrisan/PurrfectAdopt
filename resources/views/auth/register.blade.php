@@ -7,10 +7,10 @@
   <!-- Container -->
   <div class="flex flex-wrap min-h-screen w-full content-center justify-center bg-grey-700 py-10">
     
-    <!-- Login component -->
+    <!-- Register component -->
     <div class="flex shadow-md">
-      <!-- Login form -->
-      <div class="flex flex-wrap content-center justify-center rounded-l-md bg-white" style="width: 24rem; height: 32rem;">
+      <!-- Register form -->
+      <div class="flex flex-wrap content-center justify-center rounded-l-md bg-yellow-200" style="width: 24rem; height: 32rem;">
         <div class="w-72">
           <!-- Heading -->
           <h1 class="text-xl font-semibold">Sign up</h1>
@@ -23,22 +23,22 @@
             @csrf
             <div class="mb-3">
               <label class="mb-2 block text-xs font-semibold">Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name" value="" class="block w-full rounded-md border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
+              <input type="text" id="name" name="name" placeholder="Enter your name" value="" class="block w-full rounded-md bg-yellow-100 border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
             </div>
 
             <div class="mb-3">
               <label class="mb-2 block text-xs font-semibold">Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" value="" class="block w-full rounded-md border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
+              <input type="email" id="email" name="email" placeholder="Enter your email" value="" class="block w-full rounded-md bg-yellow-100 border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
             </div>
 
             <div class="mb-3">
               <label class="mb-2 block text-xs font-semibold">Role (Admin/User)</label>
-              <input type="text" id="role" name="role" placeholder="Enter your role" value="" class="block w-full rounded-md border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
+              <input type="text" id="role" name="role" placeholder="Enter your role" value="" class="block w-full rounded-md bg-yellow-100 border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
             </div>
 
             <div class="mb-3">
               <label class="mb-2 block text-xs font-semibold">Password</label>
-              <input type="password" id="password" name="password" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
+              <input type="password" id="password" name="password" placeholder="*****" class="block w-full rounded-md bg-yellow-100 border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
             </div>
 
             <div class="mb-3">
@@ -54,7 +54,7 @@
         </div>
       </div>
 
-      <!-- Login banner -->
+      <!-- Register banner -->
       @include('components.banner')
 
     </div>
