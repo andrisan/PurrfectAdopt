@@ -21,6 +21,7 @@
 </head>
 <body>
     @include('components.header');
+    @include('components.footer');
 
 <!--body-->
 <section>
