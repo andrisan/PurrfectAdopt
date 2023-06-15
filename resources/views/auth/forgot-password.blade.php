@@ -9,7 +9,7 @@
 </head>
 <body class="bg-yellow-100">
     <div class="flex h-screen items-center justify-center">
-        <div class="bg-yellow-200 p-8 rounded shadow-md w-96">
+        <div class="bg-white p-8 rounded shadow-md w-96">
             <h2 class="text-2xl font-semibold mb-6">{{ $title }}</h2>
             @if (session('status'))
                 <div class="mb-4 font-medium text-sm text-green-600">
@@ -20,7 +20,7 @@
                 @csrf
                 <div class="mb-4">
                     <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-                    <input type="email" id="email" name="email" class="w-full px-3 py-2 bg-yellow-100 border border-gray-300 rounded focus:outline-none focus:border-yellow-500" placeholder="Your email address" required autofocus>
+                    <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-yellow-500" placeholder="Your email address" required autofocus>
                     @error('email')
                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                     @enderror
