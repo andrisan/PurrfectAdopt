@@ -11,7 +11,7 @@ class Kucing extends Model
     protected $table = 'kucings';
     protected $fillable = [
         'nama', 'warna', 'ras', 'gender', 'berat_badan', 'tinggi_badan',
-        'kesehatan', 'sikap', 'foto', 'video'];
+        'kesehatan', 'sikap', 'foto', 'video', 'status'];
 
     // Relasi dengan pemilik kucing
     public function owner()
