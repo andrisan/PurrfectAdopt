@@ -21,6 +21,10 @@ class UserController extends Controller
         $user = User::all();
         return response()->json($user);
     }
+
+    public function getDetail(){
+        return view('admin.detailuser');
+    }
     public function create()
     {
         //
