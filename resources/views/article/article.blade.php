@@ -98,10 +98,12 @@
 <!-- card-->
 
 <!-- article news-->
+
 <div class="w-full text-gray-700 px-11 text-2xl font-semibold pt-20">Article News</div><br>
 <div class="flex container place-content-center">
 <div class="grid grid-cols-3 space-x-4">
 
+<!-- row1 -->
 <div class="max-w-xs  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
     <img class="rounded-t-lg" src="{{ asset('/img/artikel2.jpg') }}" alt="" />
@@ -117,7 +119,9 @@
         </a>
     </div>
 </div>
+<!-- row2 -->
 
+<!-- row2 -->
 <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
     <img class="rounded-t-lg" src="{{ asset('/img/artikel3.jpg') }}" alt="" />
@@ -133,7 +137,9 @@
         </a>
     </div>
 </div>
+<!-- row2 -->
 
+<!-- row3 -->
 <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
     <img class="rounded-t-lg" src="{{ asset('/img/artikel4.jpg') }}" alt="" />
@@ -149,12 +155,14 @@
         </a>
     </div>
 </div>
-
+<!-- row3 -->
 </div>
 </div>
 </div>
 <!-- article news-->
 
+<br>
+@include('components.footer');
 
 </body>
 </html>
