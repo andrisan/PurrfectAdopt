@@ -11,41 +11,25 @@
   <style>
 
 html {
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-     tab-size: 4;
-}
-
+  -moz-tab-size: 4;-o-tab-size: 4;tab-size: 4;}
 
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
- 
 }
 
 body {
   margin: 0;
 }
 
-
 body {
   font-family:
-		system-ui,
-		-apple-system, 
-		'Segoe UI',
-		Roboto,
-		Helvetica,
-		Arial,
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji';
+		system-ui,-apple-system, 'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
 }
 
 table {
   text-indent: 0;
-
   border-color: inherit;
-
 }
 
 button,
@@ -59,7 +43,6 @@ textarea {
   margin: 0;
   
 }
-
 
 blockquote,
 dl,
@@ -678,7 +661,7 @@ object {
         </div>
         <div class="p-2 hover:bg-pink-100 ">
           <div class="flex flex-row space-x-3 ">
-           <div><img src="../img/cogan.png" alt="foto" height="175px" width="175px"></div>
+           <div><img src="../../img/cogan.png" alt=">"></div>
           </div>
         </div>
         <div class="p-2 hover:bg-pink-100">
