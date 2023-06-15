@@ -7,7 +7,7 @@
     <!-- Tambahkan link ke Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
+<body class="bg-yellow-100">
     <div class="flex h-screen items-center justify-center">
         <div class="bg-white p-8 rounded shadow-md w-96">
             <h2 class="text-2xl font-semibold mb-6">{{ $title }}</h2>
@@ -20,13 +20,13 @@
                 @csrf
                 <div class="mb-4">
                     <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-                    <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500" placeholder="Your email address" required autofocus>
+                    <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-yellow-500" placeholder="Your email address" required autofocus>
                     @error('email')
                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                     @enderror
                 </div>
                 <div>
-                    <button type="submit" class="bg-indigo-500 text-white py-2 px-4 rounded hover:bg-indigo-600">Send Password Reset Link</button>
+                    <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-700">Send Password Reset Link</button>
                 </div>
             </form>
         </div>
