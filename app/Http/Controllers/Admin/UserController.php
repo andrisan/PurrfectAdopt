@@ -1,48 +1,30 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Kucing;
-use App\Models\Content;
 use App\Models\User;
 
-class DashboardController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
-        return view('admin.home');
-    }
- 
-    public function getKucing(){
-        $kucing = Kucing::all();
-        $totalRows = count($kucing);
-        return $totalRows;
-    }
 
-    public function getContent(){
-        $content = Content::all();
-        $totalRows = count($content);
-        return $totalRows;
+
+        return view('admin.user');
     }
 
     public function getUser(){
         $user = User::all();
-        $totalRows = count($user);
-        return $totalRows;
+        return response()->json($user);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         //
+
     }
 
     /**
@@ -80,8 +62,10 @@ class DashboardController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy( $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+        return response()->json(['pesan' => 'Deleted']);
     }
 }
