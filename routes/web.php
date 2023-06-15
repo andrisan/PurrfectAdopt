@@ -39,6 +39,11 @@ Route::get('/dashboard', function () {
   })->name('dashborad');
 });
 
+Route::get('/article', function () {
+  return view('article/article');
+})->name('article');
+
+
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store']);
 
