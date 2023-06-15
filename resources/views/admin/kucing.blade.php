@@ -185,7 +185,7 @@ td.image-cell img {
 <body>
     <header>
         <div class="flex">
-                Logo
+                <p><b>Logo</b></p>
         </div>
             <nav>
             <ul>
@@ -244,14 +244,12 @@ td.image-cell img {
             <div class="right-section">
             <span>Contact Us:</span>
             <div class="social-media">
-                <a href="#"><img src="facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
             </div>
         </div>
-    </div>
-  </footer>
-
+    </footer>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
