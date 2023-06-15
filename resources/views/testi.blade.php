@@ -86,7 +86,28 @@
         <span class="content"><?php echo $testimony['content']; ?></span>
       </div>
     </div>
+    <p>
+    <div style="position: relative; width: 100%; height: 100%;">
+
+      <div class="container mx-auto">
+        <img src="Admin.png" alt="Gambar" style="padding-left: 70px;padding-top: 20px;padding-right: 20px; position: flex; left: 10px; top: 0.5px; width: 81px; height: 81px;">
+        <div class="box mx-auto">
+          <div class="wrapper-header">
+          </div>
+          <?php if ($testimony['name'] === 'Amelia Intan') : ?>
+            <span class="content">Thank you for your trust and support in choosing our website for cat adoption. If you have any further questions or require assistance, please don't hesitate to reach out to us.</span>
+          <?php elseif ($testimony['name'] === 'Permata Cinta Via') : ?>
+            <span class="content">Thank you for sharing your positive experience with our cat adoption website. We are thrilled to hear that you had a great time using our services.</span>
+          <?php elseif ($testimony['name'] === 'Indah Kumalasari') : ?>
+            <span class="content">Thank you for your testimonial about our cat adoption website. We're thrilled that you have had amazing experiences adopting two cats through our website. It's always a joy for us to be a part of the journey in bringing new furry friends into loving homes.</span>
+          <?php elseif ($testimony['name'] === 'Eka Abimanyu') : ?>
+            <span class="content">Thank you for sharing your testimonial about adopting a cat through our cat adoption website. It's delightful to know that the cat you adopted is incredibly cute and sweet. We hope that your new furry friend brings you immense joy and companionship.</span>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
   <?php endforeach; ?>
+
 </body>
  
 </html>
