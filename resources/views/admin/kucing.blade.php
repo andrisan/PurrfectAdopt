@@ -189,7 +189,7 @@ td.image-cell img {
 <body>
     <header>
         <div class="flex">
-                Logo
+                <p><b>Logo</b></p>
         </div>
             <nav>
             <ul>
@@ -200,7 +200,7 @@ td.image-cell img {
             </ul>
             </nav>
         <div class="profile">
-            <img src="profile-image.jpg" alt="Profil">
+            <img src="{{ asset('/img/profile.png') }}" alt="Profil">
             <span>Profil</span>
         </div>
     </header>
@@ -249,9 +249,9 @@ td.image-cell img {
         <div class="right-section">
         <span>Contact Us:</span>
         <div class="social-media">
-            <a href="#"><img src="facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
         </div>
         </div>
     </footer>
