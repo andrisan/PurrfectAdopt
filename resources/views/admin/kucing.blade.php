@@ -9,7 +9,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-} 
+}
 
 header {
       background-color: #C07F00;
@@ -18,7 +18,8 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
+
+}
 
     .logo {
       margin-left: 2%;
@@ -116,7 +117,7 @@ td.image-cell img {
         justify-content: space-between;
         align-items: center;
         bottom: 0;
-        width: 100%;
+
 
     }
 
@@ -137,7 +138,7 @@ td.image-cell img {
       flex: 1;
       text-align: center;
     }
-    
+
   .right-section {
     flex: 1;
     display: flex;
@@ -192,9 +193,9 @@ td.image-cell img {
         </div>
             <nav>
             <ul>
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#">Kucing</a></li>
-                <li><a href="#">User</a></li>
+                <li><a href="<?= url('/admin-home'); ?>">Beranda</a></li>
+                <li><a href="<?= url('/admin-kucing'); ?>">Kucing</a></li>
+                <li><a href="<?= url('/admin-user'); ?>">User</a></li>
                 <li><a href="#">Artikel</a></li>
             </ul>
             </nav>
@@ -235,24 +236,8 @@ td.image-cell img {
         </div>
     </div>
 
-    <footer>
-    <div class="left-section">
-      <h3>Purrfect Adopt</h3>
-      <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
-    </div>
-    <div class="center-section">
-      <h3> Alamat Kami </h3>
-      Jalan Veteran Malang
-    </div>
-    <div class="right-section">
-      <span><b>Contact Us</b></span>
-      <div class="social-media">
-        <a href="#"><img src="{{ asset('/img/facebook.png') }}" alt="Facebook"></a>
-        <a href="#"><img src="{{ asset('/img/whatsapp.png') }}" alt="WhatsApp"></a>
-        <a href="#"><img src="{{ asset('/img/ig.png') }}" alt="Instagram"></a>
-      </div>
-    </div>
-  </footer>
+
+  <footer>
         <div class="left-section">
         <h3>Purrfect Adopt</h3>
         <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>

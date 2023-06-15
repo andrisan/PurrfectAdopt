@@ -105,7 +105,6 @@
         justify-content: space-between;
         align-items: center;
         bottom: 0;
-        width: 100%;
     }
 
     .left-section {
