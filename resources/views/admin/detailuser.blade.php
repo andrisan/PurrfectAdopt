@@ -661,7 +661,7 @@ object {
         </div>
         <div class="p-2 hover:bg-pink-100 ">
           <div class="flex flex-row space-x-3 ">
-           <div><img src="../../img/cogan.png" alt=">"></div>
+           <div><img src="../../img/cogan.png" alt=">" height='150px' width='150px'></div>
           </div>
         </div>
         <div class="p-2 hover:bg-pink-100">
@@ -701,9 +701,11 @@ object {
         </div>
         <div class="bg-blue-50 min-h-screen">
           <div class=" mt-8 grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10 ">
-
-          </div>
-
+          <div>
+        <button>Kembali</button>
+        </div>
+        </div>
+          
           <div class=" flex items-center justify-between text-gray-600 text-3xl px-5"><b>Data Kucing</b></div>
           <!--Table-->
           <div class="grid  lg:grid-cols-1  md:grid-cols-1 p-4 gap-3">
