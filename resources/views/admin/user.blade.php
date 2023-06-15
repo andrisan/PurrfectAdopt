@@ -10,100 +10,114 @@
 
     <style>
       body{
-        margin: 0;
-        padding: 0;
-        font-family: Poppins;
-        /* background-color: #FFF7D4; */
-      }
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
 
-      header {
-        background-color: #C07F00;
-        color: #fff;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+header {
+      background-color: #C07F00;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
 
-      .logo {
-        width: 30px;
-        height: 30px;
-      }
+    .logo {
+      margin-left: 2%;
+      width: 70%;
+    }
 
-      nav ul {
+    nav ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
       display: flex;
       margin-left: 110%;
-      }
+    }
 
-      nav ul li {
-        margin-right: 20px;
-      }
+    nav ul li {
+      margin-right: 20px;
+    }
 
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-  /*       margin-left: 100px; */
-      }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-      .profile {
+    nav ul li a:hover {
+    width: 20px;
+    height: 40px;
+    background: white;
+    border-radius: 5px;
+    color: #C07F00;
+    }
+
+    .profile {
       display: flex;
       align-items: center;
-      }
+    }
 
-      .profile img {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
+    .profile img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
 
-      .text-white {
-        --tw-text-opacity: 1;
-        color: rgba(255, 255, 255, var(--tw-text-opacity));
-      }
+.container {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-wrap: wrap;
+    height: 30vh;
+}
 
-      .container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 30vh;
-      }
+.table-wrapper {
+    width: 90%;
+/*     margin: 0 auto; */
 
-      .table-wrapper {
-          width: 90%;
-      /*     margin: 0 auto; */
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5px;
+    padding: 20px;
+    background: #FFD95A;
+}
 
-          margin-left: 5%;
-          margin-right: 5%;
-          border-radius: 5px;
-          padding: 20px;
-          background: #FFD95A;
-      }
+.tbluser {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 10px;
+/*     background: red; */
+}
 
-      .tableuser {
-          width: 100%;
-          border-collapse: collapse;
-          margin-top: 10px;
-          margin-bottom: 10px;
-      /*     background: red; */
-      }
+.tbluser, th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
 
-      .tableuser, th, td {
-          border: 1px solid black;
-          padding: 10px;
-      }
+thead {
+    background-color: #C07F00;
+}
 
-      footer {
+td.image-cell {
+    text-align: center;
+}
+
+td.image-cell img {
+    width: 30px;
+    height: auto;
+}
+
+    footer {
         background-color: #C07F00;
         color: #fff;
         padding: 20px;
-        display: flex;
-        position: absolute;
-        justify-content: space-between;
-        align-items: center;
+        width: 100%;
+        position: fixed;
         bottom: 0;
     }
 
@@ -125,6 +139,31 @@
       text-align: center;
     }
 
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 5%;
+}
+
+  .right-section span{
+    margin-right: 7%;
+  }
+
+.social-media {
+  margin-top: 10px;
+  margin-left: 40%;
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  /* margin-right: 10%; */
+}
+
     .right-section {
       flex: 1;
       display: flex;
@@ -137,58 +176,47 @@
       height: 20px;
       margin-left: 10px;
     }
+    .btn-red {
+        @apply bg-blue-500 text-white;
+    }
 
-      thead {
-          background-color: #C07F00;
-      }
-
-      .bg-light{
-        background-color: #FFD95A;
-      }
-
-      .bg-primary {
-        background-color: #C07F00;
-      }
-
-      .rounded {
+    .rounded {
         border-radius: 1rem;
-      }
-
-      .shadow {
-        --tw-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
       }
 
     </style>
 </head>
 
 <body style="font-family: Poppins;" class="yellow-bg">
-  <header>
-  <img src="../../../public/img/logoo.png" alt="logo">
-      <nav>
-        <ul>
-          <li><a href="#">Beranda</a></li>
-          <li><a href="#">Kucing</a></li>
-          <li><a href="#">User</a></li>
-          <li><a href="#">Artikel</a></li>
-        </ul>
-      </nav>
-      <div class="profile">
-        <img src="../../../public/img/profil.jfif" alt="Profil">
-        <span>Profil</span>
-      </div>
-  </header>
+    <header>
+        <div class="flex">
+                Logo
+        </div>
+            <nav>
+            <ul>
+                <li><a href="<?= url('/admin-home'); ?>">Beranda</a></li>
+                <li><a href="<?= url('/admin-kucing'); ?>">Kucing</a></li>
+                <li><a href="<?= url('/admin-user'); ?>">User</a></li>
+                <li><a href="#">Artikel</a></li>
+            </ul>
+            </nav>
+        <div class="profile">
+            <img src="profile-image.jpg" alt="Profil">
+            <span>Profil</span>
+        </div>
+    </header>
 
     <!--Table-->
-    <div class="col-md-12">
-        <div style="margin-left: 90px;">
-            <p style="font-size: 25px; font-weight:600">Data user yang terdaftar</p>
-        </div>
-    </div>
+
 
     <div class="container">
+
+        <div style="margin-left: 100px;">
+            <p style="font-size: 25px; font-weight:600">Data user yang terdaftar</p>
+        </div>
+
         <div class="table-wrapper shadow rounded">
-            <table class="tableuser" id="tbluser">
+            <table class="tbluser" id="tbluser">
                 <thead class="shadow">
                   <tr>
                     <td><b>No</b></td>
@@ -210,21 +238,22 @@
 
   <!--Footer-->
   <footer>
-    <div class="left-section">
-      <h3>Purrfect Adopt</h3>
-      <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
-    </div>
-    <div class="center-section">
-      <h3> Alamat Kami </h3>
-      Jalan Veteran Malang
-    </div>
-    <div class="right-section">
-      <span>Contact Us: </span>
-      <div class="social-media">
-        <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-      </div>
+    <div style="display: flex;">
+        <div class="left-section">
+            <h3>Purrfect Adopt</h3>
+            <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
+            </div>
+            <div class="center-section">
+            <h3> Alamat Kami </h3>
+            Jalan Veteran Malang
+            </div>
+            <div class="right-section">
+            <span>Contact Us:</span>
+            <div class="social-media">
+            <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+        </div>
     </div>
   </footer>
   <!--End Footer-->
