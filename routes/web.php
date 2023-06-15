@@ -18,10 +18,13 @@ use App\Http\Controllers\BioController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/bio', [BioController::class, 'index'])->name('bio');
-Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
 
-  Route::view('/testidistributor','testidistributor');
+Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
+  Route::view('/testi','testi');
+  Route::view('/balasDiskusi','balasDiskusi');
+  Route::view('/diskusi','diskusi');
+  Route::view('/setting2','setting2');
+  Route::view('/setting1','setting1');
   Route::middleware(['guest'])->group(function(){
   Route::get('/', [SesiController::class, 'index'])->name('login');
   Route::post('/', [SesiController::class, 'login']);

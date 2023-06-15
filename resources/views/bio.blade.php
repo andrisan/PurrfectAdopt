@@ -14,6 +14,7 @@
       </style>
       @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
+  <!--kartu bio-->
   <body class="bg-yellow-100">
   <div class="flex flex-row justify-center mt-12 top-100">
   <div class="w-64 p-6 bg-yellow-300 rounded shadow-md ml-6">
