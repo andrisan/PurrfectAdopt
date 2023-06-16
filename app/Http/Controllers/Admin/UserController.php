@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\UserKucing;
 
 class UserController extends Controller
 {
@@ -52,7 +53,7 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        
+
     }
 
     /**
@@ -73,8 +74,20 @@ class UserController extends Controller
         return response()->json(['pesan' => 'Deleted']);
     }
 
-    public function getUser_Kucing($id){
-        $user = User();
+    public function getUserKucing($id){
+        $user = UserKucing::where('user_id', '=', $id)
+                ->groupBy('user_id')
+                // ->rightJoin('users', 'users.id', '=', 'user_kucings.user_id')
+                // ->join('kucings', 'kucings.id', '=', 'user_kucings.kucing_id')
+                // ->select('users.*', 'kucings.*')
+
+                ->get();
+        // $user = UserKucing::join('users', 'user_kucings.user_id', '=', 'users.id')
+        //         ->join('kucings', 'user_kucings.kucing_id', '=', 'kucings.id')
+        //         ->where('user_kucings.user_id', 'LIKE', '%' . $id . '%')
+        //         ->select('users.*','users.id AS id_user', 'kucings.*', 'kucings.id AS id_kucing')
+        //         ->get();
         return response()->json($user);
+        // return view('admin.detailuser', compact("user"));
     }
 }

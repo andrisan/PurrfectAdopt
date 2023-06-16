@@ -671,27 +671,21 @@ object {
            <img src="../../img/cogan.png" alt=">" height='150px' width='150px' style="justify-content:center; align-items:center">
         </div>
         <div class="p-2 hover:bg-pink-100" style="justify-content:center; align-content:center; text-align:center">
-          <div class="space-x-3">
-            <h4 class="font-regular">Louis Partridge</h4>
+          <div id="user" class="space-x-3">
+            @foreach ($user as $us)
+            <h4 class="font-regular">{{$user->name}}</h4>
+            @endforeach
           </div>
         </div>
-        <div style="justify-content:center; align-content:center; text-align:center">
-          <h4 class="font-regular">1234567890</h4>
+        <div  id="iduser"  style="justify-content:center; align-content:center; text-align:center">
+
         </div>
-        <div style="justify-content:center; align-content:center; text-align:center">
-          <h4 class="font-regular">5</h4>
+
+        <div id="email" style="justify-content:center; align-content:center; text-align:center">
+
         </div>
-        <div style="justify-content:center; align-content:center; text-align:center">
-          <h4 class="font-regular">Kucing</h4>
-        </div>
-        <div>
-          <h4 class="font-regular">---------------------------------</h4>
-        </div>
-        <div style="justify-content:center; align-content:center; text-align:center">
-          <h4 class="font-regular">partridge@gmail.com</h4>
-        </div>
-        <div style="justify-content:center; align-content:center; text-align:center">
-          <h4 class="font-regular">089747632496</h4>
+        <div id="notelp"  style="justify-content:center; align-content:center; text-align:center">
+
         </div>
 
       </div>
@@ -706,7 +700,7 @@ object {
             </div>
             </div>
 
-      
+
 
                 <div class=" flex items-center justify-between text-gray-600 text-3xl p-5"><b>Data Kucing</b></div>
             <!--Table-->
@@ -750,6 +744,44 @@ object {
         </div>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            let name = '';
+
+            // $.ajaxSetup({
+            //     headers: {
+            //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('user')
+            //     }
+            // });
+
+            function getUser() {
+                const url = 'http://127.0.0.1:8000/getuserkucing/{id}';
+
+                $.ajax({
+                    type:"GET",
+                    url:url,
+                    dataType:"JSON",
+                    success:
+                    function (response) {
+                        console.log(response);
+                                // name = '';
+                                // // response.forEach(el => {
+                                //     name += `
+                                //         <p>${response.name}</p>
+                                //     `;
+
+                                // // });
+                                // $('#user').append(isi);
+                            }
+                });
+            }
+
+            getUser();
+        })
+    </script>
 </body>
 
 </html>
