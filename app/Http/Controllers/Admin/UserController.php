@@ -52,7 +52,7 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        
     }
 
     /**
@@ -71,5 +71,10 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
         return response()->json(['pesan' => 'Deleted']);
+    }
+
+    public function getUser_Kucing($id){
+        $user = User();
+        return response()->json($user);
     }
 }

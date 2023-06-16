@@ -31,7 +31,9 @@
                                         <th>${el.email}</th>
                                         <th> ${el.data_kucing} </th>
                                         <th>
-                                        <button id="btndelete" class="btn btn-danger">Hapus</button></th>
+                                        <button id="btndelete" class="btn btn-danger">Hapus</button>
+                                        <button id="btnbaca" class="btn btn-danger">Lihat Detail</button>
+                                        </th>
                                     </tr>
                                 `;
                                 no_urut += 1;
@@ -42,6 +44,25 @@
         }
 
         $('#tbluser').on('click', '#btndelete', function (e) {
+            var $id = $(this).closest("tr")   // Finds the closest row <tr>
+            .find(".nr")     // Gets a descendent with class="nr"
+            .text();         // Retrieves the text within <td>
+
+            let url = 'http://127.0.0.1:8000/hapususer/' + $.trim($id);        // Outputs the answer
+
+            $.ajax({
+                type: "GET",
+                url: url,
+                success: function (response) {
+                    // $('#tblanggota').find("tr:gt(0)").remove();
+                    // getanggota()
+                }
+            });
+            swal("Sukses!", "Data berhasil dihapus", "success");
+            $(this).closest('tr').remove();
+        });
+
+        $('#tbluser').on('click', '#btnbaca', function (e) {
             var $id = $(this).closest("tr")   // Finds the closest row <tr>
             .find(".nr")     // Gets a descendent with class="nr"
             .text();         // Retrieves the text within <td>

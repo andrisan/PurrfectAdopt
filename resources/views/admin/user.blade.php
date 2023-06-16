@@ -292,7 +292,8 @@ td.image-cell img {
                                             <td> ${el.gender ? 'Laki-laki' : 'Perempuan'} </td>
                                             <td> ${el.status ? 'Admin' : 'User'}</td>
                                             <td>
-                                            <button id="btndelete" class="btn btn-danger">Hapus</button></td>
+                                            <button id="btndelete" class="btn btn-danger">Hapus</button>
+                                            </td>
                                         </tr>
                                     `;
                                     no_urut += 1;

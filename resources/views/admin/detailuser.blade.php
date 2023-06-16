@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tailwindcss Course</title>
 
+  <!--Icon Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.0.0-insiders.4a070ac/tailwind.min.css" integrity="sha512-vJu7D5BpjnNXVpLBrl9LKLvmXBNjiLwge8EOZ/YS9XwiChpfKLAlydwIZvoJaDE3LI/kr3goH0MzDzNbBgyoOQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
   <style>
 
@@ -644,48 +647,51 @@ object {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
-
+.text-center{
+  text-align : center;
+}
 </style>
 </head>
 
 <body>
-
-  <div class="flex flex-row ">
-    <div class="flex flex-col  space-y-5 justify-between min-h-screen w-60 px-2 py-4 bg-gray-50">
+<div class="flex flex-col">
+  <div class="flex  bg-gray-50 p-5">
+  <a href="<?= url('/admin-user'); ?>"><i class="fa-solid fa-arrow-left" style="color: #f7f7f8;"></i></a>
+</div>
+  <div class="flex flex-row">
+    <div class="flex flex-col space-y-5 justify-between min-h-screen w-60 mx-6 p-2 py-4 bg-gray-50">
 
       <div class="flex flex-col flex-auto">
-        <div class="p-2 hover:bg-pink-100">
-          <div class="flex flex-row space-x-3">
-            <h4 class="font-bold  hover:text-pink-600 ">Profil User</h4>
+        <div class="p-2">
+          <div class="space-x-3" style="justify-content:center; align-content:center; text-align:center" >
+            <h4 class="font-bold" >Profil User</h4>
           </div>
         </div>
-        <div class="p-2 hover:bg-pink-100 ">
-          <div class="flex flex-row space-x-3 ">
-           <div><img src="../../img/cogan.png" alt=">" height='150px' width='150px'></div>
-          </div>
+        <div class="p-2" style="padding-left:10px">
+           <img src="../../img/cogan.png" alt=">" height='150px' width='150px' style="justify-content:center; align-items:center">
         </div>
-        <div class="p-2 hover:bg-pink-100">
-          <div class="flex flex-row space-x-3">
+        <div class="p-2 hover:bg-pink-100" style="justify-content:center; align-content:center; text-align:center">
+          <div class="space-x-3">
             <h4 class="font-regular">Louis Partridge</h4>
           </div>
         </div>
-        <div>
-          <h4 class="font-regular  hover:text-pink-600">1234567890</h4>
+        <div style="justify-content:center; align-content:center; text-align:center">
+          <h4 class="font-regular">1234567890</h4>
+        </div>
+        <div style="justify-content:center; align-content:center; text-align:center">
+          <h4 class="font-regular">5</h4>
+        </div>
+        <div style="justify-content:center; align-content:center; text-align:center">
+          <h4 class="font-regular">Kucing</h4>
         </div>
         <div>
-          <h4 class="font-regular  hover:text-pink-600">5</h4>
+          <h4 class="font-regular">---------------------------------</h4>
         </div>
-        <div>
-          <h4 class="font-regular  hover:text-pink-600">Kucing</h4>
+        <div style="justify-content:center; align-content:center; text-align:center">
+          <h4 class="font-regular">partridge@gmail.com</h4>
         </div>
-        <div>
-          <h4 class="font-regular  hover:text-pink-600">---------------------------------</h4>
-        </div>
-        <div>
-          <h4 class="font-regular  hover:text-pink-600">partridge@gmail.com</h4>
-        </div>
-        <div>
-          <h4 class="font-regular  hover:text-pink-600">089747632496</h4>
+        <div style="justify-content:center; align-content:center; text-align:center">
+          <h4 class="font-regular">089747632496</h4>
         </div>
 
       </div>
@@ -696,19 +702,13 @@ object {
 
     <div class="flex-auto ">
         <div class="flex flex-col">
-            <div class="flex flex-col bg-white h-24 p-2 drop-shadow-2xl">
             <div class="flex flex-row space-x-3">
             </div>
             </div>
 
-            <div class="bg-blue-50 min-h-screen">
-                <div class=" mt-8 grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10 ">
-                    <div>
-                        <button>Kembali</button>
-                    </div>
-                </div>
+      
 
-                <div class=" flex items-center justify-between text-gray-600 text-3xl px-5"><b>Data Kucing</b></div>
+                <div class=" flex items-center justify-between text-gray-600 text-3xl p-5"><b>Data Kucing</b></div>
             <!--Table-->
                 <div class="grid  lg:grid-cols-1  md:grid-cols-1 p-4 gap-3">
                     <div class="col-span-2 flex flex-auto items-center justify-between  p-5 bg-white rounded shadow-sm">
