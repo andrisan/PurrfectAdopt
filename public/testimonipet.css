@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 30px;
+  }
+  
+  .box {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 25.7px;
+    background-color: #FFD95A;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    margin-top: 30px;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  .content {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .wrapper-header {
+    display: flex;
+    flex-direction: row;
+  }
+  

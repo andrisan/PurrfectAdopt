@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\KucingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,11 +22,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['guest'])->group(function(){
   Route::get('/', function(){
     return view('welcome');
   })->name('welcome');
 
+  Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
+  Route::view('/testi','testi');
+  Route::view('/bio','bio');
+  Route::view('/balasDiskusi','balasDiskusi');
+  Route::view('/diskusi','diskusi');
+  Route::view('/setting2','setting2');
+  Route::view('/setting1','setting1');
+  Route::middleware(['guest'])->group(function(){
+  Route::get('/', [SesiController::class, 'index'])->name('login');
+  Route::post('/', [SesiController::class, 'login']);
+    
+  Route::get('/signup', [SignUpController::class, 'showRegistrationForm'])->name('signup');
+  Route::post('/signup', [SignUpController::class, 'signup']);
 
 Route::resource('/admin-kucing', KucingController::class);
 Route::get('getadminkucing', [KucingController::class, 'getKucing']);
