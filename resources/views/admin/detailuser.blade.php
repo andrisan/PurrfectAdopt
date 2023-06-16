@@ -672,26 +672,17 @@ object {
         </div>
         <div class="p-2 hover:bg-pink-100" style="justify-content:center; align-content:center; text-align:center">
           <div class="space-x-3">
-            <h4 class="font-regular">Louis Partridge</h4>
+            <h4 id="namauser" class="font-regular"></h4>
           </div>
         </div>
         <div style="justify-content:center; align-content:center; text-align:center">
-          <h4 class="font-regular">1234567890</h4>
+          <h4 id="iduser" class="font-regular"></h4>
         </div>
         <div style="justify-content:center; align-content:center; text-align:center">
-          <h4 class="font-regular">5</h4>
+          <h4 id="emailuser" class="font-regular"></h4>
         </div>
         <div style="justify-content:center; align-content:center; text-align:center">
-          <h4 class="font-regular">Kucing</h4>
-        </div>
-        <div>
-          <h4 class="font-regular">---------------------------------</h4>
-        </div>
-        <div style="justify-content:center; align-content:center; text-align:center">
-          <h4 class="font-regular">partridge@gmail.com</h4>
-        </div>
-        <div style="justify-content:center; align-content:center; text-align:center">
-          <h4 class="font-regular">089747632496</h4>
+          <h4 id="notelp" class="font-regular"></h4>
         </div>
 
       </div>
@@ -750,6 +741,93 @@ object {
         </div>
     </div>
   </div>
+  <script src="hthttps://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+        let isi = '';
+
+        // $.ajaxSetup({
+        //     headers: {
+        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('user')
+        //     }
+        // });
+
+        function getUser() {
+            const url = 'http://127.0.0.1:8000/getuserkucing';
+            $.ajax({
+                type:"GET",
+                url:url,
+                dataType:"JSON",
+                success:
+                function (response) {
+                  isi = '';
+                    isi += `
+                      <p>${response}</p>
+                      `;
+                    $('#namauser').append(isi);
+                }
+            });
+        }
+        getUser();
+
+        function getUser() {
+            const url = 'http://127.0.0.1:8000/getuserkucing';
+            $.ajax({
+                type:"GET",
+                url:url,
+                dataType:"JSON",
+                success:
+                function (response) {
+                  isi = '';
+                    isi += `
+                      <p>${response}</p>
+                      `;
+                    $('#iduser').append(isi);
+                }
+            });
+        }
+        getUser();
+
+        function getUser() {
+            const url = 'http://127.0.0.1:8000/getuserkucing';
+            $.ajax({
+                type:"GET",
+                url:url,
+                dataType:"JSON",
+                success:
+                function (response) {
+                  isi = '';
+                    isi += `
+                      <p>${response}</p>
+                      `;
+                    $('#emailuser').append(isi);
+                }
+            });
+        }
+        getUser();
+
+        function getUser() {
+            const url = 'http://127.0.0.1:8000/getuserkucing';
+            $.ajax({
+                type:"GET",
+                url:url,
+                dataType:"JSON",
+                success:
+                function (response) {
+                  isi = '';
+                    isi += `
+                      <p>${response}</p>
+                      `;
+                    $('#notelp.').append(isi);
+                }
+            });
+        }
+        getUser();
+    });
+  </script>
+
 </body>
 
 </html>
