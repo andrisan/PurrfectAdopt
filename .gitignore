@@ -17,3 +17,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+database/migrations/adopsi.php
+database/DatabaseSeeder.php
