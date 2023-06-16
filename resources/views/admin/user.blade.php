@@ -8,21 +8,24 @@
     <!--Icon Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-      body{
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-}
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
-header {
+    <style>
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header {
       background-color: #C07F00;
       color: #fff;
       padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-}
+    }
 
     .logo {
       margin-left: 2%;
@@ -67,50 +70,50 @@ header {
       margin-right: 10px;
     }
 
-.container {
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    flex-wrap: wrap;
-    height: 30vh;
-}
+    .container {
+      display: flex;
+      /* justify-content: center;
+      align-items: center; */
+      flex-wrap: wrap;
+      height: 30vh;
+    }
 
-.table-wrapper {
-    width: 90%;
+    .table-wrapper {
+      width: 90%;
 /*     margin: 0 auto; */
 
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 5px;
-    padding: 20px;
-    background: #FFD95A;
-}
+      margin-left: 5%;
+      margin-right: 5%;
+      border-radius: 5px;
+      padding: 20px;
+      background: #FFD95A;
+    }
 
-.tbluser {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    .tbluser {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      margin-bottom: 10px;
 /*     background: red; */
-}
+    }
 
-.tbluser, th, td {
-    border: 1px solid black;
-    padding: 10px;
-}
+    .tbluser, th, td {
+        border: 1px solid black;
+        padding: 10px;
+    }
 
-thead {
-    background-color: #C07F00;
-}
+    thead {
+        background-color: #C07F00;
+    }
 
-td.image-cell {
-    text-align: center;
-}
+    td.image-cell {
+        text-align: center;
+    }
 
-td.image-cell img {
-    width: 30px;
-    height: auto;
-}
+    td.image-cell img {
+        width: 30px;
+        height: auto;
+    }
 
     footer {
         background-color: #C07F00;
@@ -139,30 +142,30 @@ td.image-cell img {
       text-align: center;
     }
 
-  .right-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-right: 5%;
-}
+    .right-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-right: 5%;
+    }
 
-  .right-section span{
-    margin-right: 7%;
-  }
+    .right-section span{
+      margin-right: 7%;
+    }
 
-.social-media {
-  margin-top: 10px;
-  margin-left: 40%;
-}
+    .social-media {
+      margin-top: 10px;
+      margin-left: 40%;
+    }
 
-.social-media img {
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
-  /* margin-right: 10%; */
-}
+    .social-media img {
+      width: 30px;
+      height: 30px;
+      margin-left: 20px;
+      /* margin-right: 10%; */
+    }
 
     .right-section {
       flex: 1;
@@ -189,19 +192,19 @@ td.image-cell img {
 
 <body style="font-family: Poppins;" class="yellow-bg">
     <header>
-        <div class="flex">
-                Logo
+    <div class="flex">
+                <p><b>PurrfectAdopt</b></p>
         </div>
             <nav>
-            <ul>
+              <ul>
                 <li><a href="<?= url('/admin-home'); ?>">Beranda</a></li>
                 <li><a href="<?= url('/admin-kucing'); ?>">Kucing</a></li>
                 <li><a href="<?= url('/admin-user'); ?>">User</a></li>
                 <li><a href="#">Artikel</a></li>
-            </ul>
+              </ul>
             </nav>
         <div class="profile">
-            <img src="profile-image.jpg" alt="Profil">
+            <img src="{{ asset('/img/profile.png') }}" alt="Profil">
             <span>Profil</span>
         </div>
     </header>
