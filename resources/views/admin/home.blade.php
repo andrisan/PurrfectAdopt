@@ -504,11 +504,8 @@
                             // tblkucing diganti ID Div
                 });
             }
-
             getUser();
         })
     </script>
-
 </body>
-
 </html>
