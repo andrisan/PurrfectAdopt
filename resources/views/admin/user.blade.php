@@ -12,185 +12,185 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
     <style>
-    body{
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-    }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+      }
 
-    header {
-      background-color: #C07F00;
-      color: #fff;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      margin-left: 2%;
-      width: 70%;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      margin-left: 110%;
-    }
-
-    nav ul li {
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-    width: 20px;
-    height: 40px;
-    background: white;
-    border-radius: 5px;
-    color: #C07F00;
-    }
-
-    .profile {
-      display: flex;
-      align-items: center;
-    }
-
-    .profile img {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-
-    .container {
-      display: flex;
-      /* justify-content: center;
-      align-items: center; */
-      flex-wrap: wrap;
-      height: 30vh;
-    }
-
-    .table-wrapper {
-      width: 90%;
-/*     margin: 0 auto; */
-
-      margin-left: 5%;
-      margin-right: 5%;
-      border-radius: 5px;
-      padding: 20px;
-      background: #FFD95A;
-    }
-
-    .tbluser {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      margin-bottom: 10px;
-/*     background: red; */
-    }
-
-    .tbluser, th, td {
-        border: 1px solid black;
-        padding: 10px;
-    }
-
-    thead {
-        background-color: #C07F00;
-    }
-
-    td.image-cell {
-        text-align: center;
-    }
-
-    td.image-cell img {
-        width: 30px;
-        height: auto;
-    }
-
-    footer {
+      header {
         background-color: #C07F00;
         color: #fff;
         padding: 20px;
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-    }
-
-    .left-section {
-      flex: 1;
-    }
-
-    .left-section h3 {
-      margin: 0;
-      font-size: 18px;
-    }
-
-    .left-section p {
-      margin: 5px 0;
-    }
-
-    .center-section {
-      flex: 1;
-      text-align: center;
-    }
-
-    .right-section {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: flex-end;
-      margin-right: 5%;
-    }
-
-    .right-section span{
-      margin-right: 7%;
-    }
-
-    .social-media {
-      margin-top: 10px;
-      margin-left: 40%;
-    }
-
-    .social-media img {
-      width: 30px;
-      height: 30px;
-      margin-left: 20px;
-      /* margin-right: 10%; */
-    }
-
-    .right-section {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-
-    .social-media img {
-      width: 20px;
-      height: 20px;
-      margin-left: 10px;
-    }
-    .btn-red {
-        @apply bg-blue-500 text-white;
-    }
-
-    .rounded {
-        border-radius: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
+      .logo {
+        margin-left: 2%;
+        width: 70%;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        margin-left: 110%;
+      }
+
+      nav ul li {
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+      width: 20px;
+      height: 40px;
+      background: white;
+      border-radius: 5px;
+      color: #C07F00;
+      }
+
+      .profile {
+        display: flex;
+        align-items: center;
+      }
+
+      .profile img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .container {
+        display: flex;
+        /* justify-content: center;
+        align-items: center; */
+        flex-wrap: wrap;
+        height: 30vh;
+      }
+
+      .table-wrapper {
+        width: 90%;
+  /*     margin: 0 auto; */
+
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 5px;
+        padding: 20px;
+        background: #FFD95A;
+      }
+
+      .tbluser {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        margin-bottom: 10px;
+  /*     background: red; */
+      }
+
+      .tbluser, th, td {
+          border: 1px solid black;
+          padding: 10px;
+      }
+
+      thead {
+          background-color: #C07F00;
+      }
+
+      td.image-cell {
+          text-align: center;
+      }
+
+      td.image-cell img {
+          width: 30px;
+          height: auto;
+      }
+
+      footer {
+          background-color: #C07F00;
+          color: #fff;
+          padding: 20px;
+          width: 100%;
+          position: fixed;
+          bottom: 0;
+      }
+
+      .left-section {
+        flex: 1;
+      }
+
+      .left-section h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .left-section p {
+        margin: 5px 0;
+      }
+
+      .center-section {
+        flex: 1;
+        text-align: center;
+      }
+
+      .right-section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-right: 5%;
+      }
+
+      .right-section span{
+        margin-right: 7%;
+      }
+
+      .social-media {
+        margin-top: 10px;
+        margin-left: 40%;
+      }
+
+      .social-media img {
+        width: 30px;
+        height: 30px;
+        margin-left: 20px;
+        /* margin-right: 10%; */
+      }
+
+      .right-section {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .social-media img {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+      }
+      .btn-red {
+          @apply bg-blue-500 text-white;
+      }
+
+      .rounded {
+          border-radius: 1rem;
+      }
+      
     </style>
 </head>
 
-<body style="font-family: Poppins;" class="yellow-bg">
+<body>
     <header>
     <div class="flex">
                 <p><b>PurrfectAdopt</b></p>
