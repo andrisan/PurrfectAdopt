@@ -25,7 +25,6 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
 }
 
     .logo {
@@ -73,8 +72,9 @@ header {
 
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
+    flex-wrap: wrap;
     height: 30vh;
 }
 
@@ -119,13 +119,9 @@ td.image-cell img {
         background-color: #C07F00;
         color: #fff;
         padding: 20px;
-        display: flex;
-        position: absolute;
-        justify-content: space-between;
-        align-items: center;
+        width: 100%;
+        position: fixed;
         bottom: 0;
-
-
     }
 
     .left-section {
@@ -212,14 +208,12 @@ td.image-cell img {
         </div>
     </header>
 
-    <div class="col-md-12">
-        <div style="margin-left: 90px;">
+    <div class="container">
+
+        <div style="margin-left:100px">
             <p style="font-size: 25px; font-weight:600">Data kucing yang tersedia</p>
         </div>
-    </div>
 
-
-    <div class="container">
         <div class="table-wrapper rounded">
             <table class="tablekucing " id="tblkucing">
                 <thead>
@@ -245,24 +239,24 @@ td.image-cell img {
 
 
   <footer>
+    <div style="display: flex;">
         <div class="left-section">
-        <h3>Purrfect Adopt</h3>
-        <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
-        </div>
-        <div class="center-section">
-        <h3> Alamat Kami </h3>
-        Jalan Veteran Malang
-        </div>
-        <div class="right-section">
-        <span>Contact Us:</span>
-        <div class="social-media">
-        <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-        </div>
+            <h3>Purrfect Adopt</h3>
+            <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
+            </div>
+            <div class="center-section">
+            <h3> Alamat Kami </h3>
+            Jalan Veteran Malang
+            </div>
+            <div class="right-section">
+            <span>Contact Us:</span>
+            <div class="social-media">
+            <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+            </div>
         </div>
     </footer>
-
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

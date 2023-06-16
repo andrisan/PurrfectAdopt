@@ -40,6 +40,7 @@ Route::resource('/admin-user', UserController::class);
 Route::get('getadminuser', [UserController::class, 'getUser']);
 Route::get('hapususer/{id}', [UserController::class, 'destroy'] )->name('hapususer');
 Route::get('/admin-detailuser', [UserController::class, 'getDetail']);
+Route::get('getuserkucing/{id}', [UserController::class, 'getUserKucing'] )->name('getuserkucing');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
