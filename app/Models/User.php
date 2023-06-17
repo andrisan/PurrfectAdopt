@@ -24,6 +24,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
         'gender',
         'profesi',
         'alamat',
@@ -31,7 +32,7 @@ class User extends Authenticatable
         'ekonomi',
         'crime_hist',
         'kontak',
-        'status'
+        'status',
     ];
 
 

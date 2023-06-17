@@ -15,9 +15,9 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            'name' => 'Eiko',
-            'email' => 'eiko@gmail.com',
-            'password' => bcrypt('123'),
+            'name' => 'Anya Geraldine',
+            'email' => 'anya@yahoo.com',
+            'password' => bcrypt('12345'),
             'role' => 'user',
             'gender' => '1',
             'profesi' => 'karyawan',
@@ -29,9 +29,9 @@ class UserSeeder extends Seeder
             'status' => '0',
         ]);
         DB::table('users')->insert([
-            'name' => 'Farah',
-            'email' => 'farah@gmail.com',
-            'password' => bcrypt('123'),
+            'name' => 'Abdul Genta',
+            'email' => 'genta@yahoo.com',
+            'password' => bcrypt('12345'),
             'role' => 'user',
             'gender' => '1',
             'profesi' => 'karyawan',
@@ -43,9 +43,9 @@ class UserSeeder extends Seeder
             'status' => '0',        
         ]);
         DB::table('users')->insert([
-            'name' => 'Diva',
-            'email' => 'diva@gmail.com',
-            'password' => bcrypt('123'),
+            'name' => 'Serra Hanif',
+            'email' => 'serra@yahoo.com',
+            'password' => bcrypt('12345'),
             'role' => 'admin',
             'gender' => '1',
             'profesi' => 'karyawan',

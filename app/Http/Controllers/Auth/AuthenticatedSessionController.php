@@ -37,11 +37,11 @@ class AuthenticatedSessionController extends Controller
         
         if(Auth::attempt($info_login))
         {
-            if(Auth::user()->role === 'admin')
+            if(Auth::user()->role == 'admin')
             {
                 return redirect('/admin-home');
             }
-            elseif(Auth::user()->role === 'user')
+            elseif(Auth::user()->role == 'user')
             {
                 return redirect('/dashboard');
             }

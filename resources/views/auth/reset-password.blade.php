@@ -14,7 +14,7 @@
 
             @include('components.error')
             
-            <form action="{{ route('password.update') }}" method="POST">
+            <form action="/reset-password" method="POST">
                 @csrf
                 <input type="hidden" name="token" value="{{ $token }}">
                 <input type="hidden" name="email" value="{{ request()->email }}">

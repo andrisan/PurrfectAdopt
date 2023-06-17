@@ -30,8 +30,8 @@ Route::middleware(['guest'])->group(function(){
 /** END HALAMAN WELCOME */
 
 /** START AUTH: LOGIN, REGISTER, FORGOT-PASSWORD, RESET-PASSWORD */
-Route::get('/login', [AuthenticatedSessionController::class, 'create']);
-Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
+Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
+Route::post('/login', [AuthenticatedSessionController::class, 'store']);
 
 Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
 Route::post('/register', [RegisteredUserController::class, 'store']);
@@ -44,6 +44,7 @@ Route::post('/reset-password', [NewPasswordController::class, 'store'])->name('p
 
 Route::middleware(['auth'])->group(function(){
   /** SEBELUM MENGAKSES HAL. ADMIN-HOME USER DIPERKENANKAN UNTUK LOGIN DAHULU */
+  /** TERDAPAT MIDDLEWARE UNTUK MEMBATASI AGAR HANYA ADMIN SAJA YANG BISA MENGAKSES HALAMAN INI */
   Route::resource('/admin-home', DashboardController::class)->middleware('userAccess:admin');
 
   /** SEBELUM MENGAKSES HAL. DASHBOARD USER DIPERKENANKAN UNTUK LOGIN DAHULU */
@@ -72,7 +73,7 @@ Route::middleware(['guest'])->group(function(){
   Route::get('getadminkucing', [KucingController::class, 'getKucing']);
   Route::get('hapuskucing/{id}', [KucingController::class, 'destroy'] )->name('hapuskucing');
 
-  Route::resource('/admin-home', DashboardController::class);
+  // Route::resource('/admin-home', DashboardController::class);
   Route::get('gethomekucing', [DashboardController::class, 'getKucing']);
   Route::get('gethomecontent', [DashboardController::class, 'getContent']);
   Route::get('gethomeuser', [DashboardController::class, 'getUser']);
