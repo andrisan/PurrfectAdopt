@@ -8,8 +8,6 @@
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <script src="https://kit.fontawesome.com/61cc44f0a1.js" crossorigin="anonymous"></script>
 
@@ -22,10 +20,10 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    @include('components.header');
+    @include('components.header')
 
 <!--body-->
-<div class="w-full text-gray-700 md:text-center text-5xl font-semibold pt-10">
+<div class="w-full text-gray-700 md:text-center text-5xl font-semibold pt-10 mt-16">
     New way of finding your dream cat</div>
 </div>
 <div class="w-full text-gray-700 md:text-center text-5xl text-base/6 py-4">
@@ -39,9 +37,9 @@
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
         </div>
-        <input type="search" id="default-search" class=" w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+        <input type="search" id="default-search" class=" w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-400 focus:border-yellow-400 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
         placeholder="Find your cat here" required>
-        <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+        <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
         </div>
     </form>
 </div>
@@ -61,9 +59,9 @@
         </a>
         <p class="font-normal text-gray-700 dark:text-gray-400">Race     : Anggora</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Gender   : Male</p>
-        <p class="font-normal text-gray-700 dark:text-gray-400">Weught   : Anggora</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400">Weight   : Anggora</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Height   : Anggora</p> <br>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
             Show more
             <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </a>
@@ -80,10 +78,10 @@
         </a>
         <p class="font-normal text-gray-700 dark:text-gray-400">Race     : Anggora</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Gender   : Male</p>
-        <p class="font-normal text-gray-700 dark:text-gray-400">Weught   : Anggora</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400">Weight   : Anggora</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Height   : Anggora</p> <br>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Show more
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
+     Show more
             <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </a>
     </div>
@@ -99,10 +97,10 @@
         </a>
         <p class="font-normal text-gray-700 dark:text-gray-400">Race     : Anggora</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Gender   : Male</p>
-        <p class="font-normal text-gray-700 dark:text-gray-400">Weught   : Anggora</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400">Weight   : Anggora</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Height   : Anggora</p> <br>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Show more
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
+    Show more
             <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </a>
     </div>
@@ -113,13 +111,12 @@
 <!-- card-->
 
 <!-- choose us-->
- <!-- BEGIN FEATURES SECTION -->
  <div id="features" class="relative w-full px-0 py-10 md:py-16 lg:py-24 xl:py-20 xl:px-0">
         <div class="container flex flex-col items-center justify-between h-full max-w-6xl mx-auto">
             <h2
                 class="max-w-2xl px-5 mt-0 text-3xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl">
               Why Choose Us?</h2>
-            <div class="flex flex-col w-full mt-0 lg:flex-row sm:mt-10 lg:mt-20">
+            <div class="flex flex-col w-full mt-0 lg:flex-row sm:mt-5 lg:mt-5">
 
                 <div class="w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/3">
                     <div class="relative flex flex-col items-center justify-start w-full h-full p-20 mr-5 rounded-lg"> 
