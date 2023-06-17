@@ -29,50 +29,56 @@
 </div>
 
 <div class="container w-1/2 mx-auto px-4">
-<form>   
-    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-    <div class="relative">
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-        </div>
-        <input type="search" id="default-search" class=" w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
-        placeholder="Find your cat here" required>
-        <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
-        </div>
+    <form>   
+        <label for="post-title" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Post Title</label>
+        <input type="text" id="post-title" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+        placeholder="Enter your post title" required>
+        <label for="post-content" class="mt-4 mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Post Content</label>
+        <textarea id="post-content" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+        placeholder="Write your post content" required rows="6"></textarea>
+        <label for="post-image" class="mt-4 mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Upload Image</label>
+        <input type="file" id="post-image" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+        accept="image/*" required>
+        <button type="submit" class="text-white bg-yellow-400 hover:bg-yellow-500 font-medium rounded-lg text-sm px-4 py-2 mt-4">Create Post</button>
     </form>
 </div>
 <br> <br>
 
-<!--card-->
+<!--top article-->
 <div class="px-11">
-<div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal h-auto w-auto">
-<div class="grid grid-rows-3 grid-flow-col gap-4">
-    <div class="row-span-3 ...">
-        <img src="img/artikel1.jpg" alt="">
-    </div>
-
-    <div class="row-span-1 col-span-2 ...">
-        <h3>Embracing Feline Love:The Power of Cat Adoption</h3>
-    </div>
-
-    <div class="row-span-2 col-span-2 ...">
-        <p>In a world where companionship knows no bounds, there is one creature that effortlessly captures our hearts - the humble feline. Cats, with their playful demeanor and soothing purrs, have the remarkable ability to bring joy and comfort into our lives. However, many cats find themselves in need of a loving home and caring guardians. This article delves into the significance of cat adoption and explores the transformative power it holds for both humans and these delightful creatures.</p>
+    <div class="container mx-auto">
+    <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="flex">
+            <a href="#">
+                <img class="rounded-l-lg" src="{{ asset('/img/artikel1.jpg') }}" alt="" style="max-height: 1200px; max-width: 600px;" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Guide and Considerations for Cat Adoption</h5>
+                </a>
+                <p class="font-normal text-gray-700 dark:text-gray-400">In a world where companionship knows no bounds, there is one creature that effortlessly captures our hearts - the humble feline. Cats, with their playful demeanor and soothing purrs, have the remarkable ability to bring joy and comfort into our lives. However, many cats find themselves in need of a loving home and caring guardians. This article delves into the significance of cat adoption and explores the transformative power it holds for both humans and these delightful creatures. <br> <br> Cat adoption is not only a rewarding experience for individuals or families, but it also serves as a compassionate choice that can positively impact the feline population. By adopting a cat from a shelter or rescue organization, you are providing a second chance at life for a deserving cat that may have faced abandonment or neglect.</p>
+                <br>
+                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
+                    Read More
+                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
-</div>
-</div>
-<br>
-<br>
 
-<!-- card-->
+
+<!-- top article -->
 
 <!-- article news-->
 
-<div class="w-full text-gray-700 px-11 text-2xl font-semibold pt-20">Article News</div><br>
+<div class="w-full text-gray-700 px-11 text-2xl font-semibold pt-20 text-center">Article News</div><br>
 <div class="flex container place-content-center">
 <div class="grid grid-cols-3 space-x-4">
 
-<!-- row1 -->
+<!-- card 1 -->
 <div class="max-w-xs  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
     <img class="rounded-t-lg" src="{{ asset('/img/artikel2.jpg') }}" alt="" />
@@ -82,15 +88,15 @@
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Guide and Considerations for Cat Adoption</h5>
         </a>
         <p class="font-normal text-gray-700 dark:text-gray-400">However, before you adopt a cat, there are several things to consider to ensure a successful adoption process and provide proper care for your new feline companion.</p> <br>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
+            Read More
             <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </a>
     </div>
 </div>
-<!-- row2 -->
+<!-- card 1 -->
 
-<!-- row2 -->
+<!-- card 2 -->
 <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
     <img class="rounded-t-lg" src="{{ asset('/img/artikel3.jpg') }}" alt="" />
@@ -100,13 +106,13 @@
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Guide and Considerations for Cat Adoption</h5>
         </a>
         <p class="font-normal text-gray-700 dark:text-gray-400">However, before you adopt a cat, there are several things to consider to ensure a successful adoption process and provide proper care for your new feline companion.</p> <br>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
+            Read More
             <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </a>
     </div>
 </div>
-<!-- row2 -->
+<!-- card 2 -->
 
 <!-- row3 -->
 <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -118,8 +124,8 @@
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Guide and Considerations for Cat Adoption</h5>
         </a>
         <p class="font-normal text-gray-700 dark:text-gray-400">However, before you adopt a cat, there are several things to consider to ensure a successful adoption process and provide proper care for your new feline companion.</p> <br>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
+            Read More
             <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </a>
     </div>
