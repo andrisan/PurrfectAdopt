@@ -16,7 +16,7 @@
   <div class="container mx-auto">
     <div class="box mx-auto">
       <div class="wrapper-header">
-        <img src="bintang.png" >
+        <img src="/images/bintang.png" >
         <span class="title">Diana Sariayu</span>
       </div>
       <span class="content">How do I add a post of the cat I'm offering to my account?</span>
@@ -26,7 +26,7 @@
     <div style="position: relative; width: 100%; height: 100%;">
       
       <div class="container mx-auto">
-        <img src="Admin.png" alt="Gambar" style="padding-left: 70px;padding-top: 20px;padding-right: 20px; position: flex; left: 10px; top: 0.5px; width: 81px; height: 81px;">
+        <img src="/images/Admin.png" alt="Gambar" style="padding-left: 70px;padding-top: 20px;padding-right: 20px; position: flex; left: 10px; top: 0.5px; width: 81px; height: 81px;">
         <div class="box mx-auto">
           <div class="wrapper-header">
           </div>
@@ -38,7 +38,7 @@
     <div style="position: relative; width: 100%; height: 100%;">
 
       <div class="container mx-auto">
-        <img src="Admin.png" alt="Gambar" style="padding-left: 70px;padding-top: 20px;padding-right: 20px; position: flex; left: 10px; top: 0.5px; width: 81px; height: 81px;">
+        <img src="/images/Admin.png" alt="Gambar" style="padding-left: 70px;padding-top: 20px;padding-right: 20px; position: flex; left: 10px; top: 0.5px; width: 81px; height: 81px;">
         <div class="box mx-auto">
           <div class="wrapper-header">
           </div>
@@ -50,7 +50,7 @@
   <div class="container mx-auto">
     <div class="box mx-auto">
       <div class="wrapper-header">
-        <img src="bintang.png">
+        <img src="/images/bintang.png">
         <span class="title">Indah Kumalasari</span>
       </div>
       <span class="content">This cat adoption website is the best place to find the perfect pet cat. I have adopted two cats through this website, and both experiences have been amazing. I am highly impressed with the friendly customer service and assistance provided by the website team.</span>
@@ -60,7 +60,7 @@
     <div style="position: relative; width: 100%; height: 100%;">
       
       <div class="container mx-auto">
-        <img src="Admin.png" alt="Gambar" style="padding-left: 70px;padding-top: 20px;padding-right: 20px; position: flex; left: 10px; top: 0.5px; width: 81px; height: 81px;">
+        <img src="/images/Admin.png" alt="Gambar" style="padding-left: 70px;padding-top: 20px;padding-right: 20px; position: flex; left: 10px; top: 0.5px; width: 81px; height: 81px;">
         <div class="box mx-auto">
           <div class="wrapper-header">
           </div>
@@ -72,7 +72,7 @@
   <div class="container mx-auto">
     <div class="box mx-auto">
       <div class="wrapper-header">
-        <img src="bintang3.png">
+        <img src="/images/bintang1.png">
         <span class="title">Eka Abimanyu</span>
       </div>
       <span class="content">I recently adopted a cat through this cat adoption website, and I couldn't be happier. I received comprehensive information about the cat I wanted to adopt, and I was able to contact the previous owner to ask more questions. The cat I adopted is incredibly cute and sweet. Thank you so much!</span>
@@ -82,7 +82,7 @@
     <div style="position: relative; width: 100%; height: 100%;">
       
       <div class="container mx-auto">
-        <img src="Admin.png" alt="Gambar" style="padding-left: 70px;padding-top: 20px;padding-right: 20px; position: flex; left: 10px; top: 0.5px; width: 81px; height: 81px;">
+        <img src="/images/Admin.png" alt="Gambar" style="padding-left: 70px;padding-top: 20px;padding-right: 20px; position: flex; left: 10px; top: 0.5px; width: 81px; height: 81px;">
         <div class="box mx-auto">
           <div class="wrapper-header">
           </div>
