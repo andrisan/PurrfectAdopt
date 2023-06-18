@@ -60,10 +60,24 @@ Cats, with their irresistible charm, bewitching personalities, and comforting pr
     'updated_at' => \Carbon\Carbon::now(),
         ]);
         DB::table('contents')->insert([
-            'judul' => 'Artikel 3',
-            'nama' => 'Nama Artikel 3',
-            'isi' => 'p',
-            'galery' => '',
+            'judul' => 'Treating Cat Fever',
+            'nama' => 'Aberforth',
+            'isi' => 'Just like humans, cats can also experience fever. However, cat fever has distinct characteristics. For those who have recently acquired a cat, it is important to pay attention to various aspects of cat fever so that you know how to treat a cat with fever in the future.
+            
+            Causes of Cat Fever:
+            The most common cause of cat fever is usually due to infections that enter through the mouth, nose, eyes, or throat. Cat fever typically occurs as a body response to fight off the infection attacking the body.
+            
+            Apart from these seasonal factors, cat fever can also be an indication of a serious underlying illness. Therefore, it is important to pay attention to its condition and promptly seek medical attention to receive appropriate treatment.
+            
+            Signs of Cat Fever:
+            Signs that may indicate cat fever include a loss of appetite and decreased water intake that lasts for more than 24 hours. When a cat loses its appetite, its body becomes weaker and lacks energy.
+            
+            To truly confirm that a cat has a fever, you can perform a rectal temperature check using a thermometer. If the body temperature reads 39.3 degrees Celsius or higher, it is advisable to consult a veterinarian immediately.
+            
+            Treating Cat Fever:
+            When you observe the signs of cat fever, the next step is to seek veterinary care. The veterinarian will conduct an examination and provide appropriate treatment for your cat based on its specific needs and health condition. Typically, when a cat has a fever, the veterinarian will administer medication to reduce the fever, often in the form of liquid medication.',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now(),
         ]);
         DB::table('contents')->insert([
             'judul' => 'Artikel 4',
