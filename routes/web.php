@@ -48,9 +48,7 @@ Route::middleware(['auth'])->group(function(){
   Route::resource('/admin-home', DashboardController::class)->middleware('userAccess:admin');
 
   /** SEBELUM MENGAKSES HAL. DASHBOARD USER DIPERKENANKAN UNTUK LOGIN DAHULU */
-  Route::get('/dashboard', function () {
-    return view('dashboard');
-  });
+  Route::get('/dashboard', [DashboardController::class, 'create']);
   Route::get('/main', [AuthenticatedSessionController::class, 'main']);
   Route::get('/main/admin', [AuthenticatedSessionController::class, 'admin'])->middleware('userAccess:admin');
   Route::get('/main/user', [AuthenticatedSessionController::class, 'user'])->middleware('userAccess:user');

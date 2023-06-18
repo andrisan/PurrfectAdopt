@@ -15,7 +15,7 @@ class KucingSeeder extends Seeder
     public function run(): void
     {
         DB::table('kucings')->insert([
-            'nama'          => 'Meow',
+            'nama'          => 'Charlie',
             'warna'         => 'kuning',
             'ras'           => 'mongolia',
             'gender'        => '0',
@@ -23,11 +23,11 @@ class KucingSeeder extends Seeder
             'tinggi_badan'  => '20',
             'kesehatan'     => '',
             'sikap'         => '',
-            'foto'          => '',
+            'foto'          => '/img/cat1.jpg',
             'video'         => '',
         ]);
         DB::table('kucings')->insert([
-            'nama'          => 'Meow2',
+            'nama'          => 'Charlie2',
             'warna'         => 'kuning',
             'ras'           => 'mongolia',
             'gender'        => '0',
@@ -35,11 +35,11 @@ class KucingSeeder extends Seeder
             'tinggi_badan'  => '20',
             'kesehatan'     => '',
             'sikap'         => '',
-            'foto'          => '',
+            'foto'          => '/img/cat2.jpg',
             'video'         => '',
         ]);
         DB::table('kucings')->insert([
-            'nama'          => 'Meow3',
+            'nama'          => 'Charlie3',
             'warna'         => 'kuning',
             'ras'           => 'mongolia',
             'gender'        => '0',
@@ -47,7 +47,7 @@ class KucingSeeder extends Seeder
             'tinggi_badan'  => '20',
             'kesehatan'     => '',
             'sikap'         => '',
-            'foto'          => '',
+            'foto'          => '/img/cat5.jpg',
             'video'         => '',
         ]);
     }
