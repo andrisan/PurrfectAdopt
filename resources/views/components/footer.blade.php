@@ -1,5 +1,5 @@
 <div class="px-4 pt-12 pb-8 mx-auto text-white bg-yellow-500">
-  <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4 px-10">
+  <div class="grid gap-8 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4 px-10">
     <div class="sm:col-span-2">
         <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
             <x-application-logo class="block h-8 pr-2 w-auto fill-current" />
