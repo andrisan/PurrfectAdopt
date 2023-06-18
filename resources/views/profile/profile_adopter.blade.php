@@ -8,6 +8,9 @@
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        <link href="{{ asset('adopter.css')}}" rel="stylesheet" />
 
     <script src="https://kit.fontawesome.com/61cc44f0a1.js" crossorigin="anonymous"></script>
 
@@ -74,65 +77,11 @@
     </div>
 
 <!-- section 2 3 -->
-    <div class="v52_828">
-            <div class="v52_829"></div>
-            <div class="v52_833"></div>
-            <span class="v52_834">Nickname Profile</span>
-            <span class="v52_835">JL. **********, KECAMATAN, KOTA, PROVINSI</span>
-            <div class="v185_118">
-                <div class="v52_836">
-                    <div class="v52_837">
-
-                    </div>
-                </div>
-                <div class="v52_838">
-
-                </div>
-            </div>
-            <div class="v52_861">
-                <div class="v52_862">
-
-                </div>
-                <div class="v52_863">
-
-                </div>
-            </div>
-            <div class="v185_119">
-                <div class="v52_858">
-
-                </div>
-                <span class="v52_859">+62 8** - **** - ****</span>
-                <span class="v52_860">Lorem ipsum ....</span>
-                <div class="v52_864"><div class="v52_865">
-
-                </div>
-                <div class="v52_866">
-
-                </div>
-            </div>
-            <div class="v52_867">
-                <div class="v52_868">
-
-                </div>
-                <div class="v52_869">
-
-                </div>
-            </div>
-        </div>
-        <span class="v52_870">Bio and Contact Person</span>
-        <div class="v54_276">
-            <div class="v54_277">
-
-            </div>
-        <div class="v54_278">
-
-        </div>
-    </div>
     <div class="v52_1071">
         <div class="v52_1072">
             
         </div><div class="v52_1073"></div><span class="v52_1074">LOGO</span><div class="v52_1075"></div><div class="v52_1076"></div><span class="v52_1077">Login</span><span class="v52_1078">Sign Up</span><span class="v52_1079">Search Bar</span><div class="v52_1080"><div class="v52_1081"></div><div class="v52_1082"></div></div></div><div class="v52_1283"><div class="v52_1284"></div><div class="v52_1285"><div class="v52_1286"></div></div><div class="v52_1287"><div class="v52_1288"></div></div><div class="v52_1289"><div class="v52_1290"></div></div><span class="v52_1291">0856-4574-8425</span><span class="v52_1292">dwiwardhana12@gmail.com</span><span class="v52_1293">Contact Us</span><span class="v52_1294">Lorem ipsum dolor sit amet consectetur. Eu ullamcorper arcu varius id at lacinia aliquam metus. Vestibulum tristique duis non habitasse tincidunt montes amet praesent. Adipiscing rhoncus lacus pharetra elementum. Sed tincidunt ut pellentesque placerat lectus praesent praesent amet pretium.</span><span class="v52_1295">About</span><span class="v52_1296">Lorem ipsum dolor sit amet consectetur. Eu ullamcorper arcu varius id at lacinia aliquam metus. Vestibulum tristique duis non habitasse tincidunt montes amet praesent. Adipiscing rhoncus lacus pharetra elementum. Sed tincidunt ut pellentesque placerat lectus praesent praesent amet pretium.</span><span class="v52_1297">LOGO</span><div class="v52_1298"><div class="v52_1299"></div></div><div class="v52_1300"><div class="v52_1301"></div></div><span class="v52_1302">WORK</span><span class="v52_1303">CONTACT</span><span class="v52_1304">ABOUT</span></div><div class="v52_879"><div class="v52_880"></div><span class="v52_882">Saved Post</span><div class="v52_949"></div><div class="v46_151"><div class="v46_152"></div><span class="v46_153">Your Bookmark</span></div><div class="v52_1268"><div class="v52_1269"></div><span class="v52_1270">Your Bookmark</span></div><div class="v46_154"><div class="v46_155"></div><span class="v46_156">Your Bookmark</span></div><div class="v46_161"><div class="v46_162"></div><span class="v46_163">Your Bookmark</span></div><div class="v52_1281"><div class="v52_1271"><div class="v52_1272"></div><span class="v52_1273">Your Bookmark</span></div><div class="v52_1274"></div><div class="v52_1275"><div class="v52_1276"></div><span class="v52_1277">Your Bookmark</span></div><div class="v52_1278"><div class="v52_1279"></div><span class="v52_1280">Your Bookmark</span></div></div><div class="v52_1282"></div></div><div class="v52_951"><div class="v52_952"></div><span class="v52_953">My Pet</span><div class="v52_954"></div><span class="v52_976">DAREKECILCOMEL</span><span class="v52_977">Lorem ipsum dolor sit amet consectetur. Ornare ac massa ut at. Id aliquam sagittis faucibus in varius sit. At ut vitae tellus sed eget vitae elementum urna sagittis. Sit tincidunt vitae libero dui consequat sed tincidunt tristique.</span><span class="v52_978">Jawa Timur</span><div class="v52_979"><div class="v52_980"></div><div class="v52_981"></div><div class="v52_982"></div><div class="v52_983"></div></div><div class="v52_984"><div class="v52_985"></div><div class="v52_986"><div class="v52_987"></div></div><span class="v52_988">+62 843 - 7656 - 3452</span></div></div></div>
 
-    @include('components.footer')
+    
 </body>
 </html>
