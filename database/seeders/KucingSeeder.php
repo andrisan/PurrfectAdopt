@@ -15,9 +15,9 @@ class KucingSeeder extends Seeder
     public function run(): void
     {
         DB::table('kucings')->insert([
-            'nama'          => 'Charlie',
+            'nama'          => 'Hermione',
             'warna'         => 'kuning',
-            'ras'           => 'mongolia',
+            'ras'           => 'Mongolia',
             'gender'        => '0',
             'berat_badan'   => '20',
             'tinggi_badan'  => '20',
@@ -27,9 +27,9 @@ class KucingSeeder extends Seeder
             'video'         => '',
         ]);
         DB::table('kucings')->insert([
-            'nama'          => 'Charlie2',
+            'nama'          => 'Simba',
             'warna'         => 'kuning',
-            'ras'           => 'mongolia',
+            'ras'           => 'Anggora',
             'gender'        => '0',
             'berat_badan'   => '20',
             'tinggi_badan'  => '20',
@@ -39,15 +39,15 @@ class KucingSeeder extends Seeder
             'video'         => '',
         ]);
         DB::table('kucings')->insert([
-            'nama'          => 'Charlie3',
+            'nama'          => 'Dora',
             'warna'         => 'kuning',
-            'ras'           => 'mongolia',
-            'gender'        => '0',
+            'ras'           => 'Mongolia',
+            'gender'        => '1',
             'berat_badan'   => '20',
             'tinggi_badan'  => '20',
             'kesehatan'     => '',
             'sikap'         => '',
-            'foto'          => '/img/cat5.jpg',
+            'foto'          => '/img/cat3.jpg',
             'video'         => '',
         ]);
         DB::table('kucings')->insert([
@@ -59,7 +59,7 @@ class KucingSeeder extends Seeder
             'tinggi_badan'  => '20',
             'kesehatan'     => '',
             'sikap'         => '',
-            'foto'          => '/img/cat5.jpg',
+            'foto'          => '/img/cat4.jpg',
             'video'         => '',
         ]);
         DB::table('kucings')->insert([
@@ -83,7 +83,7 @@ class KucingSeeder extends Seeder
             'tinggi_badan'  => '20',
             'kesehatan'     => '',
             'sikap'         => '',
-            'foto'          => '/img/cat5.jpg',
+            'foto'          => '/img/cat6.jpg',
             'video'         => '',
         ]);
     }
