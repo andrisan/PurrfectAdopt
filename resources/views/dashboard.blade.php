@@ -469,7 +469,7 @@
     const swiper = new Swiper('.swiper-container', {
       loop: true,
       slidesPerView: 4,
-      spaceBetween: 30,
+      spaceBetween: 90,
       autoplay: {
         delay: 8000,
       },
@@ -484,7 +484,7 @@
         },
         1024: {
           centeredSlides: false,
-          slidesPerView: 3.25,
+          slidesPerView: 4.25,
         },
       },
     })
