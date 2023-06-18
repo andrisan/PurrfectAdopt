@@ -113,7 +113,7 @@
             >
               <div>
               <a href="#">
-                <img class="rounded-t-lg w-full h-[200px]" src="{{ asset('/img/cat1.jpg') }}" alt="" />
+                <img class="rounded-t-lg w-full h-[200px]" src="{{ $cat->foto }}" alt="" />
             </a>
                 <div class="mt-4">
                 <a href="#">
