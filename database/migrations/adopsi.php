@@ -12,14 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('Adopsi', function (Blueprint $table) {
-            $table->id();
+            $table->id('ID_ADOPSI');
             $table->integer('JUMLAH');
             $table->string('TEMPAT');
             $table->boolean('STATUS_PEMBAYARAN')->nullable();
-            $table->string('METODE')->nullable();
-            $table->text('LOKASI_PU')->nullable();
-            $table->timestamp('TGL_ADOPSI');
-
         });
     }
 
@@ -31,3 +27,6 @@ return new class extends Migration
         Schema::dropIfExists('Adopsi');
     }
 };
+
+
+

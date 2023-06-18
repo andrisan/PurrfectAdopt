@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/poppins.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 1000;
+  background-color: #FFFFFF;
+}
+
+.kotak {
+  width: 1200px;
+  height: 130px;
+  border-radius: 25px;
+  background-color: #FFD95A;
+  margin-top: 50px;
+}
+
+.kotak_balas {
+  width: 110;
+  height: 25;
+  border-radius: 10px;
+  background-color: #4C3D3D;
+  font-size: 12;
+}

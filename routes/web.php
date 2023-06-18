@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\KucingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,11 +22,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['guest'])->group(function(){
   Route::get('/', function(){
     return view('welcome');
   })->name('welcome');
 
+  Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
+  Route::view('/testi','testi');
+  Route::view('/bio','bio');
+  Route::view('/balasDiskusi','balasDiskusi');
+  Route::view('/diskusi','diskusi');
+  Route::view('/setting2','setting2');
+  Route::view('/setting1','setting1');
+  Route::middleware(['guest'])->group(function(){
+  Route::get('/', [SesiController::class, 'index'])->name('login');
+  Route::post('/', [SesiController::class, 'login']);
+    
+  Route::get('/signup', [SignUpController::class, 'showRegistrationForm'])->name('signup');
+  Route::post('/signup', [SignUpController::class, 'signup']);
 
 Route::resource('/admin-kucing', KucingController::class);
 Route::get('getadminkucing', [KucingController::class, 'getKucing']);
@@ -34,14 +47,25 @@ Route::get('hapuskucing/{id}', [KucingController::class, 'destroy'] )->name('hap
 Route::resource('/admin-home', DashboardController::class);
 Route::get('gethomekucing', [DashboardController::class, 'getKucing']);
 Route::get('gethomecontent', [DashboardController::class, 'getContent']);
+Route::get('gethomeuser', [DashboardController::class, 'getUser']);
 
 Route::resource('/admin-user', UserController::class);
 Route::get('getadminuser', [UserController::class, 'getUser']);
+Route::get('hapususer/{id}', [UserController::class, 'destroy'] )->name('hapususer');
+Route::get('/admin-detailuser', [UserController::class, 'getDetail']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
   })->name('dashborad');
 });
+
+Route::get('/article', function () {
+  return view('article/article');
+})->name('article');
+
+Route::get('/article/details', function () {
+  return view('article/articledetails');
+})->name('articledetails');
 
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store']);
