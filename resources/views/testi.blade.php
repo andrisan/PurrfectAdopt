@@ -161,7 +161,7 @@
   <div class="container mx-auto">
     <div class="box mx-auto">
       <div class="wrapper-header">
-        <img src="/images/bintang3.png">
+        <img src="/images/bintang2.png">
         <span class="title">Eka Abimanyu</span>
       </div>
       <span class="content">I recently adopted a cat through this cat adoption website, and I couldn't be happier. I received comprehensive information about the cat I wanted to adopt, and I was able to contact the previous owner to ask more questions. The cat I adopted is incredibly cute and sweet. Thank you so much!</span>
