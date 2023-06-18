@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('judul', 200);
             $table->string('penulis', 50);
-            // $table->boolean('status');
+            $table->boolean('status');
             $table->text('isi');
             $table->binary('galery')->nullable();
             $table->timestamps();
