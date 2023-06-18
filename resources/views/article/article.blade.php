@@ -50,13 +50,13 @@
     <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <div class="flex">
             <a href="#">
-                <img class="rounded-l-lg" src="{{ asset('/img/artikel1.jpg') }}" alt="" style="max-height: 1200px; max-width: 600px;" />
+                <img class="rounded-l-lg" src="{{ $contents->find(1)->galery }}" alt="" style="max-height: 1200px; max-width: 600px;" />
             </a>
             <div class="p-5">
                 <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Guide and Considerations for Cat Adoption</h5>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $contents->find(1)->judul }}</h5>
                 </a>
-                <p class="font-normal text-gray-700 dark:text-gray-400">In a world where companionship knows no bounds, there is one creature that effortlessly captures our hearts - the humble feline. Cats, with their playful demeanor and soothing purrs, have the remarkable ability to bring joy and comfort into our lives. However, many cats find themselves in need of a loving home and caring guardians. This article delves into the significance of cat adoption and explores the transformative power it holds for both humans and these delightful creatures. <br> <br> Cat adoption is not only a rewarding experience for individuals or families, but it also serves as a compassionate choice that can positively impact the feline population. By adopting a cat from a shelter or rescue organization, you are providing a second chance at life for a deserving cat that may have faced abandonment or neglect.</p>
+                <p class="font-normal text-gray-700 dark:text-gray-400">{{ $contents->find(1)->isi }}</p>
                 <br>
                 <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
                     Read More
@@ -78,59 +78,28 @@
 <div class="flex container place-content-center">
 <div class="grid grid-cols-3 space-x-4">
 
-<!-- card 1 -->
-<div class="max-w-xs  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-    <img class="rounded-t-lg" src="{{ asset('/img/artikel2.jpg') }}" alt="" />
-    </a>
-    <div class="p-5">
+<!-- card -->
+@foreach ($contents as $content)
+@if ($content != $contents->find(1))
+    <div class="max-w-xs  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Guide and Considerations for Cat Adoption</h5>
+        <img class="rounded-t-lg" src="{{ $content->galery }}" alt="" />
         </a>
-        <p class="font-normal text-gray-700 dark:text-gray-400">However, before you adopt a cat, there are several things to consider to ensure a successful adoption process and provide proper care for your new feline companion.</p> <br>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
-            Read More
-            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $content->judul }}</h5>
+            </a>
+            <p class="font-normal text-gray-700 dark:text-gray-400">{{ $content->isi }}</p> <br>
+            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
+                Read More
+                <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
     </div>
-</div>
-<!-- card 1 -->
+@endif
+@endforeach
+<!-- card -->
 
-<!-- card 2 -->
-<div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-    <img class="rounded-t-lg" src="{{ asset('/img/artikel3.jpg') }}" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Guide and Considerations for Cat Adoption</h5>
-        </a>
-        <p class="font-normal text-gray-700 dark:text-gray-400">However, before you adopt a cat, there are several things to consider to ensure a successful adoption process and provide proper care for your new feline companion.</p> <br>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
-            Read More
-            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </a>
-    </div>
-</div>
-<!-- card 2 -->
-
-<!-- row3 -->
-<div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-    <img class="rounded-t-lg" src="{{ asset('/img/artikel4.jpg') }}" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Guide and Considerations for Cat Adoption</h5>
-        </a>
-        <p class="font-normal text-gray-700 dark:text-gray-400">However, before you adopt a cat, there are several things to consider to ensure a successful adoption process and provide proper care for your new feline companion.</p> <br>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
-            Read More
-            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </a>
-    </div>
-</div>
-<!-- row3 -->
 </div>
 </div>
 </div>

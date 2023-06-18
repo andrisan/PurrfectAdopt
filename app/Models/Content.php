@@ -11,5 +11,5 @@ class Content extends Model
 
     protected $table = 'contents';
     protected $fillable = [
-        'judul', 'nama', 'isi', 'galery'];
+        'judul', 'penulis', 'isi', 'galery'];
 }

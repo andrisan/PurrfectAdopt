@@ -25,7 +25,7 @@
 <!-- sidebar -->
 <div class="mt-16 mx-5 grid grid-cols-6 gap-4">
     <div class="col-start-1 col-end-7 flex-col items-center">
-        <img class="w-full object-cover object-top" src="{{ asset('/img/artikel1.jpg') }}" style="max-height:600px;">
+        <img class="w-full object-cover object-top" src="{{ $contents->find(1)->galery }}" style="max-height:600px;">
     </div>
     <div class="w-full flex flex-col my-4 p-6 text-center items-center">
         <h3 class="text-xl font-semibold">Share</h3> <br>

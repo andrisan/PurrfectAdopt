@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
+use App\Http\Controllers\ContentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,9 +84,7 @@ Route::middleware(['guest'])->group(function(){
 
 });
 
-Route::get('/article', function () {
-  return view('article/article');
-})->name('article');
+Route::get('/article', [ContentController::class, 'create'])->name('article');
 
 Route::get('/article/details', function () {
   return view('article/articledetails');
