@@ -14,7 +14,7 @@
 
             @include('components.error')
             
-            <form action="{{ route('password.update') }}" method="POST">
+            <form action="/reset-password" method="POST">
                 @csrf
                 <input type="hidden" name="token" value="{{ $token }}">
                 <input type="hidden" name="email" value="{{ request()->email }}">
@@ -27,7 +27,7 @@
                     <input type="password" id="password_confirmation" name="password_confirmation" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-yellow-500" placeholder="Confirm new password" required>
                 </div>
                 <div>
-                    <button type="submit" class="bg-indigo-500 text-white py-2 px-4 rounded hover:bg-indigo-600">Reset Password</button>
+                    <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600">Reset Password</button>
                 </div>
             </form>
         </div>
