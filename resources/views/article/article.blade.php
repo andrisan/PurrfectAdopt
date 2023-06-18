@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Purrfect Adopt</title>
+    <title>Purrfect Adopt | Article</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -56,7 +56,9 @@
                 <a href="#">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $contents->find(1)->judul }}</h5>
                 </a>
-                <p class="font-normal text-gray-700 dark:text-gray-400">{{ $contents->find(1)->isi }}</p>
+                <p class="font-normal text-gray-700 dark:text-gray-400">
+                    {{ Str::limit($contents->find(1)->isi, 900) }}
+                </p>
                 <br>
                 <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
                     Read More
@@ -89,7 +91,10 @@
             <a href="#">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $content->judul }}</h5>
             </a>
-            <p class="font-normal text-gray-700 dark:text-gray-400">{{ $content->isi }}</p> <br>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+                {{ Str::limit($content->isi, 200) }}
+            </p>
+            <br>
             <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
                 Read More
                 <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
