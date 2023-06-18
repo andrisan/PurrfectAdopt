@@ -91,7 +91,7 @@
         <a href="#">
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Garfield</h5>
         </a>
-        <p class="font-normal text-gray-700">Race     : Anggora</p>
+        <p class="font-normal text-gray-700">Race     : Persia</p>
         <p class="font-normal text-gray-700">Gender   : Female</p>
         <p class="font-normal text-gray-700">Weight   : 24</p>
         <p class="font-normal text-gray-700">Height   : 20</p> <br>
