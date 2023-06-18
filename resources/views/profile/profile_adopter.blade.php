@@ -29,8 +29,8 @@
 
                 <div class="p-3 rounded ">
                     
-                        <img class="h-auto w-full mx-auto rounded"
-                            src="{{ asset('/img/cat1.jpg') }}"
+                        <img class="h-auto w-full mx-auto rounded-lg"
+                            src="{{ asset('/img/hero_adopter.jpg') }}"
                             alt="">
                     
                 </div>
