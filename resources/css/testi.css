@@ -42,7 +42,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
   border-radius: 15px;
 }
 
@@ -78,4 +77,10 @@
 .wrapper-header {
   display: flex;
   flex-direction: row;
+}
+
+.navbar {
+  text-align: center;
+  justify-content: space-between;
+  padding: 20px;
 }
