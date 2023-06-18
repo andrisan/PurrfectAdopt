@@ -61,17 +61,32 @@
         </div>
     </div>
     </div>
-        <div class="bg-white p-3 m-5 rounded-lg hover:shadow">
-            <!--  -->
-            <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">Enter your mail address:</label>
-            <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="nama" type="text" placeholder="ex:person@mail.com">
-            <br>
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">Enter yout phone number:</label>
-            <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="nama" type="text" placeholder="ex:+123******">
-            </div>
-        </div>
+    <div class="bg-white p-3 m-5 rounded-lg hover:shadow">
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">Enter your mail:</label>
+        <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="email" type="text"
+            placeholder="contoh: person@mail.com">
+        <br>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">Enter your phone number:</label>
+        <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="phone" type="text"
+            placeholder="contoh: +123******">
     </div>
+    <button onclick="updateProfile()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Save Changes
+    </button>
+</div>
+</div>
+
+<script>
+    function updateProfile() {
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+
+        // Kirim data ke backend atau lakukan tindakan yang diinginkan
+
+        alert(`Email: ${email}\nNomor Telepon: ${phone}`);
+    }
+</script>
 
 <!-- section 2 3 -->
     <div class="v52_828">
