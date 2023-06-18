@@ -35,17 +35,7 @@
       </div>
     </div>
     <p>
-    <div style="position: relative; width: 100%; height: 100%;">
-
-      <div class="container mx-auto">
-        <img src="/images/Admin.png" alt="Gambar" style="padding-left: 70px;padding-top: 20px;padding-right: 20px; position: flex; left: 10px; top: 0.5px; width: 81px; height: 81px;">
-        <div class="box mx-auto">
-          <div class="wrapper-header">
-          </div>
-          <span class="content">Thank you for sharing your positive experience with our cat adoption website. We are thrilled to hear that you had a great time using our services.</span>
-        </div>
-      </div>
-    </div>
+    
 
   <div class="container mx-auto">
     <div class="box mx-auto">
