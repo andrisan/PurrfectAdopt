@@ -93,5 +93,9 @@ Route::get('/article/details', function () {
   return view('article/articledetails');
 })->name('articledetails');
 
+Route::get('/findyourcat', function () {
+  return view('findyourcat');
+})->name('findyourcat');
+
 
 require __DIR__.'/auth.php';
