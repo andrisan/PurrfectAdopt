@@ -102,18 +102,18 @@
       </div>
     </div>
 
-    <div class="-mx-6 mt-8 lg:col-span-2 lg:mx-0">
+    <div class="-mx-4 mt-8 lg:col-span-2 lg:mx-0">
       <div class="swiper-container !overflow-hidden">
         <div class="swiper-wrapper">
 
         @foreach ($cats as $cat)
-           <div class="swiper-slide">
+           <div class="swiper-slide mx-4">
             <blockquote
-              class="flex h-full flex-col rounded-lg bg-white p-4"
+              class="flex h-full flex-col rounded-lg bg-white p-4 w-[300px]"
             >
               <div>
               <a href="#">
-                <img class="rounded-t-lg" src="{{ asset('/img/cat1.jpg') }}" alt="" />
+                <img class="rounded-t-lg w-full h-[200px]" src="{{ asset('/img/cat1.jpg') }}" alt="" />
             </a>
                 <div class="mt-4">
                 <a href="#">
@@ -468,8 +468,8 @@
   document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.swiper-container', {
       loop: true,
-      slidesPerView: 3,
-      spaceBetween: 8,
+      slidesPerView: 4,
+      spaceBetween: 30,
       autoplay: {
         delay: 8000,
       },
@@ -484,7 +484,7 @@
         },
         1024: {
           centeredSlides: false,
-          slidesPerView: 2.25,
+          slidesPerView: 3.25,
         },
       },
     })
