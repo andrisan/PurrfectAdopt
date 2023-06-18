@@ -9,7 +9,7 @@
   </head>
   <body>
     <div style="margin-left: 80px; margin-top: 20px" class="icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 5l-7 7l7 7m-7-7h16" /></svg>
+    
     </div>
 
     <div class="flex justify-center items-center">
