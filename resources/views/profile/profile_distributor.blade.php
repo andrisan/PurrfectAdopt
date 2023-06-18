@@ -21,106 +21,53 @@
 </head>
 <body>
 @include('components.header');
-    
-    <div class="v52_1057">
-        <div class="v46_4">
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
+<div class="">
+
+ 
+
+    <div class="container mx-auto my-5 p-5">
+        <div class="md:flex no-wrap md:-mx-2 ">
+            <div class="w-full md:w-3/12 md:mx-2">
+                <div class="p-3 rounded ">
+                    <img class="h-auto w-full mx-auto rounded"
+                        src="{{ asset('/img/cat1.jpg') }}">
+                </div>
+            </div>
+            <div class="w-full md:w-9/12 mx-2 h-64">
+                <div class=" p-3 rounded-sm">
+                    <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
+                        <span class="px-4 py-2 tracking-wide font-semibold">Nickname Pengguna</span>
+                    </div>
+                    <div class="text-gray-700">
+                        <div class="grid  text-sm">
+                            <div class="grid ">
+                                <div class="px-4 py-2">⭐⭐⭐⭐⭐ - Rating</div>
+                                <div class="px-4">JL. KEMBANG KERTAS, LOWOKWARU, MALANG</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
         </div>
-        <div class="v52_744">
-            <div class="v54_30">
-
+    </div>
+    </div>
+        <div class="bg-yellow-300 p-3 m-5 rounded-lg hover:shadow">
+            <!--  -->
+            <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">Enter your mail address:</label>
+            <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="nama" type="text" placeholder="ex:person@mail.com">
+            <br>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">Enter yout phone number:</label>
+            <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="nama" type="text" placeholder="ex:+123******">
             </div>
-            <div class="v54_32">
-
-            </div>
-            <span class="v54_33">Nickname Profile</span>
-            <span class="v54_34">JL. **********, KECAMATAN, KOTA, PROVINSI</span>
-            <div class="v54_35">
-                <div class="v54_36">
-
-                </div>
-            </div>
-            <div class="v54_37">
-
-            </div>
-            <div class="v54_38">
-                <div class="v54_39">
-
-                </div>
-                <span class="v54_40">Rating</span>
-                <div class="v54_41">
-                    <div class="v54_42">
-                        <div class="v54_43">
-
-                        </div>
-                        <div class="v54_44">
-
-                        </div>
-                    </div>
-                    <div class="v54_45">
-                        <div class="v54_46">
-
-                        </div>
-                        <div class="v54_47">
-
-                        </div>
-                    </div>
-                    <div class="v54_48">
-                        <div class="v54_49">
-
-                        </div>
-                        <div class="v54_50">
-
-                        </div>
-                    </div>
-                    <div class="v54_51">
-                        <div class="v54_52">
-
-                        </div>
-                        <div class="v54_53">
-
-                        </div>
-                    </div>
-                    <div class="v54_54">
-                        <div class="v54_55">
-
-                        </div>
-                        <div class="v54_56">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="v54_57">
-
-            </div>
-            <span class="v54_58">+62 8** - **** - ****</span>
-            <span class="v54_59">Lorem ipsum ....</span>
-            <div class="v54_60">
-                <div class="v54_61">
-
-                </div>
-                <div class="v54_62">
-
-                </div>
-            </div>
-            <div class="v54_63">
-                <div class="v54_64">
-
-                </div><div class="v54_65">
-
-                </div>
-            </div>
-            <div class="v54_66">
-                <div class="v54_67">
-
-                </div>
-                <div class="v54_68">
-
-                </div>
-            </div>
-            <span class="v54_69">Bio and Contact Person</span>
         </div>
+    </div>
+                    
+</div>
+    <!--section 2-->
+
         <div class="v54_17">
             <div class="v54_29">
 
