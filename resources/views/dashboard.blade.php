@@ -9,7 +9,9 @@
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <script src="https://kit.fontawesome.com/61cc44f0a1.js" crossorigin="anonymous"></script>
 
@@ -25,7 +27,7 @@
     @include('components.header');
 
 <!--body-->
-<div class="w-full text-gray-700 md:text-center text-5xl font-semibold pt-10">
+<div class="w-full text-gray-700 md:text-center text-5xl font-semibold pt-20">
     New way of finding your dream cat</div>
 </div>
 <div class="w-full text-gray-700 md:text-center text-5xl text-base/6 py-4">
@@ -48,68 +50,171 @@
 <br> <br>
 
 <!--card-->
-<div class="flex container place-content-center">
-<div class="grid grid-cols-3 space-x-4">
+<section>
+  <div
+    class="mx-auto max-w-[1340px] px-4 py-10 sm:px-6 sm:py-20 lg:me-0 lg:pe-0 lg:ps-8"
+  >
+    <div class="max-w-7xl items-end justify-between sm:flex sm:pe-6 lg:pe-8">
+      <h2 class="max-w-xl text-3xl font-bold tracking-tight sm:text-4xl">
+        Cats
+      </h2>
 
-<div class="max-w-xs  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-    <img class="rounded-t-lg" src="{{ asset('/img/cat1.jpg') }}" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
+      <div class="mt-8 flex gap-4 lg:mt-0">
+        <button
+          class="prev-button rounded-full border border-yellow-600 p-3 text-amber-600 hover:bg-amber-600 hover:text-white"
+        >
+          <span class="sr-only">Previous Slide</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-5 w-5 rtl:rotate-180"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </button>
+
+        <button
+          class="next-button rounded-full border border-yellow-600 p-3 text-amber-600 hover:bg-amber-600 hover:text-white"
+        >
+          <span class="sr-only">Next Slide</span>
+          <svg
+            class="h-5 w-5 rtl:rotate-180"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 5l7 7-7 7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="-mx-6 mt-8 lg:col-span-2 lg:mx-0">
+      <div class="swiper-container !overflow-hidden">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <blockquote
+              class="flex h-full flex-col rounded-lg bg-white p-4"
+            >
+              <div>
+              <a href="#">
+                <img class="rounded-t-lg" src="{{ asset('/img/cat1.jpg') }}" alt="" />
+            </a>
+                <div class="mt-4">
+                <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Charlie</h5>
         </a>
         <p class="font-normal text-gray-700 dark:text-gray-400">Race     : Anggora</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Gender   : Male</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Weught   : Anggora</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Height   : Anggora</p> <br>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Show more
-            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 
+        dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            More info
         </a>
-    </div>
-</div>
+                </div>
+              </div>
 
-<div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-    <img class="rounded-t-lg" src="{{ asset('/img/cat1.jpg') }}" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
+            </blockquote>
+          </div>
+
+          <div class="swiper-slide">
+            <blockquote
+              class="flex h-full flex-col rounded-lg bg-white p-4"
+            >
+              <div>
+              <a href="#">
+                <img class="rounded-t-lg" src="{{ asset('/img/cat1.jpg') }}" alt="" />
+            </a>
+                <div class="mt-4">
+                <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Charlie</h5>
         </a>
         <p class="font-normal text-gray-700 dark:text-gray-400">Race     : Anggora</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Gender   : Male</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Weught   : Anggora</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Height   : Anggora</p> <br>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Show more
-            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 
+        dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            More info
         </a>
-    </div>
-</div>
+                </div>
+              </div>
 
-<div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-    <img class="rounded-t-lg" src="{{ asset('/img/cat1.jpg') }}" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
+            </blockquote>
+          </div>
+
+          <div class="swiper-slide">
+            <blockquote
+              class="flex h-full flex-col rounded-lg bg-white p-4"
+            >
+              <div>
+              <a href="#">
+                <img class="rounded-t-lg" src="{{ asset('/img/cat1.jpg') }}" alt="" />
+            </a>
+                <div class="mt-4">
+                <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Charlie</h5>
         </a>
         <p class="font-normal text-gray-700 dark:text-gray-400">Race     : Anggora</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Gender   : Male</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Weught   : Anggora</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Height   : Anggora</p> <br>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Show more
-            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 
+        dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            More info
         </a>
-    </div>
-</div>
+                </div>
+              </div>
 
-</div>
-</div>
+            </blockquote>
+          </div>
+
+           <div class="swiper-slide">
+            <blockquote
+              class="flex h-full flex-col rounded-lg bg-white p-4"
+            >
+              <div>
+              <a href="#">
+                <img class="rounded-t-lg" src="{{ asset('/img/cat1.jpg') }}" alt="" />
+            </a>
+                <div class="mt-4">
+                <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Charlie</h5>
+        </a>
+        <p class="font-normal text-gray-700 dark:text-gray-400">Race     : Anggora</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400">Gender   : Male</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400">Weught   : Anggora</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400">Height   : Anggora</p> <br>
+        <a href="#" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 
+        dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            More info
+        </a>
+                </div>
+              </div>
+
+            </blockquote>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- card-->
 
 <!-- choose us-->
@@ -304,6 +409,160 @@
     </div>
     <!-- END FEATURES SECTION -->
 <!-- choose us-->
+
+<!-- artikel-->
+<section>
+  <div class="max-w-screen-xl px-4 py-4 mx-auto sm:px-6 sm:py-12 lg:px-8">
+    <header class="text-center">
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
+       Read Articles
+      </h2>
+    </header>
+
+    <ul class="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
+      <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
+        <a href="#" class="relative block group">
+          <img
+            src="https://images.unsplash.com/photo-1618898909019-010e4e234c55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+            alt=""
+            class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
+          />
+        </a>
+
+        <a href="#">
+                <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
+                    How to position your furniture for positivity
+                </h3>
+        </a>
+
+        <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+                dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
+                sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
+                voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
+                Molestias explicabo corporis voluptatem?
+            </p>
+
+        <div class="sm:flex sm:items-end sm:justify-end">
+            <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600 px-4 pb-2"
+                > Read more
+
+                <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                </span>
+            </a>
+        </div>
+      </li>
+
+      <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
+        <a href="#" class="relative block group">
+          <img
+            src="https://images.unsplash.com/photo-1624623278313-a930126a11c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+            alt=""
+            class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
+          />
+        </a>
+
+        <a href="#">
+                <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
+                    How to position your furniture for positivity
+                </h3>
+            </a>
+
+            <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+                dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
+                sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
+                voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
+                Molestias explicabo corporis voluptatem?
+            </p>
+
+            <div class="sm:flex sm:items-end sm:justify-end">
+            <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600 px-4 pb-2"
+                > Read more
+
+                <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                    &rarr;
+                </span>
+            </a>
+            </div>
+
+      </li>
+
+
+      <li class="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1 rounded-lg shadow transition 
+      hover:shadow-lg bg-white aspect-square">
+        <a href="#" class="relative block group">
+          <img
+            src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
+            alt=""
+            class="object-cover w-full transition duration-500 group-hover:opacity-90"
+          />
+          <div
+            class="absolute inset-0 flex flex-col items-start justify-end p-6"
+          >
+            <h3 class="text-xl font-bold uppercase text-white">
+                How to position your furniture for positivity</h3>
+
+        <p class="text-sm/relaxed text-white line-clamp-5">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+          perferendis hic asperiores quibusdam quidem voluptates doloremque
+          reiciendis nostrum harum. Repudiandae?  
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+            dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
+            sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
+            voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
+            Molestias explicabo corporis voluptatem? possimus pariatur animi temporibus nesciunt praesentium dolore
+            sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
+            voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
+        </p>
+          </div>
+        </a>
+
+      </li>
+    </ul>
+
+    <div class="sm:flex sm:items-end sm:justify-center py-6">
+      <a
+        href="#"
+        class="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
+      >
+        View All Post
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- artikel-->
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 8,
+      autoplay: {
+        delay: 8000,
+      },
+      navigation: {
+        nextEl: '.next-button',
+        prevEl: '.prev-button',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1.5,
+          centeredSlides: true,
+        },
+        1024: {
+          centeredSlides: false,
+          slidesPerView: 2.25,
+        },
+      },
+    })
+  })
+</script>
+<!--slider cards-->
 
 @include('components.footer');
 

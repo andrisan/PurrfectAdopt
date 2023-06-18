@@ -8,7 +8,7 @@
 body{
   margin: 0;
   padding: 0;
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -18,11 +18,11 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
+}
 
     .logo {
-      font-size: 24px;
-      font-weight: bold;
+      margin-left: 2%;
+      width: 70%;
     }
 
     nav ul {
@@ -40,7 +40,15 @@ header {
     nav ul li a {
       color: #fff;
       text-decoration: none;
-/*       margin-left: 100px; */
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+    width: 20px;
+    height: 40px;
+    background: white;
+    border-radius: 5px;
+    color: #C07F00;
     }
 
     .profile {
@@ -57,9 +65,10 @@ header {
 
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
+    /* justify-content: center;
+    align-items: center; */
+    flex-wrap: wrap;
+    height: 30vh;
 }
 
 .table-wrapper {
@@ -100,13 +109,12 @@ td.image-cell img {
 }
 
     footer {
-      background-color: #C07F00;
-      color: #fff;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 150px;
+        background-color: #C07F00;
+        color: #fff;
+        padding: 20px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
     }
 
     .left-section {
@@ -127,6 +135,31 @@ td.image-cell img {
       text-align: center;
     }
 
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 5%;
+}
+
+  .right-section span{
+    margin-right: 7%;
+  }
+
+.social-media {
+  margin-top: 10px;
+  margin-left: 40%;
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  /* margin-right: 10%; */
+}
+
     .right-section {
       flex: 1;
       display: flex;
@@ -142,28 +175,40 @@ td.image-cell img {
     .btn-red {
         @apply bg-blue-500 text-white;
     }
+
+    .rounded {
+        border-radius: 1rem;
+      }
+
 </style>
-  </head>
+</head>
 <body>
-<header>
-    <div class="logo">Logo</div>
-    <nav>
-      <ul>
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Kucing</a></li>
-        <li><a href="#">User</a></li>
-        <li><a href="#">Artikel</a></li>
-      </ul>
-    </nav>
-    <div class="profile">
-      <img src="profile-image.jpg" alt="Profil">
-      <span>Profil</span>
-    </div>
-  </header>
+    <header>
+        <div class="flex">
+                <p><b>Logo</b></p>
+        </div>
+            <nav>
+            <ul>
+                <li><a href="<?= url('/admin-home'); ?>">Beranda</a></li>
+                <li><a href="<?= url('/admin-kucing'); ?>">Kucing</a></li>
+                <li><a href="<?= url('/admin-user'); ?>">User</a></li>
+                <li><a href="#">Artikel</a></li>
+            </ul>
+            </nav>
+        <div class="profile">
+            <img src="{{ asset('/img/profile.png') }}" alt="Profil">
+            <span>Profil</span>
+        </div>
+    </header>
 
     <div class="container">
-        <div class="table-wrapper">
-            <table class="tablekucing" id="tblkucing">
+
+        <div style="margin-left:100px">
+            <p style="font-size: 25px; font-weight:600">Data kucing yang tersedia</p>
+        </div>
+
+        <div class="table-wrapper rounded">
+            <table class="tablekucing " id="tblkucing">
                 <thead>
                 <tr>
                 <td><b>No</b></td>
@@ -175,7 +220,8 @@ td.image-cell img {
                 <td><b>Berat Badan</b></td>
                 <td><b>Tinggi Badan</b</td>
                 <td><b>Status</b></td>
-                <td><b>Aksi</b></td>      </tr>
+                <td><b>Aksi</b></td>
+                </tr>
                 </thead>
                 <tbody>
 
@@ -184,25 +230,26 @@ td.image-cell img {
         </div>
     </div>
 
-    <footer>
-    <div class="left-section">
-      <h3>Purrfect Adopt</h3>
-      <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
-    </div>
-    <div class="center-section">
-      <h3> Alamat Kami </h3>
-      Jalan Veteran Malang
-    </div>
-    <div class="right-section">
-      <span>Contact Us:</span>
-      <div class="social-media">
-        <a href="#"><img src="facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="instagram.png" alt="Instagram"></a>
-      </div>
-    </div>
-  </footer>
 
+  <footer>
+    <div style="display: flex;">
+        <div class="left-section">
+            <h3>Purrfect Adopt</h3>
+            <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
+            </div>
+            <div class="center-section">
+            <h3> Alamat Kami </h3>
+            Jalan Veteran Malang
+            </div>
+            <div class="right-section">
+            <span>Contact Us:</span>
+            <div class="social-media">
+            <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+            </div>
+        </div>
+    </footer>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

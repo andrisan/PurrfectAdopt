@@ -22,22 +22,17 @@
           <form class="mt-4" method="POST">
             @csrf
             <div class="mb-3">
-              <label class="mb-2 block text-xs font-semibold">Name</label>
+              <label class="mb-2 block text-xs font-semibold" for="name">Name</label>
               <input type="text" id="name" name="name" placeholder="Enter your name" value="" class="block w-full rounded-md border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
             </div>
 
             <div class="mb-3">
-              <label class="mb-2 block text-xs font-semibold">Email</label>
+              <label class="mb-2 block text-xs font-semibold" for="email">Email</label>
               <input type="email" id="email" name="email" placeholder="Enter your email" value="" class="block w-full rounded-md border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
             </div>
 
             <div class="mb-3">
-              <label class="mb-2 block text-xs font-semibold">Role (Admin/User)</label>
-              <input type="text" id="role" name="role" placeholder="Enter your role" value="" class="block w-full rounded-md border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
-            </div>
-
-            <div class="mb-3">
-              <label class="mb-2 block text-xs font-semibold">Password</label>
+              <label class="mb-2 block text-xs font-semibold" for="password">Password</label>
               <input type="password" id="password" name="password" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-yellow-500 focus:outline-none focus:ring-1 focus:ring-yellow-500 py-1 px-1.5 text-gray-500" />
             </div>
 
