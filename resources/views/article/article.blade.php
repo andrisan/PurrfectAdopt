@@ -29,15 +29,15 @@
 </div>
 
 <div class="container w-1/2 mx-auto px-4">
-    <form>   
+    <form action="{{ route('contents.store') }}" method="POST" enctype="multipart/form-data">
         <label for="post-title" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Post Title</label>
-        <input type="text" id="post-title" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+        <input type="text" id="post-title" name="judul" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
         placeholder="Enter your post title" required>
         <label for="post-content" class="mt-4 mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Post Content</label>
-        <textarea id="post-content" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+        <textarea id="post-content" name="isi" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
         placeholder="Write your post content" required rows="6"></textarea>
         <label for="post-image" class="mt-4 mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Upload Image</label>
-        <input type="file" id="post-image" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+        <input type="file" id="post-image" name="galery" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
         accept="image/*" required>
         <button type="submit" class="text-white bg-yellow-400 hover:bg-yellow-500 font-medium rounded-lg text-sm px-4 py-2 mt-4">Create Post</button>
     </form>

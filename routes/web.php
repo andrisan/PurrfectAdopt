@@ -94,5 +94,6 @@ Route::get('/findyourcat', function () {
   return view('findyourcat');
 })->name('findyourcat');
 
+Route::post('/contents', [ContentController::class, 'store'])->name('contents.store');
 
 require __DIR__.'/auth.php';
