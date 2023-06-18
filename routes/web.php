@@ -22,6 +22,9 @@ use App\Http\Controllers\BioController;
 |
 */
 
+Route::get('/profile/mypet', function () {
+  return view('profile/mypet');
+})->name('mypet');
 
 Route::get('/profile/profile_adopter', function () {
   return view('profile/profile_adopter');
@@ -30,6 +33,14 @@ Route::get('/profile/profile_adopter', function () {
 Route::get('/profile/profile_distributor', function () {
   return view('profile/profile_distributor');
 })->name('profile_distributor');
+
+Route::get('/profile/Upload-Distributor', function () {
+  return view('profile/Upload-Distributor');
+})->name('Upload-Distributor');
+
+Route::get('/profile/profileCat_more', function () {
+  return view('profile/profileCat_more');
+})->name('profileCat_more');
 
   Route::get('/', function(){
     return view('welcome');
