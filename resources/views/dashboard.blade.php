@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Purrfect Adopt</title>
+    <title>Purrfect Adopt | Home</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
     @include('components.header')
 
 <!--body-->
-<div class="w-full text-gray-700 md:text-center text-5xl font-semibold pt-20">
+<div class="mt-16 w-full text-gray-700 md:text-center text-5xl font-semibold pt-20">
     New way of finding your dream cat</div>
 </div>
 <div class="w-full text-gray-700 md:text-center text-5xl text-base/6 py-4">
