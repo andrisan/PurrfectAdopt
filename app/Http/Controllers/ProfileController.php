@@ -57,4 +57,11 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+    
+    // mengembalikan perubahan tapi belum pakek database
+    public function index()
+    {
+        return view('profile');
+    }
+
 }
