@@ -21,7 +21,59 @@
 </head>
 <body>
 @include('components.header')
+<!-- kode -->
+<div class="container mx-auto my-5 p-5">
+        <div class="md:flex no-wrap md:-mx-2 ">
 
+            <div class="w-full md:w-3/12 md:mx-2">
+
+                <div class="p-3 rounded ">
+                    
+                        <img class="h-auto w-full mx-auto rounded"
+                            src="{{ asset('/img/cat1.jpg') }}"
+                            alt="">
+                    
+                </div>
+
+                <div class="my-4"></div>
+
+                
+
+            </div>
+
+            <div class="w-full md:w-9/12 mx-2 h-64">
+
+                <div class=" p-3 rounded-sm">
+                    <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
+                        <span class="px-4 py-2 tracking-wide font-semibold">Nickname Pengguna</span>
+                    </div>
+                    <div class="text-gray-700">
+                        <div class="grid  text-sm">
+                            <div class="grid ">
+                                <!-- <div class="px-4 py-2">Rating</div> -->
+                                <div class="px-4">JL. KEMBANG KERTAS, LOWOKWARU, MALANG</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+        <div class="bg-white p-3 m-5 rounded-lg hover:shadow">
+            <!--  -->
+            <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">Enter your mail address:</label>
+            <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="nama" type="text" placeholder="ex:person@mail.com">
+            <br>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">Enter yout phone number:</label>
+            <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="nama" type="text" placeholder="ex:+123******">
+            </div>
+        </div>
+    </div>
+
+<!-- section 2 3 -->
     <div class="v52_828">
             <div class="v52_829"></div>
             <div class="v52_833"></div>
