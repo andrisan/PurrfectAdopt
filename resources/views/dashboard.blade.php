@@ -117,7 +117,7 @@
             </a>
                 <div class="mt-4">
                 <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $cat->nama }}</h5>
+            <h1 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-dark">{{ $cat->nama }}</h1>
         </a>
         <p class="font-normal text-gray-700 dark:text-gray-400">Race     : {{ $cat->ras }}</p>
         <p class="font-normal text-gray-700 dark:text-gray-400">Gender   : @if ($cat->gender == '0')
