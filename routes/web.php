@@ -22,6 +22,11 @@ use App\Http\Controllers\BioController;
 |
 */
 
+
+Route::get('/profile/profile_adopter', function () {
+  return view('profile/profile_adopter');
+})->name('profile_adopter');
+
   Route::get('/', function(){
     return view('welcome');
   })->name('welcome');
