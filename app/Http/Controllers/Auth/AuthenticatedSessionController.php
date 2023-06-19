@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,34 +26,29 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        $request->validate([
-            'email'=>'required',
+        $info_login = $request->validate([
+            'email'=>'required|email:dns',
             'password'=>'required',
         ],
         [
             'email.required'=>'Email wajib diisi.',
             'password.required'=>'Password wajib diisi.',
         ]);
-
-        $info_login = [
-            'email'=>$request->email,
-            'password'=>$request->password,
-        ];
-
+        
         if(Auth::attempt($info_login))
         {
             if(Auth::user()->role == 'admin')
             {
-                return redirect('/main/admin');
+                return redirect('/admin-home');
             }
             elseif(Auth::user()->role == 'user')
             {
-                return redirect('/main/user');
+                return redirect('/dashboard');
             }
         }
         else
         {
-            return redirect('/')
+            return redirect('/login')
                         ->withErrors('Email dan password tidak valid')
                         ->withInput();
         }

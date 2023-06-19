@@ -42,7 +42,8 @@ class DashboardController extends Controller
      */
     public function create()
     {
-        //
+        $cats = Kucing::all();
+        return view('dashboard', compact(['cats']));
     }
 
     /**
