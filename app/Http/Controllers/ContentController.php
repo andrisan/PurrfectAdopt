@@ -10,7 +10,17 @@ class ContentController extends Controller
     public function create()
     {
         $contents = Content::all();
-        return view('article.article', compact(['contents']));
+        return view('article.article', [
+            'title' => 'Article',
+        ], compact(['contents']));
+    }
+
+    public function show_details($id)
+    {
+        $article = Content::find($id);
+        return view('article.articledetails', [
+            'title' => 'Article Details',
+        ], compact(['article']));
     }
     
     public function store(Request $request)

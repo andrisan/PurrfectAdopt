@@ -23,7 +23,7 @@ class KontenSeeder extends Seeder
             healthy interest in other dogs but can be overwhelming with them. Sweat Tea would thrive with a loving, patient adopter. 
             **Double Adoption** Local 1-year-old rescues Elsie and Evan complete each other. Youll find two is better than one when it comes to this sibling duo. Formally shy, Elsie is now taking the lead in play groups while her brother is never far behind. An experienced family (with kids over 8 years old) will have no trouble winning these two over with playtime and treats. After settling into their first real home, they’ll grow excited to learn all about family life from their favorite expert: you! 
             **Double Adoption** The only thing we like more than celebrating our cats birthdays is celebrating their adoption days. For now, Animal League America is thrilled to shower shy 1-year-olds Chanel (Adoption #H211594) and Dior (Adoption #H211595) with treats and toys with a party surrounded by fur friends and humans they have grown to trust. Have experience with nurturing shyness away from feline friends? You’d be their ultimate hero if you could provide them a consistent home (one with kids over twelve) and time to settle into a place in all your family’s hearts. ',
-            'galery' => 'img/artikel1.jpg',
+            'galery' => '/img/artikel1.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
 
@@ -53,7 +53,7 @@ Studies have shown that owning a cat can have a positive impact on our well-bein
 
 Conclusion:
 Cats, with their irresistible charm, bewitching personalities, and comforting presence, bring immeasurable joy into our lives. Their independent nature and playful spirit create a captivating dynamic that makes every day more delightful. As we revel in their antics and bask in their affection, let us embrace the incredible bond we share with these beloved feline friends. ',
-    'galery' => 'img/artikel2.jpg',
+    'galery' => '/img/artikel2.jpg',
     'created_at' => \Carbon\Carbon::now(),
     'updated_at' => \Carbon\Carbon::now(),
         ]);
@@ -76,7 +76,7 @@ Cats, with their irresistible charm, bewitching personalities, and comforting pr
             
             Treating Cat Fever:
             When you observe the signs of cat fever, the next step is to seek veterinary care. The veterinarian will conduct an examination and provide appropriate treatment for your cat based on its specific needs and health condition. Typically, when a cat has a fever, the veterinarian will administer medication to reduce the fever, often in the form of liquid medication.',
-            'galery' => 'img/artikel3.jpg',
+            'galery' => '/img/artikel3.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);
@@ -111,7 +111,7 @@ It is always a good idea to start grooming your cat as a kitten to get them comf
 At first, simply keep the brush at hand while stroking your
 
  cat, and let them check it out in their own time. Reward them with a food treat for doing so, to create a positive association with the brush. Gradually progress to touching your cat with the brush, then giving them one or two gentle strokes with the brush, taking things at their pace",
-    'galery' => 'img/artikel4.jpg',
+    'galery' => '/img/artikel4.jpg',
     'created_at' => \Carbon\Carbon::now(),
     'updated_at' => \Carbon\Carbon::now(),
 ]);

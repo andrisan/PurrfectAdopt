@@ -50,6 +50,7 @@ Route::middleware(['auth'])->group(function(){
 
   /** SEBELUM MENGAKSES HAL. DASHBOARD USER DIPERKENANKAN UNTUK LOGIN DAHULU */
   Route::get('/dashboard', [DashboardController::class, 'create']);
+
   Route::get('/main', [AuthenticatedSessionController::class, 'main']);
   Route::get('/main/admin', [AuthenticatedSessionController::class, 'admin'])->middleware('userAccess:admin');
   Route::get('/main/user', [AuthenticatedSessionController::class, 'user'])->middleware('userAccess:user');
@@ -86,9 +87,7 @@ Route::middleware(['guest'])->group(function(){
 
 Route::get('/article', [ContentController::class, 'create'])->name('article');
 
-Route::get('/article/details', function () {
-  return view('article/articledetails');
-})->name('articledetails');
+Route::get('/article/{id}', [ContentController::class, 'show_details'])->name('articledetails');
 
 Route::get('/findyourcat', function () {
   return view('findyourcat');

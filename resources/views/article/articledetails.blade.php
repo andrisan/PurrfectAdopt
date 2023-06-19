@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Purrfect Adopt</title>
+    <title>Purrfect Adopt | {{ $title }}</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
 <!-- sidebar -->
 <div class="mt-16 mx-5 grid grid-cols-6 gap-4">
     <div class="col-start-1 col-end-7 flex-col items-center">
-        <img class="w-full object-cover object-top" src="{{ asset('/img/artikel1.jpg') }}" style="max-height:600px;">
+        <img class="w-full object-cover object-top" src="{{ $article->galery }}" style="max-height:600px;">
     </div>
     <div class="w-full flex flex-col my-4 p-6 text-center items-center">
         <h3 class="text-xl font-semibold">Share</h3> <br>
@@ -84,8 +84,9 @@
     </a>
     </div>
 <!-- sidebar end -->
-<!-- content -->
-<div class="col-span-5 flex flex-col justify-start p-6 my-4">
+
+    <!-- content -->
+    {{-- <div class="col-span-5 flex flex-col justify-start p-6 my-4">
         <a href="#" class="text-black-700 text-sm font-bold uppercase pb-4 text-center">Symptoms of Cat Illness</a>
         <a href="#" class="text-3xl font-bold pb-4 text-center">Treating Cat Fever</a>
         <a href="#" class="pb-6">Just like humans, cats can also experience fever. However, cat fever has distinct characteristics. For those who have recently acquired a cat, it is important to pay attention to various aspects of cat fever so that you know how to treat a cat with fever in the future.</a>
@@ -108,6 +109,10 @@
         </a>
         <a href=""></a>
         <a href="#" class="pb-6">Well, that's a brief explanation about cat fever and how to treat it. Make sure to always pay attention to the health condition of your beloved cat and provide them with nutritious food. For cats with sensitive digestion, you can give them</a>
+    </div> --}}
+    <div class="col-span-5 flex flex-col justify-start p-6 my-4">
+        <h3 class="text-3xl font-bold pb-4 text-center">{{ $article->judul }}</h3>
+        <p class="pb-6">{{ $article->isi }}</p>
     </div>
   </div>
   <!-- content -->
