@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\KucingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\CatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
 use App\Http\Controllers\ContentController;
@@ -115,5 +116,7 @@ Route::get('/findyourcat', function () {
 })->name('findyourcat');
 
 Route::post('/contents', [ContentController::class, 'store'])->name('contents.store');
+
+Route::get('/cats/adopted', [CatController::class, 'adopted'])->name('cats.adopted');
 
 require __DIR__.'/auth.php';
