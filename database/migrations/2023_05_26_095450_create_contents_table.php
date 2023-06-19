@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('contents', function (Blueprint $table) {
             $table->id();
-            $table->string('judul',50);
-            $table->string('nama', 50);
+            $table->string('judul', 200);
+            $table->string('penulis', 50);
+            $table->boolean('status');
             $table->text('isi');
             $table->binary('galery')->nullable();
             $table->timestamps();
