@@ -17,14 +17,14 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->enum('role', ['admin', 'user'])->default('user');
-            $table->boolean('gender');
-            $table->string('profesi', 50);
-            $table->text('alamat');
-            $table->smallInteger('usia');
-            $table->text('ekonomi');
-            $table->text('crime_hist');
-            $table->integer('kontak');
-            $table->boolean('status');//ini admin atau user
+            $table->boolean('gender')->nullable();
+            $table->string('profesi', 50)->nullable();
+            $table->text('alamat')->nullable();
+            $table->smallInteger('usia')->nullable();
+            $table->text('ekonomi')->nullable();
+            $table->text('crime_hist')->nullable();
+            $table->integer('kontak')->nullable();
+            $table->boolean('status')->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

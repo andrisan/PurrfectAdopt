@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+
 class UserSeeder extends Seeder
 {
     /**
@@ -14,9 +15,10 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            'name' => 'Eiko',
-            'email' => 'eiko@gmail.com',
-            'password' => '123',
+            'name' => 'Anya Geraldine',
+            'email' => 'anya@yahoo.com',
+            'password' => bcrypt('12345'),
+            'role' => 'user',
             'gender' => '1',
             'profesi' => 'karyawan',
             'alamat' => 'jalan',
@@ -27,9 +29,10 @@ class UserSeeder extends Seeder
             'status' => '0',
         ]);
         DB::table('users')->insert([
-            'name' => 'Farah',
-            'email' => 'farah@gmail.com',
-            'password' => '123',
+            'name' => 'Abdul Genta',
+            'email' => 'genta@yahoo.com',
+            'password' => bcrypt('12345'),
+            'role' => 'user',
             'gender' => '1',
             'profesi' => 'karyawan',
             'alamat' => 'jalan',
@@ -40,9 +43,10 @@ class UserSeeder extends Seeder
             'status' => '0',        
         ]);
         DB::table('users')->insert([
-            'name' => 'Diva',
-            'email' => 'diva@gmail.com',
-            'password' => '123',
+            'name' => 'Serra Hanif',
+            'email' => 'serra@yahoo.com',
+            'password' => bcrypt('12345'),
+            'role' => 'admin',
             'gender' => '1',
             'profesi' => 'karyawan',
             'alamat' => 'jalan',
