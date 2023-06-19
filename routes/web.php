@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\artikelAdminController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\NewPasswordController;
@@ -47,6 +48,7 @@ Route::middleware(['auth'])->group(function(){
   /** SEBELUM MENGAKSES HAL. ADMIN-HOME USER DIPERKENANKAN UNTUK LOGIN DAHULU */
   /** TERDAPAT MIDDLEWARE UNTUK MEMBATASI AGAR HANYA ADMIN SAJA YANG BISA MENGAKSES HALAMAN INI */
   Route::resource('/admin-home', DashboardController::class)->middleware('userAccess:admin');
+  route::get('/artikelAdmin',[artikelAdminController::class, 'index'])->middleware('userAccess:admin');
 
   /** SEBELUM MENGAKSES HAL. DASHBOARD USER DIPERKENANKAN UNTUK LOGIN DAHULU */
   Route::get('/dashboard', [DashboardController::class, 'create']);
