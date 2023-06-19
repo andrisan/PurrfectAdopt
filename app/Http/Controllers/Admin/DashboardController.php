@@ -15,7 +15,6 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //
         return view('admin.home');
     }
  
@@ -43,7 +42,10 @@ class DashboardController extends Controller
     public function create()
     {
         $cats = Kucing::all();
-        return view('dashboard', compact(['cats']));
+        $contents = Content::all();
+        return view('dashboard', [
+            'title' => 'Home',
+        ], compact(['cats', 'contents']));
     }
 
     /**

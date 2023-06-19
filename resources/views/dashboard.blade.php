@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Purrfect Adopt | Home</title>
+    <title>Purrfect Adopt | {{ $title }}</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -201,7 +201,7 @@
     </header>
 
     <ul class="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
-      <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
+      <!-- <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
         <a href="#" class="relative block group">
           <img
             src="https://images.unsplash.com/photo-1618898909019-010e4e234c55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
@@ -300,12 +300,122 @@
           </div>
         </a>
 
-      </li>
+      </li> -->
+
+        <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
+          <a href="/article/{{ $contents->find(1)->id }}" class="relative block group">
+            <img
+              src="{{ $contents->find(1)->galery }}"
+              alt=""
+              class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
+            />
+          </a>
+
+          <a href="/article/{{ $contents->find(1)->id }}">
+                  <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
+                    {{ $contents->find(1)->judul }}
+                  </h3>
+          </a>
+
+          <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
+            {{ Str::limit($contents->find(1)->isi, 200) }}
+              </p>
+
+          <div class="sm:flex sm:items-end sm:justify-end">
+              <a href="/article/{{ $contents->find(1)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
+                  > Read more
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                      &rarr;
+                  </span>
+              </a>
+          </div>
+        </li>
+
+        <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
+          <a href="/article/{{ $contents->find(2)->id }}" class="relative block group">
+            <img
+              src="{{ $contents->find(2)->galery }}"
+              alt=""
+              class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
+            />
+          </a>
+
+          <a href="/article/{{ $contents->find(2)->id }}">
+                  <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
+                    {{ $contents->find(2)->judul }}
+                  </h3>
+              </a>
+
+              <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
+                {{ Str::limit($contents->find(2)->isi, 200) }}
+              </p>
+
+              <div class="sm:flex sm:items-end sm:justify-end">
+              <a href="/article/{{ $contents->find(2)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
+                  > Read more
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                      &rarr;
+                  </span>
+              </a>
+              </div>
+
+        </li>
+
+        <li class="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1 rounded-lg shadow transition 
+        hover:shadow-lg bg-white aspect-square">
+          <!-- <a href="/article/{{ $contents->find(3)->id }}" class="relative block group">
+            <img
+              src="{{ $contents->find(3)->galery }}"
+              alt=""
+              class="object-cover w-full transition duration-500 group-hover:opacity-90"
+            />
+            <div
+              class="absolute inset-0 flex flex-col items-start justify-end p-6"
+            >
+              <h3 class="text-xl font-bold uppercase text-white">
+                {{ $contents->find(3)->judul }}</h3>
+
+          <p class="text-sm/relaxed text-white line-clamp-5">
+            {{ $contents->find(3)->isi }}
+          </p>
+            </div>
+          </a> -->
+          <a href="/article/{{ $contents->find(3)->id }}" class="relative block group">
+            <img
+              src="{{ $contents->find(3)->galery }}"
+              alt=""
+              class="object-cover w-full transition duration-500 group-hover:opacity-90"
+            />
+          </a>
+
+          <a href="/article/{{ $contents->find(3)->id }}">
+                  <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
+                    {{ $contents->find(3)->judul }}
+                  </h3>
+              </a>
+
+              <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
+                {{ Str::limit($contents->find(3)->isi, 450) }}
+              </p>
+
+              <div class="sm:flex sm:items-end sm:justify-end">
+              <a href="/article/{{ $contents->find(3)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
+                  > Read more
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                      &rarr;
+                  </span>
+              </a>
+              </div>
+
+        </li>
     </ul>
 
     <div class="sm:flex sm:items-end sm:justify-center py-6">
       <a
-        href="#"
+        href="/article"
         class="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
       >
         View All Post
