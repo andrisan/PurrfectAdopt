@@ -51,7 +51,7 @@
 
 <!-- Result -->
 <div class="w-2/4 text-gray-900 md:text-left t text-2xl font-bold py-1 pl-20 mb-2">
-   Search results :  <span>Anggora</span>
+   Search results :  <span>Persia</span>
   </div>
 <h5 class="md:text-left text-2xl font-bold text-gray-900"></h5>
 
@@ -62,17 +62,17 @@
     <div class="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow">
       <a href="#">
         <div class="aspect-w-4 aspect-h-3">
-          <img class="object-cover object-center rounded-t-lg h-full w-full" src="{{ asset('/img/cat2.jpg') }}" style="height: 200px; width: 300px;"/>
+          <img class="object-cover object-center rounded-t-lg h-full w-full" src="{{ asset('/img/cat4.jpg') }}" style="height: 200px; width: 300px;"/>
         </div>
       </a>
       <div class="p-5">
         <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Simba</h5>
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Zoey</h5>
         </a>
-        <p class="font-normal text-gray-700">Race     : Anggora</p>
-        <p class="font-normal text-gray-700">Gender   : Male</p>
-        <p class="font-normal text-gray-700">Weight   : 0</p>
-        <p class="font-normal text-gray-700">Height   : 0</p> <br>
+        <p class="font-normal text-gray-700">Race     : Persia</p>
+        <p class="font-normal text-gray-700">Gender   : Female</p>
+        <p class="font-normal text-gray-700">Weight   : 29</p>
+        <p class="font-normal text-gray-700">Height   : 27</p> <br>
         <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
           Show more
         <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -84,17 +84,17 @@
     <div class="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow">
       <a href="#">
         <div class="aspect-w-4 aspect-h-3">
-          <img class="object-cover object-center rounded-t-lg h-full w-full" src="{{ asset('/img/cat1.jpg') }}" style="height: 200px; width: 300px;"/>
+          <img class="object-cover object-center rounded-t-lg h-full w-full" src="{{ asset('/img/cat5.jpg') }}" style="height: 200px; width: 300px;"/>
        </div>
       </a>
       <div class="p-5">
         <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Hermione</h5>
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Garfield</h5>
         </a>
-        <p class="font-normal text-gray-700">Race     : Anggora</p>
-        <p class="font-normal text-gray-700">Gender   : Male</p>
-        <p class="font-normal text-gray-700">Weight   : 0</p>
-        <p class="font-normal text-gray-700">Height   : 0</p> <br>
+        <p class="font-normal text-gray-700">Race     : Persia</p>
+        <p class="font-normal text-gray-700">Gender   : Female</p>
+        <p class="font-normal text-gray-700">Weight   : 24</p>
+        <p class="font-normal text-gray-700">Height   : 20</p> <br>
         <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
           Show more
         <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -106,46 +106,23 @@
     <div class="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow">
       <a href="#">
         <div class="aspect-w-4 aspect-h-3">
-          <img class="object-cover object-center rounded-t-lg h-full w-full" src="{{ asset('/img/cat5.jpg') }}" style="height: 200px; width: 300px;"/>
+          <img class="object-cover object-center rounded-t-lg h-full w-full" src="{{ asset('/img/cat6.jpg') }}" style="height: 200px; width: 300px;"/>
        </div>
       </a>
       <div class="p-5">
         <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Taka</h5>
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Gracie</h5>
         </a>
-        <p class="font-normal text-gray-700">Race     : Anggora</p>
-        <p class="font-normal text-gray-700">Gender   : Male</p>
-        <p class="font-normal text-gray-700">Weight   : 0</p>
-        <p class="font-normal text-gray-700">Height   : 0</p> <br>
+        <p class="font-normal text-gray-700">Race     : Persia</p>
+        <p class="font-normal text-gray-700">Gender   : Female</p>
+        <p class="font-normal text-gray-700">Weight   : 25</p>
+        <p class="font-normal text-gray-700">Height   : 32</p> <br>
         <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
           Show more
         <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </a>
       </div>
     </div>
-
-    <!-- card 4-->
-    <div class="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow">
-      <a href="#">
-        <div class="aspect-w-4 aspect-h-3">
-          <img class="object-cover object-center rounded-t-lg h-full w-full" src="{{ asset('/img/cat4.jpg') }}" style="height: 200px; width: 300px;"/>
-       </div>
-      </a>
-      <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Garfield</h5>
-        </a>
-        <p class="font-normal text-gray-700">Race     : Anggora</p>
-        <p class="font-normal text-gray-700">Gender   : Male</p>
-        <p class="font-normal text-gray-700">Weight   : 0</p>
-        <p class="font-normal text-gray-700">Height   : 0</p> <br>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
-          Show more
-        <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </a>
-      </div>
-    </div>
-
   </div>
 </div>
 @include('components.footer')
