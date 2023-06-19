@@ -92,6 +92,8 @@ Route::middleware(['auth'])->group(function(){
   Route::get('/logout', [AuthenticatedSessionController::class, 'destroy']);
 });
 
-Route::get('/cats/adopted', [CatController::class, 'adopted'])->name('cats.adopted');
+Route::middleware(['auth'])->group(function(){
+  Route::get('/adopted', [CatController::class, 'index'])->name('profile');
+});
 
 require __DIR__.'/auth.php';
