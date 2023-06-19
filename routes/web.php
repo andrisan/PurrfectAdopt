@@ -117,6 +117,8 @@ Route::get('/findyourcat', function () {
 
 Route::post('/contents', [ContentController::class, 'store'])->name('contents.store');
 
-Route::get('/cats/adopted', [CatController::class, 'adopted'])->name('cats.adopted');
+Route::middleware(['auth'])->group(function(){
+  Route::get('/adopted', [CatController::class, 'index'])->name('profile');
+});
 
 require __DIR__.'/auth.php';

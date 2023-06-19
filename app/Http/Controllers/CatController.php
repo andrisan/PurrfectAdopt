@@ -18,4 +18,8 @@ public function adopted()
         return view('cats.adopted', compact('cats'));
     }
 
+    public function index(){
+        $kucing = Kucing::all();
+        return response()->json($kucing);
+    }
 }
