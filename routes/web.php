@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\NewPasswordController;
@@ -11,6 +12,7 @@ use App\Http\Controllers\CatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
 use App\Http\Controllers\ContentController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -120,5 +122,11 @@ Route::post('/contents', [ContentController::class, 'store'])->name('contents.st
 Route::middleware(['auth'])->group(function(){
   Route::get('/adopted', [CatController::class, 'index'])->name('profile');
 });
+
+// Route menampilkan form profil pengguna
+Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+
+// Route update Bio n cp profil pengguna
+Route::post('/profile/updateBio', [ProfileController::class, 'updateBio'])->name('profile.update');
 
 require __DIR__.'/auth.php';

@@ -73,7 +73,7 @@
 
     @if ($editing)
         <!-- view form edit data -->
-        <form method="POST" action="{{ route('profile.update') }}">
+        <form method="POST" action="{{ route('profile.updateBio') }}">
             @csrf
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Enter your mail:</label>

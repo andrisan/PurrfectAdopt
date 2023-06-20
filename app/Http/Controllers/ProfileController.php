@@ -58,6 +58,20 @@ class ProfileController extends Controller
         return Redirect::to('/');
     }
     
+    /**
+     * Memperbarui informasi profil pengguna.
+     */
+
+    
+    public function updateBio(Request $request) : RedirectResponse
+    {
+        $user = $request->user();
+        $user->email = $request->input('email');
+        $user->kontak = $request->input('kontak');
+        $user->save();
+
+        return redirect()->back()->with('status', 'Profil berhasil diperbarui.');
+    }
     
     
 
