@@ -81,12 +81,24 @@ Route::middleware(['auth'])->group(function(){
 /** END AUTH: LOGIN, REGISTER, FORGOT-PASSWORD, RESET-PASSWORD */
 
 Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
+Route::get('bio', function () {
+  return view('/profile/bio');
+})->name('bio');
+
+Route::get('balasDiskusi', function () {
+  return view('/profile/balasDiskusi');
+})->name('balasDiskusi');
+Route::get('diskusi', function () {
+  return view('/profile/diskusi');
+})->name('diskusi');
+Route::get('setting2', function () {
+  return view('/profile/setting2');
+})->name('setting2');
+Route::get('setting1', function () {
+  return view('/profile/setting1');
+})->name('setting1');
 Route::view('/testi','testi');
-Route::view('/bio','bio');
-Route::view('/balasDiskusi','balasDiskusi');
-Route::view('/diskusi','diskusi');
-Route::view('/setting2','setting2');
-Route::view('/setting1','setting1');
+
 Route::middleware(['guest'])->group(function(){
 
   Route::resource('/admin-kucing', KucingController::class);
