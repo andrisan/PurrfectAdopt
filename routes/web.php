@@ -11,6 +11,7 @@ use App\Http\Controllers\CatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
 use App\Http\Controllers\ContentController;
+use App\Http\Controllers\Admin\artikelAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,6 +69,7 @@ Route::middleware(['auth'])->group(function(){
   /** SEBELUM MENGAKSES HAL. ADMIN-HOME USER DIPERKENANKAN UNTUK LOGIN DAHULU */
   /** TERDAPAT MIDDLEWARE UNTUK MEMBATASI AGAR HANYA ADMIN SAJA YANG BISA MENGAKSES HALAMAN INI */
   Route::resource('/admin-home', DashboardController::class)->middleware('userAccess:admin');
+  route::get('/artikelAdmin',[artikelAdminController::class, 'index'])->middleware('userAccess:admin');
 
   /** SEBELUM MENGAKSES HAL. DASHBOARD USER DIPERKENANKAN UNTUK LOGIN DAHULU */
   Route::get('/dashboard', [DashboardController::class, 'create']);
