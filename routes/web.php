@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\KucingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\CatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
 use App\Http\Controllers\ContentController;
@@ -21,6 +22,26 @@ use App\Http\Controllers\ContentController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/profile/mypet', function () {
+  return view('profile/mypet');
+})->name('mypet');
+
+Route::get('/profile/profile_adopter', function () {
+  return view('profile/profile_adopter');
+})->name('profile_adopter');
+
+Route::get('/profile/profile_distributor', function () {
+  return view('profile/profile_distributor');
+})->name('profile_distributor');
+
+Route::get('/profile/Upload-Distributor', function () {
+  return view('profile/Upload-Distributor');
+})->name('Upload-Distributor');
+
+Route::get('/profile/profileCat_more', function () {
+  return view('profile/profileCat_more');
+})->name('profileCat_more');
 
 /** START HALAMAN WELCOME, DIMANA USER YANG BELUM MELAKUKAN LOGIN AKAN DIARAHKAN KE HALAMAN INI */
 Route::middleware(['guest'])->group(function(){
@@ -94,5 +115,9 @@ Route::get('/findyourcat', function () {
 })->name('findyourcat');
 
 Route::post('/contents', [ContentController::class, 'store'])->name('contents.store');
+
+Route::middleware(['auth'])->group(function(){
+  Route::get('/adopted', [CatController::class, 'index'])->name('profile');
+});
 
 require __DIR__.'/auth.php';
