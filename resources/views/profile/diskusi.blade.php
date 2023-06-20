@@ -24,7 +24,12 @@
         <div class="flex justify-center items-center">
   <div class="kotak">
     <div class="flex justify-center items-center" style="padding:10px">
-    <li><a class="ml-2" style="font-size:xx-large; font-weight: medium; font-size: 20px;" href="{{ route('balasDiskusi', $content->id) }}">{{ $content->judul }}</a></li>
+    <p class="ml-2" style="font-size:xx-large; font-weight: 400; font-size: 20px;">{{ $content->judul }}</p>
+    </div>
+    <div class="flex justify-center items-center" style="padding:10px">
+    <div class="kotak_balas">
+     <a href="{{ route('balasDiskusi', $content->id) }}"> <p>lihat</p></a>
+    </div>
     </div>
   </div>
 </div>
