@@ -20,6 +20,6 @@ class UserAccess
         {
             return $next($request);
         }
-        return response()->json(['Anda tidak diperbolehkan mengakses halaman ini']);
+        return response()->json(['Anda harus login sebagai admin terlebih dahulu.']);
     }
 }
