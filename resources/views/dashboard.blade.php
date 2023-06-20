@@ -201,107 +201,6 @@
     </header>
 
     <ul class="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
-      <!-- <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
-        <a href="#" class="relative block group">
-          <img
-            src="https://images.unsplash.com/photo-1618898909019-010e4e234c55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-            alt=""
-            class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
-          />
-        </a>
-
-        <a href="#">
-                <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
-                    How to position your furniture for positivity
-                </h3>
-        </a>
-
-        <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-                dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
-                sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
-                voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
-                Molestias explicabo corporis voluptatem?
-            </p>
-
-        <div class="sm:flex sm:items-end sm:justify-end">
-            <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
-                > Read more
-
-                <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
-                    &rarr;
-                </span>
-            </a>
-        </div>
-      </li>
-
-      <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
-        <a href="#" class="relative block group">
-          <img
-            src="https://images.unsplash.com/photo-1624623278313-a930126a11c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-            alt=""
-            class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
-          />
-        </a>
-
-        <a href="#">
-                <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
-                    How to position your furniture for positivity
-                </h3>
-            </a>
-
-            <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-                dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
-                sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
-                voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
-                Molestias explicabo corporis voluptatem?
-            </p>
-
-            <div class="sm:flex sm:items-end sm:justify-end">
-            <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
-                > Read more
-
-                <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
-                    &rarr;
-                </span>
-            </a>
-            </div>
-
-      </li>
-
-
-      <li class="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1 rounded-lg shadow transition 
-      hover:shadow-lg bg-white aspect-square">
-        <a href="#" class="relative block group">
-          <img
-            src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
-            alt=""
-            class="object-cover w-full transition duration-500 group-hover:opacity-90"
-          />
-          <div
-            class="absolute inset-0 flex flex-col items-start justify-end p-6"
-          >
-            <h3 class="text-xl font-bold uppercase text-white">
-                How to position your furniture for positivity</h3>
-
-        <p class="text-sm/relaxed text-white line-clamp-5">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-          perferendis hic asperiores quibusdam quidem voluptates doloremque
-          reiciendis nostrum harum. Repudiandae?  
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-            dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
-            sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
-            voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
-            Molestias explicabo corporis voluptatem? possimus pariatur animi temporibus nesciunt praesentium dolore
-            sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
-            voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
-        </p>
-          </div>
-        </a>
-
-      </li> -->
-
         <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
           <a href="/article/{{ $contents->find(1)->id }}" class="relative block group">
             <img
@@ -365,23 +264,6 @@
 
         <li class="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1 rounded-lg shadow transition 
         hover:shadow-lg bg-white aspect-square">
-          <!-- <a href="/article/{{ $contents->find(3)->id }}" class="relative block group">
-            <img
-              src="{{ $contents->find(3)->galery }}"
-              alt=""
-              class="object-cover w-full transition duration-500 group-hover:opacity-90"
-            />
-            <div
-              class="absolute inset-0 flex flex-col items-start justify-end p-6"
-            >
-              <h3 class="text-xl font-bold uppercase text-white">
-                {{ $contents->find(3)->judul }}</h3>
-
-          <p class="text-sm/relaxed text-white line-clamp-5">
-            {{ $contents->find(3)->isi }}
-          </p>
-            </div>
-          </a> -->
           <a href="/article/{{ $contents->find(3)->id }}" class="relative block group">
             <img
               src="{{ $contents->find(3)->galery }}"
