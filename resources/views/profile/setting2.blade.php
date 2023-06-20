@@ -10,9 +10,6 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <p>INI NAVBARNYA</p>
-    </nav>
     <div style="width: 50%; float:left">
         <div class="profile-setting">
             <a href="{{ route('setting1') }}"><button type="button" class="btn"><i class="fa-solid fa-user"
@@ -22,9 +19,6 @@
         <div class="security-setting">
             <a href="{{ route('setting2') }}"><button type="button" class="btn" style="background-color: #ffd95a;"><i
                         class="fa-solid fa-shield" style="color: #4c3d3d;"></i>&nbsp;Security Setting</button></a>
-        </div>
-        <div class="verticalLine">
-            jgndihps
         </div>
     </div>
     <div style="width: 50%; float:right">

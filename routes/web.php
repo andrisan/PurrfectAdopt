@@ -11,6 +11,9 @@ use App\Http\Controllers\CatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
 use App\Http\Controllers\ContentController;
+use App\Http\Controllers\DiskusiController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -80,17 +83,17 @@ Route::middleware(['auth'])->group(function(){
 });
 /** END AUTH: LOGIN, REGISTER, FORGOT-PASSWORD, RESET-PASSWORD */
 
+// FITUR TAMBAHAN BIO
 Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
-Route::get('bio', function () {
-  return view('/profile/bio');
-})->name('bio');
 
 Route::get('balasDiskusi', function () {
   return view('/profile/balasDiskusi');
 })->name('balasDiskusi');
-Route::get('diskusi', function () {
-  return view('/profile/diskusi');
-})->name('diskusi');
+
+Route::resource('diskusi', DiskusiController::class);
+Route::get('/balasDiskusi/{id}', [DiskusiController::class, 'show'])->name('balasDiskusi');
+
+
 Route::get('setting2', function () {
   return view('/profile/setting2');
 })->name('setting2');

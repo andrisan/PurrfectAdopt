@@ -8,8 +8,6 @@ body {
 }
 
 .kotak {
-  width: 1196px;
-  height: 158px;
   left: 121px;
   top: 81px;
   border-radius: 25px;
@@ -18,9 +16,7 @@ body {
 }
 
 .kotak2 {
-  width: 1090px;
-  left: 248px;
-  top: 481px;
+  width: 70%;
   border-radius: 25px;
   background-color: #ffd95a;
   margin-top: 50px;

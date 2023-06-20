@@ -15,8 +15,10 @@
       @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
   <!--kartu bio-->
-  <body class="bg-yellow-100 pl-20 pt-20">
-    <div class="pb-20">
+  <body class="bg-yellow-100">
+  <x-header/>
+  <div class=" pl-20 pt-20">
+  <div class="pb-20">
         <div class="absolute px-auto text-gray-700 text-5xl font-normal text-left font-poppins">
         Bio and Contact Person
         <img class="absolute right-[-25%] top-[-30%]" src="/images/ORANG.png" alt="ORANG">
@@ -48,6 +50,8 @@
         </div>
       </div>
     </div>
+  </div>
+    
 
   </body>
 </html>

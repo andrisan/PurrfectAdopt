@@ -7,24 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('balasDiskusi.css') }}" />
   </head>
-  <body>
-    <div style="margin-left: 80px; margin-top: 20px" class="icon">
-    
-    </div>
-
+  <body class="bg-yellow-100">
+  <x-header/>
+  <br>
+  <br>
+  <br>
     <div class="flex justify-center items-center">
-      <div class="kotak">
-        <div class="flex">
-          <div style="padding-top: 35px; padding-left: 20px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 36 36">
-              <path fill="currentColor" d="M18 4a14 14 0 1 0 14 14A14 14 0 0 0 18 4Z" class="clr-i-solid clr-i-solid-path-1" />
-              <path fill="none" d="M0 0h36v36H0z" />
-            </svg>
-          </div>
-          <h1 style="font-size: 20px; padding-left: 25px; padding-top: 25px; font-weight: bold">Ferry Pangateu</h1>
-        </div>
-        <p style="font-size: 1.2vw; padding-left: 55px; padding-bottom: 15px">Bagaimana latar belakang kesehatan kucing ini? Apakah ada riwayat penyakit atau kondisi kesehatan tertentu yang perlu diperhatikan?</p>
-      </div>
+    <h1 style="font-size: 20px; padding: 25px; font-weight: bold">{{ $content->judul }}</h1>
     </div>
 
     <div class="flex justify-center items-center">
@@ -35,11 +24,11 @@
         />
       </svg>
       <div class="kotak2">
-        <p style="font-size: 1.2vw; padding-left: 35px; padding-bottom: 15px; padding-top: 35px; padding-right: 60px">
-          Kucing ini telah menjalani pemeriksaan kesehatan secara menyeluruh oleh seorang dokter hewan terpercaya. Saat ini, kucing dalam kondisi sehat tanpa riwayat penyakit yang perlu diperhatikan. Kami memastikan bahwa kucing ini bebas
-          dari penyakit menular dan telah divaksinasi lengkap sesuai dengan jadwal yang disarankan oleh dokter hewan. Namun, penting untuk diingat bahwa sebagai calon pemilik, Anda perlu melakukan pemeriksaan kesehatan rutin dan memberikan
-          perawatan yang tepat untuk memastikan kucing tetap sehat dan bahagia.
-        </p>
+      <div style="font-size: 1.2vw; padding-left: 55px; padding: 15px">
+        <p>{{ $content->nama }}</p>
+<p>{{ $content->isi }}</p>
+<p>{{ $content->galery }}</p>
+        </div>
       </div>
     </div>
     
