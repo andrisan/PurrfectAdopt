@@ -16,6 +16,8 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): View
     {
+        $user = Auth::user();
+        
         return view('profile.edit', [
             'user' => $request->user(),
         ]);
@@ -73,6 +75,12 @@ class ProfileController extends Controller
         return redirect()->back()->with('status', 'Profil berhasil diperbarui.');
     }
     
-    
+    public function showProfile(Request $request): View
+{
+    $user = Auth::user();
+
+    return view('profile.profile_adopter', compact('user'));
+}
+
 
 }

@@ -29,9 +29,7 @@ Route::get('/profile/mypet', function () {
   return view('profile/mypet');
 })->name('mypet');
 
-Route::get('/profile/profile_adopter', function () {
-  return view('profile/profile_adopter');
-})->name('profile_adopter');
+Route::get('/profile/profile_adopter', [ProfileController::class, 'showProfile'])->name('profile_adopter');
 
 Route::get('/profile/profile_distributor', function () {
   return view('profile/profile_distributor');

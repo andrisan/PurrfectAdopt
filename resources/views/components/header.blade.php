@@ -30,7 +30,7 @@
                     <div
                         class="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg hidden"
                         id="profileOptions">
-                        <a href="#"
+                        <a href="/profile/profile_adopter"
                             class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Edit Profile</a>
                         <a href="/logout"
                             class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Sign Out</a>
