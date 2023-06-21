@@ -671,18 +671,22 @@ object {
            <img src="../../img/cogan.png" alt=">" height='150px' width='150px' style="justify-content:center; align-items:center">
         </div>
         <div class="p-2 hover:bg-pink-100" style="justify-content:center; align-content:center; text-align:center">
-          <div class="space-x-3">
-            <h4 id="namauser" class="font-regular"></h4>
+          <div id="user" class="space-x-3">
+
           </div>
         </div>
-        <div style="justify-content:center; align-content:center; text-align:center">
-          <h4 id="iduser" class="font-regular"></h4>
+        <div  id="iduser"  style="justify-content:center; align-content:center; text-align:center">
+
         </div>
-        <div style="justify-content:center; align-content:center; text-align:center">
-          <h4 id="emailuser" class="font-regular"></h4>
+
+        <div id="email" style="justify-content:center; align-content:center; text-align:center">
+
         </div>
-        <div style="justify-content:center; align-content:center; text-align:center">
-          <h4 id="notelp" class="font-regular"></h4>
+        <div id="profesi"  style="justify-content:center; align-content:center; text-align:center">
+
+        </div>
+        <div id="kontak"  style="justify-content:center; align-content:center; text-align:center">
+
         </div>
 
       </div>
@@ -697,30 +701,30 @@ object {
             </div>
             </div>
 
-      
+
 
                 <div class=" flex items-center justify-between text-gray-600 text-3xl p-5"><b>Data Kucing</b></div>
             <!--Table-->
                 <div class="grid  lg:grid-cols-1  md:grid-cols-1 p-4 gap-3">
                     <div class="col-span-2 flex flex-auto items-center justify-between  p-5 bg-white rounded shadow-sm">
-                        <table class="min-w-full divide-y divide-gray-200 table-auto">
+                        <table id="tblkucing">
                             <thead class="bg-gray-50">
                             <tr>
                                 <th scope="col"
-                                class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
                                 Nama
                                 </th>
                                 <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
-                                Umur
+                                Warna
+                                </th>
+                                <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
+                                Ras
                                 </th>
                                 <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
                                 Jenis Kelamin
-                                </th>
-                                <th scope="col"
-                                class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
-                                Jenis Ras
                                 </th>
                                 <th scope="col"
                                 class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
@@ -728,7 +732,8 @@ object {
                                 </th>
                                 </th>
                                 <th scope="col"
-                                class="relative px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
+                                Tinggi
                                 </th>
                             </tr>
                             </thead>
@@ -741,93 +746,84 @@ object {
         </div>
     </div>
   </div>
-  <script src="hthttps://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-  <script type="text/javascript">
-    $(function () {
-        let isi = '';
+    <script type="text/javascript">
+        $(function () {
+            let name = '';
+            let IDuser = '';
+            let email = '';
+            let profesi = '';
+            let isi = '';
+            let kontak = '';
 
-        // $.ajaxSetup({
-        //     headers: {
-        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('user')
-        //     }
-        // });
+            // $.ajaxSetup({
+            //     headers: {
+            //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('user')
+            //     }
+            // });
 
-        function getUser() {
-            const url = 'http://127.0.0.1:8000/getuserkucing';
-            $.ajax({
-                type:"GET",
-                url:url,
-                dataType:"JSON",
-                success:
-                function (response) {
-                  isi = '';
-                    isi += `
-                      <p>${response}</p>
-                      `;
-                    $('#namauser').append(isi);
-                }
-            });
-        }
-        getUser();
+            function getUser() {
+                let id = `{{$idreturn}}`;
+                const url = 'http://127.0.0.1:8000/getuserkucing/'+ id;
 
-        function getUser() {
-            const url = 'http://127.0.0.1:8000/getuserkucing';
-            $.ajax({
-                type:"GET",
-                url:url,
-                dataType:"JSON",
-                success:
-                function (response) {
-                  isi = '';
-                    isi += `
-                      <p>${response}</p>
-                      `;
-                    $('#iduser').append(isi);
-                }
-            });
-        }
-        getUser();
+                $.ajax({
+                    type:"GET",
+                    url:url,
+                    dataType:"JSON",
+                    success:
+                    function (response) {
+                        console.log(response);
+                                name += `
+                                    <h4 class="font-regular">${response[0].name}</h4>
+                                `;
+                                IDuser += `
+                                    <h4 class="font-regular">${response[0].IdUser}</h4>
+                                `;
+                                email += `
+                                    <h4 class="font-regular">${response[0].email}</h4>
+                                `;
+                                profesi += `
+                                    <h4 class="font-regular">${response[0].profesi}</h4>
+                                `;
+                                kontak += `
+                                    <h4 class="font-regular">${response[0].kontak}</h4>
+                                `;
+                                isi = '';
+                                let no_urut = 1 ;
+                                response.forEach(el => {
+                                    isi += `
+                                        <tr>
+                                            <td scope="col" class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider"
+                                            > ${el.nama} </td>
+                                            <td  scope="col" class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider"
+                                            >${el.warna}</td>
+                                            <td  scope="col" class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider"
+                                            > ${el.ras} </td>
+                                            <td  scope="col" class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider"
+                                            > ${el.gender ? 'Laki-laki' : 'Perempuan'} </td>
+                                            <td  scope="col" class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider"
+                                            >${el.berat_badan}</td>
+                                            <td  scope="col" class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider"
+                                            > ${el.tinggi_badan}</td>
+                                        </tr>
+                                    `;
+                                });
 
-        function getUser() {
-            const url = 'http://127.0.0.1:8000/getuserkucing';
-            $.ajax({
-                type:"GET",
-                url:url,
-                dataType:"JSON",
-                success:
-                function (response) {
-                  isi = '';
-                    isi += `
-                      <p>${response}</p>
-                      `;
-                    $('#emailuser').append(isi);
-                }
-            });
-        }
-        getUser();
+                                $('#tblkucing').append(isi);
+                                $('#email').append(email);
+                                $('#profesi').append(profesi);
+                                $('#user').append(name);
+                                $('#iduser').append(IDuser);
+                                $('#kontak').append(kontak);
+                            }
+                });
+            }
 
-        function getUser() {
-            const url = 'http://127.0.0.1:8000/getuserkucing';
-            $.ajax({
-                type:"GET",
-                url:url,
-                dataType:"JSON",
-                success:
-                function (response) {
-                  isi = '';
-                    isi += `
-                      <p>${response}</p>
-                      `;
-                    $('#notelp.').append(isi);
-                }
-            });
-        }
-        getUser();
-    });
-  </script>
-
+            getUser();
+        })
+    </script>
 </body>
 
 </html>

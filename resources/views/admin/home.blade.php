@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Purrfect Adopt</title>
 
+  <!--Icon Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         body {
             margin: 0;
@@ -257,6 +260,13 @@
         padding-right: 5rem;
 
         }
+
+        .px-30 {
+        padding-left: 20rem;
+        padding-right: 0rem;
+
+        }
+
         .text-sm {
         font-size: 0.875rem;
         line-height: 1.25rem;
@@ -300,18 +310,18 @@
 <body>
     <header>
         <div class="flex">
-                Logo
+                <p><b>PurrfectAdopt</b></p>
         </div>
             <nav>
-            <ul>
+              <ul>
                 <li><a href="<?= url('/admin-home'); ?>">Beranda</a></li>
                 <li><a href="<?= url('/admin-kucing'); ?>">Kucing</a></li>
                 <li><a href="<?= url('/admin-user'); ?>">User</a></li>
                 <li><a href="#">Artikel</a></li>
-            </ul>
+              </ul>
             </nav>
         <div class="profile">
-            <img src="profile-image.jpg" alt="Profil">
+            <img src="{{ asset('/img/profile.png') }}" alt="Profil">
             <span>Profil</span>
         </div>
     </header>
@@ -319,31 +329,30 @@
     <div class="container">
         <div class="flex flex-col p-2 drop-shadow-2xl">
             <div class="flex flex-col p-2 drop-shadow-2xl px-20">
-                <div class="flex flex-row space-x-3 ">
-                    <h4 class="font-bold text-gray-500 p-1 ">Welcome Admin</h4>
+                <div class="flex flex-row space-x-3 " style="margin-left:500px">
+                    <h2 class="font-bold text-gray-500 p-1 ">Welcome Admin</h2>
                 </div>
-                <p class="text-gray-400 p-1">30th October 2020 | 1st November 2020</p>
             </div>
             <!-- Counter -->
 
-            <div class="cols-lg-12 px-20">
+            <div class="cols-lg-12 px-30">
             <!-- px-20 untuk ngatur padding kiri dan kanan -->
-                <div class="flex flex-wrap mt-8 grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10 rounded-md bg-kotak">
+                <div class="flex flex-wrap mt-5 grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10 rounded-md bg-kotak">
 
                     <!--Grid starts here-->
                     <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
                         <div>
                         <div  class="text-sm text-gray-400 ">Kucing</div>
-                        <div class="flex items-center pt-1">
-                            <div id="hitungkucing" class="text-3xl font-medium text-gray-600 "></div>
-                        </div>
+                            <div class="flex items-center pt-1">
+                                <div id="hitungkucing" class="text-3xl font-medium text-gray-600 "></div>
+                            </div>
                         </div>
                         <div class="text-pink-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-10" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-10" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
 
-                            clip-rule="evenodd" />
-                        </svg>
+                                clip-rule="evenodd" />
+                            </svg>
                         </div>
                     </div>
 
@@ -394,102 +403,33 @@
         </div>
     </div> -->
 
+    <!--Footer-->
     <footer>
-        <div style="display: flex;">
+        <div style="display: flex;" class= "text-sm">
             <div class="left-section">
                 <h3>Purrfect Adopt</h3>
                 <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
-                </div>
-                <div class="center-section">
+            </div>
+            <div class="center-section">
                 <h3> Alamat Kami </h3>
                 Jalan Veteran Malang
-                </div>
-                <div class="right-section">
-                <span>Contact Us:</span>
-                <div class="social-media">
-                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
-                    <a href="#"><img src="twitter.png" alt="Twitter"></a>
-                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
-                </div>
+            </div>
+            <div class="right-section">
+            <span>Contact Us:</span>
+            <div class="social-media">
+            <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
             </div>
         </div>
     </footer>
+  <!--End Footer-->
 
     <!-- Required chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Chart line -->
-    <script>
-        const labels = ["January", "February", "March", "April", "May", "June"];
-        const data = {
-        labels: labels,
-        datasets: [{
-            label: "My First dataset",
-            backgroundColor: "hsl(252, 82.9%, 67.8%)",
-            borderColor: "hsl(252, 82.9%, 67.8%)",
-            data: [10, 25, 20, 2, 20, 30, 45],
-        }, ],
-        };
 
-        const configLineChart = {
-        type: "line",
-        data,
-        options: {},
-        };
-
-        var chartLine = new Chart(
-        document.getElementById("chartLine"),
-        configLineChart
-        );
-    </script>
-
-    <script>
-        const dataRadar = {
-        labels: [
-            "Reservation 1",
-            "Reservation 2",
-            "Reservation 3",
-            "Reservation 4",
-            "Reservation 5",
-            "Reservation 6",
-            "Reservation 7",
-        ],
-        datasets: [{
-            label: "My First Dataset",
-            data: [65, 59, 90, 81, 56, 55, 40],
-            fill: true,
-            backgroundColor: "rgba(255,105,180)",
-            borderColor: "rgb(255,20,147)",
-            pointBackgroundColor: "rgb(133, 105, 241)",
-            pointBorderColor: "#fff",
-            pointHoverBackgroundColor: "#fff",
-            pointHoverBorderColor: "rgb(133, 105, 241)",
-            },
-            {
-            label: "My Second Dataset",
-            data: [28, 48, 40, 19, 96, 27, 100],
-            fill: true,
-            backgroundColor: "rgba(255,105,180)",
-            borderColor: "rgb(0,191,255)",
-            pointBackgroundColor: "rgb(54, 162, 235)",
-            pointBorderColor: "#fff",
-            pointHoverBackgroundColor: "#fff",
-            pointHoverBorderColor: "rgb(54, 162, 235)",
-            },
-        ],
-        };
-
-        const configRadarChart = {
-        type: "radar",
-        data: dataRadar,
-        options: {},
-        };
-
-        var chartBar = new Chart(
-        document.getElementById("chartRadar"),
-        configRadarChart
-        );
-    </script>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -564,11 +504,8 @@
                             // tblkucing diganti ID Div
                 });
             }
-
             getUser();
         })
     </script>
-
 </body>
-
 </html>

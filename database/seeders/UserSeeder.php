@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
             'ekonomi' => '5jt',
             'crime_hist' => '-',
             'kontak' => '0812',
-            'status' => '0',
+            'status' => '1',
         ]);
         DB::table('users')->insert([
             'name' => 'Farah',
@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
             'ekonomi' => '5jt',
             'crime_hist' => '-',
             'kontak' => '0812',
-            'status' => '0',        
+            'status' => '1',
         ]);
         DB::table('users')->insert([
             'name' => 'Diva',
@@ -51,6 +51,6 @@ class UserSeeder extends Seeder
             'crime_hist' => '-',
             'kontak' => '0812',
             'status' => '0',
-        ]);    
+        ]);
     }
 }
