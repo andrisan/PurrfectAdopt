@@ -76,41 +76,6 @@
 </div>
 <!-- top article -->
 
-<!-- recent news-->
-<div class="w-full text-gray-700 px-11 text-2xl font-semibold pt-20 text-center">Recent Articles</div><br>
-<div class="flex container place-content-center">
-<div class="grid grid-cols-3 space-x-4">
-
-<!-- card -->
-@foreach ($contents as $content)
-@if ($content != $contents->find(1))
-    <div class="max-w-xs mb-10 mx-5 bg-white border border-gray-200 rounded-lg shadow">
-        <a href="/article/{{ $content->id }}">
-        <img class="rounded-t-lg" src="{{ $content->galery }}" alt="" />
-        </a>
-        <div class="p-5">
-            <a href="/article/{{ $content->id }}">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">{{ $content->judul }}</h5>
-            </a>
-            <p class="font-normal text-gray-700">
-                {{ Str::limit($content->isi, 200) }}
-            </p>
-            <br>
-            <a href="/article/{{ $content->id }}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
-                Read More
-                <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a>
-        </div>
-    </div>
-@endif
-@endforeach
-
-</div>
-</div>
-</div>
-<!-- card -->
-
-
 <!--card slider-->
   <div class="mx-auto max-w-[1340px] px-4 py-10 sm:px-6 sm:py-20 lg:me-0 lg:pe-0 lg:ps-8">
     <div class="max-w-7xl items-end justify-between sm:flex sm:pe-6 lg:pe-8">
@@ -162,7 +127,7 @@
             @foreach ($contents as $content)
             @if ($content != $contents->find(1))
             <div class="swiper-slide mx-4">
-                <div class="max-w-xs h-96 bg-white border-gray-200 rounded-lg shadow">
+                <div class="max-w-xs w-[400px] h-[560px] bg-white border-gray-200 rounded-lg shadow">
                     <a href="/article/{{ $content->id }}">
                         <img class="rounded-t-lg" src="{{ $content->galery }}" alt="" />
                     </a>
@@ -170,14 +135,16 @@
                         <a href="/article/{{ $content->id }}">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ $content->judul }}</h5>
                         </a>
-                        <p class="font-normal text-gray-700">
-                            {{ Str::limit($content->isi, 100) }}
+                        <p class="font-normal text-gray-700 overflow-hidden line-clamp-5">
+                            {{ $content->isi }}
                         </p>
                         <br>
+                        <div class="flex justify-end">
                         <a href="/article/{{ $content->id }}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
                             Read More
                             <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         </a>
+                        </div>
                     </div>
                 </div>
             </div>
