@@ -18,7 +18,7 @@ body {
         font-family: 'Poppins', sans-serif;
       }
 
-      header {
+header {
         background-color: #C07F00;
         color: #fff;
         padding: 20px;
@@ -70,69 +70,52 @@ body {
         margin-right: 10px;
       }
 
-      .container {
-        display: flex;
-        /* justify-content: center;
-        align-items: center; */
-        flex-wrap: wrap;
-        height: 30vh;
-      }
+.container {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-wrap: wrap;
+    height: 30vh;
+}
 
-      .flex {
-        display: flex;
-      }
+.table-wrapper {
+    width: 90%;
+/*     margin: 0 auto; */
 
-      .p-1 {
-        padding: 0.25rem;
-      }
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5px;
+    padding: 20px;
+    background: #FFD95A;
+}
 
-      .text-sm {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-      }
+.tablekucing {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 10px;
+/*     background: red; */
+}
 
-      .font-bold {
-        font-weight: 800;
-      }
+.tablekucing, th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
 
-      .table-wrapper {
-        width: 90%;
-  /*     margin: 0 auto; */
+thead {
+    background-color: #C07F00;
+}
 
-        margin-left: 5%;
-        margin-right: 5%;
-        border-radius: 5px;
-        padding: 20px;
-        background: #FFD95A;
-      }
+td.image-cell {
+    text-align: center;
+}
 
-      .tablekucing {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-        margin-bottom: 10px;
-  /*     background: red; */
-      }
+td.image-cell img {
+    width: 30px;
+    height: auto;
+}
 
-      .tablekucing, th, td {
-          border: 1px solid black;
-          padding: 10px;
-      }
-
-      thead {
-          background-color: #C07F00;
-      }
-
-      td.image-cell {
-          text-align: center;
-      }
-
-      td.image-cell img {
-          width: 30px;
-          height: auto;
-      }
-
-      footer {
+footer {
           background-color: #C07F00;
           color: #fff;
           padding: 20px;
