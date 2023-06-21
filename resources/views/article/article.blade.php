@@ -70,12 +70,9 @@
         </div>
     </div>
 </div>
-
-
 <!-- top article -->
 
 <!-- article news-->
-
 <div class="w-full text-gray-700 px-11 text-2xl font-semibold pt-20 text-center">Article News</div><br>
 <div class="flex container place-content-center">
 <div class="grid grid-cols-3 space-x-4">
