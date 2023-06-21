@@ -206,7 +206,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.swiper-container', {
       loop: true,
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 15,
       autoplay: {
         delay: 8000,
