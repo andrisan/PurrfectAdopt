@@ -336,7 +336,7 @@
 </script>
 <!--slider cards-->
 
-@include('components.footer');
+@include('components.footer')
 
 </body>
 </html>

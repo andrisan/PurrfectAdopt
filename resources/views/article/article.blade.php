@@ -80,7 +80,7 @@
 <!-- card -->
 @foreach ($contents as $content)
 @if ($content != $contents->find(1))
-    <div class="max-w-xs  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="max-w-xs mb-10 mx-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="/article/{{ $content->id }}">
         <img class="rounded-t-lg" src="{{ $content->galery }}" alt="" />
         </a>
@@ -108,7 +108,7 @@
 <!-- article news-->
 
 <br>
-@include('components.footer');
+@include('components.footer')
 
 </body>
 </html>
