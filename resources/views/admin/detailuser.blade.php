@@ -63,7 +63,7 @@
             </div>
             </div>
 
-                <div class=" flex items-center justify-between text-gray-600 text-3xl p-5"><b>Data Kucing</b></div>
+                <div class=" flex items-center justify-between text-gray-600 text-3xl p-5"><b>Data kucing yang dimiliki</b></div>
             <!--Table-->
                 <div class="grid  lg:grid-cols-1  md:grid-cols-1 p-4 gap-3">
                     <div class="table-wrapper shadow rounded">

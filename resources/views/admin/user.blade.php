@@ -10,7 +10,7 @@
 
     <!--Font-->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    @vite(['resources/css/admin.css', 'resources/js/app.js'])
+    @vite(['resources/css/admin.css', 'resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
@@ -121,10 +121,10 @@
                                             <td> ${el.name} </td>
                                             <td>${el.email}</td>
                                             <td> ${el.gender ? 'Laki-laki' : 'Perempuan'} </td>
-                                            <td>${el.status ? '<button id="btnlihat" class="btn btn-orange" style="cursor:pointer">Lihat</button>' : 'Tidak memiliki kucing'}</td>
+                                            <td>${el.status ? '<button id="btnlihat" class="focus:outline-none text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-900" style="cursor:pointer" style="cursor:pointer">Lihat</button>' : 'Tidak memiliki kucing'}</td>
                                             <td> ${el.role}</td>
                                             <td>
-                                                <button id="btndelete" class="btn btn-red" style="cursor:pointer">Hapus</button>
+                                                <button id="btndelete" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" style="cursor:pointer" style="cursor:pointer">Hapus</button>
                                             </td>
                                         </tr>
                                     `;
