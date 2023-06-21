@@ -210,6 +210,7 @@
 <body>
     <header>
         <div class="flex">
+        <img src="{{ asset('/img/logoo.png') }}" alt="Logo" class="logo">
                 <p><b>PurrfectAdopt</b></p>
         </div>
             <nav>
