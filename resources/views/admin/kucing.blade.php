@@ -9,210 +9,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    @vite(['resources/css/admin.css', 'resources/js/app.js'])
 
     <style>
 
-body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Poppins', sans-serif;
-      }
-
-header {
-        background-color: #C07F00;
-        color: #fff;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      /* .logo {
-        margin-left: 2%;
-        width: 70%;
-      } */
-
-      .flex {
-        display: flex;
-        width: 300px;
-      }
-
-      nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        margin-left: 90%;
-      }
-
-      nav ul li {
-        margin-right: 20px;
-      }
-
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-      nav ul li a:hover {
-      width: 20px;
-      height: 40px;
-      background: white;
-      border-radius: 5px;
-      color: #C07F00;
-      }
-
-      .text-sm {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-      }
-
-      .profile {
-        display: flex;
-        align-items: center;
-        margin-right: 2%;
-      }
-
-      .profile img {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-
-.container {
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    flex-wrap: wrap;
-    height: 30vh;
-}
-
-.table-wrapper {
-    width: 90%;
-/*     margin: 0 auto; */
-
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 5px;
-    padding: 20px;
-    background: #FFD95A;
-}
-
-.tablekucing {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    margin-bottom: 10px;
-/*     background: red; */
-}
-
-.tablekucing, th, td {
-    border: 1px solid black;
-    padding: 10px;
-}
-
-thead {
-    background-color: #C07F00;
-}
-
-td.image-cell {
-    text-align: center;
-}
-
-td.image-cell img {
-    width: 30px;
-    height: auto;
-}
-
-footer {
-  background-color: #C07F00;
-  width: 100%;
-  padding: 20px 0;
-  color: white;
-  bottom: 0;
-  position: fixed;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.left-section {
-  flex-basis: 33.33%;
-  padding: 0 15px;
-  box-sizing: border-box;
-}
-
-.center-section {
-  padding-left: 15%;
-}
-
-.right-section {
-  padding-left: 20%;
-}
-
-h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-p {
-  margin-bottom: 20px;
-}
-
-.social-media {
-  list-style: none;
-  padding: 0;
-  display: flex;
-}
-
-.social-media li {
-  margin-right: 10px;
-}
-
-.social-media a {
-  color: #333;
-  font-size: 20px;
-  padding-right: 7%;
-}
-
-/* Tambahkan CSS responsif berdasarkan ukuran layar */
-@media (max-width: 768px) {
-  .col-md-4 {
-    flex-basis: 100%;
-    margin-bottom: 20px;
-  }
-}
+        /* Tambahkan CSS responsif berdasarkan ukuran layar */
+        @media (max-width: 768px) {
+        .col-md-4 {
+            flex-basis: 100%;
+            margin-bottom: 20px;
+        }
+        }
 
 
 
-/* Tambahkan CSS responsif berdasarkan ukuran layar */
-@media (max-width: 768px) {
-  .col-md-4 {
-    flex-basis: 100%;
-    margin-bottom: 20px;
-  }
-}
-
-      .btn-red {
-          @apply bg-blue-500 text-white;
-      }
-
-      .rounded {
-          border-radius: 1rem;
-      }
-
-</style>
+        /* Tambahkan CSS responsif berdasarkan ukuran layar */
+        @media (max-width: 768px) {
+        .col-md-4 {
+            flex-basis: 100%;
+            margin-bottom: 20px;
+        }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -241,7 +59,7 @@ p {
         </div>
 
         <div class="table-wrapper shadow rounded">
-            <table class="tablekucing text-sm" id="tblkucing">
+            <table class="tbluser text-sm" id="tblkucing">
                 <thead>
                 <tr>
                 <td><b>No</b></td>
@@ -325,7 +143,7 @@ p {
                                         <td> ${el.tinggi_badan}</td>
                                         <td>${el.status ? 'Teradopsi' : 'Belum diadopsi'}</td>
                                         <td class="image-cell">
-                                            <button id="btndelete" class="btn btn-red">hapus</button>
+                                            <button id="btndelete" class="btn btn-red" style="cursor:pointer">hapus</button>
                                         </td>
                                     </tr>
                                 `;
