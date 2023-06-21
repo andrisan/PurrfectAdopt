@@ -15,9 +15,13 @@
 
 <body>
     <header>
-        <div class="flex">
-        <img src="{{ asset('/img/logoo.png') }}" alt="Logo" class="logo">
-                <p><b>PurrfectAdopt</b></p>
+        <div class="flex flex-row">
+            <div>
+                <img src="{{ asset('/img/logoo.png') }}" alt="logo" class ="logo">
+            </div>
+            <div style="margin-top: 10px;">
+                <p style="font-size: 30px;"><b>Purrfect Adopt</b></p>
+            </div>
         </div>
             <nav>
               <ul>
@@ -66,27 +70,27 @@
 
   <!--Footer-->
   <footer>
-    <div class="container">
-      <div class="row">
-        <div class="left-section">
-          <h3>Purrfect Adopt</h3>
-          <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
+        <div class="container">
+            <div class="row">
+                <div class="left-section">
+                <p style="font-size: 18px;font-weight:bold;margin-bottom:10px">Purrfect Adopt</p>
+                <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
+                </div>
+                <div class="center-section">
+                <p style="font-size: 18px;font-weight:bold;margin-bottom:10px">Alamat Kami</p>
+                <p>Jl. Veteran, Malang<br>Telepon: 123-456-7890</p>
+                </div>
+                <div class="right-section">
+                <p style="font-size: 18px;font-weight:bold;margin-bottom:10px">Sosial Media</p>
+                <ul class="social-media">
+                    <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                </ul>
+                </div>
+            </div>
         </div>
-        <div class="center-section">
-          <h3>Alamat Kami</h3>
-          <p>Jl. Veteran, Malang<br>Telepon: 123-456-7890</p>
-        </div>
-        <div class="right-section">
-          <h3>Sosial Media</h3>
-          <ul class="social-media">
-            <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
   <!--End Footer-->
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>

@@ -10,13 +10,17 @@
   <!--Icon Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-  @vite(['resources/css/admin.css', 'resources/js/app.js'])
+  @vite(['resources/css/admin.css', 'resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     <header>
-        <div class="flex">
-            <img src="{{ asset('/img/logoo.png') }}" alt="logo" class ="logo">
-                <p><b>PurrfectAdopt</b></p>
+        <div class="flex flex-row">
+            <div>
+                <img src="{{ asset('/img/logoo.png') }}" alt="logo" class ="logo">
+            </div>
+            <div style="margin-top: 10px;">
+                <p style="font-size: 30px;"><b>Purrfect Adopt</b></p>
+            </div>
         </div>
             <nav>
               <ul>
@@ -32,82 +36,66 @@
         </div>
     </header>
 
-    <div class="container">
-        <div class="flex flex-col p-2 drop-shadow-2xl">
-            <div class="flex flex-col p-2 drop-shadow-2xl px-20">
-                <div class="flex flex-row space-x-3 " style="margin-left:500px">
-                    <h2 class="font-bold text-gray-500 p-1 ">Welcome Admin</h2>
-                </div>
-            </div>
-            <!-- Counter -->
-
-            <div class="cols-lg-12 px-30">
-            <!-- px-20 untuk ngatur padding kiri dan kanan -->
-                <div class="flex flex-wrap mt-5 grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10 rounded-md bg-kotak">
-
-                    <!--Grid starts here-->
-                    <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
-                        <div>
-                        <div  class="text-sm text-gray-400 ">Data Kucing</div>
-                            <div class="flex items-center pt-1">
-                                <div id="hitungkucing" class="text-3xl font-medium text-gray-600 "></div>
-                            </div>
-                        </div>
-                        <div class="text-pink-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-10" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-
-                                clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
-                        <div>
-                        <div class="text-sm text-gray-400 ">Data User</div>
-                        <div class="flex items-center pt-1">
-                            <div id="hitunguser" class="text-3xl font-medium text-gray-600 "></div>
-                        </div>
-                        </div>
-                        <div class="text-pink-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-
-                            clip-rule="evenodd" />
-                        </svg>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
-                        <div>
-                        <div class="text-sm text-gray-400 ">Data Artikel</div>
-                        <div class="flex items-center pt-1">
-                            <div id="hitungartikel" class="text-3xl font-medium text-gray-600 "></div>
-                        </div>
-                        </div>
-                        <div class="text-pink-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-                            <path
-                            />
-                        </svg>
-                        </div>
-                    </div>
-                    <!-- Grid ends here..-->
-                </div>
-            </div>
-            <!-- Counter -->
-        </div>
+    <div class="flex drop-shadow-2xl " style="margin-top:40px;text-align:center; justify-content:center; align-content:center; ">
+        <h2 class="font-bold text-gray-500 p-1" style="font-size: 30px;color:black">Welcome Admin</h2>
     </div>
 
-    <!-- <div class="container">
-        <div class=" mt-5 grid  lg:grid-cols-2  md:grid-cols-3 p-4 gap-3">
-            <div class="col-span-2 flex flex-col   p-8 bg-graph rounded shadow-sm">
-            <b class="flex flex-row text-gray-500">Data kucing tahun lalu</b>
-            <canvas class="p-5" id="chartLine">
 
-            </canvas>
+    <div class="" style="margin-left:100px; margin-right:100px">
+    <!-- px-20 untuk ngatur padding kiri dan kanan -->
+        <div class="flex flex-wrap mt-5 grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10 rounded-md bg-kotak">
+
+            <!--Grid starts here-->
+            <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
+                <div>
+                <div  class="text-sm text-gray-400 ">Data Kucing</div>
+                    <div class="flex items-center pt-1">
+                        <div id="hitungkucing" class="text-3xl font-medium text-gray-600 "></div>
+                    </div>
+                </div>
+                <div class="text-pink-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-10" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+
+                        clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
+                <div>
+                <div class="text-sm text-gray-400 ">Data User</div>
+                <div class="flex items-center pt-1">
+                    <div id="hitunguser" class="text-3xl font-medium text-gray-600 "></div>
+                </div>
+                </div>
+                <div class="text-pink-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+
+                    clip-rule="evenodd" />
+                </svg>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
+                <div>
+                <div class="text-sm text-gray-400 ">Data Artikel</div>
+                <div class="flex items-center pt-1">
+                    <div id="hitungartikel" class="text-3xl font-medium text-gray-600 "></div>
+                </div>
+                </div>
+                <div class="text-pink-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                    <path
+                    />
+                </svg>
+                </div>
+            </div>
+            <!-- Grid ends here..-->
         </div>
-    </div> -->
+    </div>
+    <!-- Counter -->
 
     <!--Footer-->
     <footer>
