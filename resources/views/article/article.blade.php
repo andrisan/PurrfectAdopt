@@ -104,13 +104,14 @@
     </div>
 @endif
 @endforeach
+
 </div>
 </div>
 </div>
 <!-- card -->
 
 
-<!--card-->
+<!--card slider-->
 <section>
   <div class="mx-auto max-w-[1340px] px-4 py-10 sm:px-6 sm:py-20 lg:me-0 lg:pe-0 lg:ps-8">
     <div class="max-w-7xl items-end justify-between sm:flex sm:pe-6 lg:pe-8">
@@ -164,9 +165,9 @@
         <div class="swiper-wrapper">
 
         @foreach ($contents as $content)
-        @if ($content != $contents->find(1))
+          @if ($content != $contents->find(1))
         <div class="swiper-slide mx-4">
-        <div class="max-w-xs  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="max-w-xs  bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="/article/{{ $content->id }}">
         <img class="rounded-t-lg" src="{{ $content->galery }}" alt="" />
         </a>
@@ -175,7 +176,7 @@
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $content->judul }}</h5>
             </a>
             <p class="font-normal text-gray-700 dark:text-gray-400">
-                {{ Str::limit($content->isi, 200) }}
+                {{ Str::limit($content->isi, 100) }}
             </p>
             <br>
             <a href="/article/{{ $content->id }}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
@@ -185,11 +186,13 @@
         </div>
     </div>
     </div>
-    @endif
+      @endif
     @endforeach
+
         </div>
       </div>
     </div>
+  </div>
   </div>
 </section>
 <!-- card-->
@@ -200,8 +203,8 @@
   document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.swiper-container', {
       loop: true,
-      slidesPerView: 3,
-      spaceBetween: 90,
+      slidesPerView: 4,
+      spaceBetween: 15,
       autoplay: {
         delay: 8000,
       },
@@ -216,7 +219,7 @@
         },
         1024: {
           centeredSlides: false,
-          slidesPerView: 3.25,
+          slidesPerView: 4.25,
         },
       },
     })
