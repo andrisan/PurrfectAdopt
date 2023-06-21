@@ -52,5 +52,31 @@ class UserSeeder extends Seeder
             'kontak' => '081264312',
             'status' => '0',
         ]);
+        DB::table('users')->insert([
+            'name' => 'Agist',
+            'email' => 'agist@gmail.com',
+            'password' => '123',
+            'gender' => '1',
+            'profesi' => 'programmer',
+            'alamat' => 'jalan',
+            'usia' => '21',
+            'ekonomi' => '5jt',
+            'crime_hist' => '-',
+            'kontak' => '081264312',
+            'status' => '0',
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Ashila',
+            'email' => 'ashill@gmail.com',
+            'password' => '123',
+            'gender' => '1',
+            'profesi' => 'programmer',
+            'alamat' => 'jalan',
+            'usia' => '21',
+            'ekonomi' => '5jt',
+            'crime_hist' => '-',
+            'kontak' => '081264312',
+            'status' => '0',
+        ]);
     }
 }

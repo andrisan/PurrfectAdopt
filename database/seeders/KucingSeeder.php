@@ -17,7 +17,7 @@ class KucingSeeder extends Seeder
         DB::table('kucings')->insert([
             'nama'          => 'Meow',
             'warna'         => 'orange',
-            'ras'           => 'mongolia',
+            'ras'           => 'persia',
             'gender'        => '0',
             'berat_badan'   => '20',
             'tinggi_badan'  => '30',
@@ -29,7 +29,7 @@ class KucingSeeder extends Seeder
         DB::table('kucings')->insert([
             'nama'          => 'Meow2',
             'warna'         => 'putih',
-            'ras'           => 'mongolia',
+            'ras'           => 'persia',
             'gender'        => '1',
             'berat_badan'   => '15',
             'tinggi_badan'  => '20',
@@ -42,7 +42,31 @@ class KucingSeeder extends Seeder
         DB::table('kucings')->insert([
             'nama'          => 'Meow3',
             'warna'         => 'kuning',
-            'ras'           => 'mongolia',
+            'ras'           => 'persia',
+            'gender'        => '0',
+            'berat_badan'   => '20',
+            'tinggi_badan'  => '20',
+            'kesehatan'     => '',
+            'sikap'         => '',
+            'foto'          => '',
+            'video'         => '',
+        ]);
+        DB::table('kucings')->insert([
+            'nama'          => 'Meow4',
+            'warna'         => 'abu-abu',
+            'ras'           => 'siamese',
+            'gender'        => '0',
+            'berat_badan'   => '20',
+            'tinggi_badan'  => '20',
+            'kesehatan'     => '',
+            'sikap'         => '',
+            'foto'          => '',
+            'video'         => '',
+        ]);
+        DB::table('kucings')->insert([
+            'nama'          => 'Meow5',
+            'warna'         => 'putih',
+            'ras'           => 'siberia',
             'gender'        => '0',
             'berat_badan'   => '20',
             'tinggi_badan'  => '20',
