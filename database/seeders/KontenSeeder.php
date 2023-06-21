@@ -116,5 +116,31 @@ At first, simply keep the brush at hand while stroking your
     'updated_at' => \Carbon\Carbon::now(),
 ]);
 
+DB::table('contents')->insert([
+    'judul' => 'Cat Funny War with the Automatic Feeder Is Cracking Everyone Up',
+    'penulis' => 'Gabrielle LaFrank',
+    'status' => True,
+    'isi' => '
+    Cats Funny War with the Automatic Feeder Is Cracking Everyone Up
+    Pets can be creatures of habit, so changing up something as simple as a feeder can really take them for a spin. Just take @winston.naughtypaws for example! This white and tabby cat has developed quite the rivalry with his new automatic feeder, and its just as entertaining as it sounds.
+    
+    The hungry kitty is still convinced that he can get his food out of the feeder, and honestly--maybe he can! Winstons mama has already had to make several adjustments to keep the feeder in place while he figures it out, but that might not even be enough to keep him at bay.
+    
+    View the original article to see embedded media.
+    
+    LMAO! Winston went from inconvenienced to downright enraged in just a few moments, but this is only day 2 of his time with the automatic cat feeder. Were sure hell figure out that he cant make it dispense food, but his attempts in the meantime are pretty darn funny.
+    
+    "I love how angry they get," said commenter @ohhthatsssheeer. "They all act like we dont feed them for days when it goes off." Thats so true! All of the cat food is gobbled up in seconds, and then theyre upset when they cant get any more until the next meal. Its a tale as old as time!
+    
+    Every cat will have their own appetite levels, but it can be normal to run into challenges like Winstons when switching from free-feeding to a routine meal schedule. Everyone at home will adjust in time! Keeping your cat on a consistent feeding schedule can help add a sense of routine and normalcy to their days, so its worth considering despite the adjustment period.
+    
+    Looking for more PetHelpful updates? Follow us on YouTube for more entertaining videos.
+    
+    Or, share your own adorable pet by submitting a video, and sign up for our newsletter for the latest pet updates and tips.',
+    'galery' => '/img/artikel4.jpg',
+    'created_at' => \Carbon\Carbon::now(),
+    'updated_at' => \Carbon\Carbon::now(),
+]);
+
     }
 }
