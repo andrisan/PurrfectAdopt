@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
             'usia' => '21',
             'ekonomi' => '5jt',
             'crime_hist' => '-',
-            'kontak' => '0812',
+            'kontak' => '081264312',
             'status' => '1',
         ]);
         DB::table('users')->insert([
@@ -31,12 +31,12 @@ class UserSeeder extends Seeder
             'email' => 'farah@gmail.com',
             'password' => '123',
             'gender' => '1',
-            'profesi' => 'karyawan',
+            'profesi' => 'guru',
             'alamat' => 'jalan',
             'usia' => '20',
             'ekonomi' => '5jt',
             'crime_hist' => '-',
-            'kontak' => '0812',
+            'kontak' => '081264312',
             'status' => '1',
         ]);
         DB::table('users')->insert([
@@ -44,12 +44,12 @@ class UserSeeder extends Seeder
             'email' => 'diva@gmail.com',
             'password' => '123',
             'gender' => '1',
-            'profesi' => 'karyawan',
+            'profesi' => 'programmer',
             'alamat' => 'jalan',
             'usia' => '21',
             'ekonomi' => '5jt',
             'crime_hist' => '-',
-            'kontak' => '0812',
+            'kontak' => '081264312',
             'status' => '0',
         ]);
     }

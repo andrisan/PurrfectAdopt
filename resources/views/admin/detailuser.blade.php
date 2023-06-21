@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwindcss Course</title>
+  <title>Purrfect Adopt</title>
 
   <!--Icon Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -650,6 +650,28 @@ object {
 .text-center{
   text-align : center;
 }
+.table-wrapper {
+    width: 90%;
+/*     margin: 0 auto; */
+
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5px;
+    padding: 20px;
+    background: #FFD95A;
+}
+.tablekucing {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 10px;
+/*     background: red; */
+}
+
+.tablekucing, th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
 </style>
 </head>
 
@@ -701,13 +723,11 @@ object {
             </div>
             </div>
 
-
-
                 <div class=" flex items-center justify-between text-gray-600 text-3xl p-5"><b>Data Kucing</b></div>
             <!--Table-->
                 <div class="grid  lg:grid-cols-1  md:grid-cols-1 p-4 gap-3">
-                    <div class="col-span-2 flex flex-auto items-center justify-between  p-5 bg-white rounded shadow-sm">
-                        <table id="tblkucing">
+                    <div class="table-wrapper shadow rounded">
+                        <table id="tblkucing" class="tablekucing text-sm">
                             <thead class="bg-gray-50">
                             <tr>
                                 <th scope="col"
