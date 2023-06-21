@@ -21,14 +21,14 @@
 </head>
 <body>
     @include('components.header');
-    <div class="container mx-auto flex flex-wrap md:flex-nowrap">
-    <div class="sticky">
-    <img src="{{asset('/img/Vector.png')}}" alt="" class="w-10">
-    </div>
+    <div class="container mx-auto flex flex-wrap md:flex-nowrap mt-20">
+    <div id="love-container">
+    <button id="toggleButton" onclick="toggleHeart()"><i id="heartIcon" class="fa-regular fa-heart fa-2xl" style="color: #ff0505;"></i></button>
+</div>
         <div class="w-full xl:w-4/8 py-7 mt-7">
             <img class="w-3/4 h-auto mx-auto" src="{{ asset('/img/Kuceng.png') }}">
         </div>
-        <div class="flex flex-col xl:w-3/4 mt-14 text-left">
+        <div class="flex flex-col xl:w-3/4 mt-20 text-left">
         <h1 class="text-6xl mb-8 text-black">BUDYANTO</h1>
         <h3 class="">PET Description</h3>
         <ul class="list-disc ml-6 mt-2">
@@ -53,5 +53,22 @@
     </div>
 </div>
     @include('components.footer');
+    <script>
+  var isCondition1 = true;
+  
+  function toggleHeart() {
+    var heartIcon = document.getElementById('heartIcon');
+    
+    if (isCondition1) {
+      heartIcon.classList.remove('fa-regular');
+      heartIcon.classList.add('fa-solid');
+      isCondition1 = false;
+    } else {
+      heartIcon.classList.remove('fa-solid');
+      heartIcon.classList.add('fa-regular');
+      isCondition1 = true;
+    }
+  }
+</script>
 </body>
 </html>
