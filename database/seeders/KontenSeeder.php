@@ -116,5 +116,100 @@ At first, simply keep the brush at hand while stroking your
     'updated_at' => \Carbon\Carbon::now(),
 ]);
 
+DB::table('contents')->insert([
+    'judul' => 'Cat Funny War with the Automatic Feeder Is Cracking Everyone Up',
+    'penulis' => 'Gabrielle LaFrank',
+    'status' => True,
+    'isi' => '
+    Cats Funny War with the Automatic Feeder Is Cracking Everyone Up
+    Pets can be creatures of habit, so changing up something as simple as a feeder can really take them for a spin. Just take @winston.naughtypaws for example! This white and tabby cat has developed quite the rivalry with his new automatic feeder, and its just as entertaining as it sounds.
+    
+    The hungry kitty is still convinced that he can get his food out of the feeder, and honestly--maybe he can! Winstons mama has already had to make several adjustments to keep the feeder in place while he figures it out, but that might not even be enough to keep him at bay.
+    
+    View the original article to see embedded media.
+    
+    LMAO! Winston went from inconvenienced to downright enraged in just a few moments, but this is only day 2 of his time with the automatic cat feeder. Were sure hell figure out that he cant make it dispense food, but his attempts in the meantime are pretty darn funny.
+    
+    "I love how angry they get," said commenter @ohhthatsssheeer. "They all act like we dont feed them for days when it goes off." Thats so true! All of the cat food is gobbled up in seconds, and then theyre upset when they cant get any more until the next meal. Its a tale as old as time!
+    
+    Every cat will have their own appetite levels, but it can be normal to run into challenges like Winstons when switching from free-feeding to a routine meal schedule. Everyone at home will adjust in time! Keeping your cat on a consistent feeding schedule can help add a sense of routine and normalcy to their days, so its worth considering despite the adjustment period.
+    
+    Looking for more PetHelpful updates? Follow us on YouTube for more entertaining videos.
+    
+    Or, share your own adorable pet by submitting a video, and sign up for our newsletter for the latest pet updates and tips.',
+    'galery' => '/img/artikel4.jpg',
+    'created_at' => \Carbon\Carbon::now(),
+    'updated_at' => \Carbon\Carbon::now(),
+]);
+
+DB::table('contents')->insert([
+    'judul' => 'British Shorthairs Reaction To Human Sister in Cat Costume Is Cracking Everyone Up',
+    'penulis' => 'Eve Vawter',
+    'status' => True,
+    'isi' => 'British Shorthairs Reaction To Human Sister in Cat Costume Is Cracking Everyone Up
+    In a hilarious showdown of "Who Wore It Better," we have a bona fide feline superstar, a dashing British shorthair, pitted against his human accomplice, a pint-sized girl donning cat ears and whiskers. Brace yourselves for this expected reaction—this genuine cat is seething with feline fury at his human copycat. He is just not having it.
+    
+    Check out the following video posted by TikTok user @Bronxy to see this cat real cranky about this situation.
+    
+    View the original article to see embedded media.
+    
+    He has no idea who this new giant cat is but hes more than ready to evict her. TikTok users are finding this all too hilarious and @Mixalis comments, "He for real said "Call the police,  we are getting robbed!" @Tina adds, "What cat? I only see a very distinguished centerpiece." A very distinguished, very furious centerpiece. @Melly is all too familiar with this scenario and comments, "My cats reacted like this when I wore headphones with cat ears on it." @Itsdanik thinks it may be due to socialization, and replies, "Um excuse me you are actually supposed to do slow introductions with new cats." LOL!
+    
+    Cats are always just so extra. They get so jealous if they think another cat is going to get more attention than they are. We had love to see Bronxys reaction if his human sister dressed up like a dog or a bird. Or even better, a can of cat food.
+    
+    Looking for more PetHelpful updates? Follow us on YouTube for more entertaining videos. Or, share your own adorable pet by submitting a video, and sign up for our newsletter for the latest pet updates and tips.',
+    'galery' => '/img/artikel1.jpg',
+    'created_at' => \Carbon\Carbon::now(),
+    'updated_at' => \Carbon\Carbon::now(),
+]);
+
+DB::table('contents')->insert([
+    'judul' => 'Orange Cat Walks Into a Third Grade Classroom and Quickly Turns It Into His Home',
+    'penulis' => 'Regina Sienra',
+    'status' => True,
+    'isi' => 'We have heard stories of cats finding a home by simply wandering into a home and adopting the humans living in it. 
+        But one very clever kitty walked into a more academic location and got itself a tiny legion of adoring friends. Tombi the cat used to roam the grounds of an elementary school in Izmir, Turkey, greeting students and asking for pets.
+        One day, he made his way to a third-grade classroom. What at first seemed a one-day occurrence quickly turned into a long-term thing, as Tombi settled in and turned the classroom into his home, much to the students delight.
+        While many may think the cat could easily turn into a distraction for the kids, Tombi had the opposite effect on them. “The children come on time to school, and they are taking care of Tombi,” the third grade teacher, Özlem Pınar Ivaşcu, told The Dodo. “This is good for them.”
+
+        Instead of running around and playing in between lessons, the students remained calm during breaks for Tombi. Ivaşcus photos show him sitting on students desks while they work, almost as if he was an assistant teacher guiding students through a lesson.
+
+        The cat seemed to love the kids as much as they loved him. Unfortunately, one students parents filed a complaint about Tombi, as he could pose a health risk, and the cat was moved into an actual home. Tombi really missed his friends, and stopped eating for three days. Hoping to cheer him up, Ivaşcu brought him into her home, but he was not happy there either. Meanwhile, the students sent him drawings and letters to let him know they had not forgotten about him. Worried about his state, the teacher turned to social media, and after getting support from her manager and the director of education in Izmir—and a change of heart from the students parents—Tombi was welcomed back into the classroom.',
+    'galery' => '/img/artikel2.jpg',
+    'created_at' => \Carbon\Carbon::now(),
+    'updated_at' => \Carbon\Carbon::now(),
+]);
+
+DB::table('contents')->insert([
+    'judul' => 'Domestic cat',
+    'penulis' => 'Azalea Yumiko',
+    'status' => True,
+    'isi' => 'Where do cats come from?
+From ancient Egyptians to today’s internet users, people have always loved their cats. In the U.S. alone, cats reign over about 45.3 million households. There are at least 45 domestic breeds, which differ widely in features such as coat color, tail length, hair texture, and temperament, according to the Cat Fancier’s Association. The Maine Coon is the largest, with males reaching an average of 3.5 feet long. The smallest breed is the Singapura, native to Singapore, with adult females weighing as little as four pounds. One of the most unusual-looking cats is the Sphynx, a mostly hairless cat known for being robust and intelligent. Like their big cat cousins, house cats are obligate carnivores, meaning they have to eat meat to stay healthy. Though they’ve been domesticated for thousands of years, these predators have maintained a strong hunting instinct, relying on stealth to stalk prey and attack with sharp claws and teeth. (Learn surprising things you never knew about your cat.) As mostly nocturnal animals, cats have excellent vision and hearing, with ears that can turn like satellite dishes. Their reputation for having nine lives stems in part from their ability to navigate difficult environments, for example using their tail to balance and mostly land their lean, muscular bodies on all fours. Cushioning discs between vertebrae also give cat bodies exceptional flexibility and speed.
+
+Kitty origins
+People began to domesticate cats in the Fertile Crescent about 10,000 years ago, according to DNA research. Modern-day cats descended from a subspecies of African wildcat, Felis silvestris lybica, which today is the most common and widespread wildcat. (Read more about little-known small wildcats.) Thousands of years ago, these wildcats were likely drawn to human settlements and their plentiful mice and food scraps. People realized these rodent catchers were helpful to have around, and eventually the two species began living together. Later, people began to bring felines aboard ships as they traveled the world. (Read about house cat ancestors’ remains found in Polish caves.) Another, independent foray into cat domestication occurred in China about 5,000 years ago with another wildcat species the leopard cat. Since domestic cats today aren’t related to leopard cats, the harmony doesn’t seem to have lasted..',
+    'galery' => '/img/artikel4.jpg',
+    'created_at' => \Carbon\Carbon::now(),
+    'updated_at' => \Carbon\Carbon::now(),
+]);
+
+DB::table('contents')->insert([
+    'judul' => 'Managing your pet's weight',
+    'penulis' => 'Zayn Malik',
+    'status' => True,
+    'isi' => 'Feeding the correct food
+Dog vs Cat diets – a brief biology lesson
+Dogs are considered omnivores, having evolved over thousands of years to live alongside humans and relying on them for scraps of food. Because of this, dogs have adapted to digest both meat and vegetation. Like humans, dogs can synthesize taurine (an essential amino acid building block for protein) from other proteins, which is essential for good health. Cats can only derive taurine from meat and fish, so it’s vital to feed them a balanced feline diet. Cats typically have a higher protein requirement than dogs. They do not need carbohydrates and are typically classified as carnivorous, historically being hunting predators. Feeding a cat dog food or a vegetarian diet can cause deficiencies and lead to health problems.
+
+Lifestage diets
+Kitten and puppy foods are higher in calories and are fed for the growth phase. They are generally suitable for up to a year old. However, some pets may be more likely to gain weight when they are neutered so may need to switch to an adult diet from 6 months. Growth phases are longer in very large breeds of dogs so they may be fed puppy foods for longer, or they may be able to switch to an in-between junior food. Senior foods are typically fed once a pet reaches 7 to 8 yrs old and generally contains fewer calories and different vitamins and minerals to suit the requirements of an older pet.
+
+Wet vs dry food
+Tinned or pouch foods (wet foods) are relatively easy to store, have a stronger smell, and are thought to be more appealing to an animal. It has high water content at around 80%, which means your pet won’t drink as much. This is particularly noticeable in cats. Dry foods are convenient to feed, easy to store and generally less expensive than wet food. Good quality dry foods are very well researched and balanced. The down side is that dry foods generally contain a greater amount of calories from carbohydrates in a smaller amount of food so extra care must be taken to feed the correct amount. Water content is much lower (between 15 to 30%) so you must make sure fresh water is available at every opportunity. Combinations of wet and dry can be fed, as long as the total amount fed is correct for your pet’s ideal body weight. ',
+    'galery' => '/img/artikel1.jpg',
+    'created_at' => \Carbon\Carbon::now(),
+    'updated_at' => \Carbon\Carbon::now(),
+]);
     }
 }
