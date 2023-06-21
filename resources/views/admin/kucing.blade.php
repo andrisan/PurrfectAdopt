@@ -42,7 +42,7 @@ header {
         margin: 0;
         padding: 0;
         display: flex;
-        margin-left: 100%;
+        margin-left: 90%;
       }
 
       nav ul li {
@@ -71,6 +71,7 @@ header {
       .profile {
         display: flex;
         align-items: center;
+        margin-right: 2%;
       }
 
       .profile img {
