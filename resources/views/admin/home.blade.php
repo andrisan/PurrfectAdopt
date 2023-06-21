@@ -277,6 +277,14 @@
         line-height: 1.5rem;
         }
 
+        .text-gray-400 {
+            color:#FFFFFF;
+        }
+
+        .text-gray-600{
+            color:#FFFFFF;
+        }
+
         .text-3xl {
         font-size: 1.875rem;
         line-height: 2.25rem;
@@ -310,6 +318,7 @@
 <body>
     <header>
         <div class="flex">
+            <img src="{{ asset('/img/logoo.png') }}" alt="logo" class ="logo">
                 <p><b>PurrfectAdopt</b></p>
         </div>
             <nav>
@@ -455,7 +464,7 @@
                     function (response) {
                                 isi = '';
                                     isi += `
-                                        <p>${response}</p>
+                                        <h3>${response}</h3>
                                     `;
                                 $('#hitungkucing').append(isi);
                             }
@@ -476,7 +485,7 @@
                     function (response) {
                                 isi = '';
                                     isi += `
-                                        <p>${response}</p>
+                                        <h3>${response}</h3>
                                     `;
                                 $('#hitungartikel').append(isi);
                             }
@@ -497,7 +506,7 @@
                     function (response) {
                                 isi = '';
                                     isi += `
-                                        <p>${response}</p>
+                                        <h3>${response}</h3>
                                     `;
                                 $('#hitunguser').append(isi);
                             }
