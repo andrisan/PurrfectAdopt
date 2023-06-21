@@ -185,8 +185,7 @@ DB::table('contents')->insert([
     'penulis' => 'Azalea Yumiko',
     'status' => True,
     'isi' => 'Where do cats come from?
-From ancient Egyptians to today’s internet users, people have always loved their cats. In the U.S. alone, cats reign over about 45.3 million households. There are at least 45 domestic breeds, which differ widely in features such as coat color, tail length, hair texture, and temperament, according to the Cat Fancier’s Association. The Maine Coon is the largest, with males reaching an average of 3.5 feet long. The smallest breed is the Singapura, native to Singapore, with adult females weighing as little as four pounds. One of the most unusual-looking cats is the Sphynx, a mostly hairless cat known for being robust and intelligent. Like their big cat cousins, house cats are obligate carnivores, meaning they have to eat meat to stay healthy. Though they’ve been domesticated for thousands of years, these predators have maintained a strong hunting instinct, relying on stealth to stalk prey and attack with sharp claws and teeth. (Learn surprising things you never knew about your cat.) As mostly nocturnal animals, cats have excellent vision and hearing, with ears that can turn like satellite dishes. Their reputation for having nine lives stems in part from their ability to navigate difficult environments, for example using their tail to balance and mostly land their lean, muscular bodies on all fours. Cushioning discs between vertebrae also give cat bodies exceptional flexibility and speed.
-
+From ancient Egyptians to todays internet users, people have always loved their cats. In the U.S. alone, cats reign over about 45.3 million households. There are at least 45 domestic breeds, which differ widely in features such as coat color, tail length, hair texture, and temperament, according to the Cat Fancier’s Association. The Maine Coon is the largest, with males reaching an average of 3.5 feet long. The smallest breed is the Singapura, native to Singapore, with adult females weighing as little as four pounds. One of the most unusual-looking cats is the Sphynx, a mostly hairless cat known for being robust and intelligent. Like their big cat cousins, house cats are obligate carnivores, meaning they have to eat meat to stay healthy. Though they’ve been domesticated for thousands of years, these predators have maintained a strong hunting instinct, relying on stealth to stalk prey and attack with sharp claws and teeth. (Learn surprising things you never knew about your cat.) As mostly nocturnal animals, cats have excellent vision and hearing, with ears that can turn like satellite dishes. Their reputation for having nine lives stems in part from their ability to navigate difficult environments, for example using their tail to balance and mostly land their lean, muscular bodies on all fours. Cushioning discs between vertebrae also give cat bodies exceptional flexibility and speed.
 Kitty origins
 People began to domesticate cats in the Fertile Crescent about 10,000 years ago, according to DNA research. Modern-day cats descended from a subspecies of African wildcat, Felis silvestris lybica, which today is the most common and widespread wildcat. (Read more about little-known small wildcats.) Thousands of years ago, these wildcats were likely drawn to human settlements and their plentiful mice and food scraps. People realized these rodent catchers were helpful to have around, and eventually the two species began living together. Later, people began to bring felines aboard ships as they traveled the world. (Read about house cat ancestors’ remains found in Polish caves.) Another, independent foray into cat domestication occurred in China about 5,000 years ago with another wildcat species the leopard cat. Since domestic cats today aren’t related to leopard cats, the harmony doesn’t seem to have lasted..',
     'galery' => '/img/artikel4.jpg',
@@ -195,11 +194,11 @@ People began to domesticate cats in the Fertile Crescent about 10,000 years ago,
 ]);
 
 DB::table('contents')->insert([
-    'judul' => 'Managing your pet's weight',
+    'judul' => 'Managing your pets weight',
     'penulis' => 'Zayn Malik',
     'status' => True,
     'isi' => 'Feeding the correct food
-Dog vs Cat diets – a brief biology lesson
+Dog vs Cat diets a brief biology lesson
 Dogs are considered omnivores, having evolved over thousands of years to live alongside humans and relying on them for scraps of food. Because of this, dogs have adapted to digest both meat and vegetation. Like humans, dogs can synthesize taurine (an essential amino acid building block for protein) from other proteins, which is essential for good health. Cats can only derive taurine from meat and fish, so it’s vital to feed them a balanced feline diet. Cats typically have a higher protein requirement than dogs. They do not need carbohydrates and are typically classified as carnivorous, historically being hunting predators. Feeding a cat dog food or a vegetarian diet can cause deficiencies and lead to health problems.
 
 Lifestage diets
@@ -208,6 +207,32 @@ Kitten and puppy foods are higher in calories and are fed for the growth phase. 
 Wet vs dry food
 Tinned or pouch foods (wet foods) are relatively easy to store, have a stronger smell, and are thought to be more appealing to an animal. It has high water content at around 80%, which means your pet won’t drink as much. This is particularly noticeable in cats. Dry foods are convenient to feed, easy to store and generally less expensive than wet food. Good quality dry foods are very well researched and balanced. The down side is that dry foods generally contain a greater amount of calories from carbohydrates in a smaller amount of food so extra care must be taken to feed the correct amount. Water content is much lower (between 15 to 30%) so you must make sure fresh water is available at every opportunity. Combinations of wet and dry can be fed, as long as the total amount fed is correct for your pet’s ideal body weight. ',
     'galery' => '/img/artikel1.jpg',
+    'created_at' => \Carbon\Carbon::now(),
+    'updated_at' => \Carbon\Carbon::now(),
+]);
+
+DB::table('contents')->insert([
+    'judul' => 'There Are Various Types Of Cats',
+    'penulis' => 'Zunaera',
+    'status' => True,
+    'isi' => 'Cats or as we usually called it as the domestic cat are four-legged carnivorous mammal. Their latin name is Felis catus or Felis silvestris catus. The domestication of cats is believed to have started since ancient Egypt 9,500 years ago. Since that, cats have become humans companion. Nowadays it is the most popular pet in the world and also the second most popular pet in the US and they are often called as the house cats. It is believed that there are more than 70 cat breeds now in the world.
+    
+    Most cats are furry, only some of them such as Sphynx cat born with less fur on their body. Some cats have a long tail and some others have a short tail. It also has a very flexible body and sharp claws which can be retracted. Usually cats can grow up to 4 to 5 kg in weight and 23 to 25 cm in length, but sometimes it can be smaller or grow even bigger. Their eyes allow them to see in the dark and their ears allow them to hear sound with a high frequency that human could not hear. They are a good solitary hunters who have a really good sense of smell. There are various colors of cats in the world such as white, brown, grey, black, stripes and even multi color. They are a social species and they can make various sound such as Mewing, Purring, Hissing and Growling.',
+    'galery' => '/img/artikel3.jpg',
+    'created_at' => \Carbon\Carbon::now(),
+    'updated_at' => \Carbon\Carbon::now(),
+]);
+
+DB::table('contents')->insert([
+    'judul' => 'Do You Ever Touch A Cat?',
+    'penulis' => 'Eilaria',
+    'status' => True,
+    'isi' => 'A cat is one of the mammal animal which is liked a lion. It is called small lion. Although they have a similarity but they are different much. A cat is categorized as a tame animal, is a carnivore which consumes meat, flesh or fish. We can see it everywhere such as at home, at road, at the cat conservation and other.
+    
+    This mammal, has four legs for making it easy to run so don’t be shocked if you see the fast cat takes your meal in the dining table. It can run as fast as a dog. It has paws to protect itself from the enemy, climbing the tree and danger. It has sharp teeth which is useful to cut the meal, eat something and bring something. The beautiful and smooth feather is for protecting form the unpredicted situation and keeps the important body part. Every cat has different feather color, such as cream, black, white, or black-white and other.
+    
+    It is a tame pet so everybody to take care of it at home, to protect from the mouse too. But we have to be careful when we are with it. There are many disease from the cat, guys.. for example influenza, cough, respiratory error who can be caused by the cat feather. If you have a cat at home and you love it so much, please wash your hand before touching your meal and face, sweep the floor after it sleeps and also takes a bath it once a day.',
+    'galery' => '/img/artikel2.jpg',
     'created_at' => \Carbon\Carbon::now(),
     'updated_at' => \Carbon\Carbon::now(),
 ]);
