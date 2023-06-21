@@ -142,5 +142,26 @@ DB::table('contents')->insert([
     'updated_at' => \Carbon\Carbon::now(),
 ]);
 
+DB::table('contents')->insert([
+    'judul' => 'British Shorthairs Reaction To Human Sister in Cat Costume Is Cracking Everyone Up',
+    'penulis' => 'Eve Vawter',
+    'status' => True,
+    'isi' => 'British Shorthairs Reaction To Human Sister in Cat Costume Is Cracking Everyone Up
+    In a hilarious showdown of "Who Wore It Better," we have a bona fide feline superstar, a dashing British shorthair, pitted against his human accomplice, a pint-sized girl donning cat ears and whiskers. Brace yourselves for this expected reaction—this genuine cat is seething with feline fury at his human copycat. He is just not having it.
+    
+    Check out the following video posted by TikTok user @Bronxy to see this cat real cranky about this situation.
+    
+    View the original article to see embedded media.
+    
+    He has no idea who this new giant cat is but hes more than ready to evict her. TikTok users are finding this all too hilarious and @Mixalis comments, "He for real said "Call the police,  we are getting robbed!" @Tina adds, "What cat? I only see a very distinguished centerpiece." A very distinguished, very furious centerpiece. @Melly is all too familiar with this scenario and comments, "My cats reacted like this when I wore headphones with cat ears on it." @Itsdanik thinks it may be due to socialization, and replies, "Um excuse me you are actually supposed to do slow introductions with new cats." LOL!
+    
+    Cats are always just so extra. They get so jealous if they think another cat is going to get more attention than they are. We had love to see Bronxys reaction if his human sister dressed up like a dog or a bird. Or even better, a can of cat food.
+    
+    Looking for more PetHelpful updates? Follow us on YouTube for more entertaining videos. Or, share your own adorable pet by submitting a video, and sign up for our newsletter for the latest pet updates and tips.',
+    'galery' => '/img/artikel1.jpg',
+    'created_at' => \Carbon\Carbon::now(),
+    'updated_at' => \Carbon\Carbon::now(),
+]);
+
     }
 }
