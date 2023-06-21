@@ -18,6 +18,7 @@ class ContentController extends Controller
     public function show_details($id)
     {
         $article = Content::find($id);
+        $article->isi = str_replace("\n", "<br>", $article->isi);
         return view('article.articledetails', [
             'title' => 'Article Details',
         ], compact(['article']));
