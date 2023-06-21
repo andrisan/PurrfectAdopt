@@ -36,7 +36,7 @@
         footer {
         background-color: #C07F00;
         width: 100%;
-        padding: 20px 0;
+        padding: 10px 0;
         color: white;
         bottom: 0;
         position: fixed;
@@ -66,6 +66,44 @@
         .right-section {
         padding-left: 20%;
         }
+
+         h3{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        }
+
+        .center-section h3{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        }
+
+        .footer h3{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        }
+      
+        p {
+        margin-bottom: 20px;
+        }
+
+      .social-media {
+        list-style: none;
+        padding: 0;
+        display: flex;
+      }
+
+      .social-media li {
+        margin-right: 10px;
+      }
+
+      .social-media a {
+        color: #333;
+        font-size: 20px;
+        padding-right: 7%;
+      }
 
         .logo {
         margin-left: 2%;
@@ -113,7 +151,7 @@
         .left-section {
         flex: 1;
         }
-
+        
         .left-section h3 {
         margin: 0;
         font-size: 18px;
@@ -128,23 +166,19 @@
         text-align: center;
         }
 
-    .right-section {
+        /*.right-section {
         flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
-        margin-right: 5%;
+        margin-right: 5%;*/
     }
 
     .right-section span{
         margin-right: 7%;
     }
 
-    .social-media {
-    margin-top: 10px;
-    margin-left: 40%;
-    }
 
     .social-media img {
     width: 30px;
@@ -153,18 +187,19 @@
     /* margin-right: 10%; */
     }
 
-        .right-section {
+    /*.right-section {
         flex: 1;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        }
+        }*/
 
         .social-media img {
         width: 20px;
         height: 20px;
         margin-left: 10px;
         }
+
         .btn-red {
             @apply bg-blue-500 text-white;
         }
