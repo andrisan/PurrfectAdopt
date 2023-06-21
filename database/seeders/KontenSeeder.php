@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Content;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class KontenSeeder extends Seeder
 {
@@ -111,7 +112,7 @@ class KontenSeeder extends Seeder
             \n
             \nLMAO! Winston went from inconvenienced to downright enraged in just a few moments, but this is only day 2 of his time with the automatic cat feeder. Were sure hell figure out that he cant make it dispense food, but his attempts in the meantime are pretty darn funny.
             \n
-            \n"I love how angry they get," said commenter @ohhthatsssheeer. "They all act like we dont feed them for days when it goes off." Thats so true! All of the cat food is gobbled up in seconds, and then theyre upset when they cant get any more until the next meal. Its a tale as old as time!
+            \n'I love how angry they get, said commenter @ohhthatsssheeer.' 'They all act like we dont feed them for days when it goes off.' Thats so true! All of the cat food is gobbled up in seconds, and then theyre upset when they cant get any more until the next meal. Its a tale as old as time!
             \n
             \nEvery cat will have their own appetite levels, but it can be normal to run into challenges like Winstons when switching from free-feeding to a routine meal schedule. Everyone at home will adjust in time! Keeping your cat on a consistent feeding schedule can help add a sense of routine and normalcy to their days, so its worth considering despite the adjustment period.
             \n
@@ -144,11 +145,11 @@ class KontenSeeder extends Seeder
             'isi' => "We have heard stories of cats finding a home by simply wandering into a home and adopting the humans living in it. 
             \nBut one very clever kitty walked into a more academic location and got itself a tiny legion of adoring friends. Tombi the cat used to roam the grounds of an elementary school in Izmir, Turkey, greeting students and asking for pets.
             One day, he made his way to a third-grade classroom. What at first seemed a one-day occurrence quickly turned into a long-term thing, as Tombi settled in and turned the classroom into his home, much to the students delight.
-            While many may think the cat could easily turn into a distraction for the kids, Tombi had the opposite effect on them. “The children come on time to school, and they are taking care of Tombi,” the third grade teacher, Özlem Pınar Ivaşcu, told The Dodo. “This is good for them.”
+            While many may think the cat could easily turn into a distraction for the kids, Tombi had the opposite effect on them. “The children come on time to school, and they are taking care of Tombi,” the third grade teacher, Özlem Pinar Ivaşcu, told The Dodo. “This is good for them.”
             \n
             \nInstead of running around and playing in between lessons, the students remained calm during breaks for Tombi. Ivaşcus photos show him sitting on students desks while they work, almost as if he was an assistant teacher guiding students through a lesson.
             \n
-            \nThe cat seemed to love the kids as much as they loved him. Unfortunately, one students parents filed a complaint about Tombi, as he could pose a health risk, and the cat was moved into an actual home. Tombi really missed his friends, and stopped eating for three days. Hoping to cheer him up, Ivaşcu brought him into her home, but he was not happy there either. Meanwhile, the students sent him drawings and letters to let him know they had not forgotten about him. Worried about his state, the teacher turned to social media, and after getting support from her manager and the director of education in Izmir—and a change of heart from the students parents—Tombi was welcomed back into the classroom.',
+            \nThe cat seemed to love the kids as much as they loved him. Unfortunately, one students parents filed a complaint about Tombi, as he could pose a health risk, and the cat was moved into an actual home. Tombi really missed his friends, and stopped eating for three days. Hoping to cheer him up, Ivaşcu brought him into her home, but he was not happy there either. Meanwhile, the students sent him drawings and letters to let him know they had not forgotten about him. Worried about his state, the teacher turned to social media, and after getting support from her manager and the director of education in Izmir—and a change of heart from the students parents—Tombi was welcomed back into the classroom.",
             'galery' => '/img/artikel6.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
