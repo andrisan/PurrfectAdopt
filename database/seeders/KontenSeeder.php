@@ -163,5 +163,23 @@ DB::table('contents')->insert([
     'updated_at' => \Carbon\Carbon::now(),
 ]);
 
+DB::table('contents')->insert([
+    'judul' => 'Orange Cat Walks Into a Third Grade Classroom and Quickly Turns It Into His Home',
+    'penulis' => 'Regina Sienra',
+    'status' => True,
+    'isi' => 'We have heard stories of cats finding a home by simply wandering into a home and adopting the humans living in it. 
+        But one very clever kitty walked into a more academic location and got itself a tiny legion of adoring friends. Tombi the cat used to roam the grounds of an elementary school in Izmir, Turkey, greeting students and asking for pets.
+        One day, he made his way to a third-grade classroom. What at first seemed a one-day occurrence quickly turned into a long-term thing, as Tombi settled in and turned the classroom into his home, much to the students delight.
+        While many may think the cat could easily turn into a distraction for the kids, Tombi had the opposite effect on them. “The children come on time to school, and they are taking care of Tombi,” the third grade teacher, Özlem Pınar Ivaşcu, told The Dodo. “This is good for them.”
+
+        Instead of running around and playing in between lessons, the students remained calm during breaks for Tombi. Ivaşcus photos show him sitting on students desks while they work, almost as if he was an assistant teacher guiding students through a lesson.
+
+        The cat seemed to love the kids as much as they loved him. Unfortunately, one students parents filed a complaint about Tombi, as he could pose a health risk, and the cat was moved into an actual home. Tombi really missed his friends, and stopped eating for three days. Hoping to cheer him up, Ivaşcu brought him into her home, but he was not happy there either. Meanwhile, the students sent him drawings and letters to let him know they had not forgotten about him. Worried about his state, the teacher turned to social media, and after getting support from her manager and the director of education in Izmir—and a change of heart from the students parents—Tombi was welcomed back into the classroom.',
+    'galery' => '/img/artikel2.jpg',
+    'created_at' => \Carbon\Carbon::now(),
+    'updated_at' => \Carbon\Carbon::now(),
+]);
+
+
     }
 }
