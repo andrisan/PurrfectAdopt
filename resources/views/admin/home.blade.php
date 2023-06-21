@@ -67,7 +67,7 @@
         padding-left: 20%;
         }
 
-         h3{
+        footer h3{
         font-size: 18px;
         font-weight: bold;
         margin-bottom: 10px;
