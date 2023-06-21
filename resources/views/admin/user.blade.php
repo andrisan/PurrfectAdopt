@@ -203,13 +203,13 @@
       .rounded {
           border-radius: 1rem;
       }
-      
+
     </style>
 </head>
 
 <body>
     <header>
-    <div class="flex">
+        <div class="flex">
                 <p><b>PurrfectAdopt</b></p>
         </div>
             <nav>
@@ -244,6 +244,7 @@
                     <td><b>Name</b></td>
                     <td><b>Email</b></td>
                     <td><b>Jenis Kelamin</b></td>
+                    <td><b>Kucing</b></td>
                     <td><b>Status</b></td>
                     <td><b>Aksi</b></td>
                   </tr>
@@ -310,9 +311,10 @@
                                             <td> ${el.name} </td>
                                             <td>${el.email}</td>
                                             <td> ${el.gender ? 'Laki-laki' : 'Perempuan'} </td>
-                                            <td> ${el.status ? 'Admin' : 'User'}</td>
+                                            <td>${el.status ? '<button id="btnlihat" class="btn btn-danger">Lihat</button>' : 'Tidak memiliki kucing'}</td>
+                                            <td> ${el.role}</td>
                                             <td>
-                                            <button id="btndelete" class="btn btn-danger">Hapus</button>
+                                                <button id="btndelete" class="btn btn-danger">Hapus</button>
                                             </td>
                                         </tr>
                                     `;
@@ -340,6 +342,27 @@
                 });
                 swal("Sukses!", "Data berhasil dihapus", "success");
                 $(this).closest('tr').remove();
+            });
+
+            $('#tbluser').on('click', '#btnlihat', function (e) {
+                var $id = $(this).closest("tr")   // Finds the closest row <tr>
+                .find(".nr")     // Gets a descendent with class="nr"
+                .text();         // Retrieves the text within <td>
+
+                let url = 'http://127.0.0.1:8000/getuserkucing/' + $.trim($id);        // Outputs the answer
+
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    success: function (response) {
+                        // $('#tblanggota').find("tr:gt(0)").remove();
+                        // getanggota()
+                        console.log(url);
+                        console.log($id);
+                        window.location.href = '/admin-detailuser/'+ $.trim($id);  ;
+                        // window.location.href = url;
+                    }
+                });
             });
 
             getUser();

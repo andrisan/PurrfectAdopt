@@ -12,179 +12,196 @@
 
     <style>
 
-body{
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-}
+body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+      }
 
-header {
-      background-color: #C07F00;
-      color: #fff;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-}
-
-    .logo {
-      margin-left: 2%;
-      width: 70%;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      margin-left: 110%;
-    }
-
-    nav ul li {
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-    width: 20px;
-    height: 40px;
-    background: white;
-    border-radius: 5px;
-    color: #C07F00;
-    }
-
-    .profile {
-      display: flex;
-      align-items: center;
-    }
-
-    .profile img {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-
-.container {
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    flex-wrap: wrap;
-    height: 30vh;
-}
-
-.table-wrapper {
-    width: 90%;
-/*     margin: 0 auto; */
-
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 5px;
-    padding: 20px;
-    background: #FFD95A;
-}
-
-.tablekucing {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    margin-bottom: 10px;
-/*     background: red; */
-}
-
-.tablekucing, th, td {
-    border: 1px solid black;
-    padding: 10px;
-}
-
-thead {
-    background-color: #C07F00;
-}
-
-td.image-cell {
-    text-align: center;
-}
-
-td.image-cell img {
-    width: 30px;
-    height: auto;
-}
-
-    footer {
+      header {
         background-color: #C07F00;
         color: #fff;
         padding: 20px;
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-    }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-    .left-section {
-      flex: 1;
-    }
+      .logo {
+        margin-left: 2%;
+        width: 70%;
+      }
 
-    .left-section h3 {
-      margin: 0;
-      font-size: 18px;
-    }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        margin-left: 110%;
+      }
 
-    .left-section p {
-      margin: 5px 0;
-    }
+      nav ul li {
+        margin-right: 20px;
+      }
 
-    .center-section {
-      flex: 1;
-      text-align: center;
-    }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
 
-  .right-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-right: 5%;
-}
-
-  .right-section span{
-    margin-right: 7%;
-  }
-
-.social-media {
-  margin-top: 10px;
-  margin-left: 40%;
-}
-
-.social-media img {
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
-  /* margin-right: 10%; */
-}
-
-    .right-section {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-
-    .social-media img {
+      nav ul li a:hover {
       width: 20px;
-      height: 20px;
-      margin-left: 10px;
-    }
-    .btn-red {
-        @apply bg-blue-500 text-white;
-    }
+      height: 40px;
+      background: white;
+      border-radius: 5px;
+      color: #C07F00;
+      }
 
-    .rounded {
-        border-radius: 1rem;
+      .profile {
+        display: flex;
+        align-items: center;
+      }
+
+      .profile img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .container {
+        display: flex;
+        /* justify-content: center;
+        align-items: center; */
+        flex-wrap: wrap;
+        height: 30vh;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .p-1 {
+        padding: 0.25rem;
+      }
+
+      .text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+
+      .font-bold {
+        font-weight: 800;
+      }
+
+      .table-wrapper {
+        width: 90%;
+  /*     margin: 0 auto; */
+
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 5px;
+        padding: 20px;
+        background: #FFD95A;
+      }
+
+      .tablekucing {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        margin-bottom: 10px;
+  /*     background: red; */
+      }
+
+      .tablekucing, th, td {
+          border: 1px solid black;
+          padding: 10px;
+      }
+
+      thead {
+          background-color: #C07F00;
+      }
+
+      td.image-cell {
+          text-align: center;
+      }
+
+      td.image-cell img {
+          width: 30px;
+          height: auto;
+      }
+
+      footer {
+          background-color: #C07F00;
+          color: #fff;
+          padding: 20px;
+          width: 100%;
+          position: fixed;
+          bottom: 0;
+      }
+
+      .left-section {
+        flex: 1;
+      }
+
+      .left-section h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .left-section p {
+        margin: 5px 0;
+      }
+
+      .center-section {
+        flex: 1;
+        text-align: center;
+      }
+
+      .right-section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-right: 5%;
+      }
+
+      .right-section span{
+        margin-right: 7%;
+      }
+
+      .social-media {
+        margin-top: 10px;
+        margin-left: 40%;
+      }
+
+      .social-media img {
+        width: 30px;
+        height: 30px;
+        margin-left: 20px;
+        /* margin-right: 10%; */
+      }
+
+      .right-section {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .social-media img {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+      }
+      .btn-red {
+          @apply bg-blue-500 text-white;
+      }
+
+      .rounded {
+          border-radius: 1rem;
       }
 
 </style>
@@ -192,7 +209,7 @@ td.image-cell img {
 <body>
     <header>
         <div class="flex">
-                <p><b>Logo</b></p>
+                <p><b>PurrfectAdopt</b></p>
         </div>
             <nav>
             <ul>
@@ -210,12 +227,12 @@ td.image-cell img {
       <!-- SDSS -->
     <div class="container">
 
-        <div style="margin-left:100px">
-            <p style="font-size: 25px; font-weight:600">Data kucing yang tersedia</p>
+         <div style="margin-left: 90px; margin-top: 25px" class="flex">
+          <h4 class="font-bold p-1"><b>Data kucing yang terdaftar</b></p>
         </div>
 
-        <div class="table-wrapper rounded">
-            <table class="tablekucing " id="tblkucing">
+        <div class="table-wrapper shadow rounded">
+            <table class="tablekucing text-sm" id="tblkucing">
                 <thead>
                 <tr>
                 <td><b>No</b></td>
@@ -238,25 +255,26 @@ td.image-cell img {
     </div>
 
 
-  <footer>
-    <div style="display: flex;">
+    <footer>
+    <div style="display: flex;" class= "text-sm">
         <div class="left-section">
-            <h3>Purrfect Adopt</h3>
-            <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
-            </div>
-            <div class="center-section">
-            <h3> Alamat Kami </h3>
-            Jalan Veteran Malang
-            </div>
-            <div class="right-section">
-            <span>Contact Us:</span>
-            <div class="social-media">
-            <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-            </div>
+          <h3>Purrfect Adopt</h3>
+          <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
         </div>
-    </footer>
+        <div class="center-section">
+          <h3> Alamat Kami </h3>
+          Jalan Veteran Malang
+        </div>
+        <div class="right-section">
+          <span>Contact Us:</span>
+          <div class="social-media">
+          <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+        </div>
+        </div>
+    </div>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kucing_adopsi', function (Blueprint $table) {
+        Schema::create('user_kucings', function (Blueprint $table) {
             $table->id();
-            $table->foreign('kucing_id_kucing')->constrained('kucing_adopsi')->primary();
-            $table->foreign('kucing_id_kucing')->primary();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('kucing_id');
+
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('kucing_id')->references('id')->on('kucings');
             $table->timestamps();
         });
     }
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kucing_adopsi');
+        Schema::dropIfExists('user_kucings');
     }
 };

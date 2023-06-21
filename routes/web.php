@@ -34,9 +34,9 @@ use App\Http\Controllers\BioController;
   Route::view('/setting2','setting2');
   Route::view('/setting1','setting1');
   Route::middleware(['guest'])->group(function(){
-  Route::get('/', [SesiController::class, 'index'])->name('login');
-  Route::post('/', [SesiController::class, 'login']);
-    
+//   Route::get('/', [SesiController::class, 'index'])->name('login');
+//   Route::post('/', [SesiController::class, 'login']);
+
   Route::get('/signup', [SignUpController::class, 'showRegistrationForm'])->name('signup');
   Route::post('/signup', [SignUpController::class, 'signup']);
 
@@ -52,8 +52,8 @@ Route::get('gethomeuser', [DashboardController::class, 'getUser']);
 Route::resource('/admin-user', UserController::class);
 Route::get('getadminuser', [UserController::class, 'getUser']);
 Route::get('hapususer/{id}', [UserController::class, 'destroy'] )->name('hapususer');
-Route::get('/admin-detailuser', [UserController::class, 'getDetail']);
-Route::get('getuserkucing/{id}', [UserController::class, 'getUserKucing'] )->name('getuserkucing');
+Route::get('/admin-detailuser/{id}', [UserController::class, 'getDetail'])->name('getdetail');
+Route::get('/getuserkucing/{id}', [UserController::class, 'getUserKucing'] )->name('getuserkucing');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

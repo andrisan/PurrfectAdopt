@@ -672,9 +672,7 @@ object {
         </div>
         <div class="p-2 hover:bg-pink-100" style="justify-content:center; align-content:center; text-align:center">
           <div id="user" class="space-x-3">
-            @foreach ($user as $us)
-            <h4 class="font-regular">{{$user->name}}</h4>
-            @endforeach
+
           </div>
         </div>
         <div  id="iduser"  style="justify-content:center; align-content:center; text-align:center">
@@ -684,7 +682,10 @@ object {
         <div id="email" style="justify-content:center; align-content:center; text-align:center">
 
         </div>
-        <div id="notelp"  style="justify-content:center; align-content:center; text-align:center">
+        <div id="profesi"  style="justify-content:center; align-content:center; text-align:center">
+
+        </div>
+        <div id="kontak"  style="justify-content:center; align-content:center; text-align:center">
 
         </div>
 
@@ -706,24 +707,24 @@ object {
             <!--Table-->
                 <div class="grid  lg:grid-cols-1  md:grid-cols-1 p-4 gap-3">
                     <div class="col-span-2 flex flex-auto items-center justify-between  p-5 bg-white rounded shadow-sm">
-                        <table class="min-w-full divide-y divide-gray-200 table-auto">
+                        <table id="tblkucing">
                             <thead class="bg-gray-50">
                             <tr>
                                 <th scope="col"
-                                class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
                                 Nama
                                 </th>
                                 <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
-                                Umur
+                                Warna
+                                </th>
+                                <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
+                                Ras
                                 </th>
                                 <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
                                 Jenis Kelamin
-                                </th>
-                                <th scope="col"
-                                class="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
-                                Jenis Ras
                                 </th>
                                 <th scope="col"
                                 class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
@@ -731,7 +732,8 @@ object {
                                 </th>
                                 </th>
                                 <th scope="col"
-                                class="relative px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
+                                Tinggi
                                 </th>
                             </tr>
                             </thead>
@@ -750,6 +752,11 @@ object {
     <script type="text/javascript">
         $(function () {
             let name = '';
+            let IDuser = '';
+            let email = '';
+            let profesi = '';
+            let isi = '';
+            let kontak = '';
 
             // $.ajaxSetup({
             //     headers: {
@@ -758,7 +765,8 @@ object {
             // });
 
             function getUser() {
-                const url = 'http://127.0.0.1:8000/getuserkucing/{id}';
+                let id = `{{$idreturn}}`;
+                const url = 'http://127.0.0.1:8000/getuserkucing/'+ id;
 
                 $.ajax({
                     type:"GET",
@@ -767,14 +775,48 @@ object {
                     success:
                     function (response) {
                         console.log(response);
-                                // name = '';
-                                // // response.forEach(el => {
-                                //     name += `
-                                //         <p>${response.name}</p>
-                                //     `;
+                                name += `
+                                    <h4 class="font-regular">${response[0].name}</h4>
+                                `;
+                                IDuser += `
+                                    <h4 class="font-regular">${response[0].IdUser}</h4>
+                                `;
+                                email += `
+                                    <h4 class="font-regular">${response[0].email}</h4>
+                                `;
+                                profesi += `
+                                    <h4 class="font-regular">${response[0].profesi}</h4>
+                                `;
+                                kontak += `
+                                    <h4 class="font-regular">${response[0].kontak}</h4>
+                                `;
+                                isi = '';
+                                let no_urut = 1 ;
+                                response.forEach(el => {
+                                    isi += `
+                                        <tr>
+                                            <td scope="col" class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider"
+                                            > ${el.nama} </td>
+                                            <td  scope="col" class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider"
+                                            >${el.warna}</td>
+                                            <td  scope="col" class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider"
+                                            > ${el.ras} </td>
+                                            <td  scope="col" class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider"
+                                            > ${el.gender ? 'Laki-laki' : 'Perempuan'} </td>
+                                            <td  scope="col" class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider"
+                                            >${el.berat_badan}</td>
+                                            <td  scope="col" class="relative px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider"
+                                            > ${el.tinggi_badan}</td>
+                                        </tr>
+                                    `;
+                                });
 
-                                // // });
-                                // $('#user').append(isi);
+                                $('#tblkucing').append(isi);
+                                $('#email').append(email);
+                                $('#profesi').append(profesi);
+                                $('#user').append(name);
+                                $('#iduser').append(IDuser);
+                                $('#kontak').append(kontak);
                             }
                 });
             }

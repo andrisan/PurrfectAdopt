@@ -9,7 +9,7 @@
 
   <!--Icon Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <style>
         body {
             margin: 0;
@@ -305,20 +305,20 @@
             background-color: #FFD95A;
         } */
     </style>
-        
+
 </head>
 <body>
-<header>
+    <header>
         <div class="flex">
                 <p><b>PurrfectAdopt</b></p>
         </div>
             <nav>
-            <ul>
+              <ul>
                 <li><a href="<?= url('/admin-home'); ?>">Beranda</a></li>
                 <li><a href="<?= url('/admin-kucing'); ?>">Kucing</a></li>
                 <li><a href="<?= url('/admin-user'); ?>">User</a></li>
                 <li><a href="#">Artikel</a></li>
-            </ul>
+              </ul>
             </nav>
         <div class="profile">
             <img src="{{ asset('/img/profile.png') }}" alt="Profil">
@@ -329,8 +329,8 @@
     <div class="container">
         <div class="flex flex-col p-2 drop-shadow-2xl">
             <div class="flex flex-col p-2 drop-shadow-2xl px-20">
-                <div class="flex flex-row space-x-3 ">
-                    <h4 class="font-bold text-gray-500 p-1 ">Welcome Admin</h4>
+                <div class="flex flex-row space-x-3 " style="margin-left:500px">
+                    <h2 class="font-bold text-gray-500 p-1 ">Welcome Admin</h2>
                 </div>
             </div>
             <!-- Counter -->
@@ -343,16 +343,16 @@
                     <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
                         <div>
                         <div  class="text-sm text-gray-400 ">Kucing</div>
-                        <div class="flex items-center pt-1">
-                            <div id="hitungkucing" class="text-3xl font-medium text-gray-600 "></div>
-                        </div>
+                            <div class="flex items-center pt-1">
+                                <div id="hitungkucing" class="text-3xl font-medium text-gray-600 "></div>
+                            </div>
                         </div>
                         <div class="text-pink-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-10" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-10" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
 
-                            clip-rule="evenodd" />
-                        </svg>
+                                clip-rule="evenodd" />
+                            </svg>
                         </div>
                     </div>
 
@@ -404,15 +404,15 @@
     </div> -->
 
     <!--Footer-->
-  <footer>
-    <div style="display: flex;">
-        <div class="left-section">
-            <h3>Purrfect Adopt</h3>
-            <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
+    <footer>
+        <div style="display: flex;" class= "text-sm">
+            <div class="left-section">
+                <h3>Purrfect Adopt</h3>
+                <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
             </div>
             <div class="center-section">
-            <h3> Alamat Kami </h3>
-            Jalan Veteran Malang
+                <h3> Alamat Kami </h3>
+                Jalan Veteran Malang
             </div>
             <div class="right-section">
             <span>Contact Us:</span>
@@ -420,9 +420,9 @@
             <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
             <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+            </div>
         </div>
-    </div>
-  </footer>
+    </footer>
   <!--End Footer-->
 
     <!-- Required chart.js -->
