@@ -27,9 +27,14 @@ header {
         align-items: center;
       }
 
-      .logo {
+      /* .logo {
         margin-left: 2%;
         width: 70%;
+      } */
+
+      .flex {
+        display: flex;
+        width: 300px;
       }
 
       nav ul {
@@ -37,7 +42,7 @@ header {
         margin: 0;
         padding: 0;
         display: flex;
-        margin-left: 110%;
+        margin-left: 90%;
       }
 
       nav ul li {
@@ -58,9 +63,15 @@ header {
       color: #C07F00;
       }
 
+      .text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+
       .profile {
         display: flex;
         align-items: center;
+        margin-right: 2%;
       }
 
       .profile img {
@@ -116,69 +127,83 @@ td.image-cell img {
 }
 
 footer {
-          background-color: #C07F00;
-          color: #fff;
-          padding: 20px;
-          width: 100%;
-          position: fixed;
-          bottom: 0;
-      }
+  background-color: #C07F00;
+  width: 100%;
+  padding: 20px 0;
+  color: white;
+  bottom: 0;
+  position: fixed;
+}
 
-      .left-section {
-        flex: 1;
-      }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
-      .left-section h3 {
-        margin: 0;
-        font-size: 18px;
-      }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-      .left-section p {
-        margin: 5px 0;
-      }
+.left-section {
+  flex-basis: 33.33%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
 
-      .center-section {
-        flex: 1;
-        text-align: center;
-      }
+.center-section {
+  padding-left: 15%;
+}
 
-      .right-section {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin-right: 5%;
-      }
+.right-section {
+  padding-left: 20%;
+}
 
-      .right-section span{
-        margin-right: 7%;
-      }
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
-      .social-media {
-        margin-top: 10px;
-        margin-left: 40%;
-      }
+p {
+  margin-bottom: 20px;
+}
 
-      .social-media img {
-        width: 30px;
-        height: 30px;
-        margin-left: 20px;
-        /* margin-right: 10%; */
-      }
+.social-media {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
 
-      .right-section {
-        flex: 1;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-      }
+.social-media li {
+  margin-right: 10px;
+}
 
-      .social-media img {
-        width: 20px;
-        height: 20px;
-        margin-left: 10px;
-      }
+.social-media a {
+  color: #333;
+  font-size: 20px;
+  padding-right: 7%;
+}
+
+/* Tambahkan CSS responsif berdasarkan ukuran layar */
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* Tambahkan CSS responsif berdasarkan ukuran layar */
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}
+
       .btn-red {
           @apply bg-blue-500 text-white;
       }
@@ -191,7 +216,8 @@ footer {
 </head>
 <body>
     <header>
-        <div class="flex">
+    <div class="flex">
+        <img src="{{ asset('/img/logoo.png') }}" alt="Logo" class="logo">
                 <p><b>PurrfectAdopt</b></p>
         </div>
             <nav>
@@ -237,27 +263,31 @@ footer {
         </div>
     </div>
 
-
     <footer>
-    <div style="display: flex;" class= "text-sm">
-        <div class="left-section">
-          <h3>Purrfect Adopt</h3>
-          <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
-        </div>
-        <div class="center-section">
-          <h3> Alamat Kami </h3>
-          Jalan Veteran Malang
-        </div>
-        <div class="right-section">
-          <span>Contact Us:</span>
-          <div class="social-media">
+  <div class="container">
+    <div class="row">
+      <div class="left-section">
+        <h3>Purrfect Adopt</h3>
+        <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
+      </div>
+      <div class="center-section">
+        <h3>Alamat Kami</h3>
+        <p>Jl. Veteran, Malang<br>Telepon: 123-456-7890</p>
+      </div>
+      <div class="right-section">
+        <h3>Sosial Media</h3>
+        <ul class="social-media">
           <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
           <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
           <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-        </div>
-        </div>
+        </ul>
+      </div>
     </div>
-  </footer>
+  </div>
+</footer>
+
+
+
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

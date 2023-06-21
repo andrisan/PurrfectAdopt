@@ -690,7 +690,7 @@ object {
           </div>
         </div>
         <div class="p-2" style="padding-left:10px">
-           <img src="../../img/cogan.png" alt=">" height='150px' width='150px' style="justify-content:center; align-items:center">
+           <img src="../../img/user.png" alt=">" height='90px' width='90px' style="justify-content:center; align-items:center">
         </div>
         <div class="p-2 hover:bg-pink-100" style="justify-content:center; align-content:center; text-align:center">
           <div id="user" class="space-x-3">

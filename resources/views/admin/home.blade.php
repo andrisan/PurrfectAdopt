@@ -9,6 +9,7 @@
 
   <!--Icon Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
     <style>
         body {
@@ -34,13 +35,76 @@
         }
 
         footer {
-            background-color: #C07F00;
-            color: #fff;
-            padding: 20px;
-            width: 100%;
-            position: fixed;
-            bottom: 0;
+        background-color: #C07F00;
+        width: 100%;
+        padding: 10px 0;
+        color: white;
+        bottom: 0;
+        position: fixed;
         }
+
+        .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        }
+        
+        .row {
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        .left-section {
+        flex-basis: 33.33%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        }
+
+        .center-section {
+        padding-left: 15%;
+        }
+
+        .right-section {
+        padding-left: 20%;
+        }
+
+        footer h3{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        }
+
+        .center-section h3{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        }
+
+        .footer h3{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        }
+      
+        p {
+        margin-bottom: 20px;
+        }
+
+      .social-media {
+        list-style: none;
+        padding: 0;
+        display: flex;
+      }
+
+      .social-media li {
+        margin-right: 10px;
+      }
+
+      .social-media a {
+        color: #333;
+        font-size: 20px;
+        padding-right: 7%;
+      }
 
         .logo {
         margin-left: 2%;
@@ -88,7 +152,7 @@
         .left-section {
         flex: 1;
         }
-
+        
         .left-section h3 {
         margin: 0;
         font-size: 18px;
@@ -103,23 +167,19 @@
         text-align: center;
         }
 
-    .right-section {
+        /*.right-section {
         flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
-        margin-right: 5%;
+        margin-right: 5%;*/
     }
 
     .right-section span{
         margin-right: 7%;
     }
 
-    .social-media {
-    margin-top: 10px;
-    margin-left: 40%;
-    }
 
     .social-media img {
     width: 30px;
@@ -128,18 +188,19 @@
     /* margin-right: 10%; */
     }
 
-        .right-section {
+    /*.right-section {
         flex: 1;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        }
+        }*/
 
         .social-media img {
         width: 20px;
         height: 20px;
         margin-left: 10px;
         }
+
         .btn-red {
             @apply bg-blue-500 text-white;
         }
@@ -277,6 +338,14 @@
         line-height: 1.5rem;
         }
 
+        .text-gray-400 {
+            color:#FFFFFF;
+        }
+
+        .text-gray-600{
+            color:#FFFFFF;
+        }
+
         .text-3xl {
         font-size: 1.875rem;
         line-height: 2.25rem;
@@ -310,6 +379,7 @@
 <body>
     <header>
         <div class="flex">
+            <img src="{{ asset('/img/logoo.png') }}" alt="logo" class ="logo">
                 <p><b>PurrfectAdopt</b></p>
         </div>
             <nav>
@@ -405,24 +475,27 @@
 
     <!--Footer-->
     <footer>
-        <div style="display: flex;" class= "text-sm">
-            <div class="left-section">
-                <h3>Purrfect Adopt</h3>
-                <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
-            </div>
-            <div class="center-section">
-                <h3> Alamat Kami </h3>
-                Jalan Veteran Malang
-            </div>
-            <div class="right-section">
-            <span>Contact Us:</span>
-            <div class="social-media">
-            <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-            </div>
-        </div>
-    </footer>
+  <div class="container">
+    <div class="row">
+      <div class="left-section">
+        <h3>Purrfect Adopt</h3>
+        <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
+      </div>
+      <div class="center-section">
+        <h3>Alamat Kami</h3>
+        <p>Jl. Veteran, Malang<br>Telepon: 123-456-7890</p>
+      </div>
+      <div class="right-section">
+        <h3>Sosial Media</h3>
+        <ul class="social-media">
+          <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
   <!--End Footer-->
 
     <!-- Required chart.js -->
@@ -455,7 +528,7 @@
                     function (response) {
                                 isi = '';
                                     isi += `
-                                        <p>${response}</p>
+                                        <h3>${response}</h3>
                                     `;
                                 $('#hitungkucing').append(isi);
                             }
@@ -476,7 +549,7 @@
                     function (response) {
                                 isi = '';
                                     isi += `
-                                        <p>${response}</p>
+                                        <h3>${response}</h3>
                                     `;
                                 $('#hitungartikel').append(isi);
                             }
@@ -497,7 +570,7 @@
                     function (response) {
                                 isi = '';
                                     isi += `
-                                        <p>${response}</p>
+                                        <h3>${response}</h3>
                                     `;
                                 $('#hitunguser').append(isi);
                             }
