@@ -80,6 +80,7 @@
 
       .flex {
         display: flex;
+        width: 3000px;
       }
 
       .p-1 {
@@ -209,7 +210,7 @@
 
 <body>
     <header>
-        <div class="flex">
+    <div class="flex">
         <img src="{{ asset('/img/logoo.png') }}" alt="Logo" class="logo">
                 <p><b>PurrfectAdopt</b></p>
         </div>

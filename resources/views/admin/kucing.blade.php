@@ -27,9 +27,14 @@ header {
         align-items: center;
       }
 
-      .logo {
+      /* .logo {
         margin-left: 2%;
         width: 70%;
+      } */
+
+      .flex {
+        display: flex;
+        width: 300px;
       }
 
       nav ul {
@@ -37,7 +42,7 @@ header {
         margin: 0;
         padding: 0;
         display: flex;
-        margin-left: 110%;
+        margin-left: 100%;
       }
 
       nav ul li {
@@ -210,9 +215,9 @@ p {
 </head>
 <body>
     <header>
-        <div class="flex">
-        <img src="{{ asset('/img/logoo.png') }}" alt="logo">
-        <p><b>PurrfectAdopt</b></p>
+    <div class="flex">
+        <img src="{{ asset('/img/logoo.png') }}" alt="Logo" class="logo">
+                <p><b>PurrfectAdopt</b></p>
         </div>
             <nav>
             <ul>
