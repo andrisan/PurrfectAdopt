@@ -12,8 +12,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\DiskusiController;
-
-
+use App\Http\Controllers\FaqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -86,13 +85,14 @@ Route::middleware(['auth'])->group(function(){
 // FITUR TAMBAHAN BIO
 Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
 
-Route::get('balasDiskusi', function () {
+Route::get('balasDiskusi', function() {
   return view('/profile/balasDiskusi');
 })->name('balasDiskusi');
 
 Route::resource('diskusi', DiskusiController::class);
 Route::get('/balasDiskusi/{id}', [DiskusiController::class, 'show'])->name('balasDiskusi');
 
+Route::resource('faq', FaqController::class);
 
 Route::get('setting2', function () {
   return view('/profile/setting2');
@@ -100,7 +100,6 @@ Route::get('setting2', function () {
 Route::get('setting1', function () {
   return view('/profile/setting1');
 })->name('setting1');
-Route::view('/testi','testi');
 
 Route::middleware(['guest'])->group(function(){
 

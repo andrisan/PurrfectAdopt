@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             KucingSeeder::class,
             KontenSeeder::class,
             UserSeeder::class,
+            FaqSeeder::class,
         ]);
     }
 }
