@@ -68,7 +68,7 @@
       <!-- Result end -->
       
       <!-- card start-->
-      <div class="flex justify-center mb-5">
+      <div class="flex justify-center mb-5 pt-4 pl-20">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           @foreach ($cats as $cat)
             <div class="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow">

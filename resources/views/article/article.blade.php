@@ -186,7 +186,7 @@
         </div>
     </div>
     </div>
-      @endif
+    @endif
     @endforeach
 
         </div>
