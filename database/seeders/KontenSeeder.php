@@ -180,6 +180,36 @@ DB::table('contents')->insert([
     'updated_at' => \Carbon\Carbon::now(),
 ]);
 
+DB::table('contents')->insert([
+    'judul' => 'Domestic cat',
+    'penulis' => 'Azalea Yumiko',
+    'status' => True,
+    'isi' => 'Where do cats come from?
+From ancient Egyptians to today’s internet users, people have always loved their cats. In the U.S. alone, cats reign over about 45.3 million households. There are at least 45 domestic breeds, which differ widely in features such as coat color, tail length, hair texture, and temperament, according to the Cat Fancier’s Association. The Maine Coon is the largest, with males reaching an average of 3.5 feet long. The smallest breed is the Singapura, native to Singapore, with adult females weighing as little as four pounds. One of the most unusual-looking cats is the Sphynx, a mostly hairless cat known for being robust and intelligent. Like their big cat cousins, house cats are obligate carnivores, meaning they have to eat meat to stay healthy. Though they’ve been domesticated for thousands of years, these predators have maintained a strong hunting instinct, relying on stealth to stalk prey and attack with sharp claws and teeth. (Learn surprising things you never knew about your cat.) As mostly nocturnal animals, cats have excellent vision and hearing, with ears that can turn like satellite dishes. Their reputation for having nine lives stems in part from their ability to navigate difficult environments, for example using their tail to balance and mostly land their lean, muscular bodies on all fours. Cushioning discs between vertebrae also give cat bodies exceptional flexibility and speed.
 
+Kitty origins
+People began to domesticate cats in the Fertile Crescent about 10,000 years ago, according to DNA research. Modern-day cats descended from a subspecies of African wildcat, Felis silvestris lybica, which today is the most common and widespread wildcat. (Read more about little-known small wildcats.) Thousands of years ago, these wildcats were likely drawn to human settlements and their plentiful mice and food scraps. People realized these rodent catchers were helpful to have around, and eventually the two species began living together. Later, people began to bring felines aboard ships as they traveled the world. (Read about house cat ancestors’ remains found in Polish caves.) Another, independent foray into cat domestication occurred in China about 5,000 years ago with another wildcat species the leopard cat. Since domestic cats today aren’t related to leopard cats, the harmony doesn’t seem to have lasted..',
+    'galery' => '/img/artikel4.jpg',
+    'created_at' => \Carbon\Carbon::now(),
+    'updated_at' => \Carbon\Carbon::now(),
+]);
+
+DB::table('contents')->insert([
+    'judul' => 'Managing your pet's weight',
+    'penulis' => 'Zayn Malik',
+    'status' => True,
+    'isi' => 'Feeding the correct food
+Dog vs Cat diets – a brief biology lesson
+Dogs are considered omnivores, having evolved over thousands of years to live alongside humans and relying on them for scraps of food. Because of this, dogs have adapted to digest both meat and vegetation. Like humans, dogs can synthesize taurine (an essential amino acid building block for protein) from other proteins, which is essential for good health. Cats can only derive taurine from meat and fish, so it’s vital to feed them a balanced feline diet. Cats typically have a higher protein requirement than dogs. They do not need carbohydrates and are typically classified as carnivorous, historically being hunting predators. Feeding a cat dog food or a vegetarian diet can cause deficiencies and lead to health problems.
+
+Lifestage diets
+Kitten and puppy foods are higher in calories and are fed for the growth phase. They are generally suitable for up to a year old. However, some pets may be more likely to gain weight when they are neutered so may need to switch to an adult diet from 6 months. Growth phases are longer in very large breeds of dogs so they may be fed puppy foods for longer, or they may be able to switch to an in-between junior food. Senior foods are typically fed once a pet reaches 7 to 8 yrs old and generally contains fewer calories and different vitamins and minerals to suit the requirements of an older pet.
+
+Wet vs dry food
+Tinned or pouch foods (wet foods) are relatively easy to store, have a stronger smell, and are thought to be more appealing to an animal. It has high water content at around 80%, which means your pet won’t drink as much. This is particularly noticeable in cats. Dry foods are convenient to feed, easy to store and generally less expensive than wet food. Good quality dry foods are very well researched and balanced. The down side is that dry foods generally contain a greater amount of calories from carbohydrates in a smaller amount of food so extra care must be taken to feed the correct amount. Water content is much lower (between 15 to 30%) so you must make sure fresh water is available at every opportunity. Combinations of wet and dry can be fed, as long as the total amount fed is correct for your pet’s ideal body weight. ',
+    'galery' => '/img/artikel1.jpg',
+    'created_at' => \Carbon\Carbon::now(),
+    'updated_at' => \Carbon\Carbon::now(),
+]);
     }
 }
