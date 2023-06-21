@@ -27,6 +27,7 @@ class UserSeeder extends Seeder
             'crime_hist' => '-',
             'kontak' => '0812',
             'status' => '0',
+            'fotoProfil' => '/img/hero_adopter.jpg',
         ]);
         DB::table('users')->insert([
             'name' => 'Abdul Genta',
@@ -41,6 +42,7 @@ class UserSeeder extends Seeder
             'crime_hist' => '-',
             'kontak' => '0812',
             'status' => '0',        
+            'fotoProfil' => '/img/hero_adopter.jpg',
         ]);
         DB::table('users')->insert([
             'name' => 'Serra Hanif',
@@ -55,6 +57,7 @@ class UserSeeder extends Seeder
             'crime_hist' => '-',
             'kontak' => '0812',
             'status' => '0',
+            'fotoProfil' => '/img/hero_adopter.jpg',
         ]);    
     }
 }
