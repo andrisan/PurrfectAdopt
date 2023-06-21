@@ -110,9 +110,7 @@ Route::get('/article', [ContentController::class, 'create'])->name('article');
 
 Route::get('/article/{id}', [ContentController::class, 'show_details'])->name('articledetails');
 
-Route::get('/findyourcat', function () {
-  return view('findyourcat');
-})->name('findyourcat');
+Route::get('/find-your-cat', [CatController::class, 'search'])->name('cat.search');
 
 Route::post('/contents', [ContentController::class, 'store'])->name('contents.store');
 
