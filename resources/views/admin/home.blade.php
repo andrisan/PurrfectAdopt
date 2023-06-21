@@ -34,12 +34,37 @@
         }
 
         footer {
-            background-color: #C07F00;
-            color: #fff;
-            padding: 20px;
-            width: 100%;
-            position: fixed;
-            bottom: 0;
+        background-color: #C07F00;
+        width: 100%;
+        padding: 20px 0;
+        color: white;
+        bottom: 0;
+        position: fixed;
+        }
+
+        .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        }
+        
+        .row {
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        .left-section {
+        flex-basis: 33.33%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        }
+
+        .center-section {
+        padding-left: 15%;
+        }
+
+        .right-section {
+        padding-left: 20%;
         }
 
         .logo {
@@ -414,24 +439,27 @@
 
     <!--Footer-->
     <footer>
-        <div style="display: flex;" class= "text-sm">
-            <div class="left-section">
-                <h3>Purrfect Adopt</h3>
-                <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
-            </div>
-            <div class="center-section">
-                <h3> Alamat Kami </h3>
-                Jalan Veteran Malang
-            </div>
-            <div class="right-section">
-            <span>Contact Us:</span>
-            <div class="social-media">
-            <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-            </div>
-        </div>
-    </footer>
+  <div class="container">
+    <div class="row">
+      <div class="left-section">
+        <h3>Purrfect Adopt</h3>
+        <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
+      </div>
+      <div class="center-section">
+        <h3>Alamat Kami</h3>
+        <p>Jl. Veteran, Malang<br>Telepon: 123-456-7890</p>
+      </div>
+      <div class="right-section">
+        <h3>Sosial Media</h3>
+        <ul class="social-media">
+          <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
   <!--End Footer-->
 
     <!-- Required chart.js -->
