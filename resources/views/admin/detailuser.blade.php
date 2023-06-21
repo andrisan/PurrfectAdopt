@@ -17,36 +17,37 @@
 <body>
 <div class="flex flex-col">
   <div class="flex  bg-gray-50 p-5">
-  <a href="<?= url('/admin-user'); ?>"><i class="fa-solid fa-arrow-left" style="color: #f7f7f8;"></i></a>
+  <a href="<?= url('/admin-user'); ?>" style="text-decoration: none;color:white;"><i class="fa-solid fa-arrow-left" style="color: #f7f7f8;"></i> Kembali</a>
 </div>
   <div class="flex flex-row">
-    <div class="flex flex-col space-y-5 justify-between min-h-screen w-60 mx-6 p-2 py-4 bg-gray-50">
+    <div class="flex flex-col space-y-5 justify-between min-h-screen w-100 mx-6 p-2 py-4 bg-gray-50">
 
       <div class="flex flex-col flex-auto">
         <div class="p-2">
           <div class="space-x-3" style="justify-content:center; align-content:center; text-align:center" >
-            <h4 class="font-bold" >Profil User</h4>
+            <h4 class="font-bold"><b>Profil User</b></h4>
           </div>
         </div>
-        <div class="p-2" style="padding-left:10px">
+
+        <div class="p-2" style="padding-left:40px">
            <img src="../../img/user.png" alt=">" height='90px' width='90px' style="justify-content:center; align-items:center">
         </div>
-        <div class="p-2 hover:bg-pink-100" style="justify-content:center; align-content:center; text-align:center">
-          <div id="user" class="space-x-3">
 
-          </div>
-        </div>
-        <div  id="iduser"  style="justify-content:center; align-content:center; text-align:center">
+        <div id="user" style="justify-content:center; align-content:center;">
 
         </div>
 
-        <div id="email" style="justify-content:center; align-content:center; text-align:center">
+        <div  id="iduser"  style="justify-content:center; align-content:center;">
 
         </div>
-        <div id="profesi"  style="justify-content:center; align-content:center; text-align:center">
+
+        <div id="email" style="justify-content:center; align-content:center;">
 
         </div>
-        <div id="kontak"  style="justify-content:center; align-content:center; text-align:center">
+        <div id="profesi" style="justify-content:center; align-content:center;">
+
+        </div>
+        <div id="kontak"  style="justify-content:center; align-content:center;">
 
         </div>
 
@@ -135,19 +136,16 @@
                     function (response) {
                         console.log(response);
                                 name += `
-                                    <h4 class="font-regular">${response[0].name}</h4>
-                                `;
-                                IDuser += `
-                                    <h4 class="font-regular">${response[0].IdUser}</h4>
+                                    <h4 class="font-regular">Nama : ${response[0].name}</h4>
                                 `;
                                 email += `
-                                    <h4 class="font-regular">${response[0].email}</h4>
+                                    <h4 class="font-regular">Email : ${response[0].email}</h4>
                                 `;
                                 profesi += `
-                                    <h4 class="font-regular">${response[0].profesi}</h4>
+                                    <h4 class="font-regular" >Profesi : ${response[0].profesi}</h4>
                                 `;
                                 kontak += `
-                                    <h4 class="font-regular">${response[0].kontak}</h4>
+                                    <h4 class="font-regular" >Kontak : 0${response[0].kontak}</h4>
                                 `;
                                 isi = '';
                                 let no_urut = 1 ;
@@ -174,7 +172,6 @@
                                 $('#email').append(email);
                                 $('#profesi').append(profesi);
                                 $('#user').append(name);
-                                $('#iduser').append(IDuser);
                                 $('#kontak').append(kontak);
                             }
                 });
