@@ -137,8 +137,10 @@
             </div>
         </form>
 
-        @if(session('success')) @include('article.success-popup') @endif
-        
+        @if(session('success')) 
+        @include('profile.success-popup')
+        @endif
+
         @include('components.footer');
 
         <script>
