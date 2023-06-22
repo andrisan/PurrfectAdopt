@@ -56,7 +56,7 @@ class UserSeeder extends Seeder
             'name' => 'Agist',
             'email' => 'agist@gmail.com',
             'password' => '123',
-            'gender' => '1',
+            'gender' => '0',
             'profesi' => 'programmer',
             'alamat' => 'jalan',
             'usia' => '21',

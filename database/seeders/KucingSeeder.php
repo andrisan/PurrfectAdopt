@@ -74,6 +74,7 @@ class KucingSeeder extends Seeder
             'sikap'         => '',
             'foto'          => '',
             'video'         => '',
+            'status'        => '1'
         ]);
     }
 }

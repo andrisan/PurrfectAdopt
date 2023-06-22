@@ -145,7 +145,7 @@
                                         <td> ${el.gender ? 'Laki-laki' : 'Perempuan'} </td>
                                         <td>${el.berat_badan}</td>
                                         <td> ${el.tinggi_badan}</td>
-                                        <td>${el.status ? '<span class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Teradopsi</span>' : '<span class="bg-yellow-100 text-white-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Belum Teradopsi</span>'}</td>
+                                        <td>${el.status ? '<span class="bg-green-300 text-green-900 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Teradopsi</span>' : '<span class="bg-yellow-100 text-white-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Belum Teradopsi</span>'}</td>
                                         <td class="image-cell">
                                             <button id="btndelete"  class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" style="cursor:pointer">hapus</button>
                                         </td>

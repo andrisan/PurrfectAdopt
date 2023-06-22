@@ -124,7 +124,7 @@
                                             <td class="nr" opacity="0">${el.id}</td>
                                             <td> ${el.name} </td>
                                             <td>${el.email}</td>
-                                            <td> ${el.gender ? 'Laki-laki' : 'Perempuan'} </td>
+                                            <td> ${el.gender ? 'Perempuan' : 'Laki-laki'} </td>
                                             <td>${el.status ? '<button id="btnlihat" class="focus:outline-none text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-900" style="cursor:pointer" style="cursor:pointer">Lihat</button>' : 'Tidak memiliki kucing'}</td>
                                             <td> ${el.role}</td>
                                             <td>
