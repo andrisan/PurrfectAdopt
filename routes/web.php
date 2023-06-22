@@ -138,7 +138,7 @@ Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.e
 // Route update Bio n cp profil pengguna
 Route::post('/profile/updateBio', [ProfileController::class, 'updateBio'])->name('profile.update');
 
-Route::post('/cats', [CatController::class, 'store'])->name('store.cat');
+Route::post('/kucing', [CatController::class, 'store'])->name('store.cat');
 
 require __DIR__.'/auth.php';
 
