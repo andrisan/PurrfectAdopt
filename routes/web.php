@@ -27,6 +27,8 @@ use App\Http\Controllers\Admin\artikelAdminController;
 |
 */
 
+Route::post('/profile/update-bio', 'ProfileController@updateBio')->name('profile.updateBio');
+
 Route::get('/profile/mypet', [ProfileController::class, 'myPet'])->name('profile.mypet');
 
 Route::get('/profile/profile_adopter', [ProfileController::class, 'showProfile'])->name('profile_adopter');
