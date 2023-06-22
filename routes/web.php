@@ -24,9 +24,7 @@ use App\Http\Controllers\Admin\artikelAdminController;
 |
 */
 
-Route::get('/profile/mypet', function () {
-  return view('profile/mypet');
-})->name('mypet');
+Route::get('/profile/mypet', [ProfileController::class, 'myPet'])->name('profile.mypet');
 
 Route::get('/profile/profile_adopter', [ProfileController::class, 'showProfile'])->name('profile_adopter');
 
