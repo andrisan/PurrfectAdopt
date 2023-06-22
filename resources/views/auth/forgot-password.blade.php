@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purrfect Adopt | {{ $title }}</title>
-    <!-- Tambahkan link ke Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    @include('components.head')
 </head>
 <body class="bg-yellow-100">
     <div class="flex h-screen items-center justify-center">

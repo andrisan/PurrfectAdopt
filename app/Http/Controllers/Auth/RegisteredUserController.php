@@ -30,7 +30,6 @@ class RegisteredUserController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'role' => ['required', 'string', 'max:5'],
             'password' => ['required', 'string', 'min:5'],
         ]);
 
@@ -43,7 +42,6 @@ class RegisteredUserController extends Controller
         User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
-            'role' => $request->input('role'),
             'password' => bcrypt($request->input('password')),
         ]);
 
