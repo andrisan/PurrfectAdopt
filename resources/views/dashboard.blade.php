@@ -124,8 +124,8 @@
         @else
             {{ 'Female' }}
         @endif</p>
-        <p class="font-normal text-gray-700">Weight   : {{ $cat->berat_badan }}</p>
-        <p class="font-normal text-gray-700">Height   : {{ $cat->tinggi_badan }}</p> <br>
+        <p class="font-normal text-gray-700">Weight   : {{ $cat->berat_badan }} kg</p>
+        <p class="font-normal text-gray-700">Height   : {{ $cat->tinggi_badan }} cm</p> <br>
         <a href="#" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300">
             More info
         </a>
@@ -183,16 +183,14 @@
                         <p class="relative mt-2 text-base text-center text-gray-600">We facilitate easy interaction between buyers and distributors through a chat feature.</p>
                     </div>
                 </div>
-            </div>
-            
+            </div>  
         </div>
     </div>
-    <!-- END FEATURES SECTION -->
 <!-- choose us-->
 
 <!-- artikel-->
 <section>
-  <div class="max-w-screen-xl px-4 py-4 mx-auto sm:px-6 sm:py-12 lg:px-8">
+  <div class="max-w-screen-xl px-4 mx-auto sm:px-6 sm:py-12 lg:px-8">
     <header class="text-center">
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
        Read Articles
@@ -277,8 +275,8 @@
                   </h3>
               </a>
 
-              <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
-                {{ Str::limit($contents->find(3)->isi, 450) }}
+              <p class="mt-2 text-sm/relaxed text-gray-500 px-4">
+                {{ Str::limit($contents->find(3)->isi, 1170) }}
               </p>
 
               <div class="sm:flex sm:items-end sm:justify-end">
@@ -295,12 +293,9 @@
     </ul>
 
     <div class="sm:flex sm:items-end sm:justify-center py-6">
-      <a
-        href="/article"
-        class="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
-      >
-        View All Post
-      </a>
+      <a href="/article" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300">
+            View All Post
+        </a>  
     </div>
 
   </div>
