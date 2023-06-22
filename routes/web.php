@@ -4,9 +4,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
-use App\Http\Controllers\Admin\KucingController;
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
@@ -49,6 +47,27 @@ Route::middleware(['guest'])->group(function(){
   Route::get('/', function(){
     return view('welcome');
   })->name('welcome');
+
+
+  Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
+  Route::view('/testi','testi');
+  Route::view('/bio','bio');
+  Route::view('/balasDiskusi','balasDiskusi');
+  Route::view('/diskusi','diskusi');
+  Route::view('/setting2','setting2');
+  Route::view('/setting1','setting1');
+  Route::middleware(['guest'])->group(function(){
+//   Route::get('/', [SesiController::class, 'index'])->name('login');
+//   Route::post('/', [SesiController::class, 'login']);
+
+  Route::get('/signup', [SignUpController::class, 'showRegistrationForm'])->name('signup');
+  Route::post('/signup', [SignUpController::class, 'signup']);
+
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+  })->name('dashborad');
 });
 /** END HALAMAN WELCOME */
 
@@ -91,20 +110,6 @@ Route::view('/setting2','setting2');
 Route::view('/setting1','setting1');
 Route::middleware(['guest'])->group(function(){
 
-  Route::resource('/admin-kucing', KucingController::class);
-  Route::get('getadminkucing', [KucingController::class, 'getKucing']);
-  Route::get('hapuskucing/{id}', [KucingController::class, 'destroy'] )->name('hapuskucing');
-
-  // Route::resource('/admin-home', DashboardController::class);
-  Route::get('gethomekucing', [DashboardController::class, 'getKucing']);
-  Route::get('gethomecontent', [DashboardController::class, 'getContent']);
-  Route::get('gethomeuser', [DashboardController::class, 'getUser']);
-
-  Route::resource('/admin-user', UserController::class);
-  Route::get('getadminuser', [UserController::class, 'getUser']);
-  Route::get('hapususer/{id}', [UserController::class, 'destroy'] )->name('hapususer');
-  Route::get('/admin-detailuser', [UserController::class, 'getDetail']);
-
 });
 
 Route::get('/article', [ContentController::class, 'create'])->name('article');
@@ -124,3 +129,4 @@ Route::middleware(['auth'])->group(function(){
 });
 
 require __DIR__.'/auth.php';
+require __DIR__.'/webkel5.php';
