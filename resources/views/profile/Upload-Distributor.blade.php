@@ -21,8 +21,9 @@
         @include('components.header');
 
         <form
-            action="{{ route('store.cat') }}"
+        action="{{ route('store.cat') }}" method="POST" enctype="multipart/form-data"
             class="flex items-center justify-center h-screen rounded-lg mt-20 mb-20">
+            @csrf
             <div class="bg-yellow-300 w-4/5 p-4 rounded-lg">
                 <div class="flex">
                     <div class="w-1/3 p-4 rounded-lg bg-gray-200 opacity-70">
@@ -43,6 +44,7 @@
                         <input
                             id="file-input"
                             type="file"
+                            name="foto"
                             class="hidden"
                             onchange="handleFileUpload(event)">
                     </div>
