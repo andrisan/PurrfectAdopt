@@ -8,9 +8,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\Kucing;
+
 
 class ProfileController extends Controller
 {
+    public function myPet()
+{
+    $kucings = Kucing::where('save', true)->get();
+    return view('profile.mypet', compact('kucings'));
+}
+
     /**
      * Display the user's profile form.
      */
@@ -81,6 +89,13 @@ class ProfileController extends Controller
 
     return view('profile.profile_adopter', compact('user'));
 }
+
+    public function showProfileDistributor(Request $request): View
+{
+    $user = Auth::user();
+
+    return view('profile.profile_distributor', compact('user'));
+}   
 
 
 }
