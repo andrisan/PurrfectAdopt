@@ -121,10 +121,25 @@
   <!-- Section: Design Block -->
 </div>
 <!-- Container for demo purpose -->
-
-
 <!-- section 2 end -->
 
+<!-- section 3 -->
+
+    <section class="">
+        <a href="">
+            <button type="" class="border border-yellow-300 hover:bg-yellow-300 text-yellow-300 hover:text-white font-bold py-2 px-4 rounded w-full">Discussion</button>
+        </a>
+        <a href="">
+            <br><button type="" class="border border-yellow-300 hover:bg-yellow-300 text-yellow-300 hover:text-white font-bold py-2 px-4 rounded w-full">Review</button>
+        </a>
+        <a href="">
+            <br><button type="" class="border border-yellow-300 hover:bg-yellow-300 text-yellow-300 hover:text-white font-bold py-2 px-4 rounded w-full">Setting</button>
+        </a>
+        <a href="">
+            <br><button type="" class="border border-yellow-300 hover:bg-yellow-300 text-yellow-300 hover:text-white font-bold py-2 px-4 rounded w-full">Sign Out</button>
+        </a>
+    </section>
+  <!-- Section 3 end -->
 
 <!-- custom js -->
 <script>
