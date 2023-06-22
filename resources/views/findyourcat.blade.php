@@ -83,8 +83,8 @@
                 </a>
                 <p class="font-normal text-gray-700">Race: {{ $cat->ras }}</p>
                 <p class="font-normal text-gray-700">Gender: {{ $cat->gender ? 'Female' : 'Male' }}</p>
-                <p class="font-normal text-gray-700">Weight: {{ $cat->berat_badan }}</p>
-                <p class="font-normal text-gray-700">Height: {{ $cat->tinggi_badan }}</p> <br>
+                <p class="font-normal text-gray-700">Weight: {{ $cat->berat_badan }} kg</p>
+                <p class="font-normal text-gray-700">Height: {{ $cat->tinggi_badan }} cm</p> <br>
                 <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
                   Show more
                   <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
