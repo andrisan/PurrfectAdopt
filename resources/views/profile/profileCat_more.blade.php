@@ -16,6 +16,14 @@
             font-family: 'Poppins', sans-serif;
             background-color: #FFF7D4;
         }
+
+        .img-object {
+            height: 300px; /* Ubah sesuai tinggi yang diinginkan */
+            width: 300px; /* Ubah sesuai lebar yang diinginkan */
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+        }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -36,7 +44,7 @@
     </a>
 </div>
     <div class="w-full xl:w-4/8 py-7 mt-7">
-        <img class="w-3/4 h-auto mx-auto" src="{{ asset($kucing->foto) }}">
+        <img class="w-3/4 h-auto mx-auto img-object" src="{{ asset($kucing->foto) }}">
     </div>
     <div class="flex flex-col xl:w-3/4 mt-20 text-left">
         <h1 class="text-6xl mb-8 text-black">{{ $kucing->nama }}</h1>
