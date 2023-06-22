@@ -33,17 +33,13 @@ Route::get('/profile/mypet', [ProfileController::class, 'myPet'])->name('profile
 
 Route::get('/profile/profile_adopter', [ProfileController::class, 'showProfile'])->name('profile_adopter');
 
-Route::get('/profile/profile_distributor', function () {
-  return view('profile/profile_distributor');
-})->name('profile_distributor');
+Route::get('/profile/profile_distributor', [ProfileController::class, 'showProfileDistributor'])->name('profile_distributor');
 
 Route::get('/profile/Upload-Distributor', function () {
   return view('profile/Upload-Distributor');
 })->name('Upload-Distributor');
 
-Route::get('/profile/profileCat_more', function () {
-  return view('profile/profileCat_more');
-})->name('profileCat_more');
+Route::get('profileCat_more/{id}', [ProfileController::class, 'show'])->name('profileCat_more');
 
 /** START HALAMAN WELCOME, DIMANA USER YANG BELUM MELAKUKAN LOGIN AKAN DIARAHKAN KE HALAMAN INI */
 Route::middleware(['guest'])->group(function(){
@@ -138,6 +134,8 @@ Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.e
 
 // Route update Bio n cp profil pengguna
 Route::post('/profile/updateBio', [ProfileController::class, 'updateBio'])->name('profile.update');
+
+Route::post('/cats', [CatController::class, 'store'])->name('store.cat');
 
 require __DIR__.'/auth.php';
 

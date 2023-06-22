@@ -19,6 +19,13 @@ class ProfileController extends Controller
     return view('profile.mypet', compact('kucings'));
 }
 
+public function show($id)
+{
+    $kucing = Kucing::findOrFail($id);
+    return view('profile.profileCat_more', compact('kucing'));
+}
+
+
     /**
      * Display the user's profile form.
      */
@@ -30,6 +37,7 @@ class ProfileController extends Controller
             'user' => $request->user(),
         ]);
     }
+
 
     /**
      * Update the user's profile information.
