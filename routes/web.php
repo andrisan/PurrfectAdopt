@@ -10,7 +10,6 @@ use App\Http\Controllers\CatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
 use App\Http\Controllers\ContentController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\artikelAdminController;
 
 
