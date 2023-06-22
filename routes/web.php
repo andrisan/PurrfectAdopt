@@ -14,6 +14,8 @@ use App\Http\Controllers\ContentController;
 use App\Http\Controllers\DiskusiController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\E_ProfileController;
+use App\Http\Controllers\Setting2Controller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -97,10 +99,8 @@ Route::resource('faq', FaqController::class);
 Route::get('/setting1/edit/{id}', [E_ProfileController::class, 'edit'])->name('setting1.edit');
 Route::put('/setting1/update/{id}', [E_ProfileController::class, 'update'])->name('setting1.update');
 
-
-Route::get('setting2', function () {
-  return view('/profile/setting2');
-})->name('setting2');
+Route::get('/setting2/edit/{id}', [Setting2Controller::class, 'edit'])->name('setting2.edit');
+Route::put('/setting2/update/{id}', [Setting2Controller::class, 'update'])->name('setting2.update');
 
 Route::middleware(['guest'])->group(function(){
 

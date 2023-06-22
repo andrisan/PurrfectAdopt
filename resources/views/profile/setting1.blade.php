@@ -21,7 +21,7 @@
             </div>
 
             <div class="p-4">
-                <a href="{{ route('setting2') }}">
+                <a href="{{ route('setting2.edit',$user->id)}}">
                     <button type="button" class="btn bg-yellow-300"><i class="fa-solid fa-shield" style="color: #4c3d3d;"></i>&nbsp;Security Setting</button>
                 </a>
             </div>
@@ -31,19 +31,20 @@
             <div class="p-4">
                 <h2 class="text-2xl">Security Setting</h2>
                 <br><br>
-                <form action="{{ route('setting1.update', $user->id) }}" method="POST">
+
+        <form action="{{ route('setting1.update', $user->id) }}" method="POST">
         @csrf
         @method('PUT')
 
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" value="{{ $user->name }}">
-<br>
         <br>
-<input type="text" name="kontak" id="kontak" value="{{ $user->kontak }}">
+        <br>
+        <input type="text" name="kontak" id="kontak" value="{{ $user->kontak }}">
         <!-- Tambahkan input field untuk atribut lainnya -->
         <br>
         <button type="submit" class="save">Save</button>
-    </form>
+        </form>
                 
             </div>
         </div>
