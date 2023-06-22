@@ -20,13 +20,27 @@ class KucingSeeder extends Seeder
             'ras'           => 'Mongolia',
             'gender'        => '0',
             'berat_badan'   => '20',
-            'tinggi_badan'  => '20',
+            'tinggi_badan'  => '30',
             'kesehatan'     => '',
             'sikap'         => '',
             'foto'          => '/img/cat1.jpg',
             'video'         => '',
         ]);
         DB::table('kucings')->insert([
+            'nama'          => 'Meow2',
+            'warna'         => 'putih',
+            'ras'           => 'persia',
+            'gender'        => '1',
+            'berat_badan'   => '15',
+            'tinggi_badan'  => '20',
+            'kesehatan'     => '',
+            'sikap'         => '',
+            'foto'          => '',
+            'video'         => '',
+            'status'        => '1'
+        ]);
+        DB::table('kucings')->insert([
+          
             'nama'          => 'Simba',
             'warna'         => 'kuning',
             'ras'           => 'Anggora',
@@ -39,6 +53,19 @@ class KucingSeeder extends Seeder
             'video'         => '',
         ]);
         DB::table('kucings')->insert([
+            'nama'          => 'Meow4',
+            'warna'         => 'abu-abu',
+            'ras'           => 'siamese',
+            'gender'        => '0',
+            'berat_badan'   => '20',
+            'tinggi_badan'  => '20',
+            'kesehatan'     => '',
+            'sikap'         => '',
+            'foto'          => '',
+            'video'         => '',
+        ]);
+        DB::table('kucings')->insert([
+          
             'nama'          => 'Dora',
             'warna'         => 'kuning',
             'ras'           => 'Mongolia',
@@ -85,6 +112,7 @@ class KucingSeeder extends Seeder
             'sikap'         => '',
             'foto'          => '/img/cat6.jpg',
             'video'         => '',
+            'status'        => '1'
         ]);
     }
 }
