@@ -34,6 +34,7 @@
 
 <div class="container w-1/2 mx-auto px-4">
     <form action="{{ route('contents.store') }}" method="POST" enctype="multipart/form-data">
+        @csrf
         <label for="post-title" class="mb-2 text-sm font-medium text-gray-900 sr-only">Post Title</label>
         <input type="text" id="post-title" name="judul" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
         placeholder="Enter your post title" required>
