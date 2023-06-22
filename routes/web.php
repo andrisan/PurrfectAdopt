@@ -48,7 +48,7 @@ Route::middleware(['guest'])->group(function(){
   Route::get('/', function(){
     return view('welcome');
   })->name('welcome');
-}
+});
 
 
   Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
