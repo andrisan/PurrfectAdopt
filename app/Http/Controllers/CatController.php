@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cat;
+use App\Models\Kucing;
 use Illuminate\Http\Request;
 
 class CatController extends Controller
@@ -34,6 +34,7 @@ public function adopted()
             'berat' => 'required|integer',
             'tinggi' => 'nullable|integer',
             'deskripsi' => 'required|string',
+            'foto' => 'image|max:2048', // Validasi bahwa input adalah gambar dengan ukuran maksimum 2MB
         ]);
 
         // Simpan data kucing ke dalam database
@@ -45,6 +46,12 @@ public function adopted()
         $kucing->berat_badan = $validatedData['berat'];
         $kucing->tinggi_badan = $validatedData['tinggi'];
         $kucing->description = $validatedData['deskripsi'];
+        if ($request->hasFile('foto')) {
+            $file = $request->file('foto');
+            $foto = file_get_contents($file->getRealPath());
+            $kucing->foto = $foto;
+        }
+    
         $kucing->save();
 
         // Redirect ke halaman yang sesuai atau tampilkan pesan berhasil
