@@ -88,7 +88,8 @@
     <!-- content -->
     <div class="col-span-5 flex flex-col justify-start p-6 my-4">
         <h3 class="text-3xl font-bold pb-4 text-center">{{ $article->judul }}</h3>
-        <p class="pb-6">{{ $article->isi }}</p>
+        <p class="pb-6">{!! $article->isi !!}
+</p>
     </div>
   </div>
   <!-- content -->

@@ -41,7 +41,7 @@
       <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
         <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
       </div>
-      <input type="search" name="race" id="default-search" class="w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" placeholder="Find your cat here" required>
+      <input type="search" name="race" id="default-search" class="w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" placeholder="Find the cat race you want" required>
       <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
     </div>
   </form>
@@ -124,8 +124,8 @@
         @else
             {{ 'Female' }}
         @endif</p>
-        <p class="font-normal text-gray-700">Weight   : {{ $cat->berat_badan }}</p>
-        <p class="font-normal text-gray-700">Height   : {{ $cat->tinggi_badan }}</p> <br>
+        <p class="font-normal text-gray-700">Weight   : {{ $cat->berat_badan }} kg</p>
+        <p class="font-normal text-gray-700">Height   : {{ $cat->tinggi_badan }} cm</p> <br>
         <a href="#" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300">
             More info
         </a>
@@ -183,16 +183,14 @@
                         <p class="relative mt-2 text-base text-center text-gray-600">We facilitate easy interaction between buyers and distributors through a chat feature.</p>
                     </div>
                 </div>
-            </div>
-            
+            </div>  
         </div>
     </div>
-    <!-- END FEATURES SECTION -->
 <!-- choose us-->
 
 <!-- artikel-->
 <section>
-  <div class="max-w-screen-xl px-4 py-4 mx-auto sm:px-6 sm:py-12 lg:px-8">
+  <div class="max-w-screen-xl px-4 mx-auto sm:px-6 sm:py-12 lg:px-8">
     <header class="text-center">
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
        Read Articles
@@ -277,8 +275,8 @@
                   </h3>
               </a>
 
-              <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
-                {{ Str::limit($contents->find(3)->isi, 450) }}
+              <p class="mt-2 text-sm/relaxed text-gray-500 px-4">
+                {{ Str::limit($contents->find(3)->isi, 1170) }}
               </p>
 
               <div class="sm:flex sm:items-end sm:justify-end">
@@ -295,12 +293,9 @@
     </ul>
 
     <div class="sm:flex sm:items-end sm:justify-center py-6">
-      <a
-        href="/article"
-        class="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
-      >
-        View All Post
-      </a>
+      <a href="/article" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300">
+            View All Post
+        </a>  
     </div>
 
   </div>
