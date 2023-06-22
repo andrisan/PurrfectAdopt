@@ -35,19 +35,19 @@
             <div class="w-full md:w-3/12 md:mx-2">
                 <div class="p-3 rounded ">
                     <img class="h-auto w-full mx-auto rounded"
-                        src="{{ asset('/img/cat1.jpg') }}">
+                        src="{{ asset($user->fotoProfil) }}">
                 </div>
             </div>
             <div class="w-full md:w-9/12 mx-2 h-64">
                 <div class=" p-3 rounded-sm">
                     <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
-                        <span class="px-4 py-2 tracking-wide font-semibold">Nickname Pengguna</span>
+                        <span class="px-4 py-2 tracking-wide font-semibold">{{ $user->name }}</span>
                     </div>
                     <div class="text-gray-700">
                         <div class="grid  text-sm">
                             <div class="grid ">
                                 <div class="px-4 py-2">⭐⭐⭐⭐⭐ - Rating</div>
-                                <div class="px-4">JL. KEMBANG KERTAS, LOWOKWARU, MALANG</div>
+                                <div class="px-4">{{ $user->alamat }}</div>
                             </div>
                         </div>
                     </div>
@@ -56,21 +56,83 @@
         </div>
     </div>
     </div>
-        <div class="bg-yellow-300 p-3 m-5 rounded-lg hover:shadow">
-            <!--  -->
-            <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">Enter your mail address:</label>
-            <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="nama" type="text" placeholder="ex:person@mail.com">
-            <br>
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">Enter yout phone number:</label>
-            <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="nama" type="text" placeholder="ex:+123******">
-            </div>
-        </div>
-    </div>
-                    
-</div>
-    <!--section 2-->
+        <!-- p iki form -->
+    <div class="bg-white p-3 m-5 rounded-lg hover:shadow">
+    @php
+        $editing = false; // Menambahkan inisialisasi variabel $editing
+    @endphp
 
+    @if ($editing)
+        <!-- view form edit data -->
+        <form method="POST" action="{{ route('profile.updateBio') }}">
+            @csrf
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Enter your mail:</label>
+                <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="email" type="text"
+                    name="email" value="{{ $user->email ?? '' }}">
+                <br>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="kontak">Enter your phone number:</label>
+                <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="kontak" type="text"
+                    name="kontak" value="{{ $user->kontak ?? '' }}">
+            </div>
+            <div class="flex justify-end">
+                <button type="submit"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Save Changes</button>
+            </div>
+        </form>
+    @else
+        <!-- view email dan nomor telepon -->
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email:</label>
+            <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="email" type="text"
+                value="{{ $user->email ?? '' }}" readonly>
+            <br>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="kontak">Nomor Telepon:</label>
+            <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="kontak" type="text"
+                value="{{ $user->kontak ?? '' }}" readonly>
+        </div>
+        <div class="flex justify-end">
+            <button onclick="editProfile()"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit Data</button>
+        </div>
+    @endif
+</div>
+
+<!-- custom js -->
+<script>
+    function editProfile() {
+        document.getElementById('email').removeAttribute('readonly');
+        document.getElementById('kontak').removeAttribute('readonly');
+        document.getElementById('email').focus();
+        document.getElementById('kontak').focus();
+
+        var editButton = document.createElement("button");
+        editButton.innerHTML = "Simpan";
+        editButton.classList.add("bg-green-500", "hover:bg-green-700", "text-white", "font-bold", "py-2", "px-4", "rounded");
+        editButton.onclick = saveProfile;
+
+        var parentDiv = document.querySelector(".flex.justify-end");
+        parentDiv.innerHTML = "";
+        parentDiv.appendChild(editButton);
+    }
+
+    function saveProfile() {
+        document.getElementById('email').setAttribute('readonly', true);
+        document.getElementById('kontak').setAttribute('readonly', true);
+
+        var editButton = document.createElement("button");
+        editButton.innerHTML = "Edit Data";
+        editButton.classList.add("bg-blue-500", "hover:bg-blue-700", "text-white", "font-bold", "py-2", "px-4", "rounded");
+        editButton.onclick = editProfile;
+
+        var parentDiv = document.querySelector(".flex.justify-end");
+        parentDiv.innerHTML = "";
+        parentDiv.appendChild(editButton);
+    }
+</script>
+
+    <!--section 2-->
+<!-- 
         <div class="v54_17">
             <div class="v54_29">
 
@@ -296,7 +358,7 @@
                         </div>
                         <div class="v54_272"></div></div></div></div><span class="v54_273">More</span><div class="v54_1228"></div><div class="v54_1282"></div><div class="v54_1255"></div><div class="v54_1229"><div class="v54_1230"></div><span class="v54_1231">Ferry Pangateu</span><div class="v54_1232"><div class="v54_1233"><div class="v54_1234"></div><div class="v54_1235"></div></div><div class="v54_1236"><div class="v54_1237"></div><div class="v54_1238"></div></div><div class="v54_1239"><div class="v54_1240"></div><div class="v54_1241"></div></div><div class="v54_1242"><div class="v54_1243"></div><div class="v54_1244"></div></div><div class="v54_1245"><div class="v54_1246"></div><div class="v54_1247"></div></div></div></div><div class="v54_1283"><div class="v54_1284"></div><span class="v54_1285">Ferry Pangateu</span><div class="v54_1286"><div class="v54_1287"><div class="v54_1288"></div><div class="v54_1289"></div></div><div class="v54_1290"><div class="v54_1291"></div><div class="v54_1292"></div></div><div class="v54_1293"><div class="v54_1294"></div><div class="v54_1295"></div></div><div class="v54_1296"><div class="v54_1297"></div><div class="v54_1298"></div></div><div class="v54_1299"><div class="v54_1300"></div><div class="v54_1301"></div></div></div></div><div class="v54_1256"><div class="v54_1257"></div><span class="v54_1258">Ferry Pangateu</span></div><span class="v54_1248">Lorem ipsum dolor sit amet consectetur. Ornare ac massa ut at. Id aliquam sagittis faucibus in varius sit. At ut vitae tellus sed eget vitae elementum urna sagittis. Sit tincidunt vitae libero dui consequat sed tincidunt tristique.</span><span class="v54_1302">Lorem ipsum dolor sit amet consectetur. Ornare ac massa ut at. Id aliquam sagittis faucibus in varius sit. At ut vitae tellus sed eget vitae elementum urna sagittis. Sit tincidunt vitae libero dui consequat sed tincidunt tristique.</span><span class="v54_1275">Lorem ipsum dolor sit amet consectetur. Ornare ac massa ut at. Id aliquam sagittis faucibus in varius sit. At ut vitae tellus sed eget vitae elementum urna sagittis. Sit tincidunt vitae libero dui consequat sed tincidunt tristique?</span><div class="v54_1249"><div class="v54_1250"></div><span class="v54_1251">Balas</span></div><div class="v54_1303"><div class="v54_1304"></div><span class="v54_1305">Balas</span></div><div class="v54_1276"><div class="v54_1277"></div><span class="v54_1278">Balas</span></div><div class="v54_1279"><div class="v54_1280"></div><span class="v54_1281">More ></span></div><div class="v54_1317"><div class="v54_1318"></div><span class="v54_1319">More ></span></div></div><div class="v52_1070"><div class="v54_4"></div><div class="v54_5"></div><span class="v54_16">LOGO</span><div class="v52_871"></div><div class="v52_872"></div><span class="v52_873">Login</span><span class="v52_874">Sign Up</span><span class="v54_15">Search Bar</span><div class="v54_14"><div class="v54_12"></div><div class="v54_13"></div></div></div><div class="v48_8"><div class="v48_9"></div><div class="v48_10"><div class="v48_11"></div></div><div class="v48_12"><div class="v48_13"></div></div><div class="v48_14"><div class="v48_15"></div></div><span class="v48_16">0856-4574-8425</span><span class="v48_17">dwiwardhana12@gmail.com</span><span class="v48_18">Contact Us</span><span class="v48_19">Lorem ipsum dolor sit amet consectetur. Eu ullamcorper arcu varius id at lacinia aliquam metus. Vestibulum tristique duis non habitasse tincidunt montes amet praesent. Adipiscing rhoncus lacus pharetra elementum. Sed tincidunt ut pellentesque placerat lectus praesent praesent amet pretium.</span><span class="v48_20">About</span><span class="v48_21">Lorem ipsum dolor sit amet consectetur. Eu ullamcorper arcu varius id at lacinia aliquam metus. Vestibulum tristique duis non habitasse tincidunt montes amet praesent. Adipiscing rhoncus lacus pharetra elementum. Sed tincidunt ut pellentesque placerat lectus praesent praesent amet pretium.</span><span class="v48_22">LOGO</span><div class="v48_23"><div class="v48_24"></div></div><div class="v48_25"><div class="v48_26"></div></div><span class="v48_28">WORK</span><span class="v48_29">CONTACT</span><span class="v48_30">ABOUT</span></div></div>
 
-
+ -->
 
 </body>
 </html>
