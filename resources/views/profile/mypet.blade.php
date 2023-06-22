@@ -17,53 +17,9 @@
             background-color: #FFF7D4;
         }
 
-        #menu-toggle:checked + #menu {
-            display: block;
-        }
-        
-        .hover\:grow {
-            transition: all 0.3s;
-            transform: scale(1);
-        }
-        
-        .hover\:grow:hover {
-            transform: scale(1.02);
-        }
-        
-        .carousel-open:checked + .carousel-item {
-            position: static;
-            opacity: 100;
-        }
-        
-        .carousel-item {
-            -webkit-transition: opacity 0.6s ease-out;
-            transition: opacity 0.6s ease-out;
-        }
-        
-        #carousel-1:checked ~ .control-1,
-        #carousel-2:checked ~ .control-2,
-        #carousel-3:checked ~ .control-3 {
-            display: block;
-        }
-        
-        .carousel-indicators {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            bottom: 2%;
-            left: 0;
-            right: 0;
-            text-align: center;
-            z-index: 10;
-        }
-        
-        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-            color: #000;
-        }
+        /* ... Kode CSS lainnya ... */
 
+        
         .img-object {
             height: 300px; /* Ubah sesuai tinggi yang diinginkan */
             width: 300px; /* Ubah sesuai lebar yang diinginkan */
@@ -71,28 +27,63 @@
             object-position: center;
             border-radius: 10px;
         }
+
+        .add-post-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 300px;
+            width: 300px;
+            border: 2px dashed #999;
+            border-radius: 10px;
+            background-color: #F3F3F3;
+            cursor: pointer;
+        }
+
+        .add-post-button:hover {
+            background-color: #EAEAEA;
+        }
+
+        .add-post-button i {
+            font-size: 6rem;
+            color: #888;
+        }
+
+        .add-post-button span {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: #888;
+        }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     @include('components.header');
     <section class="bg-white py-8">
-    <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-    @foreach ($kucings as $kucing)
-    <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-        <a href="{{ route('profileCat_more', $kucing->id) }}">
-            <img class="hover:grow hover:shadow-lg img-object" src="{{ asset($kucing->foto) }}">
-            <div class="pt-3 flex items-center justify-between">
-                <p class="">{{ $kucing->nama }}</p>
-                <i class="fa-solid fa-heart fa-xl" style="color: #ff0505;"></i>
-            </div>
-            <p class="pt-1 text-gray-900"> </p>
-        </a>
-    </div>
-@endforeach
+        <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
+            @foreach ($kucings as $kucing)
+                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                    <a href="{{ route('profileCat_more', $kucing->id) }}">
+                        <img class="hover:grow hover:shadow-lg img-object" src="{{ asset($kucing->foto) }}">
+                        <div class="pt-3 flex items-center justify-between">
+                            <p class="">{{ $kucing->nama }}</p>
+                            <i class="fa-solid fa-heart fa-xl" style="color: #ff0505;"></i>
+                        </div>
+                        <p class="pt-1 text-gray-900"> </p>
+                    </a>
+                </div>
+            @endforeach
 
+            <label for="file-input" class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col items-center">
+                <div class="add-post-button">
+                <a href="{{ route('Upload-Distributor') }}">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+            </label>
         </div>
     </section>
+
     @include('components.footer');
 </body>
 </html>
