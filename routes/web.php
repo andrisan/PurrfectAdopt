@@ -31,6 +31,8 @@ Route::get('/profile/mypet', [ProfileController::class, 'myPet'])->name('profile
 
 Route::get('/profile/profile_adopter', [ProfileController::class, 'showProfile'])->name('profile_adopter');
 
+Route::get('/profile/profile_distributor', [ProfileController::class, 'showProfileDistributor'])->name('profile_distributor');
+
 Route::get('/profile/profile_distributor', function () {
   return view('profile/profile_distributor');
 })->name('profile_distributor');
