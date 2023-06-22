@@ -25,6 +25,7 @@ return new class extends Migration
             $table->binary('video')->nullable();
             $table->boolean('status')->default(0);
             $table->text('description');
+            $table->boolean('save')->default(0);
             $table->timestamps();
         });
     }

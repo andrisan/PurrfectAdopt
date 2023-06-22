@@ -25,10 +25,10 @@ return new class extends Migration
             $table->text('crime_hist')->nullable();
             $table->integer('kontak')->nullable();
             $table->boolean('status')->default(0);
+            $table->binary('fotoProfil')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
-            $table->binary('fotoProfil');
         });
     }
 
