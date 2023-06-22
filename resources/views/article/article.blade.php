@@ -46,6 +46,9 @@
         accept="image/*" required>
         <button type="submit" class="text-white bg-yellow-400 hover:bg-yellow-500 font-medium rounded-lg text-sm px-4 py-2 mt-4">Create Post</button>
     </form>
+    @if(session('success'))
+    @include('article.success-popup')
+    @endif
 </div>
 <br> <br>
 

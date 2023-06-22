@@ -46,7 +46,7 @@ class ContentController extends Controller
     $content->save();
 
     // Redirect atau melakukan tindakan lain setelah berhasil menyimpan data
-    return redirect()->back()->with('success', 'Post berhasil dibuat!');
+    return redirect()->back()->with('success', 'Post successfully created!');
 }
 
 }
