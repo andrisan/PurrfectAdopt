@@ -5,9 +5,6 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Admin\KucingController;
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
 
@@ -40,20 +37,7 @@ use App\Http\Controllers\BioController;
   Route::get('/signup', [SignUpController::class, 'showRegistrationForm'])->name('signup');
   Route::post('/signup', [SignUpController::class, 'signup']);
 
-Route::resource('/admin-kucing', KucingController::class);
-Route::get('getadminkucing', [KucingController::class, 'getKucing']);
-Route::get('hapuskucing/{id}', [KucingController::class, 'destroy'] )->name('hapuskucing');
 
-Route::resource('/admin-home', DashboardController::class);
-Route::get('gethomekucing', [DashboardController::class, 'getKucing']);
-Route::get('gethomecontent', [DashboardController::class, 'getContent']);
-Route::get('gethomeuser', [DashboardController::class, 'getUser']);
-
-Route::resource('/admin-user', UserController::class);
-Route::get('getadminuser', [UserController::class, 'getUser']);
-Route::get('hapususer/{id}', [UserController::class, 'destroy'] )->name('hapususer');
-Route::get('/admin-detailuser/{id}', [UserController::class, 'getDetail'])->name('getdetail');
-Route::get('/getuserkucing/{id}', [UserController::class, 'getUserKucing'] )->name('getuserkucing');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -93,3 +77,4 @@ Route::middleware(['auth'])->group(function(){
 });
 
 require __DIR__.'/auth.php';
+require __DIR__.'/webkel5.php';
