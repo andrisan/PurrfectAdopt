@@ -6,6 +6,9 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\KucingController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\CatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
@@ -24,9 +27,7 @@ use App\Http\Controllers\Admin\artikelAdminController;
 |
 */
 
-Route::get('/profile/mypet', function () {
-  return view('profile/mypet');
-})->name('mypet');
+Route::get('/profile/mypet', [ProfileController::class, 'myPet'])->name('profile.mypet');
 
 Route::get('/profile/profile_adopter', [ProfileController::class, 'showProfile'])->name('profile_adopter');
 
