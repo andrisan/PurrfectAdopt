@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\Admin\artikelAdminController;
+use App\Models\Kucing;
 
 
 /*
@@ -27,10 +28,14 @@ use App\Http\Controllers\Admin\artikelAdminController;
 |
 */
 
+Route::get('/profile/profile_adopter', [ProfileController::class, 'showProfile1'])->name('profile_adopter');
+
+Route::post('/profile/update-bio', 'ProfileController@updateBio')->name('profile.updateBio');
+
 Route::get('/profile/mypet', [ProfileController::class, 'myPet'])->name('profile.mypet');
 
 Route::get('/profile/profile_adopter', [ProfileController::class, 'showProfile'])->name('profile_adopter');
-
+Route::get('toggleLove/{id}', [ProfileController::class, 'toggleLove'])->name('toggleLove');
 Route::get('/profile/profile_distributor', [ProfileController::class, 'showProfileDistributor'])->name('profile_distributor');
 
 Route::get('/profile/Upload-Distributor', function () {

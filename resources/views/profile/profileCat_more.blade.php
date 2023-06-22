@@ -16,17 +16,35 @@
             font-family: 'Poppins', sans-serif;
             background-color: #FFF7D4;
         }
+
+        .img-object {
+            height: 300px; /* Ubah sesuai tinggi yang diinginkan */
+            width: 300px; /* Ubah sesuai lebar yang diinginkan */
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+        }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     @include('components.header');
-    <div class="container mx-auto flex flex-wrap md:flex-nowrap mt-20">
+<div>
+    <div class="hover:grow mt-14">
+    <a href="{{ route('profile.mypet') }}" class="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-9">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+</div>
+    <div class="container mx-auto flex flex-wrap md:flex-nowrap mt-10">
     <div id="love-container">
-        <button id="toggleButton" onclick="toggleHeart()"><i id="heartIcon" class="fa-regular fa-heart fa-2xl" style="color: #ff0505;"></i></button>
-    </div>
+    <a href="{{ route('toggleLove', $kucing->id) }}">
+        <button id="toggleButton">
+            <i id="heartIcon" class="{{ $kucing->save ? 'fa-solid' : 'fa-regular' }} fa-heart fa-2xl" style="color: #ff0505;"></i>
+        </button>
+    </a>
+</div>
     <div class="w-full xl:w-4/8 py-7 mt-7">
-        <img class="w-3/4 h-80 mx-auto" src="{{ asset($kucing->foto) }}">
+        <img class="w-3/4 h-auto mx-auto img-object" src="{{ asset($kucing->foto) }}">
     </div>
     <div class="flex flex-col xl:w-3/4 mt-20 text-left">
         <h1 class="text-6xl mb-8 text-black">{{ $kucing->nama }}</h1>
@@ -51,6 +69,7 @@
         </div>
     </div>
 </div>
+</div>
     @include('components.footer');
     <script>
   var isCondition1 = true;
@@ -68,6 +87,17 @@
       isCondition1 = true;
     }
   }
+  function toggleHeart() {
+        var heartIcon = document.getElementById('heartIcon');
+
+        if (heartIcon.classList.contains('fa-regular')) {
+            heartIcon.classList.remove('fa-regular');
+            heartIcon.classList.add('fa-solid');
+        } else {
+            heartIcon.classList.remove('fa-solid');
+            heartIcon.classList.add('fa-regular');
+        }
+    }
 </script>
 </body>
 </html>

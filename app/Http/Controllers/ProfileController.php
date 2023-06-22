@@ -25,6 +25,14 @@ public function show($id)
     return view('profile.profileCat_more', compact('kucing'));
 }
 
+public function toggleLove($id)
+{
+    $kucing = Kucing::findOrFail($id);
+    $kucing->save = !$kucing->save; // Mengubah status save menjadi kebalikannya
+    $kucing->save(); // Menyimpan perubahan ke database
+
+    return redirect()->back(); // Kembali ke halaman sebelumnya
+}
 
     /**
      * Display the user's profile form.
@@ -92,18 +100,26 @@ public function show($id)
     }
     
     public function showProfile(Request $request): View
-{
+    {
     $user = Auth::user();
 
     return view('profile.profile_adopter', compact('user'));
-}
+    
+    }
 
     public function showProfileDistributor(Request $request): View
-{
+    {
     $user = Auth::user();
 
     return view('profile.profile_distributor', compact('user'));
-}   
+    }
+    
+    public function showProfile1()
+    {
+        $kucing = Kucing::find(1);
+        return view('profile_adopter', compact('kucing'));
+    }
+
 
 
 }

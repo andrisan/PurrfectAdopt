@@ -63,6 +63,14 @@
         #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
             color: #000;
         }
+
+        .img-object {
+            height: 300px; /* Ubah sesuai tinggi yang diinginkan */
+            width: 300px; /* Ubah sesuai lebar yang diinginkan */
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+        }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -73,7 +81,7 @@
     @foreach ($kucings as $kucing)
     <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
         <a href="{{ route('profileCat_more', $kucing->id) }}">
-            <img class="hover:grow hover:shadow-lg" src="{{ asset($kucing->foto) }}">
+            <img class="hover:grow hover:shadow-lg img-object" src="{{ asset($kucing->foto) }}">
             <div class="pt-3 flex items-center justify-between">
                 <p class="">{{ $kucing->nama }}</p>
                 <i class="fa-solid fa-heart fa-xl" style="color: #ff0505;"></i>
