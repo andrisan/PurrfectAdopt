@@ -21,7 +21,9 @@
         @include('components.header');
 
         <form
-        action="{{ route('store.cat') }}" method="POST" enctype="multipart/form-data"
+            action="{{ route('store.cat') }}"
+            method="POST"
+            enctype="multipart/form-data"
             class="flex items-center justify-center h-screen rounded-lg mt-20 mb-20">
             @csrf
             <div class="bg-yellow-300 w-4/5 p-4 rounded-lg">
@@ -135,6 +137,8 @@
             </div>
         </form>
 
+        @if(session('success')) @include('article.success-popup') @endif
+        
         @include('components.footer');
 
         <script>
