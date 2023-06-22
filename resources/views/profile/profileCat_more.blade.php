@@ -23,8 +23,12 @@
     @include('components.header');
     <div class="container mx-auto flex flex-wrap md:flex-nowrap mt-20">
     <div id="love-container">
-        <button id="toggleButton" onclick="toggleHeart()"><i id="heartIcon" class="fa-regular fa-heart fa-2xl" style="color: #ff0505;"></i></button>
-    </div>
+    <a href="{{ route('toggleLove', $kucing->id) }}">
+        <button id="toggleButton">
+            <i id="heartIcon" class="{{ $kucing->save ? 'fa-solid' : 'fa-regular' }} fa-heart fa-2xl" style="color: #ff0505;"></i>
+        </button>
+    </a>
+</div>
     <div class="w-full xl:w-4/8 py-7 mt-7">
         <img class="w-3/4 h-80 mx-auto" src="{{ asset($kucing->foto) }}">
     </div>
@@ -68,6 +72,17 @@
       isCondition1 = true;
     }
   }
+  function toggleHeart() {
+        var heartIcon = document.getElementById('heartIcon');
+
+        if (heartIcon.classList.contains('fa-regular')) {
+            heartIcon.classList.remove('fa-regular');
+            heartIcon.classList.add('fa-solid');
+        } else {
+            heartIcon.classList.remove('fa-solid');
+            heartIcon.classList.add('fa-regular');
+        }
+    }
 </script>
 </body>
 </html>
