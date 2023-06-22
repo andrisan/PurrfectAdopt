@@ -24,17 +24,16 @@
     <body>
         @include('components.header');
 
-        <div class="flex items-center justify-center h-screen rounded-lg">
+    <div class="flex items-center justify-center h-screen rounded-lg">
     <div class="bg-yellow-300 w-4/5 p-4 rounded-lg">
         <div class="flex">
             <div class="w-1/3 p-4 rounded-lg bg-gray-200 opacity-70">
-                <div class="flex items-center justify-center h-full border-dashed border-2 border-gray-400 rounded-lg">
+                <label for="file-input" class="flex items-center justify-center h-full border-dashed border-2 border-gray-400 rounded-lg">
                     <div class="text-4xl text-gray-500 mb-2">
+                        <i class="fas fa-plus-circle text-6xl"></i>
                     </div>
-                    <div class="text-6xl text-gray-500">
-                        <span>Drag & Drop</span>
-                    </div>
-                </div>
+                </label>
+                <input id="file-input" type="file" class="hidden" onchange="handleFileUpload(event)">
             </div>
 
             <div class="w-2/3 p-4 ml-4">
