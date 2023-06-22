@@ -100,18 +100,26 @@ public function toggleLove($id)
     }
     
     public function showProfile(Request $request): View
-{
+    {
     $user = Auth::user();
 
     return view('profile.profile_adopter', compact('user'));
-}
+    
+    }
 
     public function showProfileDistributor(Request $request): View
-{
+    {
     $user = Auth::user();
 
     return view('profile.profile_distributor', compact('user'));
-}   
+    }
+    
+    public function showProfile1()
+    {
+        $kucing = Kucing::find(1);
+        return view('profile_adopter', compact('kucing'));
+    }
+
 
 
 }
