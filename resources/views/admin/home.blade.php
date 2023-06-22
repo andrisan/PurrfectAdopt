@@ -27,8 +27,8 @@
                 <li><a href="<?= url('/admin-home'); ?>">Beranda</a></li>
                 <li><a href="<?= url('/admin-kucing'); ?>">Kucing</a></li>
                 <li><a href="<?= url('/admin-user'); ?>">User</a></li>
-                <li><a href="#">Artikel</a></li>
-              </ul>
+                <li><a href="<?= url('/artikelAdmin'); ?>">Artikel</a></li>
+            </ul>
             </nav>
         <div class="profile">
             <img src="{{ asset('/img/profile.png') }}" alt="Profil">
