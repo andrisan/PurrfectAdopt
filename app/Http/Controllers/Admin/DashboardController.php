@@ -10,15 +10,11 @@ use App\Models\User;
 
 class DashboardController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
         return view('admin.home');
     }
- 
+
     public function getKucing(){
         $kucing = Kucing::all();
         $totalRows = count($kucing);
@@ -42,8 +38,7 @@ class DashboardController extends Controller
      */
     public function create()
     {
-        $cats = Kucing::all();
-        return view('dashboard', compact(['cats']));
+        //
     }
 
     /**
