@@ -28,6 +28,8 @@ use App\Models\Kucing;
 |
 */
 
+Route::post('/profile/update-bio', 'ProfileController@updateBio')->name('profile.updateBio');
+
 Route::get('/profile/mypet', [ProfileController::class, 'myPet'])->name('profile.mypet');
 
 Route::get('/profile/profile_adopter', [ProfileController::class, 'showProfile'])->name('profile_adopter');
@@ -133,6 +135,8 @@ Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.e
 
 // Route update Bio n cp profil pengguna
 Route::post('/profile/updateBio', [ProfileController::class, 'updateBio'])->name('profile.update');
+
+Route::post('/cats', [CatController::class, 'store'])->name('store.cat');
 
 require __DIR__.'/auth.php';
 
