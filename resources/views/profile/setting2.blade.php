@@ -12,7 +12,7 @@
 <body>
     <div style="width: 50%; float:left">
         <div class="profile-setting">
-            <a href="{{ route('setting1') }}"><button type="button" class="btn"><i class="fa-solid fa-user"
+            <a href=""><button type="button" class="btn"><i class="fa-solid fa-user"
                         style="color: #4c3d3d;"></i>&nbsp;Profile Setting</button></a>
         </div>
 

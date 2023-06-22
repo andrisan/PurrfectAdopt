@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,52 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Setting</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
     <script src="https://kit.fontawesome.com/cc4885a691.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <div style="width: 50%; float:left">
-        <div class="profile-setting">
-            <a href="{{ route('setting1') }}"><button type="button" class="btn" style="background-color: #ffd95a;"><i
-                        class="fa-solid fa-user" style="color: #4c3d3d;"></i>&nbsp;&nbsp;Profile Setting</button></a>
+<body style="margin:3%">
+    <div class="flex">
+        <div class="w-1/2">
+            <div class="p-4">
+                <a href="{{ route('setting1.edit',$user->id) }}">
+                    <button type="button" class="btn"><i class="fa-solid fa-user" style="color: #4c3d3d;"></i>&nbsp;Profile Setting</button>
+                </a>
+            </div>
+
+            <div class="p-4">
+                <a href="{{ route('setting2') }}">
+                    <button type="button" class="btn bg-yellow-300"><i class="fa-solid fa-shield" style="color: #4c3d3d;"></i>&nbsp;Security Setting</button>
+                </a>
+            </div>
         </div>
 
-        <div class="security-setting">
-            <a href="{{ route('setting2') }}"><button type="button" class="btn"><i class="fa-solid fa-shield"
-                        style="color: #4c3d3d;"></i>&nbsp;&nbsp;Security Setting</button></a>
-        </div>
-    </div>
-    <div style="width: 50%; float:right">
-        <div class="profile">
-            <h2>Profile Setting</h2>
-            <br>
-            <form>
-                <label for="email">Email address:</label><br>
-                <input type="text" id="email" name="email" placeholder="jimmyar@gmail.com"><br>
-                <label for="password">Change password:</label><br>
-                <input type="password" id="password" name="password" placeholder="***********"><br>
-                <label for="address">Change address:</label><br>
-                <input type="text" id="address" name="address"
-                    placeholder="Jl.Borobudur No.13A, Sumberejo, Kendal,Jawa Tengah">
-            </form>
-            <br>
-            <p class="alignleft" style="float: left;">Send Push Notification</p>
-            <div class="alignright" style="float: right; padding-right: 20%;">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
+        <div class="w-1/2">
+            <div class="p-4">
+                <h2 class="text-2xl">Security Setting</h2>
+                <br><br>
+                <form action="{{ route('setting1.update', $user->id) }}" method="POST">
+        @csrf
+        @method('PUT')
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="{{ $user->name }}">
+<br>
+        <br>
+<input type="text" name="kontak" id="kontak" value="{{ $user->kontak }}">
+        <!-- Tambahkan input field untuk atribut lainnya -->
+        <br>
+        <button type="submit" class="save">Save</button>
+    </form>
+                
             </div>
-            <br><br>
-            <p class="alignleft" style="float: left;">Show email threads (BETA)</p>
-            <div class="alignright" style="float: right; padding-right: 20%;">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-            <br><br>
-            <button type="button" class="save">Save</button>
         </div>
     </div>
 </body>

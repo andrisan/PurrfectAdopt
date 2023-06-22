@@ -13,7 +13,7 @@ use App\Http\Controllers\BioController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\DiskusiController;
 use App\Http\Controllers\FaqController;
-
+use App\Http\Controllers\E_ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -94,12 +94,13 @@ Route::get('/balasDiskusi/{id}', [DiskusiController::class, 'show'])->name('bala
 
 Route::resource('faq', FaqController::class);
 
+Route::get('/setting1/edit/{id}', [E_ProfileController::class, 'edit'])->name('setting1.edit');
+Route::put('/setting1/update/{id}', [E_ProfileController::class, 'update'])->name('setting1.update');
+
+
 Route::get('setting2', function () {
   return view('/profile/setting2');
 })->name('setting2');
-Route::get('setting1', function () {
-  return view('/profile/setting1');
-})->name('setting1');
 
 Route::middleware(['guest'])->group(function(){
 
