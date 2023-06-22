@@ -1,39 +1,24 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Kucing;
 use App\Models\Content;
-use App\Models\User;
 
-class DashboardController extends Controller
+class MainDashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.home');
-    }
- 
-    public function getKucing(){
-        $kucing = Kucing::all();
-        $totalRows = count($kucing);
-        return $totalRows;
-    }
-
-    public function getContent(){
-        $content = Content::all();
-        $totalRows = count($content);
-        return $totalRows;
-    }
-
-    public function getUser(){
-        $user = User::all();
-        $totalRows = count($user);
-        return $totalRows;
+        $cats = Kucing::all();
+        $contents = Content::all();
+        return view('dashboard', [
+            'title' => 'Home',
+        ], compact(['cats', 'contents']));
     }
 
     /**

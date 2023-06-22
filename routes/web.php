@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\CatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
+use App\Http\Controllers\MainDashboardController;
 use App\Http\Controllers\ContentController;
 
 /*
@@ -70,7 +71,7 @@ Route::middleware(['auth'])->group(function(){
   Route::resource('/admin-home', DashboardController::class)->middleware('userAccess:admin');
 
   /** SEBELUM MENGAKSES HAL. DASHBOARD USER DIPERKENANKAN UNTUK LOGIN DAHULU */
-  Route::get('/dashboard', [DashboardController::class, 'create']);
+  Route::get('/dashboard', [MainDashboardController::class, 'index']);
 
   Route::get('/main', [AuthenticatedSessionController::class, 'main']);
   Route::get('/main/admin', [AuthenticatedSessionController::class, 'admin'])->middleware('userAccess:admin');
