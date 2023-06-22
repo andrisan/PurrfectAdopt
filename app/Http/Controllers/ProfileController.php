@@ -82,5 +82,12 @@ class ProfileController extends Controller
     return view('profile.profile_adopter', compact('user'));
 }
 
+    public function showProfileDistributor(Request $request): View
+{
+    $user = Auth::user();
+
+    return view('profile.profile_distributor', compact('user'));
+}   
+
 
 }
