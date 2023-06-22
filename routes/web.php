@@ -28,6 +28,8 @@ use App\Models\Kucing;
 |
 */
 
+Route::get('/profile/profile_adopter', [ProfileController::class, 'showProfile1'])->name('profile_adopter');
+
 Route::post('/profile/update-bio', 'ProfileController@updateBio')->name('profile.updateBio');
 
 Route::get('/profile/mypet', [ProfileController::class, 'myPet'])->name('profile.mypet');
