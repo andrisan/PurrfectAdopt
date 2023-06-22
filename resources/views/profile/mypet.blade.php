@@ -68,6 +68,8 @@
             height: 300px; /* Ubah sesuai tinggi yang diinginkan */
             width: 300px; /* Ubah sesuai lebar yang diinginkan */
             object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
         }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
