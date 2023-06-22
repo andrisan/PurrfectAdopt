@@ -115,6 +115,5 @@ At first, simply keep the brush at hand while stroking your
     'created_at' => \Carbon\Carbon::now(),
     'updated_at' => \Carbon\Carbon::now(),
 ]);
-
     }
 }
