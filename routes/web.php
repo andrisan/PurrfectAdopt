@@ -33,10 +33,6 @@ Route::get('/profile/profile_adopter', [ProfileController::class, 'showProfile']
 
 Route::get('/profile/profile_distributor', [ProfileController::class, 'showProfileDistributor'])->name('profile_distributor');
 
-Route::get('/profile/profile_distributor', function () {
-  return view('profile/profile_distributor');
-})->name('profile_distributor');
-
 Route::get('/profile/Upload-Distributor', function () {
   return view('profile/Upload-Distributor');
 })->name('Upload-Distributor');
