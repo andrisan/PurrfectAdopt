@@ -110,8 +110,13 @@
                     <p class="mb-4 font-semibold">{{ \App\Models\Kucing::find(1)->ras }}</p>
                         <p class="mb-6 text-black dark:text-black text-justify">{{ \App\Models\Kucing::find(1)->description }}</p>
                     <div class="flex justify-end">
-                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">More</button>
-                        <button type="submit" class="mx-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">My Pet</button>
+                        <a href="/profileCat_more/1">
+                            <button  type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">More</button>
+                        </a>
+                        <a href="{{ route('profile.mypet') }}">
+                            <button type="submit" class="mx-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">My Pet</button>
+                        </a>
+                        
                     </div>
                 </div>
             </div>
