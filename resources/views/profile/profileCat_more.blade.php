@@ -21,7 +21,13 @@
 </head>
 <body>
     @include('components.header');
-    <div class="container mx-auto flex flex-wrap md:flex-nowrap mt-20">
+<div>
+    <div class="hover:grow mt-14">
+    <a href="{{ route('profile.mypet') }}" class="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-9">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+</div>
+    <div class="container mx-auto flex flex-wrap md:flex-nowrap mt-10">
     <div id="love-container">
     <a href="{{ route('toggleLove', $kucing->id) }}">
         <button id="toggleButton">
@@ -30,7 +36,7 @@
     </a>
 </div>
     <div class="w-full xl:w-4/8 py-7 mt-7">
-        <img class="w-3/4 h-80 mx-auto" src="{{ asset($kucing->foto) }}">
+        <img class="w-3/4 h-auto mx-auto" src="{{ asset($kucing->foto) }}">
     </div>
     <div class="flex flex-col xl:w-3/4 mt-20 text-left">
         <h1 class="text-6xl mb-8 text-black">{{ $kucing->nama }}</h1>
@@ -54,6 +60,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
     @include('components.footer');
     <script>
