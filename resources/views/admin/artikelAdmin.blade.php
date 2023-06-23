@@ -74,24 +74,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="antialiased font-sans leading-normal tracking-normal bg-cover bg-fixed">
-    <header>
-        <div class="flex">
-                <p><b>Logo</b></p>
-        </div>
-            <nav>
-            <ul>
-                <li><a href="<?= url('/admin-home'); ?>">Beranda</a></li>
-                <li><a href="<?= url('/admin-kucing'); ?>">Kucing</a></li>
-                <li><a href="<?= url('/admin-user'); ?>">User</a></li>
-                <li><a href="#">Artikel</a></li>
-            </ul>
-            </nav>
-        <div class="profile">
-            <img src="{{ asset('/img/profile.png') }}" alt="Profil">
-            <span>Profil</span>
-        </div>
-    </header>
-    <div class="container px-12">
+    @include('components.header-admin');
+    <div class="container px-12 my-16">
        <div class="md:container md:mx-auto bg-yellow-300 p-5 mb-2 rounded-md my-10">
             <table class="w-full table-auto border-spacing-2">
                 <thead class="border-b-1 bg-orange-600">
@@ -180,6 +164,7 @@
           </table>
         </div> 
     </div>
+    @include('components.footer')
     
 
   
