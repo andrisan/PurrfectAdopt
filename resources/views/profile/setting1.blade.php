@@ -45,6 +45,10 @@
                     <br>
                     <button type="submit" class="save">Save</button>
                 </form>
+                <br>
+                <p>setel ulang password :</p>
+              <button class="btn"><a href="/forgot-password">ubah passowrd</a></button>  
+            
             </div>
         </div>
     </div>
