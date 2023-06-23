@@ -51,8 +51,6 @@ Route::middleware(['guest'])->group(function(){
   Route::get('/', function(){
     return view('welcome');
   })->name('welcome');
-
-
   Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
   Route::view('/testi','testi');
   Route::view('/bio','bio');
@@ -66,13 +64,12 @@ Route::middleware(['guest'])->group(function(){
 
   Route::get('/signup', [SignUpController::class, 'showRegistrationForm'])->name('signup');
   Route::post('/signup', [SignUpController::class, 'signup']);
-
-
-
+  });
 Route::get('/dashboard', function () {
     return view('dashboard');
   })->name('dashborad');
 });
+
 /** END HALAMAN WELCOME */
 
 /** START AUTH: LOGIN, REGISTER, FORGOT-PASSWORD, RESET-PASSWORD */
