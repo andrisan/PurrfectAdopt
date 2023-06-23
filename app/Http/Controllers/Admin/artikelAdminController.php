@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Kucing;
 use App\Models\Content;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class artikelAdminController extends Controller
 {
@@ -18,13 +18,10 @@ class artikelAdminController extends Controller
         //
         return view('admin.artikelAdmin');
     }
- 
-    public function getKucing(){
-        $kucing = Kucing::all();
-        $totalRows = count($kucing);
-        return $totalRows;
+    public function show(){
+        $data = content::all();
+        return view('admin.artikelAdmin',['content'=>$data]);
     }
-
     public function getContent(){
         $content = Content::all();
         $totalRows = count($content);
@@ -40,11 +37,6 @@ class artikelAdminController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-        $cats = Kucing::all();
-        return view('dashboard', compact(['cats']));
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -57,19 +49,17 @@ class artikelAdminController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         //
+        $contents = DB::table('contents')->where('id',$id)->get();
+        //passing data pegawai yang didapat ke view edit.blade.php
+        return view('edit',['contents' => $id]);
     }
-
     /**
      * Update the specified resource in storage.
      */
@@ -81,8 +71,10 @@ class artikelAdminController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        //
-    }
+    public function destroy($id)
+{
+    Content::destroy($id);
+    return redirect('artikelAdmin');
+}
+
 }
