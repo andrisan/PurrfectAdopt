@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Kucing;
 use App\Models\Cat;
-use App\Models\Kucing;
 use Illuminate\Http\Request;
 
 class CatController extends Controller
