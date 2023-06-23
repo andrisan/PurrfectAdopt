@@ -19,3 +19,4 @@ yarn-error.log
 /.vscode
 database/migrations/adopsi.php
 database/DatabaseSeeder.php
+resources/views/bio.blade.php
