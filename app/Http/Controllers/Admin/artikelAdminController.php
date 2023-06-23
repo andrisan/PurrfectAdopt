@@ -72,8 +72,9 @@ class artikelAdminController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy($id)
-    {
-        DB::table('contents')->where('id',$id)->delete();
-        return redirect('artikelAdmin');
-    }
+{
+    Content::destroy($id);
+    return redirect('artikelAdmin');
+}
+
 }
