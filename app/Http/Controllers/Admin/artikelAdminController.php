@@ -8,13 +8,17 @@ use App\Models\Kucing;
 use App\Models\Content;
 use App\Models\User;
 
-class DashboardController extends Controller
+class artikelAdminController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        return view('admin.home');
+        //
+        return view('admin.artikelAdmin');
     }
-
+ 
     public function getKucing(){
         $kucing = Kucing::all();
         $totalRows = count($kucing);

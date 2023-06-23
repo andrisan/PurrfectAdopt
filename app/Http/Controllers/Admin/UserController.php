@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\UserKucing;
 
 class UserController extends Controller
 {
@@ -12,8 +13,6 @@ class UserController extends Controller
      */
     public function index()
     {
-
-
         return view('admin.user');
     }
 
@@ -22,54 +21,24 @@ class UserController extends Controller
         return response()->json($user);
     }
 
-    public function getDetail(){
-        return view('admin.detailuser');
-    }
-    public function create()
-    {
-        //
-
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy( $id)
+    public function destroy($id)
     {
         $user = User::findOrFail($id);
         $user->delete();
         return response()->json(['pesan' => 'Deleted']);
+    }
+    public function getDetail($id){
+        $idreturn = $id;
+        return view('admin.detailuser', compact('idreturn'));
+    }
+    public function getUserKucing($id){
+        $uk = UserKucing::where('user_id', '=', $id)
+             ->join('users', 'users.id', '=', 'user_kucings.user_id')
+             ->join('kucings', 'kucings.id', '=', 'user_kucings.kucing_id')
+             ->select('users.*', 'users.id as IdUser', 'kucings.*')
+             ->get();
+
+        return response()->json($uk);
+        // return view('admin.detailuser', compact('uk'));
     }
 }
