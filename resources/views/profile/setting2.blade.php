@@ -7,9 +7,10 @@
     <title>Setting</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/cc4885a691.js" crossorigin="anonymous"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body style= margin:3%>
+<body style= margin:3% class="bg-amber-100">
     <div style="width: 50%; float:left">
         <div class="profile-setting">
             <a href="{{ route('setting1.edit',$user->id) }}">
@@ -26,22 +27,24 @@
 
     <div style="width: 50%; float:right">
         <div class="profile">
-            <h2>Security Setting</h2>
+            <div class="text-2xl font-bold">
+                <h2>Security Setting</h2>
+            </div>
             <form action="{{ route('setting2.update', $user->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 <br><br>
-                <label for="name">Name :</label>
+                <label for="name">Nama :</label>
                 <br>
-                <input type="text" name="name" id="name" value="{{ $user->name }}">
-                <br><br>
+                <input class="p-5 rounded-xl" type="text" name="name" id="name" value="{{ $user->name }}">
+                <br>
                 <label for="profesi">Profesi :</label>
                 <br>
-                <input type="text" name="profesi" id="profesi" value="{{ $user->profesi }}">
-                <br><br>
+                <input class="p-5 rounded-xl" type="text" name="profesi" id="profesi" value="{{ $user->profesi }}">
+                <br>
                 <label for="alamat">Alamat :</label>
                 <br>
-                <input type="text" name="alamat" id="alamat" value="{{ $user->alamat }}"> 
+                <input class="p-5 rounded-xl" type="text" name="alamat" id="alamat" value="{{ $user->alamat }}"> 
                 <br>
                 <button type="submit" class="save">Save</button>
             </form>
