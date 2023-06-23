@@ -81,7 +81,7 @@
 <!-- top article -->
 
 <!--card slider-->
-  <div class="mx-auto max-w-[1340px] px-4 py-10 sm:px-6 sm:py-20 lg:me-0 lg:pe-0 lg:ps-8">
+<div class="mx-auto max-w-[1340px] px-4 py-10 sm:px-6 sm:py-20 lg:me-0 lg:pe-0 lg:ps-8">
     <div class="max-w-7xl items-end justify-between sm:flex sm:pe-6 lg:pe-8">
         <div class="w-full text-gray-700 px-11 text-2xl font-semibold pt-20">Article News</div><br>
         
@@ -170,8 +170,8 @@
   document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.swiper-container', {
       loop: true,
-      slidesPerView: 4,
-      spaceBetween: 15,
+      slidesPerView: 3,
+      spaceBetween: 30,
       autoplay: {
         delay: 8000,
       },
