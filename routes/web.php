@@ -117,8 +117,5 @@ Route::get('/findyourcat', function () {
 
 Route::post('/contents', [ContentController::class, 'store'])->name('contents.store');
 
-Route::middleware(['auth'])->group(function(){
-  Route::get('/adopted', [CatController::class, 'index'])->name('profile');
-});
-
 require __DIR__.'/auth.php';
+require __DIR__.'/webkel2.php';
