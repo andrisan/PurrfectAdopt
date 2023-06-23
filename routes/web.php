@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\NewPasswordController;
@@ -17,6 +18,8 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\E_ProfileController;
 use App\Http\Controllers\Setting2Controller;
 use App\Http\Controllers\Admin\artikelAdminController;
+use App\Models\Kucing;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +31,16 @@ use App\Http\Controllers\Admin\artikelAdminController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+/** START HALAMAN WELCOME, DIMANA USER YANG BELUM MELAKUKAN LOGIN AKAN DIARAHKAN KE HALAMAN INI */
+Route::middleware(['guest'])->group(function(){
+  Route::get('/', function(){
+    return view('welcome');
+  })->name('welcome');
+});
+
+/** END HALAMAN WELCOME */
+
 Route::middleware(['auth'])->group(function(){
   Route::get('/profile/mypet', function () {
     return view('profile/mypet');
@@ -49,6 +62,7 @@ Route::middleware(['auth'])->group(function(){
     return view('profile/profileCat_more');
   })->name('profileCat_more');
 });
+
 
 
 Route::middleware(['auth'])->group(function(){
@@ -103,8 +117,15 @@ Route::middleware(['auth'])->group(function(){
   });
 });
 
+
+// Route menampilkan form profil pengguna
+
+require __DIR__.'/auth.php';
+
 require __DIR__.'/auth.php';
 require __DIR__.'/webkel5.php';
 require __DIR__.'/webkel3.php';
 require __DIR__.'/webkel2.php';
+require __DIR__.'/webkel1.php';
 require __DIR__.'/webkel4.php';
+

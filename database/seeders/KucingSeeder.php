@@ -25,6 +25,9 @@ class KucingSeeder extends Seeder
             'sikap'         => '',
             'foto'          => '/img/cat1.jpg',
             'video'         => '',
+            'status'        => FALSE,
+            'description'   => 'This cats name is Hermione, and it is a male Mongolian breed cat with a yellow color. It has a considerable weight of 20 kilograms and a body height of 20 centimeters.',
+            'save'          => TRUE
         ]);
         DB::table('kucings')->insert([
             'nama'          => 'Simba',
@@ -37,6 +40,9 @@ class KucingSeeder extends Seeder
             'sikap'         => '',
             'foto'          => '/img/cat2.jpg',
             'video'         => '',
+            'status'        => FALSE,
+            'description'   => 'This cats name is Simba, and it is an Angora breed cat with a yellow color. It is a male cat and has a large body weight of 25 kilograms and a body height of 30 cm.',
+            'save'          => TRUE
         ]);
         DB::table('kucings')->insert([
             'nama'          => 'Dora',
@@ -49,6 +55,9 @@ class KucingSeeder extends Seeder
             'sikap'         => '',
             'foto'          => '/img/cat3.jpg',
             'video'         => '',
+            'status'        => FALSE,
+            'description'   => 'This cat is named Dora, and it is a Mongolian breed cat with a yellow color. It is a female cat and has a large body weight of 28 kilograms and a body height of 31 cm.',
+            'save'          => TRUE
         ]);
         DB::table('kucings')->insert([
             'nama'          => 'Zoey',
@@ -61,6 +70,9 @@ class KucingSeeder extends Seeder
             'sikap'         => '',
             'foto'          => '/img/cat4.jpg',
             'video'         => '',
+            'status'        => FALSE,
+            'description'   => 'This cat is named Zoey, and it is a Persian breed cat with a white color. It is a female cat and has a large body weight, weighing in at 29 kilograms, and a relatively smaller body height of 27 cm.',
+            'save'          => TRUE
         ]);
         DB::table('kucings')->insert([
             'nama'          => 'Garfield',
@@ -73,6 +85,9 @@ class KucingSeeder extends Seeder
             'sikap'         => '',
             'foto'          => '/img/cat5.jpg',
             'video'         => '',
+            'status'        => FALSE,
+            'description'   => 'This cat is named Garfield, and it is a Persian breed cat with a brown color. It is a female cat and has a relatively lighter body weight of 24 kilograms and a smaller body height of 20 cm.',
+            'save'          => TRUE
         ]);
         DB::table('kucings')->insert([
             'nama'          => 'Gracie',
@@ -85,6 +100,9 @@ class KucingSeeder extends Seeder
             'sikap'         => '',
             'foto'          => '/img/cat6.jpg',
             'video'         => '',
+            'status'        => FALSE,
+            'description'   => 'This cat is named Gracie, and she is a Persian breed cat with a white color. She is a female cat and has a relatively lighter body weight of 25 kilograms and a smaller body height of 32 cm.',
+            'save'          => TRUE
         ]);
     }
 }
