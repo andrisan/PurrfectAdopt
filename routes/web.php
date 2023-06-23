@@ -150,17 +150,17 @@ Route::middleware(['auth'])->group(function(){
   Route::view('/setting2','setting2');
   Route::view('/setting1','setting1');
   Route::middleware(['guest'])->group(function(){
-    
+
   });
-  
+
   Route::get('/article', [ContentController::class, 'create'])->name('article');
-  
+
   Route::get('/article/{id}', [ContentController::class, 'show_details'])->name('articledetails');
-  
+
   Route::get('/find-your-cat', [CatController::class, 'search'])->name('cat.search');
-  
+
   Route::post('/contents', [ContentController::class, 'store'])->name('contents.store');
-  
+
   Route::middleware(['auth'])->group(function(){
     Route::get('/adopted', [CatController::class, 'index'])->name('profile');
   });
@@ -169,3 +169,4 @@ Route::middleware(['auth'])->group(function(){
 require __DIR__.'/auth.php';
 require __DIR__.'/webkel5.php';
 require __DIR__.'/webkel3.php';
+require __DIR__.'/webkel2.php';
