@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kucing;
 use App\Models\Cat;
+use App\Models\Kucing;
 use Illuminate\Http\Request;
 
 class CatController extends Controller
@@ -13,7 +14,7 @@ class CatController extends Controller
     {
         $race = $request->input('race');
         $cats = Kucing::where('ras', $race)->get();
-        
+
         return view('findyourcat', ['cats' => $cats, 'race' => $race]);
     }
 
@@ -29,7 +30,7 @@ public function adopted()
     }
 
     public function index(){
-        $kucing = Kucing::all();
-        return response()->json($kucing);
+        $cats = Kucing::all();
+        return view('/cats/adopted', compact('cats'));
     }
 }
