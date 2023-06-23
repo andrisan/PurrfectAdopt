@@ -32,10 +32,7 @@
             <form action="{{ route('setting2.update', $user->id) }}" method="POST">
                 @csrf
                 @method('PUT')
-                <br><br>
-                <label for="name">Nama :</label>
                 <br>
-                <input class="p-5 rounded-xl" type="text" name="name" id="name" value="{{ $user->name }}">
                 <br>
                 <label for="profesi">Profesi :</label>
                 <br>
@@ -45,7 +42,7 @@
                 <br>
                 <input class="p-5 rounded-xl" type="text" name="alamat" id="alamat" value="{{ $user->alamat }}"> 
                 <br>
-                <button type="submit" class="save">Save</button>
+                <button type="submit" class="btn">Save</button>
             </form>
         </div>
     </div>

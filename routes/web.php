@@ -102,23 +102,6 @@ Route::middleware(['auth'])->group(function(){
 });
 /** END AUTH: LOGIN, REGISTER, FORGOT-PASSWORD, RESET-PASSWORD */
 
-// FITUR TAMBAHAN BIO
-Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
-
-Route::get('balasDiskusi', function() {
-  return view('/profile/balasDiskusi');
-})->name('balasDiskusi');
-
-Route::resource('diskusi', DiskusiController::class);
-Route::get('/balasDiskusi/{id}', [DiskusiController::class, 'show'])->name('balasDiskusi');
-
-Route::resource('faq', FaqController::class);
-
-Route::get('/setting1/edit/{id}', [E_ProfileController::class, 'edit'])->name('setting1.edit');
-Route::put('/setting1/update/{id}', [E_ProfileController::class, 'update'])->name('setting1.update');
-
-Route::get('/setting2/edit/{id}', [Setting2Controller::class, 'edit'])->name('setting2.edit');
-Route::put('/setting2/update/{id}', [Setting2Controller::class, 'update'])->name('setting2.update');
 
 Route::middleware(['guest'])->group(function(){
 
@@ -142,3 +125,4 @@ Route::middleware(['auth'])->group(function(){
 
 require __DIR__.'/auth.php';
 require __DIR__.'/webkel5.php';
+require __DIR__.'/webkel3.php';

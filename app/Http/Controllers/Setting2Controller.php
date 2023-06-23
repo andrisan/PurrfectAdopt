@@ -17,7 +17,6 @@ class Setting2Controller extends Controller
     {
         $user = User::findOrFail($id);
         
-        $user->name = $request->input('name');
         $user->profesi = $request->input('profesi');
         $user->alamat = $request->input('alamat');
 
