@@ -39,30 +39,6 @@ Route::middleware(['guest'])->group(function(){
   })->name('welcome');
 });
 
-/** END HALAMAN WELCOME */
-
-Route::middleware(['auth'])->group(function(){
-  Route::get('/profile/mypet', function () {
-    return view('profile/mypet');
-  })->name('mypet');
-
-  Route::get('/profile/profile_adopter', function () {
-    return view('profile/profile_adopter');
-  })->name('profile_adopter');
-
-  Route::get('/profile/profile_distributor', function () {
-    return view('profile/profile_distributor');
-  })->name('profile_distributor');
-
-  Route::get('/profile/Upload-Distributor', function () {
-    return view('profile/Upload-Distributor');
-  })->name('Upload-Distributor');
-
-  Route::get('/profile/profileCat_more', function () {
-    return view('profile/profileCat_more');
-  })->name('profileCat_more');
-});
-
 
 
 Route::middleware(['auth'])->group(function(){
