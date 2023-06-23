@@ -31,6 +31,7 @@ use App\Models\Kucing;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 /** START HALAMAN WELCOME, DIMANA USER YANG BELUM MELAKUKAN LOGIN AKAN DIARAHKAN KE HALAMAN INI */
 Route::middleware(['guest'])->group(function(){
   Route::get('/', function(){
@@ -39,6 +40,30 @@ Route::middleware(['guest'])->group(function(){
 });
 
 /** END HALAMAN WELCOME */
+
+Route::middleware(['auth'])->group(function(){
+  Route::get('/profile/mypet', function () {
+    return view('profile/mypet');
+  })->name('mypet');
+
+  Route::get('/profile/profile_adopter', function () {
+    return view('profile/profile_adopter');
+  })->name('profile_adopter');
+
+  Route::get('/profile/profile_distributor', function () {
+    return view('profile/profile_distributor');
+  })->name('profile_distributor');
+
+  Route::get('/profile/Upload-Distributor', function () {
+    return view('profile/Upload-Distributor');
+  })->name('Upload-Distributor');
+
+  Route::get('/profile/profileCat_more', function () {
+    return view('profile/profileCat_more');
+  })->name('profileCat_more');
+});
+
+
 
 Route::middleware(['auth'])->group(function(){
 
@@ -72,54 +97,6 @@ Route::get('/dashboard', function () {
   })->name('dashborad');
 });*/
 
-Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
-Route::post('/login', [AuthenticatedSessionController::class, 'store']);
-
-Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
-Route::post('/register', [RegisteredUserController::class, 'store']);
-
-Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])->name('password.request');
-Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])->name('password.email');
-
-Route::get('/reset-password/{token}', [NewPasswordController::class, 'create'])->name('password.reset');
-Route::post('/reset-password', [NewPasswordController::class, 'store'])->name('password.update');
-
-Route::middleware(['auth'])->group(function(){
-  /** SEBELUM MENGAKSES HAL. ADMIN-HOME USER DIPERKENANKAN UNTUK LOGIN DAHULU */
-  /** TERDAPAT MIDDLEWARE UNTUK MEMBATASI AGAR HANYA ADMIN SAJA YANG BISA MENGAKSES HALAMAN INI */
-  Route::resource('/admin-home', DashboardController::class)->middleware('userAccess:admin');
-  route::get('/artikelAdmin',[artikelAdminController::class, 'show'])->middleware('userAccess:admin');
-  Route::delete('/artikelAdmin/destroy/{id}', [artikelAdminController::class, 'destroy'])->middleware('userAccess:admin');
-
-  /** SEBELUM MENGAKSES HAL. DASHBOARD USER DIPERKENANKAN UNTUK LOGIN DAHULU */
-  Route::get('/dashboard', [MainDashboardController::class, 'index']);
-
-  Route::get('/main', [AuthenticatedSessionController::class, 'main']);
-  Route::get('/main/admin', [AuthenticatedSessionController::class, 'admin'])->middleware('userAccess:admin');
-  Route::get('/main/user', [AuthenticatedSessionController::class, 'user'])->middleware('userAccess:user');
-
-  /** JIKA INGIN LOGOUT KETIKKAN ENDPOINT DIBAWAH INI PADA URL */
-  Route::get('/logout', [AuthenticatedSessionController::class, 'destroy']);
-
-});
-/** END AUTH: LOGIN, REGISTER, FORGOT-PASSWORD, RESET-PASSWORD */
-
-
-Route::middleware(['guest'])->group(function(){
-
-});
-
-Route::get('/article', [ContentController::class, 'create'])->name('article');
-
-Route::get('/article/details', function () {
-  return view('article/articledetails');
-})->name('articledetails');
-
-Route::get('/findyourcat', function () {
-  return view('findyourcat');
-})->name('findyourcat');
-
-Route::post('/contents', [ContentController::class, 'store'])->name('contents.store');
 
 Route::middleware(['auth'])->group(function(){
   Route::get('/adopted', [CatController::class, 'index'])->name('profile');
@@ -134,14 +111,7 @@ Route::middleware(['auth'])->group(function(){
 
   });
 
-  Route::get('/article', [ContentController::class, 'create'])->name('article');
-
-  Route::get('/article/{id}', [ContentController::class, 'show_details'])->name('articledetails');
-
-  Route::get('/find-your-cat', [CatController::class, 'search'])->name('cat.search');
-
-  Route::post('/contents', [ContentController::class, 'store'])->name('contents.store');
-
+  
   Route::middleware(['auth'])->group(function(){
     Route::get('/adopted', [CatController::class, 'index'])->name('profile');
   });
@@ -157,3 +127,5 @@ require __DIR__.'/webkel5.php';
 require __DIR__.'/webkel3.php';
 require __DIR__.'/webkel2.php';
 require __DIR__.'/webkel1.php';
+require __DIR__.'/webkel4.php';
+

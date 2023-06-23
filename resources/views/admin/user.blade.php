@@ -14,33 +14,12 @@
 </head>
 
 <body>
-    <header>
-        <div class="flex flex-row">
-            <div>
-                <img src="{{ asset('/img/logoo.png') }}" alt="logo" class ="logo">
-            </div>
-            <div style="margin-top: 10px;">
-                <p style="font-size: 30px;"><b>Purrfect Adopt</b></p>
-            </div>
-        </div>
-            <nav>
-              <ul>
-                <li><a href="<?= url('/admin-home'); ?>">Beranda</a></li>
-                <li><a href="<?= url('/admin-kucing'); ?>">Kucing</a></li>
-                <li><a href="<?= url('/admin-user'); ?>">User</a></li>
-                <li><a href="#">Artikel</a></li>
-              </ul>
-            </nav>
-        <div class="profile">
-            <img src="{{ asset('/img/profile.png') }}" alt="Profil">
-            <span>Profil</span>
-        </div>
-    </header>
+    @include('components.header-admin');
 
     <!--Table-->
 
 
-    <div class="container">
+    <div class="container my-16">
 
         <div style="margin-left: 90px; margin-top: 25px" class="flex">
           <h4 class="font-bold p-1"><b>Data user yang terdaftar</b></p>
@@ -68,30 +47,7 @@
     </div>
   <!--End Table-->
 
-  <!--Footer-->
-  <footer>
-        <div class="container">
-            <div class="row">
-                <div class="left-section">
-                <p style="font-size: 18px;font-weight:bold;margin-bottom:10px">Purrfect Adopt</p>
-                <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
-                </div>
-                <div class="center-section">
-                <p style="font-size: 18px;font-weight:bold;margin-bottom:10px">Alamat Kami</p>
-                <p>Jl. Veteran, Malang<br>Telepon: 123-456-7890</p>
-                </div>
-                <div class="right-section">
-                <p style="font-size: 18px;font-weight:bold;margin-bottom:10px">Sosial Media</p>
-                <ul class="social-media">
-                    <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-  <!--End Footer-->
+  @include('components.footer')
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
