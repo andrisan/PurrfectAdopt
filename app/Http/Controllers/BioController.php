@@ -20,7 +20,7 @@ class BioController extends Controller
         return abort(404);
     }
 
-    return view('/bio', compact('bio'));
+    return view('/profile/bio', compact('bio'));
 }
 
 

@@ -38,4 +38,39 @@
     display: flex;
     flex-direction: row;
   }
+
+  .kotakreturn {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 25.7px;
+    background-color: #FFD95A;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar {
+    text-align: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
   

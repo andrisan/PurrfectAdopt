@@ -49,7 +49,7 @@ class AuthenticatedSessionController extends Controller
         else
         {
             return redirect('/login')
-                        ->withErrors('Email dan password tidak valid')
+                        ->withErrors('Email atau password tidak valid')
                         ->withInput();
         }
     }
