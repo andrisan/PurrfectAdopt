@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Setting</title>
-    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/cc4885a691.js" crossorigin="anonymous"></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['public/style.css', 'resources/js/app.js'])
 </head>
 
 <body style= margin:3% class="bg-amber-100">
