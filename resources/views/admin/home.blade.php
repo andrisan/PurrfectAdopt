@@ -13,35 +13,14 @@
   @vite(['resources/css/admin.css', 'resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <header>
-        <div class="flex flex-row">
-            <div>
-                <img src="{{ asset('/img/logoo.png') }}" alt="logo" class ="logo">
-            </div>
-            <div style="margin-top: 10px;">
-                <p style="font-size: 30px;"><b>Purrfect Adopt</b></p>
-            </div>
-        </div>
-            <nav>
-              <ul>
-                <li><a href="<?= url('/admin-home'); ?>">Beranda</a></li>
-                <li><a href="<?= url('/admin-kucing'); ?>">Kucing</a></li>
-                <li><a href="<?= url('/admin-user'); ?>">User</a></li>
-                <li><a href="<?= url('/artikelAdmin'); ?>">Artikel</a></li>
-            </ul>
-            </nav>
-        <div class="profile">
-            <img src="{{ asset('/img/profile.png') }}" alt="Profil">
-            <span>Profil</span>
-        </div>
-    </header>
+    @include('components.header-admin');
 
-    <div class="flex drop-shadow-2xl " style="margin-top:40px;text-align:center; justify-content:center; align-content:center; ">
+    <div class="flex drop-shadow-2xl mt-16" style="margin-top:40px;text-align:center; justify-content:center; align-content:center; ">
         <h2 class="font-bold text-gray-500 p-1" style="font-size: 30px;color:black">Welcome Admin</h2>
     </div>
 
 
-    <div class="" style="margin-left:100px; margin-right:100px">
+    <div class="my-16" style="margin-left:100px; margin-right:100px">
     <!-- px-20 untuk ngatur padding kiri dan kanan -->
         <div class="flex flex-wrap mt-5 grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10 rounded-md bg-kotak">
 
@@ -97,30 +76,7 @@
     </div>
     <!-- Counter -->
 
-    <!--Footer-->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="left-section">
-                <p style="font-size: 18px;font-weight:bold;margin-bottom:10px">Purrfect Adopt</p>
-                <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
-                </div>
-                <div class="center-section">
-                <p style="font-size: 18px;font-weight:bold;margin-bottom:10px">Alamat Kami</p>
-                <p>Jl. Veteran, Malang<br>Telepon: 123-456-7890</p>
-                </div>
-                <div class="right-section">
-                <p style="font-size: 18px;font-weight:bold;margin-bottom:10px">Sosial Media</p>
-                <ul class="social-media">
-                    <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--End Footer-->
+    @include('components.footer')
 
     <!-- Required chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

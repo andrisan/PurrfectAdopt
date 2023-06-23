@@ -33,30 +33,9 @@
     </style>
 </head>
 <body>
-    <header>
-            <div class="flex flex-row">
-                <div>
-                    <img src="{{ asset('/img/logoo.png') }}" alt="logo" class ="logo">
-                </div>
-                <div style="margin-top: 10px;">
-                    <p style="font-size: 30px;"><b>Purrfect Adopt</b></p>
-                </div>
-            </div>
-            <nav>
-            <ul>
-                <li><a href="<?= url('/admin-home'); ?>">Beranda</a></li>
-                <li><a href="<?= url('/admin-kucing'); ?>">Kucing</a></li>
-                <li><a href="<?= url('/admin-user'); ?>">User</a></li>
-                <li><a href="#">Artikel</a></li>
-            </ul>
-            </nav>
-        <div class="profile">
-            <img src="{{ asset('/img/profile.png') }}" alt="Profil">
-            <span>Profil</span>
-        </div>
-    </header>
+    @include('components.header-admin');
       <!-- SDSS -->
-    <div class="container">
+    <div class="container my-16">
 
          <div style="margin-left: 90px; margin-top: 25px" class="flex">
           <h4 class="font-bold p-1"><b>Data kucing yang terdaftar</b></p>
@@ -85,28 +64,7 @@
         </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="left-section">
-                <p style="font-size: 18px;font-weight:bold;margin-bottom:10px">Purrfect Adopt</p>
-                <p>Kami adalah tempat kamu bisa mengadopsi Kucing Ras Terpercaya dengan biaya yang sangat terjangkau. Kami menyediakan berbagai jenis Kucing Ras yang bisa jadi teman pelepas penatmu.</p>
-                </div>
-                <div class="center-section">
-                <p style="font-size: 18px;font-weight:bold;margin-bottom:10px">Alamat Kami</p>
-                <p>Jl. Veteran, Malang<br>Telepon: 123-456-7890</p>
-                </div>
-                <div class="right-section">
-                <p style="font-size: 18px;font-weight:bold;margin-bottom:10px">Sosial Media</p>
-                <ul class="social-media">
-                    <a href="#"><i class="fa-brands fa-facebook"  style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"  style="color: #ffffff;"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('components.footer')
 
 
 
@@ -147,7 +105,9 @@
                                         <td> ${el.tinggi_badan}</td>
                                         <td>${el.status ? '<span class="bg-green-300 text-green-900 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Teradopsi</span>' : '<span class="bg-yellow-100 text-white-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Belum Teradopsi</span>'}</td>
                                         <td class="image-cell">
-                                            <button id="btndelete"  class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" style="cursor:pointer">hapus</button>
+                                            <button id=" buttondelete"  class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" style="cursor:pointer">Delete</button>
+                                            <button id="buttonview"  class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" style="cursor:pointer">View</button>
+                                            <button id="buttonapprove"  class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" style="cursor:pointer">Approve</button>
                                         </td>
                                     </tr>
                                 `;
