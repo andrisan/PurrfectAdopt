@@ -16,9 +16,9 @@
                 class="inline-block text-white no-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-105 duration-300 ease-in-out">
                 Article
             </a>
-            <a href="#"
+            <a href="/adopted"
                 class="inline-block text-white no-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-105 duration-300 ease-in-out">
-                My Pet
+                My Cat
             </a>
             <div class="relative ml-auto mx-5">
                 <div class="relative inline-block">

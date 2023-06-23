@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Purrfect Adopt | Home</title>
+    <title>Purrfect Adopt | {{ $title }}</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -35,17 +35,16 @@
 </div>
 
 <div class="container w-1/2 mx-auto px-4">
-<form>   
+  <form action="{{ route('cat.search') }}" method="GET">
     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
     <div class="relative">
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-        </div>
-        <input type="search" id="default-search" class=" w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
-        placeholder="Find your cat here" required>
-        <a href="/findyourcat"><button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-4 py-2">Search</button></a>
-        </div>
-    </form>
+      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      </div>
+      <input type="search" name="race" id="default-search" class="w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" placeholder="Find the cat race you want" required>
+      <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
+    </div>
+  </form>
 </div>
 <br> <br>
 
@@ -125,8 +124,8 @@
         @else
             {{ 'Female' }}
         @endif</p>
-        <p class="font-normal text-gray-700">Weight   : {{ $cat->berat_badan }}</p>
-        <p class="font-normal text-gray-700">Height   : {{ $cat->tinggi_badan }}</p> <br>
+        <p class="font-normal text-gray-700">Weight   : {{ $cat->berat_badan }} kg</p>
+        <p class="font-normal text-gray-700">Height   : {{ $cat->tinggi_badan }} cm</p> <br>
         <a href="#" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300">
             More info
         </a>
@@ -184,16 +183,14 @@
                         <p class="relative mt-2 text-base text-center text-gray-600">We facilitate easy interaction between buyers and distributors through a chat feature.</p>
                     </div>
                 </div>
-            </div>
-            
+            </div>  
         </div>
     </div>
-    <!-- END FEATURES SECTION -->
 <!-- choose us-->
 
 <!-- artikel-->
 <section>
-  <div class="max-w-screen-xl px-4 py-4 mx-auto sm:px-6 sm:py-12 lg:px-8">
+  <div class="max-w-screen-xl px-4 mx-auto sm:px-6 sm:py-12 lg:px-8">
     <header class="text-center">
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
        Read Articles
@@ -201,115 +198,104 @@
     </header>
 
     <ul class="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
-      <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
-        <a href="#" class="relative block group">
-          <img
-            src="https://images.unsplash.com/photo-1618898909019-010e4e234c55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-            alt=""
-            class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
-          />
-        </a>
+        <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
+          <a href="/article/{{ $contents->find(1)->id }}" class="relative block group">
+            <img
+              src="{{ $contents->find(1)->galery }}"
+              alt=""
+              class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
+            />
+          </a>
 
-        <a href="#">
-                <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
-                    How to position your furniture for positivity
-                </h3>
-        </a>
+          <a href="/article/{{ $contents->find(1)->id }}">
+                  <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
+                    {{ $contents->find(1)->judul }}
+                  </h3>
+          </a>
 
-        <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-                dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
-                sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
-                voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
-                Molestias explicabo corporis voluptatem?
-            </p>
+          <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
+            {{ Str::limit($contents->find(1)->isi, 200) }}
+              </p>
 
-        <div class="sm:flex sm:items-end sm:justify-end">
-            <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
-                > Read more
+          <div class="sm:flex sm:items-end sm:justify-end">
+              <a href="/article/{{ $contents->find(1)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
+                  > Read more
 
-                <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
-                    &rarr;
-                </span>
-            </a>
-        </div>
-      </li>
-
-      <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
-        <a href="#" class="relative block group">
-          <img
-            src="https://images.unsplash.com/photo-1624623278313-a930126a11c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-            alt=""
-            class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
-          />
-        </a>
-
-        <a href="#">
-                <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
-                    How to position your furniture for positivity
-                </h3>
-            </a>
-
-            <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-                dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
-                sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
-                voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
-                Molestias explicabo corporis voluptatem?
-            </p>
-
-            <div class="sm:flex sm:items-end sm:justify-end">
-            <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
-                > Read more
-
-                <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
-                    &rarr;
-                </span>
-            </a>
-            </div>
-
-      </li>
-
-
-      <li class="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1 rounded-lg shadow transition 
-      hover:shadow-lg bg-white aspect-square">
-        <a href="#" class="relative block group">
-          <img
-            src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
-            alt=""
-            class="object-cover w-full transition duration-500 group-hover:opacity-90"
-          />
-          <div
-            class="absolute inset-0 flex flex-col items-start justify-end p-6"
-          >
-            <h3 class="text-xl font-bold uppercase text-white">
-                How to position your furniture for positivity</h3>
-
-        <p class="text-sm/relaxed text-white line-clamp-5">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-          perferendis hic asperiores quibusdam quidem voluptates doloremque
-          reiciendis nostrum harum. Repudiandae?  
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-            dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
-            sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
-            voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
-            Molestias explicabo corporis voluptatem? possimus pariatur animi temporibus nesciunt praesentium dolore
-            sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
-            voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
-        </p>
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                      &rarr;
+                  </span>
+              </a>
           </div>
-        </a>
+        </li>
 
-      </li>
+        <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
+          <a href="/article/{{ $contents->find(2)->id }}" class="relative block group">
+            <img
+              src="{{ $contents->find(2)->galery }}"
+              alt=""
+              class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
+            />
+          </a>
+
+          <a href="/article/{{ $contents->find(2)->id }}">
+                  <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
+                    {{ $contents->find(2)->judul }}
+                  </h3>
+              </a>
+
+              <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
+                {{ Str::limit($contents->find(2)->isi, 200) }}
+              </p>
+
+              <div class="sm:flex sm:items-end sm:justify-end">
+              <a href="/article/{{ $contents->find(2)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
+                  > Read more
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                      &rarr;
+                  </span>
+              </a>
+              </div>
+
+        </li>
+
+        <li class="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1 rounded-lg shadow transition 
+        hover:shadow-lg bg-white aspect-square">
+          <a href="/article/{{ $contents->find(3)->id }}" class="relative block group">
+            <img
+              src="{{ $contents->find(3)->galery }}"
+              alt=""
+              class="object-cover w-full transition duration-500 group-hover:opacity-90"
+            />
+          </a>
+
+          <a href="/article/{{ $contents->find(3)->id }}">
+                  <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
+                    {{ $contents->find(3)->judul }}
+                  </h3>
+              </a>
+
+              <p class="mt-2 text-sm/relaxed text-gray-500 px-4">
+                {{ Str::limit($contents->find(3)->isi, 1170) }}
+              </p>
+
+              <div class="sm:flex sm:items-end sm:justify-end">
+              <a href="/article/{{ $contents->find(3)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
+                  > Read more
+
+                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                      &rarr;
+                  </span>
+              </a>
+              </div>
+
+        </li>
     </ul>
 
     <div class="sm:flex sm:items-end sm:justify-center py-6">
-      <a
-        href="#"
-        class="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
-      >
-        View All Post
-      </a>
+      <a href="/article" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300">
+            View All Post
+        </a>  
     </div>
 
   </div>
@@ -345,7 +331,7 @@
 </script>
 <!--slider cards-->
 
-@include('components.footer');
+@include('components.footer')
 
 </body>
 </html>

@@ -1,6 +1,5 @@
 <?php
 
-
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\NewPasswordController;
@@ -12,7 +11,12 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\CatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BioController;
+use App\Http\Controllers\MainDashboardController;
 use App\Http\Controllers\ContentController;
+use App\Http\Controllers\DiskusiController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\E_ProfileController;
+use App\Http\Controllers\Setting2Controller;
 use App\Http\Controllers\Admin\artikelAdminController;
 use App\Models\Kucing;
 
@@ -27,6 +31,11 @@ use App\Models\Kucing;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::middleware(['auth'])->group(function(){
+  Route::get('/profile/mypet', function () {
+    return view('profile/mypet');
+  })->name('mypet');
+
 
 Route::get('/profile/profile_adopter', [ProfileController::class, 'showProfile1'])->name('profile_adopter');
 
@@ -38,11 +47,13 @@ Route::get('/profile/profile_adopter', [ProfileController::class, 'showProfile']
 Route::get('toggleLove/{id}', [ProfileController::class, 'toggleLove'])->name('toggleLove');
 Route::get('/profile/profile_distributor', [ProfileController::class, 'showProfileDistributor'])->name('profile_distributor');
 
-Route::get('/profile/Upload-Distributor', function () {
-  return view('profile/Upload-Distributor');
-})->name('Upload-Distributor');
+ Route::get('/profile/Upload-Distributor', function () {
+    return view('profile/Upload-Distributor');
+  })->name('Upload-Distributor');
+
 
 Route::get('profileCat_more/{id}', [ProfileController::class, 'show'])->name('profileCat_more');
+
 
 /** START HALAMAN WELCOME, DIMANA USER YANG BELUM MELAKUKAN LOGIN AKAN DIARAHKAN KE HALAMAN INI */
 Route::middleware(['guest'])->group(function(){
@@ -51,6 +62,10 @@ Route::middleware(['guest'])->group(function(){
   })->name('welcome');
 });
 
+});
+/** END HALAMAN WELCOME */
+
+Route::middleware(['auth'])->group(function(){
 
   Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
   Route::view('/testi','testi');
@@ -59,22 +74,29 @@ Route::middleware(['guest'])->group(function(){
   Route::view('/diskusi','diskusi');
   Route::view('/setting2','setting2');
   Route::view('/setting1','setting1');
-  Route::middleware(['guest'])->group(function(){
+});
+
+/*Route::middleware(['guest'])->group(function(){
 //   Route::get('/', [SesiController::class, 'index'])->name('login');
 //   Route::post('/', [SesiController::class, 'login']);
 
   Route::get('/signup', [SignUpController::class, 'showRegistrationForm'])->name('signup');
   Route::post('/signup', [SignUpController::class, 'signup']);
-
-
-
+  });
 Route::get('/dashboard', function () {
     return view('dashboard');
   })->name('dashborad');
 });
-/** END HALAMAN WELCOME */
 
-/** START AUTH: LOGIN, REGISTER, FORGOT-PASSWORD, RESET-PASSWORD */
+/** END HALAMAN WELCOME
+  // Route::get('/signup', [SignUpController::class, 'showRegistrationForm'])->name('signup');
+  // Route::post('/signup', [SignUpController::class, 'signup']);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+  })->name('dashborad');
+});*/
+
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store']);
 
@@ -91,26 +113,23 @@ Route::middleware(['auth'])->group(function(){
   /** SEBELUM MENGAKSES HAL. ADMIN-HOME USER DIPERKENANKAN UNTUK LOGIN DAHULU */
   /** TERDAPAT MIDDLEWARE UNTUK MEMBATASI AGAR HANYA ADMIN SAJA YANG BISA MENGAKSES HALAMAN INI */
   Route::resource('/admin-home', DashboardController::class)->middleware('userAccess:admin');
-  route::get('/artikelAdmin',[artikelAdminController::class, 'index'])->middleware('userAccess:admin');
+  route::get('/artikelAdmin',[artikelAdminController::class, 'show'])->middleware('userAccess:admin');
+  Route::delete('/artikelAdmin/destroy/{id}', [artikelAdminController::class, 'destroy'])->middleware('userAccess:admin');
 
   /** SEBELUM MENGAKSES HAL. DASHBOARD USER DIPERKENANKAN UNTUK LOGIN DAHULU */
-  Route::get('/dashboard', [DashboardController::class, 'create']);
+  Route::get('/dashboard', [MainDashboardController::class, 'index']);
+
   Route::get('/main', [AuthenticatedSessionController::class, 'main']);
   Route::get('/main/admin', [AuthenticatedSessionController::class, 'admin'])->middleware('userAccess:admin');
   Route::get('/main/user', [AuthenticatedSessionController::class, 'user'])->middleware('userAccess:user');
 
   /** JIKA INGIN LOGOUT KETIKKAN ENDPOINT DIBAWAH INI PADA URL */
   Route::get('/logout', [AuthenticatedSessionController::class, 'destroy']);
+
 });
 /** END AUTH: LOGIN, REGISTER, FORGOT-PASSWORD, RESET-PASSWORD */
 
-Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
-Route::view('/testi','testi');
-Route::view('/bio','bio');
-Route::view('/balasDiskusi','balasDiskusi');
-Route::view('/diskusi','diskusi');
-Route::view('/setting2','setting2');
-Route::view('/setting1','setting1');
+
 Route::middleware(['guest'])->group(function(){
 
 });
@@ -129,6 +148,28 @@ Route::post('/contents', [ContentController::class, 'store'])->name('contents.st
 
 Route::middleware(['auth'])->group(function(){
   Route::get('/adopted', [CatController::class, 'index'])->name('profile');
+  Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
+  Route::view('/testi','testi');
+  Route::view('/bio','bio');
+  Route::view('/balasDiskusi','balasDiskusi');
+  Route::view('/diskusi','diskusi');
+  Route::view('/setting2','setting2');
+  Route::view('/setting1','setting1');
+  Route::middleware(['guest'])->group(function(){
+
+  });
+
+  Route::get('/article', [ContentController::class, 'create'])->name('article');
+
+  Route::get('/article/{id}', [ContentController::class, 'show_details'])->name('articledetails');
+
+  Route::get('/find-your-cat', [CatController::class, 'search'])->name('cat.search');
+
+  Route::post('/contents', [ContentController::class, 'store'])->name('contents.store');
+
+  Route::middleware(['auth'])->group(function(){
+    Route::get('/adopted', [CatController::class, 'index'])->name('profile');
+  });
 });
 
 
@@ -144,4 +185,5 @@ require __DIR__.'/auth.php';
 
 require __DIR__.'/auth.php';
 require __DIR__.'/webkel5.php';
-
+require __DIR__.'/webkel3.php';
+require __DIR__.'/webkel2.php';
